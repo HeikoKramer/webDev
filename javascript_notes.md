@@ -163,3 +163,18 @@ var anOtherDemo = 66 / quotient;
 console.log(anOtherDemo);
 // > 33
 ```
+
+## Incrementing a number
+To increment a number means to add 1 to it. <br>
+
+```js
+var myVar = 87;
+
+// the following two methods do exactly the same, both are incementing myVar + 1
+myVar = myVar + 1;
+console.log(myVar);
+// > 88
+myVar++;
+console.log(myVar);
+// > 89
+```
