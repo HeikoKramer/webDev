@@ -193,3 +193,12 @@ console.log(myVar);
 // > 85
 ```
 
+## Decimal numbers aka "Floating number", or "Floats"
+
+```js
+var ourDecimal  = 5.7;
+var myDecimal   = 0.5;
+var allDecimals = ourDecimal + myDecimal;
+console.log(allDecimals); 
+// > 6.2
+```
