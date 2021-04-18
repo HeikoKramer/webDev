@@ -113,3 +113,13 @@ console.log(b);
 console.log(c);
 // > I am a String!
 ```
+
+## Variable names
+JavaScript variables are **case sensitive**! <br>
+**Camel case** is the standard. <br>
+
+```js
+var properCamelCase;
+```
+
+
