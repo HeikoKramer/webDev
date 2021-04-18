@@ -218,3 +218,13 @@ var quotient = 4.4 / 2.0;
 console.log(quotient);
 // > 2.2
 ```
+
+## The remainder
+**%** – gives the **remainder** of a division of two numbers. <br>
+
+```js
+var remainder;
+remainder = 11 % 3;
+console.log(remainder);
+// > 2
+```
