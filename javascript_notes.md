@@ -48,7 +48,9 @@ multi line comment */
 
 ## Variables 
 There are three ways to declare a variable in JavaScript: <br>
-Declare variable with **var**: <br>
+
+### Declare variable with var:
+
 ```js
 var myName = "Heiko" // does the following:
 // var        >>  declares variable myName
@@ -59,18 +61,21 @@ myName = 8
 ```
 
 Variables declared with **var** will be usable for the **whole programm**. <br>
-<br>
-Declare variable with **let**: <br>
+
+### Declare variable with let:
+
 ```js
 let ourName = "freeCodeCamp"
 ```
 
 Variables declared with **let** are only usable withing the scope where you declare it. <br>
 
-Declare variable with **const**: <br>
+### Declare variable with const:
+
 ```js
 const pi 3.14
 ```
 
 Variables declared with **const** will **never change** its content. <br>
+
 
