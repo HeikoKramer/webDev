@@ -210,3 +210,11 @@ var product = 2.0 * 2.5;
 console.log(product);
 // > 5
 ```
+
+### Dividing decimals
+
+```js
+var quotient = 4.4 / 2.0;
+console.log(quotient);
+// > 2.2
+```
