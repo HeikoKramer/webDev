@@ -93,3 +93,23 @@ console.log(b)
 // the console log method will display the value of variable b in the console
 // the displayed value will be 7 – as this is the value of variable a, which is assigned to b
 ```
+
+## Variables examples
+
+```js
+// Initialize these three variable
+var a = 5;
+var b = 10;
+var c = "I am a";
+
+a = a + 1;
+b = b + 5;
+c = c + " String!";
+
+console.log(a);
+// > 6
+console.log(b);
+// > 15
+console.log(c);
+// > I am a String!
+```
