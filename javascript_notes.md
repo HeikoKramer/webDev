@@ -24,4 +24,15 @@ Open the **index.html** in your browser, press <kbd>CTRL</kbd> <kbd>SHIFT</kbd> 
 You can test your code in an interactive sandbox environment like [codepen.io](https://codepen.io/pen?editors=0012). <br>
 [scrimba.com](https://scrimba.com/) has an easy to use JavaScript playground too. <br>
 
+## Comments
+JavaScript comments are similar to Java comments. <br>
+Inline comments with `//`, multi line comments with `/*` and `*/`. <br>
 
+```js
+// example inline comment
+var a = "hello world" // example inline comment
+
+/* this is an
+example for a 
+multi line comment */
+```
