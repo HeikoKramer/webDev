@@ -136,4 +136,14 @@ var nextsum = sum + newsum;
 console.log(nextsum);
 // > 50
 
+// Substraction
+var difference = 45 - 33;
+console.log(difference);
+// > 12
+var evenLess = difference - 6;
+console.log(evenLess);
+// > 6
+var thatShouldBeIt = difference - evenLess - evenLess;
+console.log(thatShouldBeIt);
+// > 0
 ```
