@@ -228,3 +228,29 @@ remainder = 11 % 3;
 console.log(remainder);
 // > 2
 ```
+
+## Shortcuts
+### =+
+
+```js
+var a = 3;
+var b = 17;
+var c = 12;
+
+// commonly used syntax 
+a = a + 12;
+b = 9 + b;
+c = c + 7;
+
+// shortened syntax
+a =+ 12;
+b =+ 9;
+c =+ 7;
+
+console.log(a);
+// > 15
+console.log(b);
+// > 26
+console.log(c);
+// > 19
+```
