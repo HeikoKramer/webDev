@@ -48,11 +48,29 @@ multi line comment */
 
 ## Variables 
 There are three ways to declare a variable in JavaScript: <br>
-`var myName = "Heiko"` does the following:
-* var – declares variable **myName**
-* = "Heiko" – sets it to data type **string** with content **Heiko**
+Declare variable with **var**: <br>
+```js
+var myName = "Heiko" // does the following:
+// var        >>  declares variable myName
+// = "Heiko"  >>  sets it to data type string with content – Heiko
 
-This variable can later be set to be an other data type `myName = 8`. <br>
+// This variable can later be set to be an other data type:
+myName = 8 
+```
+
+Variables declared with **var** will be usable for the **whole programm**. <br>
 <br>
-`let ourName = "freeCodeCamp"`
-`const pi 3.14`
+Declare variable with **let**: <br>
+```js
+let ourName = "freeCodeCamp"
+```
+
+Variables declared with **let** are only usable withing the scope where you declare it. <br>
+
+Declare variable with **const**: <br>
+```js
+const pi 3.14
+```
+
+Variables declared with **const** will **never change** its content. <br>
+
