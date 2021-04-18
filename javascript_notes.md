@@ -255,3 +255,30 @@ console.log(b);
 console.log(c);
 // > 19
 ```
+
+### -=
+
+```js
+var a = 11;
+var b = 9;
+var c = 3;
+
+/* commonly used syntax 
+a = a - 6;
+b = b - 15;
+c = c - 1;
+*/
+
+// shortened syntax
+a -= 6;
+b -= 15;
+c -= 1;
+
+console.log(a);
+// > 5
+console.log(b);
+// > -6
+console.log(c);
+// > 2
+```
+
