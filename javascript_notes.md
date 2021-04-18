@@ -14,8 +14,9 @@ Create the file **index.html** with the following content: <br>
 
 ```html
 <script>
-  consol.log("hello world");
+  console.log("hello world");
 </script>
 ```
 
-
+This file is a most basic **hello world** script, which will display those word in the debug console of you browser. <br>
+Open the **index.html** in your browser, press <kbd>CTRL</kbd> <kbd>SHIFT</kbd> + <kbd>j</kbd> to open the console (Firefox, Linux) and you should see **hello world** written in the console log. <br>
