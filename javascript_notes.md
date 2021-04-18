@@ -157,7 +157,7 @@ console.log(youGetIt);
  
 // Division
 var quotient = 66 / 33;
-console.log(quotient;
+console.log(quotient);
 // > 2
 var anOtherDemo = 66 / quotient;
 console.log(anOtherDemo);
