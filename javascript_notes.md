@@ -1,4 +1,4 @@
-# JavaScript
+# Java:ww:Script
 This document is used to document my JS learning progress. <br>
 
 ## Resources 
@@ -36,3 +36,23 @@ var a = "hello world" // example inline comment
 example for a 
 multi line comment */
 ```
+
+## Data types
+* undefined
+* null
+* boolean
+* string
+* symbol
+* number
+* object
+
+## Variables 
+There are three ways to declare a variable in JavaScript: <br>
+`var myName = "Heiko"` does the following:
+* var – declares variable **myName**
+* = "Heiko" – sets it to data type **string** with content **Heiko**
+
+This variable can later be set to be an other data type `myName = 8`. <br>
+<br>
+`let ourName = "freeCodeCamp"`
+`const pi 3.14`
