@@ -1,4 +1,4 @@
-# Java:ww:Script
+# JavaScript
 This document is used to document my JS learning progress. <br>
 
 ## Resources 
@@ -52,12 +52,12 @@ There are three ways to declare a variable in JavaScript: <br>
 ### Declare variable with var:
 
 ```js
-var myName = "Heiko" // does the following:
+var myName = "Heiko"; // does the following:
 // var        >>  declares variable myName
 // = "Heiko"  >>  sets it to data type string with content – Heiko
 
 // This variable can later be set to be an other data type:
-myName = 8 
+myName = 8; 
 ```
 
 Variables declared with **var** will be usable for the **whole programm**. <br>
@@ -65,7 +65,7 @@ Variables declared with **var** will be usable for the **whole programm**. <br>
 ### Declare variable with let:
 
 ```js
-let ourName = "freeCodeCamp"
+let ourName = "freeCodeCamp";
 ```
 
 Variables declared with **let** are only usable withing the scope where you declare it. <br>
@@ -73,9 +73,23 @@ Variables declared with **let** are only usable withing the scope where you decl
 ### Declare variable with const:
 
 ```js
-const pi 3.14
+const pi 3.14;
 ```
 
 Variables declared with **const** will **never change** its content. <br>
+If you do try to change it, you'll get an error. <br>
 
+## Declaring vs. assigning variables
 
+```js
+var a;      // this variable has just been declared
+var b = 2;  // this variable has been declared and assigned in one line
+
+a = 7;      // a was already declared, now we've assigned it the value 7
+
+b = a;      // you can assigne ond variable to an other 
+
+console.log(b) 
+// the console log method will display the value of variable b in the console
+// the displayed value will be 7 – as this is the value of variable a, which is assigned to b
+```
