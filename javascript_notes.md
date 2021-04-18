@@ -102,9 +102,9 @@ var a = 5;
 var b = 10;
 var c = "I am a";
 
-a = a + 1;
+a = a + 1; // add number to number
 b = b + 5;
-c = c + " String!";
+c = c + " String!"; // add string to string
 
 console.log(a);
 // > 6
