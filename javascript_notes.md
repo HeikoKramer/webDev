@@ -26,7 +26,7 @@ You can test your code in an interactive sandbox environment like [codepen.io](h
 
 ## Comments
 JavaScript comments are similar to Java comments. <br>
-Inline comments with `//`, multi line comments with `/*` and `*/`. <br>
+Inline comments start with `//`, multi line comments are in between `/*` and `*/`. <br>
 
 ```js
 // example inline comment
