@@ -202,3 +202,11 @@ var allDecimals = ourDecimal + myDecimal;
 console.log(allDecimals); 
 // > 6.2
 ```
+
+### Multiplying decimals
+
+```js
+var product = 2.0 * 2.5;
+console.log(product);
+// > 5
+```
