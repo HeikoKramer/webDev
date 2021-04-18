@@ -129,11 +129,11 @@ var properCamelCase;
 var sum = 10 + 10;
 console.log(sum);
 // > 20
-var newsum = sum + 10;
-console.log(newsum);
+var newSum = sum + 10;
+console.log(newSum);
 // > 30
-var nextsum = sum + newsum;
-console.log(nextsum);
+var nextSum = sum + newSum;
+console.log(nextSum);
 // > 50
 
 // Substraction
@@ -146,4 +146,20 @@ console.log(evenLess);
 var thatShouldBeIt = difference - evenLess - evenLess;
 console.log(thatShouldBeIt);
 // > 0
+
+// Multiplication
+var product = 8 * 10;
+console.log(product);
+// > 80
+var youGetIt = product * 2;
+console.log(youGetIt);
+// > 160
+ 
+// Division
+var quotient = 66 / 33;
+console.log(quotient;
+// > 2
+var anOtherDemo = 66 / quotient;
+console.log(anOtherDemo);
+// > 33
 ```
