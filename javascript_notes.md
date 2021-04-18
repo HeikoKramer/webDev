@@ -178,3 +178,18 @@ myVar++;
 console.log(myVar);
 // > 89
 ```
+
+## Decrementing a number
+To decrement a number means to subtract 1 from it. <br>
+
+```js
+var mVar = 87;
+
+myVar = myVar -1
+console.log(myVar);
+// > 86
+myVar--;
+console.log(myVar);
+// > 85
+```
+
