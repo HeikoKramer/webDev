@@ -122,4 +122,18 @@ JavaScript variables are **case sensitive**! <br>
 var properCamelCase;
 ```
 
+## Variables and math operators
 
+```js
+// Addition
+var sum = 10 + 10;
+console.log(sum);
+// > 20
+var newsum = sum + 10;
+console.log(newsum);
+// > 30
+var nextsum = sum + newsum;
+console.log(nextsum);
+// > 50
+
+```
