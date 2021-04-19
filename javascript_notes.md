@@ -329,7 +329,7 @@ c /= 11;
 console.log(a);
 // > 4
 console.log(b);
-// > 32
+// > 27
 console.log(c);
 // > 3
 ```
