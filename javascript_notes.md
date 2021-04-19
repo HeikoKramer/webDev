@@ -334,4 +334,18 @@ console.log(c);
 // > 3
 ```
 
+## String declaration
+Strings can be declared in double quotes (**""**), single quotes(**''**) or backticks (**\`\`**). <br>
 
+```js
+var my1stString = "Double quotes are most common.";
+var my2ndString = 'Will single wotes do the job?';
+var my3rdString = `Seriously backticks?`;
+
+console.log(my1stString);
+// > Double quotes are most common.
+console.log(my2ndString);
+// > Will single wotes do the job?
+console.log(my3rdString);
+// > Seriously backticks?
+```
