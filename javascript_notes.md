@@ -366,3 +366,12 @@ var myString = 'He said "Let\'s go!" and walked away.';
 console.log(myString);
 // > He said "Let's go!" and walked away.
 ```
+
+If you're using **backticks** you can youse singe and double quotes in your sting, **without escaping** them. <br>
+
+```js
+var myString = `He said "Let's go!" and walked away.`;
+console.log(myString);
+// > He said "Let's go!" and walked away.
+```
+
