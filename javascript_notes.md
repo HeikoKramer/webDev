@@ -308,4 +308,30 @@ console.log(c);
 // > 46
 ```
 
+### /=
+
+```js
+var a = 48;
+var b = 108;
+var c = 33;
+
+/* commonly used syntax 
+a = a / 12;
+b = b / 4;
+c = c / 11;
+*/
+
+// shortened syntax
+a /= 12;
+b /= 4;
+c /= 11;
+
+console.log(a);
+// > 4
+console.log(b);
+// > 32
+console.log(c);
+// > 3
+```
+
 
