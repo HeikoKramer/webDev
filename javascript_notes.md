@@ -335,7 +335,7 @@ console.log(c);
 ```
 
 ## String declaration
-Strings can be declared in double quotes (**""**), single quotes(**''**) or backticks (**\`\`**). <br>
+Strings can be declared in double quotes (**"string"**), single quotes(**'string'**) or backticks (**\`string\`**). <br>
 
 ```js
 var my1stString = "Double quotes are most common.";
