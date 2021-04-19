@@ -357,3 +357,11 @@ var myString = "He said \"Let's go!\" and walked away.";
 console.log(myString);
 // > He said "Let's go!" and walked away.
 ```
+
+Another way to produce the same outcome is to use **single quotes** for the string declaration. <br>
+
+```js
+var myString = 'He said "Let's go!" and walked away.';
+console.log(myString);
+// > He said "Let's go!" and walked away.
+```
