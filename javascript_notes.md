@@ -349,3 +349,11 @@ console.log(my2ndString);
 console.log(my3rdString);
 // > Seriously backticks?
 ```
+
+**Note:** To escape any sort of quotes in the string itself, **escape** them with **backslash**. <br>
+
+```js
+var myString = "He said \"Let's go!\" and walked away.";
+console.log(myString);
+// > He said "Let's go!" and walked away.
+```
