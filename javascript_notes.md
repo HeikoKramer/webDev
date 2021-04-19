@@ -282,3 +282,30 @@ console.log(c);
 // > 2
 ```
 
+### \*=
+
+```js
+var a = 5;
+var b = 12;
+var c = 4.6;
+
+/* commonly used syntax 
+a = a * 5;
+b = 3 * b;
+c = c * 10;
+*/
+
+// shortened syntax
+a *= 5;
+b *= 3;
+c *= 10;
+
+console.log(a);
+// > 25
+console.log(b);
+// > 36
+console.log(c);
+// > 46
+```
+
+
