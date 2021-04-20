@@ -404,7 +404,7 @@ console.log("Now together: " + yourStr + myString);
 // concatenated with +=
 var aString = "1st & ";
 aString += "2nd";
-consol.log(aString);
+console.log(aString);
 // > 1st & 2nd
 
 ```
