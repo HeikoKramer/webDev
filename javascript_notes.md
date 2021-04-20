@@ -399,4 +399,12 @@ var yourStr = "I come first, " + "I come second, ";
 var myString = "and I come third!"
 console.log("Now together: " + yourStr + myString);
 // > Now together: I come first, I come second, and I come third!
+
+
+// concatenated with +=
+var aString = "1st & ";
+aString += "2nd";
+consol.log(aString);
+// > 1st & 2nd
+
 ```
