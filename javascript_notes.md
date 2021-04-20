@@ -409,7 +409,7 @@ console.log(aString);
 
 // append variable to string
 var anAdjective = "awesome!";
-var ourStr "freeCodeCamp is ";
+var ourStr = "freeCodeCamp is ";
 ourStr += anAdjective;
 console.log(ourStr);
 // > freeCodeCamp is awesome!
