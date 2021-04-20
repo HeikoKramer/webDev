@@ -407,4 +407,10 @@ aString += "2nd";
 console.log(aString);
 // > 1st & 2nd
 
+// append variable to string
+var anAdjective = "awesome!";
+var ourStr "freeCodeCamp is ";
+ourStr += anAdjective;
+console.log(ourStr);
+// > freeCodeCamp is awesome!
 ```
