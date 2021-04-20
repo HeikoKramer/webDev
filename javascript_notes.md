@@ -391,4 +391,12 @@ CODE OUTPUT
 */
 ```
 
+## String concatenation
 
+```js
+// Example
+var yourStr = "I come first, " + "I come second, ";
+var myString = "and I come third!"
+console.log("Now together: " yourStr + myString);
+// > Now together: I come first, I come second, and I come third!
+```
