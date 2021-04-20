@@ -375,3 +375,20 @@ console.log(myString);
 // > He said "Let's go!" and walked away.
 ```
 
+## Escape Sequences in Strings
+
+```js
+/*
+CODE OUTPUT
+\' single quote
+\" double quote
+\\ backslash
+\n newline
+\r carriage return
+\t tab
+\b backspace
+\f form feed
+*/
+```
+
+
