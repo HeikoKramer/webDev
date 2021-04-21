@@ -414,3 +414,17 @@ ourStr += anAdjective;
 console.log(ourStr);
 // > freeCodeCamp is awesome!
 ```
+
+## String methods
+
+```js
+// length of a string
+var firstNameLength = 0;
+var firstName = "Ada";
+
+firstNameLength = firstName.length;
+console.log(firstNameLength);
+// > 3
+```
+
+
