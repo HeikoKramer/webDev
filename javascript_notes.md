@@ -367,7 +367,7 @@ console.log(myString);
 // > He said "Let's go!" and walked away.
 ```
 
-If you're using **backticks** you can youse singe and double quotes in your sting, **without escaping** them. <br>
+If you're using **backticks** you can use singe and double quotes in your sting, **without escaping** them. <br>
 
 ```js
 var myString = `He said "Let's go!" and walked away.`;
@@ -425,6 +425,15 @@ var firstName = "Ada";
 firstNameLength = firstName.length;
 console.log(firstNameLength);
 // > 3
+
+
+// bracket notation
+var firstLetterOfFirstName = "";
+var firstName = "Ada";
+
+firstLetterOfFirstName = firstName[0];
+console.log(firstLetterOfFirstName):
+// > A
 ```
 
 
