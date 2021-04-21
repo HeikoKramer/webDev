@@ -448,4 +448,11 @@ var myStr = "Hello World";
 myStr[0] = "Y";
 // this will result in an error because of the immutability of strings
 // > TypeError: 0 is read-only
+
+// how to find the last charakter of a string
+var firstName = "Ada";
+var lastLetterOfFirstName = firstName[firstName.length -1];
+console.log(lastLetterOfFirstName);
+// > a
 ```
+
