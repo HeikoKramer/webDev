@@ -443,12 +443,9 @@ console.log(firstName[2]);
 // > d
 // > a
 
-// bracket notation can also change letters
+// bracket notation can't just change single letters of a string
 var myStr = "Hello World";
-
 myStr[0] = "Y";
-console.log(myStr);
-// > Yello World
+// this will result in an error because of the immutability of strings
+// > TypeError: 0 is read-only
 ```
-
-
