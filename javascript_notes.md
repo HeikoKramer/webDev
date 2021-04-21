@@ -434,6 +434,16 @@ var firstName = "Ada";
 firstLetterOfFirstName = firstName[0];
 console.log(firstLetterOfFirstName);
 // > A
+
+// array index starts with 0 in JavaScript
+var firstName = "Ada";
+
+console.log(firstName[0]);
+console.log(firstName[1]);
+console.log(firstName[2]);
+// > A
+// > d
+// > a
 ```
 
 
