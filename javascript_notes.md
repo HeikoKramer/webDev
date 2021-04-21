@@ -442,6 +442,13 @@ console.log(firstName[2]);
 // > A
 // > d
 // > a
+
+// bracket notation can also change letters
+var myStr = "Hello World";
+
+myStr[0] = "Y";
+console.log(myStr);
+// > Yello World
 ```
 
 
