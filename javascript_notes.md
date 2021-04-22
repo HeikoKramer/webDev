@@ -484,7 +484,7 @@ var ourArray = [["the universe",42], ["everything", "is connected"]];
 
 The example above shows an array storing two arrays, 1st: string & number, 2nd: string & string. <br> 
 
-### Access Array Data with Indexes
+### Access array data with indexes
 
 ```js
 // single dimensional array
@@ -498,6 +498,25 @@ console.log(ourArrays[0][0]);
 // > 50
 console.log(ourArrays[1][2]);                
 // > 100
+```
+
+### Update array data with indexes
+
+```js
+// single dimensional array
+var ourArray = [50,60,70];
+ourArray[1] = 80;
+console.log(ourArray);
+// > [50, 80, 70]
+
+// multi dimensional arry
+var myMultiArray = [["Hello", "World"],[22,23,24]];
+myMultiArray[0][1] = "Heiko";
+console.log(myMultiArray[0][0] + " " + myMultiArray[0][1]);
+// > Hello Heiko
+myMultiArray[1][0] = 99;
+console.log(myMultiArray[1]);
+// > [99, 23, 24]
 ```
 
 ## Code demos
