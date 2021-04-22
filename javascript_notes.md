@@ -389,6 +389,7 @@ CODE OUTPUT
 \b backspace
 \f form feed
 */
+
 ```
 
 ## String concatenation
@@ -464,7 +465,26 @@ console.log(secondToLastLetterOfLastName);
 // > c
 ```
 
-## Code Demos
+## Arrays
+Arrays allow you to store several pieces of data in one place. <br>
+They always start and end with brackets **\[** & **\]**, every element is separated by a comma **,**. <br>
+
+```sh
+var ourArray = ["John", 23];
+```
+
+Elements can be of any data type. In the example above, it's a string and a number. <br>
+
+### Nested arrays
+If one of the elements within the array is an other array, it is called **nested** or **multidimensional array**. <br>
+
+```js
+var ourArray = [["the universe",42], ["everything", "is connected"]];
+```
+
+The example above shows an array storing two arrays, 1st: string & number, 2nd: string & string. <br> 
+
+## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
 
