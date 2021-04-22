@@ -449,12 +449,16 @@ myStr[0] = "Y";
 // this will result in an error because of the immutability of strings
 // > TypeError: 0 is read-only
 
-// how to find the last charakter of a string
+// how to find a certain charakter of a string
 var firstName = "Ada";
 var lastName = "Lovelace";
+
+// find last letter with length -1
 var lastLetterOfFirstName = firstName[firstName.length -1];
 console.log(lastLetterOfFirstName);
 // > a
+
+// find 2nd last charakter with -2 and so on … 
 var secondToLastLetterOfLastName = lastName[lastName.length -2];
 console.log(secondToLastLetterOfLastName);
 // > c
