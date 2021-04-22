@@ -457,5 +457,5 @@ console.log(lastLetterOfFirstName);
 // > a
 var secondToLastLetterOfLastName = lastName[lastName.length -2];
 console.log(secondToLastLetterOfLastName);
-// > ce
+// > c
 ```
