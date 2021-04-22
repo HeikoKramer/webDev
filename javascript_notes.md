@@ -484,6 +484,15 @@ var ourArray = [["the universe",42], ["everything", "is connected"]];
 
 The example above shows an array storing two arrays, 1st: string & number, 2nd: string & string. <br> 
 
+### Access Array Data with Indexes
+
+```js
+var ourArray = [50,60,70];
+console.log(ourArray[0]);
+// > 50
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
