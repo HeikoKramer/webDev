@@ -451,8 +451,11 @@ myStr[0] = "Y";
 
 // how to find the last charakter of a string
 var firstName = "Ada";
+var lastName = "Lovelace";
 var lastLetterOfFirstName = firstName[firstName.length -1];
 console.log(lastLetterOfFirstName);
 // > a
+var secondToLastLetterOfLastName = lastName[lastName.length -2];
+console.log(secondToLastLetterOfLastName);
+// > ce
 ```
-
