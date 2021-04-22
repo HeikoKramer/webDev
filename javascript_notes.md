@@ -487,11 +487,18 @@ The example above shows an array storing two arrays, 1st: string & number, 2nd: 
 ### Access Array Data with Indexes
 
 ```js
+// single dimensional array
 var ourArray = [50,60,70];
 console.log(ourArray[0]);
 // > 50
-```
 
+// multidimensional array
+var ourArrays = [[50,60,70],[80,90,100]];
+console.log(ourArrays[0][0]);
+// > 50
+console.log(ourArrays[1][2]);                
+// > 100
+```
 
 ## Code demos
 ### Word blank game
