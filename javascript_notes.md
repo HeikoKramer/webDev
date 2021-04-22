@@ -586,6 +586,24 @@ console.log(ourArray);
 // > ["this", "is", "some", "array", "of", "strings"]
 ```
 
+## Passing parameters over to functions
+Parameters are placeholder variables to hand over values to a function, when it is calles. <br>
+
+```js
+function ourFunctionWithArgs(a, b) {
+  console.log(a - b);
+}
+ourFunctionWithArgs(10, 5);
+// > 5
+
+
+function anOtherFunctionWithArgs(a, b) {
+  console.log(a + b);                                               
+}
+anOtherFunctionWithArgs("Hello ", "World!");
+// > Hello World!
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
