@@ -7,7 +7,7 @@ This document is used to document my JS learning progress. <br>
 
 ## How to install / run JavaScript
 JavaScript is supported by and included in all standard web-browsers (except text-only browsers like lynx) <br>
-An easy way to run and test JavaScript code is to include it into an **.html** file and open it in a browser. <br>
+An easy way to run and test JavaScript code is to include nt into an **.html** file and open it in a browser. <br>
 <br>
 **Example:** <br>
 Create the file **index.html** with the following content: <br>
@@ -558,6 +558,19 @@ console.log(ourArray);
 console.log(secondArray);
 // > [4, 5, 6]
 // the new variable isn't multidimensional
+```
+
+### Manipulate arrays with shift
+The shift function is similar to the pop function, except that its moving the **first** element out of the array, not the last. <br>
+
+```js
+// shift will take the first item out of the array    
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.shift();
+console.log(ourArray);
+// > [2, 3]
+console.log(removedFromOurArray);
+// > 1
 ```
 
 ## Code demos
