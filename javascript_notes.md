@@ -463,3 +463,19 @@ var secondToLastLetterOfLastName = lastName[lastName.length -2];
 console.log(secondToLastLetterOfLastName);
 // > c
 ```
+
+## Code Demos
+### Word blank game
+Demo game which builds sentences from input words. <br>
+
+```sh
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+
+  var result = "";
+  result += "The " + myAdjective + " " + myNoun + " " +  myVerb + " to the store " + myAdverb + ".";
+  return result;
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+// > The big dog ran to the store quickly.
+```
