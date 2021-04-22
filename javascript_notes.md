@@ -538,6 +538,28 @@ console.log(ourArray);
 // > ["some", "array", "of", "strings", [33, 34, 35, 36]]
 ```
 
+### Manipulate arrays with pop
+
+```js
+// pop will take the last item out of the array
+var ourArray = [1,2,3];
+var removedFromOurArray = ourArray.pop();
+console.log(ourArray);
+// > [1, 2]
+console.log(removedFromOurArray);
+// > 3
+
+// this works the same way with multidimensional arrays
+var ourArrays = [[1,2,3],[4,5,6]];
+var secondArray = ourArrays.pop();
+console.log(ourArray);
+// > [[1, 2, 3]]
+// NOTE: the double bracket indicates that the multidimensional structure is maintained 
+console.log(secondArray);
+// > [4, 5, 6]
+// the new variable isn't multidimensional
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
