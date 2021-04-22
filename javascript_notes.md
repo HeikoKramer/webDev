@@ -519,6 +519,25 @@ console.log(myMultiArray[1]);
 // > [99, 23, 24]
 ```
 
+### Append data to an array with push
+
+```js
+var ourArray = ["some", "array", "of"];
+ourArray.push("strings");
+console.log(ourArray);
+// > ["some", "array", "of", "strings"]
+
+// you can also push arrays into arrays
+ourArray.push([33,34,35]);
+console.log(ourArray);                      
+// > ["some", "array", "of", "strings", [33, 34, 35]]
+
+// or values into arrays in arrays …
+ourArray[4].push(36);                 
+console.log(ourArray);        
+// > ["some", "array", "of", "strings", [33, 34, 35, 36]]
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
