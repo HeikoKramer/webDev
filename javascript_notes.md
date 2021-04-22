@@ -561,7 +561,7 @@ console.log(secondArray);
 ```
 
 ### Manipulate arrays with shift
-The shift function is similar to the pop function, except that its moving the **first** element out of the array, not the last. <br>
+The **shift** function is similar to the pop function, except that its moving the **first** element out of the array, not the last. <br>
 
 ```js
 // shift will take the first item out of the array    
@@ -571,6 +571,19 @@ console.log(ourArray);
 // > [2, 3]
 console.log(removedFromOurArray);
 // > 1
+```
+
+### Manipulate arrays with unshift
+The **unshift** function is similar to the push function, but does append elements at **the beginning** of the arrays. <br>
+
+```js
+var ourArray = ["some", "array", "of"];
+ourArray.unshift("this","is");
+console.log(ourArray);
+// > ["this", "is", "some", "array", "of"]
+ourArray.push("string");
+console.log(ourArray);    
+// > ["this", "is", "some", "array", "of", "strings"]
 ```
 
 ## Code demos
