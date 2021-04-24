@@ -634,7 +634,7 @@ The highest number + 1 works as standalone to define the range. <br>
 The **+ 1** in combination with **Math.floor** ensures we get the full capability of the range. <br>
 **Math.floor** rounds our value down and as **Math.random** gives us only a number close to the highest range … <br>
 A high of 40 without **+ 1** and **Math.floor** would be a random max of **39.996** and never show **40**. <br>
-So with **+ 1** and **Math-floor** the max is **40.996** (close to 41) and this gets rounded down to **40**. <br>
+So with **+ 1** and **Math-floor** the **high** is **40.996** (close to 41) and this gets rounded down to **40**. <br>
 If a **low** is defined in the formula, the random number won't contain numbers below the defined range. <br> 
 
 ```js
