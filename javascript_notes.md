@@ -1,13 +1,22 @@
 # JavaScript
 This document is used to document my JS learning progress. <br>
 
-## Resources 
+## Resources and how I progress
 [freeCodeCamp.org JavaScript Beginner course on YouTube](https://youtu.be/PkZNo7MFNFg) <br>
 [Eloquent JavaScript book (free under MIT license)](https://eloquentjavascript.net/) <br>
+[Kirupa JS learning tutorials](https://www.kirupa.com/) <br>
+
+The initial version of these notes will be a transcript of the **freeCodeCamp.org** video. <br>
+I'm following this video and video and writing things down. <br>
+I'm using the **scrimba.com** console to play around and verify everything before I'm adding it to the notes. <br> 
+<br>
+When I'm done with the video, I'll continue with the **Eloquent JavaScript book**. <br>
+I won't specifically quote or link those two sources further from here. <br> 
+Whenever I find interesting content like [Kirupa's tutorial on how to pick a random item from an arry](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md#picking-a-random-item-from-an-array), I'll add it to the notes by naming the source. <br>
 
 ## How to install / run JavaScript
 JavaScript is supported by and included in all standard web-browsers (except text-only browsers like lynx) <br>
-An easy way to run and test JavaScript code is to include nt into an **.html** file and open it in a browser. <br>
+An easy way to run and test JavaScript code is to include it into an **.html** file and open it in a browser. <br>
 <br>
 **Example:** <br>
 Create the file **index.html** with the following content: <br>
