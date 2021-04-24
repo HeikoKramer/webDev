@@ -586,8 +586,104 @@ console.log(ourArray);
 // > ["this", "is", "some", "array", "of", "strings"]
 ```
 
+### Picking a random item from an array
+Source: [Kirupa YouTube Session](https://t.co/fQxauzKORu) <br>
+
+```js
+let myShows = ["Deadwood", "Game of Thrones", "The Wire", "The Expanse", "Boardwalk Empire", "Mars", "Killing Eve", "Meister Eder und sein Pumuckl"];
+
+let show = myShows[Math.floor(Math.random() * myShows.length)];
+console.log(show);
+```
+
+The method is quite simple. It uses the array length to define the **high** of a generated random number and then picks a **random index number** from the array. <br>
+Random number explained in more depth below. 
+
+## Random number
+Source: [Kirupa YouTube Random Number](https://youtu.be/0CkNc86JvB4) <br>
+The function `Math.random()` generates a number between 0 and **less than 1**: <br>
+
+```js
+console.log(Math.random());
+// > 0.8764213916052898
+
+console.log(Math.random());
+// > 0.691161663784646
+
+console.log(Math.random());
+// > 0.32959270961454
+```
+
+Formula for generating a random number, rounded to the lower full number is:
+
+```js
+Math.floor(Math.random() * (1 + high - low)) + low
+```
+
+If 0 is the lowest number, the definition of low is obsolete. <br>
+The highest number + 1 works as standalone to define the range. <br> 
+The **+ 1** in combination with **Math.floor** ensures we get the full capability of the range. <br>
+**Math.floor** rounds our value down and as **Math.random** gives us only a number close to the highest range … <br>
+A high of 40 without **+ 1** and **Math.floor** would be a random max of **39.996** and never show **40**. <br>
+So with **+ 1** and **Math-floor** the max (is close to 41) **40.996** with gets rounded down to **40**. <br>
+If a **low** is defined in the formula, the random number won't contain numbers below the defined range. <br> 
+
+```js
+var high = 100;
+var low  = 80;
+
+// full formula with HIGH and LOW defined
+var randomNumberWithLow = Math.floor(Math.random() * (1 + high - low)) + low;
+
+// only the number outcome from formula from range defining part of the formula 
+var rangeNumber = (1 + high - low) + low;
+
+// formula without defining low – only high +1 specified as range
+var randomNumberNoLow = Math.floor(Math.random() * rangeNumber);
+
+console.log("rangeNumber: " + rangeNumber);
+// > 101
+console.log("randomNumberWithLow: " + randomNumberWithLow);
+// > 92
+console.log("randomNumberNoLow: " + randomNumberNoLow);
+// > 2
+
+console.log("rangeNumber: " + rangeNumber);
+// > 101
+console.log("randomNumberWithLow: " + randomNumberWithLow);
+// > 100
+console.log("randomNumberNoLow: " + randomNumberNoLow);
+// > 58
+
+console.log("rangeNumber: " + rangeNumber);
+// > 101
+console.log("randomNumberWithLow: " + randomNumberWithLow);
+// > 91
+console.log("randomNumberNoLow: " + randomNumberNoLow);
+// > 34
+```
+
+Put the formula into a function to save you from typing it every time you need a random number. <br>
+
+```js
+function getRandomNumber(low, high) {
+  let r = Math.floor(Math.random() * (1 + high - low)) + low;
+  return r;
+}
+
+let zorb = getRandomNumber(3, 9);
+console.log(zorb);
+// > 9
+
+console.log(zorb);
+// > 3
+
+console.log(zorb);
+// > 4
+```
+
 ## Passing parameters over to functions
-Parameters are placeholder variables to hand over values to a function, when it is calles. <br>
+Parameters are placeholder variables to hand over values to a function, when it is called. <br>
 
 ```js
 function ourFunctionWithArgs(a, b) {
@@ -596,13 +692,15 @@ function ourFunctionWithArgs(a, b) {
 ourFunctionWithArgs(10, 5);
 // > 5
 
-
 function anOtherFunctionWithArgs(a, b) {
   console.log(a + b);                                               
 }
 anOtherFunctionWithArgs("Hello ", "World!");
 // > Hello World!
 ```
+
+## Global scope and functions
+weiter bei ––> 55:43
 
 ## Code demos
 ### Word blank game
