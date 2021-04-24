@@ -764,7 +764,23 @@ fun2();
 **NOTE:** If the function variable *oopsGlobal* would be declared without the **var** keyword, it would automatically be of **global scope**. <br> 
 
 ## Local scope and functions
-weiter bei ––> 59:31
+Veriables which are declared within a function as well as the function parameters have **local scope**. <br>
+That means they are only visible from whitin the function. <br>
+
+```js
+// variable declared within a function – lokal scope
+// the value is visible in the console when the function is called
+function myLocalScope() {
+  var myVar = 5;
+  console.log(myVar);
+}
+myLocalScope();
+// > 5
+
+// a try to display the content of the variable outside of the function will produce an error
+console.log(myVar);
+// > ReferenceError: myVar is not defined 
+```
 
 ## Code demos
 ### Word blank game
