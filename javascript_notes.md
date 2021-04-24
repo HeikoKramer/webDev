@@ -7,12 +7,12 @@ This document is used to document my JS learning progress. <br>
 [Kirupa JS learning tutorials](https://www.kirupa.com/) <br>
 
 The initial version of these notes will be a transcript of the **freeCodeCamp.org** video. <br>
-I'm following this video and video and writing things down. <br>
+I'm following this video and writing things down. <br>
 I'm using the **scrimba.com** console to play around and verify everything before I'm adding it to the notes. <br> 
 <br>
 When I'm done with the video, I'll continue with the **Eloquent JavaScript book**. <br>
 I won't specifically quote or link those two sources further from here. <br> 
-Whenever I find interesting content like [Kirupa's tutorial on how to pick a random item from an arry](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md#picking-a-random-item-from-an-array), I'll add it to the notes by naming the source. <br>
+Whenever I find additional interesting content like [Kirupa's tutorial on random items from an arry](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md#picking-a-random-item-from-an-array), I'll add it to the notes by naming the source. <br>
 
 ## How to install / run JavaScript
 JavaScript is supported by and included in all standard web-browsers (except text-only browsers like lynx) <br>
