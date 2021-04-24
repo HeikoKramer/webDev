@@ -709,7 +709,59 @@ anOtherFunctionWithArgs("Hello ", "World!");
 ```
 
 ## Global scope and functions
-weiter bei ––> 55:43
+Variables defined outside a function block have **global scope**. <br>
+**Global scope** means, they can be seen everywhere in our JavaScript code. <br>
+
+```js
+// global scope
+var myGlobal = 10;
+
+// non-global variable declared in function
+function fun1() {
+  var oopsGlobal = 5;
+}
+
+// as myGlobal is defined with global scope, it is visible within the function.
+// oopsGlobal has only been defined within fun1 and is not visible in fun2. 
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+fun1();
+
+fun2();
+// > myGlobal: 10 
+```
+
+Same code as above, but both variables declared with global scope now: <br>
+
+```js
+// global scope 
+var myGlobal = 10;
+var oopsGlobal = 5;
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+fun2();
+// > myGlobal: 10 oopsGlobal: 5
+```
+
+**NOTE:** If the function variable *oopsGlobal* would be declared without the **var** keyword, it would automatically be of **global scope**. <br> 
 
 ## Code demos
 ### Word blank game
