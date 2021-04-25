@@ -915,6 +915,9 @@ Boleans do not require quotation. <br>
 function welcomeToBooleans() {
   return false;
 }
+
+console.log(welcomeToBooleans());
+// > false
 ```
 
 
