@@ -828,10 +828,10 @@ var my2ndNoun   = ["ein Eis", "eine Paprika", "den großen Spielplatz", "den Con
 function wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun) {
 
   var result = "";
-  result += myNoun[Math.floor(Math.random() * myNoun.length)]       + " ";
-  result += myVerb[Math.floor(Math.random() * myVerb.length)]       + " ";
-  result += myAdverb[Math.floor(Math.random() * myAdverb.length)]   + " ";  
-  result += my2ndNoun[Math.floor(Math.random() * my2ndNoun.length)] + ".";    
+  result += myNoun[Math.floor(Math.random()    * myNoun.length)]     + " ";
+  result += myVerb[Math.floor(Math.random()    * myVerb.length)]     + " ";
+  result += myAdverb[Math.floor(Math.random()  * myAdverb.length)]   + " ";  
+  result += my2ndNoun[Math.floor(Math.random() * my2ndNoun.length)]  + ".";    
   return result;
 }
 
