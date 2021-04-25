@@ -782,6 +782,40 @@ console.log(myVar);
 // > ReferenceError: myVar is not defined 
 ```
 
+## Global vs. lokal scope in functions
+It is possible to have both, local and global variables with the same name. <br>
+When you do that, the local variable takes precedence over the global variable. <br>
+But only within its own scope. Outside of ity scope, the global variable rulez. <br>
+
+```js
+// global variable
+var outerWear = "T-Shirt";
+
+// same variable declared in a function
+function myOutfit() {
+  var outerWear = "Sweater";  
+  return outerWear;
+}
+
+// the local variable took precedence – in its scope!
+console.log(myOutfit());
+// > Sweater
+
+// If we show the variable outside of the function, it will be the global scope value.
+console.log(outerWear);
+// > T-Shirt
+
+// another function, referring the global variable without declaring it
+function yourOutfit() {
+  return outerWear;
+}
+
+console.log(yourOutfit());
+// > T-Shirt
+```
+
+weiter bei --> 1:02:39
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
