@@ -877,6 +877,35 @@ console.log(processed);
 // > 2
 ```
 
+## Stand in line
+**Queue:** Abstract data structure that keeps things in order. <br>
+New items can be added to the back of the queue, while old items are taken off from the front of it. <br>
+The following function will simulate the functionality of a queue. <br>
+
+```js
+function nextInLine(arr, item) {
+  
+  // push appends the item parameter to the array 
+  arr.push(item);
+
+  // shift takes the .[0] index from the array, taken and returned
+  return arr.shift();
+}
+
+var testArr = [1,2,3,4,5];
+
+console.log("Before: " + JSON.stringify(testArr));
+// > Before: [1,2,3,4,5]
+
+// call function, hand over test array and the number "6"
+console.log(nextInLine(testArr, 6));
+
+// 6 was appended to the end, while 1 was taken from the front of the array
+console.log("After: " + JSON.stringify(testArr));
+// > After:  [2,3,4,5,6]
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
