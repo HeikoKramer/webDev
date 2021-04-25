@@ -815,7 +815,7 @@ console.log(yourOutfit());
 ```
 
 ## Return a value from a function
-A function will **return** any value after the appropriate keyword. <br>
+A function will **return** any value after the appropriate statement. <br>
 
 ```js
 function minusSeven(num) {
@@ -826,6 +826,29 @@ function minusSeven(num) {
 console.log(minusSeven(10));
 // > 3
 ```
+
+## Undefined value returned from a function
+Functions can have return statements, but they don't have to. <br>
+A function **without return statement** will return **undefined**. <br>
+
+```js
+var sum = 0;
+
+// The function has no return statement
+function addThree() {
+  sum = sum + 3;
+  console.log("sum in function: " + sum);
+  // > sum in function: 3
+}
+
+console.log("function called global: " + addThree());
+// > function called global: undefined
+
+// The global variable has been updated, although the function didn't return anything
+console.log("global sum after function: " + sum); 
+// > global sum after function: 3
+```
+
 
 ## Code demos
 ### Word blank game
