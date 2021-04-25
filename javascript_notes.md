@@ -897,8 +897,9 @@ var testArr = [1,2,3,4,5];
 console.log("Before: " + JSON.stringify(testArr));
 // > Before: [1,2,3,4,5]
 
-// call function, hand over test array and the number "6"
+// call function, hand over test array and the number "6" – returns .[0] index
 console.log(nextInLine(testArr, 6));
+// > 1
 
 // 6 was appended to the end, while 1 was taken from the front of the array
 console.log("After: " + JSON.stringify(testArr));
