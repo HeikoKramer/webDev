@@ -906,6 +906,17 @@ console.log("After: " + JSON.stringify(testArr));
 // > After:  [2,3,4,5,6]
 ```
 
+## Boolean values
+The boolean data type knows only two values **true** and **false**. <br>
+Boolean are basically little **on** (true) / **off** (false) switches. <br>
+Boleans do not require quotation. <br>
+
+```js
+function welcomeToBooleans() {
+  return false;
+}
+```
+
 
 ## Code demos
 ### Word blank game
