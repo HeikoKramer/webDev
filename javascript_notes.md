@@ -849,6 +849,32 @@ console.log("global sum after function: " + sum);
 // > global sum after function: 3
 ```
 
+## Assignment with a returned value
+It's easy to assign a function result to a global scope variable. Two examples below: <br>
+
+```js
+var changed = 0;
+
+function change(num) {
+  return (num + 5) / 3;
+}
+
+// assignment of the returned function result
+changed = change(10);
+console.log(changed);
+// > 5
+
+
+var processed = 0;
+
+function processArg(num) {
+  return (num +3) / 5;
+}
+
+// assignment of the returned function result
+processed = processArg(7);
+// > 2
+```
 
 ## Code demos
 ### Word blank game
