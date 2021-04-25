@@ -836,5 +836,4 @@ function wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun) {
 }
 
 console.log(wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun));
-// > The big dog ran to the store quickly.
 ```
