@@ -821,13 +821,20 @@ weiter bei --> 1:02:39
 Demo game which builds sentences from input words. <br>
 
 ```sh
-function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+var myNoun      = ["Mama", "Papa", "Clara"];
+var myVerb      = ["zählt", "knuddelnt", "verspeißt", "kitzelt", "begrüßt", "bastelt", "knuspert", "schlürft", "verkauft", "gießt", "erntet", "sortiert"];
+var myAdverb    = ["schmollend", "hungrig", "durstig", "mit verbundenen Augen", "ohne Sinn und Verstand", "zufrieden", "wütend", "glücklich", "völlig durchgedreht"];
+var my2ndNoun   = ["ein Eis", "eine Paprika", "den großen Spielplatz", "den Concierge", "die Pizza", "einen Hund", "gelbe Socken", "den Pumuckl", "einen Apfel", "unser Geld", "die Blumen"];
+function wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun) {
 
   var result = "";
-  result += "The " + myAdjective + " " + myNoun + " " +  myVerb + " to the store " + myAdverb + ".";
+  result += myNoun[Math.floor(Math.random() * myNoun.length)]       + " ";
+  result += myVerb[Math.floor(Math.random() * myVerb.length)]       + " ";
+  result += myAdverb[Math.floor(Math.random() * myAdverb.length)]   + " ";  
+  result += my2ndNoun[Math.floor(Math.random() * my2ndNoun.length)] + ".";    
   return result;
 }
 
-console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun));
 // > The big dog ran to the store quickly.
 ```
