@@ -873,6 +873,7 @@ function processArg(num) {
 
 // assignment of the returned function result
 processed = processArg(7);
+console.log(processed);
 // > 2
 ```
 
