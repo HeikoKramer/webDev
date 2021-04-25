@@ -764,8 +764,8 @@ fun2();
 **NOTE:** If the function variable *oopsGlobal* would be declared without the **var** keyword, it would automatically be of **global scope**. <br> 
 
 ## Local scope and functions
-Veriables which are declared within a function as well as the function parameters have **local scope**. <br>
-That means they are only visible from whitin the function. <br>
+Variables which are declared within a function as well as the function parameters have **local scope**. <br>
+That means they are only visible from within the function. <br>
 
 ```js
 // variable declared within a function – lokal scope
@@ -782,10 +782,10 @@ console.log(myVar);
 // > ReferenceError: myVar is not defined 
 ```
 
-## Global vs. lokal scope in functions
+## Global vs. local scope in functions
 It is possible to have both, local and global variables with the same name. <br>
 When you do that, the local variable takes precedence over the global variable. <br>
-But only within its own scope. Outside of ity scope, the global variable rulez. <br>
+But only within its own scope. Outside of its scope, the global variable rules. <br>
 
 ```js
 // global variable
