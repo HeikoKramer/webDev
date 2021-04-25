@@ -814,7 +814,18 @@ console.log(yourOutfit());
 // > T-Shirt
 ```
 
-weiter bei --> 1:02:39
+## Return a value from a function
+A function will **return** any value after the appropriate keyword. <br>
+
+```js
+function minusSeven(num) {
+  return num -7;
+}
+
+// The executed console log of the function will "return" the result
+console.log(minusSeven(10));
+// > 3
+```
 
 ## Code demos
 ### Word blank game
