@@ -941,6 +941,27 @@ console.log(ourTrueOrFalse(false));
 // > No, it's false
 ```
 
+## Comparison with the equality operator
+There are many comparison operators in JavaScript that will return a boolean true or false. <br>
+The most common is the **equality operator**. It is often used in an **if statement**. <br>
+The JavaScript **equality operator** is double **==**. We can't just use single **=** as this is the **assignment operator**. <br>
+
+```js
+// if statement will execute when the function call parameter equals 12
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+console.log(testEqual(10));
+// > not equal
+
+console.log(testEqual(12));
+// > equal
+```
+
 
 ## Code demos
 ### Word blank game
