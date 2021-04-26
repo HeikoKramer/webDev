@@ -909,7 +909,7 @@ console.log("After: " + JSON.stringify(testArr));
 ## Boolean values
 The boolean data type knows only two values **true** and **false**. <br>
 Boolean are basically little **on** (true) / **off** (false) switches. <br>
-Boleans do not require quotation. <br>
+Booleans do not require quotation. <br>
 
 ```js
 function welcomeToBooleans() {
@@ -918,6 +918,27 @@ function welcomeToBooleans() {
 
 console.log(welcomeToBooleans());
 // > false
+```
+
+## Use conditional logic with if statements
+An **if statement** is used to make decisions in code. <br>
+The keyword **if** tells JavaScript to execute the code in the curly braces `if (condition) {code block}` – **if** the condition within the parenthesis **equals true**. <br>
+
+```js
+function ourTrueOrFalse(isItTrue) {
+  if (isItTrue) {
+    return "Yes, it's true";
+  }
+  return "No, it's false";
+}
+
+// call function with true
+console.log(ourTrueOrFalse(true));
+// > Yes, it's true
+
+// call function with false
+console.log(ourTrueOrFalse(false));
+// > No, it's false
 ```
 
 
