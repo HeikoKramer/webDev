@@ -962,6 +962,47 @@ console.log(testEqual(12));
 // > equal
 ```
 
+## Comparison with the strict equality operator
+The strict operator is the triple **===** sign. <br>
+The *double equal* sign attempts to convert compared values to a *common type*. <br>
+The **strict equal** doesn't do any type conversion. <br>
+
+```js
+// EQUAL
+// function with double equal sign
+function testEqual(val) {
+  if (val == 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// pass-in 12 as a string
+console.log(testEqual("12"));
+// > equal
+
+// pass-in 12 as a number
+console.log(testEqual(12));
+// > equal
+
+
+// STRICT
+// same function as above, but this time with triple equal sign
+function testStrict(val) {
+  if (val === 12) { 
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+// pass-in 12 as a string
+console.log(testStrict("12"));
+// > not equal
+
+// pass-in 12 as a number
+console.log(testStrict(12));
+// > equal
+```
 
 ## Code demos
 ### Word blank game
