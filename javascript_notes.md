@@ -1027,7 +1027,7 @@ console.log(testNotEqual(99));
 ```js
 // NOT EQUAL
 function testNotEqual(val) {
-  if (val !== 99) {
+  if (val != 99) {
     return "Not Equal";
   }
   return "Equal";
