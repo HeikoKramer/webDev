@@ -1084,6 +1084,31 @@ console.log(testGreaterThan(110));
 // > Over 100
 ```
 
+## Comparisons with the "greater than or equal" and operator
+
+```js
+function testGreaterThanOrEqual(val) 
+  if (val >= 20) {
+    return "20 or Over";
+  }
+
+  if (val >= 10) {
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+console.log(testGreaterThan(8));
+// > Less than 10
+
+console.log(testGreaterThan(10));
+// > 10 or Over
+
+console.log(testGreaterThan(20));
+// > 20 or Over
+```
+
 
 ## Code demos
 ### Word blank game
