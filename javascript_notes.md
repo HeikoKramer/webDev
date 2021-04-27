@@ -1109,7 +1109,7 @@ console.log(testGreaterThanOrEqual(20));
 // > 20 or Over
 ```
 
-## Comparison with the less than operator
+## Comparison with the "less than" operator
 
 ```js
 function testLessThan(val) {
@@ -1132,7 +1132,31 @@ console.log(testLessThan(50));
 
 console.log(testLessThan(23));
 // > Under 25
+```
 
+## Comparison with the "less than or equal" operator
+
+```js
+function testLessThanOrEqual(val) {
+  if (val < 12) {
+    return "Smaller Than or Equal to 12";
+  }
+
+  if (val < 24) {
+    return "Smaller Than or Equal to 24";
+  }
+
+  return "More Than 24";
+}
+
+console.log(testLessThanOrEqual(80));
+// > More Than 24
+
+console.log(testLessThanOrEqual(24));
+// > Smaller Than or Equal to 24
+
+console.log(testLessThanOrEqual(9));
+// > Smaller Than or Equal to 12
 ```
 
 ## Code demos
