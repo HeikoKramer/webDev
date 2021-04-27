@@ -1008,7 +1008,7 @@ console.log(testStrict(12));
 The **inequality operator !=** is basically the opposite of the equality operator. <br>
 
 ```js
-funxtion testNotEqual(val) {
+function testNotEqual(val) {
   if (val != 99) {
     return "Not Equal";
   }
