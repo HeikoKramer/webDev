@@ -1087,7 +1087,7 @@ console.log(testGreaterThan(110));
 ## Comparisons with the "greater than or equal" and operator
 
 ```js
-function testGreaterThanOrEqual(val) 
+function testGreaterThanOrEqual(val) {
   if (val >= 20) {
     return "20 or Over";
   }
@@ -1099,13 +1099,13 @@ function testGreaterThanOrEqual(val)
   return "Less than 10";
 }
 
-console.log(testGreaterThan(8));
+console.log(testGreaterThanOrEqual(8));
 // > Less than 10
 
-console.log(testGreaterThan(10));
+console.log(testGreaterThanOrEqual(10));
 // > 10 or Over
 
-console.log(testGreaterThan(20));
+console.log(testGreaterThanOrEqual(20));
 // > 20 or Over
 ```
 
