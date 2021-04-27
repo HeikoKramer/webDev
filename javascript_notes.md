@@ -1004,6 +1004,26 @@ console.log(testStrict(12));
 // > Equal
 ```
 
+## Comparison with the inequality operator
+The **inequality operator !=** is basically the opposite of the equality operator. <br>
+
+```js
+funxtion testNotEqual(val) {
+  if (val != 99) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+console.log(testNotEqual(10));
+// > Not Equal
+
+console.log(testNotEqual(99));
+// > Equal
+```
+
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
