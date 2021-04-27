@@ -1071,7 +1071,7 @@ function testGreaterThan(val) {
     return "Over 10";
   }
 
-  return "10 or Under":
+  return "10 or Under";
 }
 
 console.log(testGreaterThan(10));
