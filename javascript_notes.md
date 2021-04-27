@@ -1138,11 +1138,11 @@ console.log(testLessThan(23));
 
 ```js
 function testLessThanOrEqual(val) {
-  if (val < 12) {
+  if (val <= 12) {
     return "Smaller Than or Equal to 12";
   }
 
-  if (val < 24) {
+  if (val <= 24) {
     return "Smaller Than or Equal to 24";
   }
 
