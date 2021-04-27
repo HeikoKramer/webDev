@@ -1059,6 +1059,30 @@ console.log(testStrictNotEqual(99));
 // > Equal
 ```
 
+## Comparisons with the "greater than" and operator
+
+```js
+function testGreaterThan(val) {
+  if (val > 100) {
+    return "Over 100";
+  }
+
+  if (val > 10) {
+    return "Over 10";
+  }
+
+  return "10 or Under":
+}
+
+console.log(testGreaterThan(10));
+// > 10 or under
+
+console.log(testGreaterThan(11));
+// > Over 10
+
+console.log(testGreaterThan(110));
+// > Over 100
+```
 
 
 ## Code demos
