@@ -1022,6 +1022,43 @@ console.log(testNotEqual(99));
 // > Equal
 ```
 
+## Comparison with the strickt inequality operator
+
+```js
+// NOT EQUAL
+function testNotEqual(val) {
+  if (val !== 99) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// pass-in 99 as a string
+console.log(testNotEqual("99"));
+// > Equal
+
+// pass-in 99 as a number
+console.log(testNotEqual(99));
+// > Equal
+
+
+// STRICT NOT EQUAL
+function testStrictNotEqual(val) {
+  if (val !== 99) {
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// pass-in 99 as a string
+console.log(testStrictNotEqual("99"));
+// > Not Equal
+
+// pass-in 99 as a number
+console.log(testStrictNotEqual(99));
+// > Equal
+```
+
 
 
 ## Code demos
