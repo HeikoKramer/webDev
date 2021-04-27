@@ -979,11 +979,11 @@ function testEqual(val) {
 
 // pass-in 12 as a string
 console.log(testEqual("12"));
-// > equal
+// > Equal
 
 // pass-in 12 as a number
 console.log(testEqual(12));
-// > equal
+// > Equal
 
 
 // STRICT
@@ -997,11 +997,11 @@ function testStrict(val) {
 
 // pass-in 12 as a string
 console.log(testStrict("12"));
-// > not equal
+// > not Equal
 
 // pass-in 12 as a number
 console.log(testStrict(12));
-// > equal
+// > Equal
 ```
 
 ## Code demos
