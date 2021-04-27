@@ -1109,6 +1109,31 @@ console.log(testGreaterThanOrEqual(20));
 // > 20 or Over
 ```
 
+## Comparison with the less than operator
+
+```js
+function testLessThan(val) {
+  if (val < 25) {
+    return "Under 25";
+  }
+
+  if (val < 55) {
+    return "Under 55";
+  }
+
+  return "55 or Over";
+}
+
+console.log(testLessThan(80));
+// > 55 or Over
+
+console.log(testLessThan(50));
+// > Under 55
+
+console.log(testLessThan(23));
+// > Under 25
+
+```
 
 ## Code demos
 ### Word blank game
