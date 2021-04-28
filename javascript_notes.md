@@ -1202,6 +1202,50 @@ console.log(testLogicalAnd(51));
 // No
 ```
 
+## Comparisons with the logical "or" operator
+The or operator equals a logic comparable to two if statements. <br>
+
+```js
+// TWO IF STATEMENTS
+function testDoubleIf(val) {
+  if (val < 10) {
+    return "Outside";
+  }
+
+  if (val > 20) {
+    return "Outside";
+  }
+  return "Inside";
+}
+console.log(testDoubleIf(9));
+// Outside
+
+console.log(testDoubleIf(22));
+// Outside
+
+console.log(testDoubleIf(13));
+// Inside
+
+
+// OR OPERATOR
+function testLogicalOr(val) {
+  if (val < 10 || (val > 20) {
+    return "Outside";
+  }
+
+  return "Inside";
+}
+console.log(testLogicalOr(9));
+// Outside
+
+console.log(testLogicalOr(22));
+// Outside
+
+console.log(testLogicalOr(13));
+// Inside
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
