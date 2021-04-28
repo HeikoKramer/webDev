@@ -1229,7 +1229,7 @@ console.log(testDoubleIf(13));
 
 // OR OPERATOR
 function testLogicalOr(val) {
-  if (val < 10 || (val > 20) {
+  if (val < 10 || val > 20) {
     return "Outside";
   }
 
