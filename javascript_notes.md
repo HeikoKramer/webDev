@@ -1159,6 +1159,49 @@ console.log(testLessThanOrEqual(9));
 // > Smaller Than or Equal to 12
 ```
 
+## Comparison with the logical "and" operator
+Sometimes you want to check if two or more things are true at the same time. <br>
+There are two ways to do that: <br>
+* a nested if statement
+* the **&&** operator
+
+```js
+// NESTED IF
+function testNestedIf(val) {
+
+  if (val <= 50) {
+    if (val >= 25) {
+      return "Yes";
+    }
+  }
+  return "No";
+}
+
+console.log(testNestedIf(10));
+// No
+console.log(testNestedIf(30));
+// Yes
+console.log(testNestedIf(51));
+// No
+
+
+// AND OPERATOR
+function testLogicalAnd(val) {
+
+  if (val <= 50 && val >= 25) {
+      return "Yes";
+  }
+  return "No";
+}
+
+console.log(testLogicalAnd(10));
+// No
+console.log(testLogicalAnd(30));
+// Yes
+console.log(testLogicalAnd(51));
+// No
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
