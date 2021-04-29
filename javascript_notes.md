@@ -1318,8 +1318,8 @@ function testElseIf(val) {
     return "Smaller than 5";
   } else {
     return "Between 5 and 10";
+  }
 }
-
 console.log(testElseIf(13));
 // Greater than 10
 
