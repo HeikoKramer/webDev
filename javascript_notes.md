@@ -1320,13 +1320,13 @@ function testElseIf(val) {
     return "Between 5 and 10";
 }
 
-console.log(testDoubleIf(13));
+console.log(testElseIf(13));
 // Greater than 10
 
-console.log(testDoubleIf(4));
+console.log(testElseIf(4));
 // Smaller than 5
 
-console.log(testDoubleIf(6));
+console.log(testElseIf(6));
 // Between 5 and 10
 ```
 
