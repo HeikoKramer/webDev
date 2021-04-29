@@ -1285,6 +1285,50 @@ console.log(testElse(5));
 // 5 or Smaller
 ```
 
+## Else if statement
+If you have multiple conditions that need to be addressed, you can use else if statements. <br>
+
+```js
+// TW0 IF + ALTERNATIVE
+function testDoubleIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  }
+  if (val < 5) {
+    return "Smaller than 5";
+  }
+  return "Between 5 and 10";
+}
+
+console.log(testDoubleIf(13));
+// Greater than 10
+
+console.log(testDoubleIf(4));
+// Smaller than 5
+
+console.log(testDoubleIf(6));
+// Between 5 and 10
+
+
+// ELSE IF STATEMENT
+function testElseIf(val) {
+  if (val > 10) {
+   return "Greater than 10";
+  } else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 10";
+}
+
+console.log(testDoubleIf(13));
+// Greater than 10
+
+console.log(testDoubleIf(4));
+// Smaller than 5
+
+console.log(testDoubleIf(6));
+// Between 5 and 10
+```
 
 ## Code demos
 ### Word blank game
