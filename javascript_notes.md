@@ -1254,11 +1254,11 @@ With an else statement, an alternate block of code can be executed when it's not
 function testElse(val) {
   var result = "";
 
-  if (val < 5) {
+  if (val > 5) {
   return "Bigger than 5";
   }
 
-  if (val >= 5) {
+  if (val <= 5) {
     return "5 or Smaller";
   }
 }
