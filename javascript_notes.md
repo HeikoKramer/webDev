@@ -1251,14 +1251,30 @@ And if it's not true, nothing happens. <br>
 With an else statement, an alternate block of code can be executed when it's not true. <br>
 
 ```js
-function testElse(val) {
-  var result = "";
+// TW0 IF
+function testDoubleIf(val) {
 
   if (val > 5) {
-  return "Bigger than 5";
+    return "Bigger than 5";
   }
 
   if (val <= 5) {
+    return "5 or Smaller";
+  }
+}
+console.log(testDoubleIf(9));
+// Bigger than 5
+
+console.log(testDoubleIf(5));
+// 5 or Smaller
+
+
+// ELSE STATEMENT
+function testElse(val) {
+
+  if (val > 5) {
+   return "Bigger than 5";
+  } else {
     return "5 or Smaller";
   }
 }
