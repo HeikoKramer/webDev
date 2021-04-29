@@ -1245,6 +1245,30 @@ console.log(testLogicalOr(13));
 // Inside
 ```
 
+## Else Statement
+When an if statement is true, the block of code right after it will be evaluated. <br>
+And if it's not true, nothing happens. <br>
+With an else statement, an alternate block of code can be executed when it's not true. <br>
+
+```js
+function testElse(val) {
+  var result = "";
+
+  if (val < 5) {
+  return "Bigger than 5";
+  }
+
+  if (val >= 5) {
+    return "5 or Smaller";
+  }
+}
+console.log(testElse(9));
+// Bigger than 5
+
+console.log(testElse(5));
+// 5 or Smaller
+```
+
 
 ## Code demos
 ### Word blank game
