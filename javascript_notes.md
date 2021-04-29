@@ -1330,6 +1330,46 @@ console.log(testElseIf(6));
 // Between 5 and 10
 ```
 
+## Logical order in if else statements
+When you're using else-if statements, the order is very important. <br>
+
+```js
+function incorrectOrder(val) {
+  if (val < 10) {
+    return "Less than 10";
+  } else if (val < 5) {
+    return "Less than 5";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+console.log(incorrectOrder(7));
+// > Less than 10
+// incorrect order, < 10 gets evaluated true before < 5
+console.log(incorrectOrder(3));
+// > Less than 10
+console.log(incorrectOrder(11));
+// > Greater than or equal to 10
+
+
+function correctOrder(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+console.log(correctOrder(7));
+// > Less than 10
+console.log(correctOrder(3));
+// > Less than 5
+console.log(correctOrder(11));
+// > Greater than or equal to 10
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
