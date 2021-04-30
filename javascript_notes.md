@@ -1485,6 +1485,41 @@ console.log(caseInSwitch(4));
 // > delta
 ```
 
+## Default option in switch statements
+The default option is kind of like **else** in an **if else** statement. <br>
+In the example below **a**, **b** and **c** are defined with an individual answer. <br>
+If you call the function with an other option than a,b,c it would return an empty string. <br>
+But with the **default** defined, it will return **stuff** for any option given except those defined values. <br>
+
+```js
+function switchOfStuff(val) {
+  var answer = "";
+  switch(val) {
+    case "a":
+      answer ="apple";
+      break;
+    case "b":
+      answer ="bird";
+      break;
+    case "c":
+      answer ="cat";
+      break;
+    default:
+      answer = "stuff";
+      break;
+  }
+  return answer;
+}
+console.log(switchOfStuff("a"));
+// > apple
+console.log(switchOfStuff("b"));
+// > bird
+console.log(switchOfStuff("c"));
+// > cat
+console.log(switchOfStuff("222"));
+// > stuff
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
