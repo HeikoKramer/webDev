@@ -1444,6 +1444,47 @@ console.log(golfScore(5, 8));
 // > Go Home!
 ```
 
+## Switch Statements
+Instead of using chained else if statements, you can use a switch statement. <br>
+A switch statement tests a value and can have many case statements which define various possible values. <br>
+
+```js
+/*
+Write a switch statement which tests val and sets answer for the following conditions:
+1 – "alpha"
+2 – "beta"
+3 – "gamma"
+4 – "delta"
+*/
+
+function caseInSwitch(val) {
+  var answer = "";
+  switch(val) {
+    case 1:
+      answer ="alpha";
+      break;
+    case 2:
+      answer ="beta";
+      break;
+    case 3:
+      answer ="gamma";
+      break;
+    case 4:
+      answer ="delta";
+      break;
+  }
+  return answer;
+}
+console.log(caseInSwitch(1));
+// > alpha
+console.log(caseInSwitch(2));
+// > beta
+console.log(caseInSwitch(3));
+// > gamma
+console.log(caseInSwitch(4));
+// > delta
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
