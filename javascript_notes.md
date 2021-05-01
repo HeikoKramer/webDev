@@ -1847,6 +1847,7 @@ var ourDog = {
   "bark": "bow-wow"
 };
 
+// delete property with dot notation
 delete ourDog.bark;
 console.log(ourDog.bark);
 // > undefined
@@ -1860,6 +1861,7 @@ var myDog = {
   "bark": "woof"
 };
 
+// delete property with bracket notation
 delete myDog["tails"];
 console.log(myDog["tails"]);
 // > undefined
