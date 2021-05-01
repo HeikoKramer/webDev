@@ -1582,10 +1582,10 @@ console.log(ifElseDemo(7));
 // > Ate Nine
 
 
-function chainToSwitch(val:
+function chainToSwitch(val) {
   var answer = "";
   
-  switch(val:
+  switch(val) {
     case "bob":
     answer = "Marley";
     break;
