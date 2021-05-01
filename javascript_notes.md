@@ -1702,7 +1702,7 @@ var ourDog = {
   "name": "Camper", // the object "properties" are the values before the colons
   "legs": 4,
   "tails": 1,
-  "friends": ["everythin!"]
+  "friends": ["Donald", "Daisy", "Dagobert"]
 };
 
 console.log(ourDog.name);
