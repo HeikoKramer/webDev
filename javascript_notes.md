@@ -1693,6 +1693,35 @@ cc(2); cc('K'); cc(10); cc('K'); cc('A');
 console.log(cc(4));
 ```
 
+## Build JavaScript Objects
+Objects are similar to arrays, except that instead of using indexex to access data, you use properties. <br>
+
+```js
+// object are defined with curly braces at the beginning and the end
+var ourDog = {
+  "name": "Camper", // the object "properties" are the values before the colons
+  "legs": 4,
+  "tails": 1,
+  "friends": ["everythin!"]
+};
+
+console.log(ourDog.name);
+// > Camper
+console.log(ourDog.friends[1]);
+// > Daisy
+
+
+var myDog = {
+  "name": "Quincy",
+  "legs": 3, // my dog had an accident
+  "tails": 2, // very special dog
+  "friends": []
+};
+
+console.log(myDog.name);
+// > Quincy
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
