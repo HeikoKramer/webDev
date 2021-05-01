@@ -1742,6 +1742,26 @@ console.log(testObj.shirt);
 // > jersey
 ```
 
+## Accessing object properties with bracket notation
+Besides using dot notation, you can also use **bracket notation** to access a property in an object. <br>
+You can use bracket notation anytime, but it is required if the name has a space in it. <br>
+
+```js
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+var entreeValue = testObj["an entree"]; // double quotes will work
+console.log(entreeValue);
+// > hamburger
+
+var drinkValue = testObj['the drink']; // single quotes will also work
+console.log(drinkValue);
+// > water
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
