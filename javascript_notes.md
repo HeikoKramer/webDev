@@ -1656,6 +1656,42 @@ console.log(abTest(-1,2));
 // > undefined
 ```
 
+## Counting cards
+When you see a low card, the count goes up. When you see a high card, the card goes down. 
+If it's a middle value card, the count stays the same. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low. <br>
+We're going to use a switch statement to figure out what card has been passed in and what to do about it. <br>
+
+```js
+var count = 0;
+
+function cc(card) {
+  switch(card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  var holdbet = 'Hold';
+  if (count > 0) {
+    holdbet = 'Bet';
+  }
+  return count + " " + holdbet; 
+}
+
+
+cc(2); cc('K'); cc(10); cc('K'); cc('A');
+console.log(cc(4));
+```
 
 ## Code demos
 ### Word blank game
