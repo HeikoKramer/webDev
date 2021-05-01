@@ -1799,6 +1799,43 @@ console.log(ourDog["name"]); // retrieve name using bracket notation
 // > Happy Camper
 ```
 
+## Add new properties to an object
+You can add new properties to an object using dot notation or bracket notation. <br>
+
+```js
+var ourDog = {
+  "name": "Camper", // the object "properties" are the values before the colons
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Donald", "Daisy", "Dagobert"]
+};
+
+// new property "bark" added with dot notation
+ourDog.bark = "bow-wow";
+
+console.log(ourDog.name);
+// > Camper
+console.log(ourDog.bark);
+// > bow-wow
+
+
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4, 
+  "tails": 1,
+  "friends": ["freeCodeCamp.org", "YouTube"]
+};
+
+// new property "bark" added with bracket notation
+myDog['bark'] = "woof";
+
+console.log(myDog["name"]);
+// > Happy Coder
+console.log(myDog["bark"]);
+// > woof
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
