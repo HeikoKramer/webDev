@@ -1762,6 +1762,22 @@ console.log(drinkValue);
 // > water
 ```
 
+## Accessing object properties with variables
+**Bracket notation** can also be used to look up object properties using variables. <br>
+
+```js
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+var playerNumber = 16;
+var player = testObj[playerNumber]; // variable name used instead of number 
+console.log(player);
+// > Montana
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
