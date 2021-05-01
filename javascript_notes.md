@@ -1722,6 +1722,26 @@ console.log(myDog.name);
 // > Quincy
 ```
 
+## Accessing object properties with dot notation
+There are two main ways to access a property on an object. <br>
+**Dot notation** is one of them. <br>
+
+```js
+var testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+var hatValue   = testObj.hat;
+console.log(testObj.hat);
+// > ballcap
+
+var shirtValue = testObj.shirt;
+console.log(testObj.shirt);
+// > jersey
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
