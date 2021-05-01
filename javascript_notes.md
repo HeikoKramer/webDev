@@ -1642,6 +1642,21 @@ console.log(isLess(15, 10));
 // > false
 ```
 
+## Returning early pattern from functions
+
+```js
+function abTest(a, b) {
+  if (a < 0 || b < 0) {
+    return undefined;
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(-1,2));
+// > undefined
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
