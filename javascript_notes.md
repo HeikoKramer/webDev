@@ -1612,6 +1612,35 @@ console.log(chainToSwitch(7));
 // > Ate Nine
 ```
 
+## Returning boolean values from functions
+Here's a little trick to let a function return **true** or **false**. <br>
+All comparison operators return a boolean **true** or **false** value. <br>
+So you can save the if logic and directly return their outcome. <br>
+
+```js
+function isLessWithIf(a, b) {
+  if (a < b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isLessWithIf(10, 15));
+// > true
+console.log(isLessWithIf(15, 10));
+// > false
+
+
+function isLess(a, b) {
+  return (a < b); 
+}
+
+console.log(isLess(10, 15));
+// > true
+console.log(isLess(15, 10));
+// > false
+```
 
 ## Code demos
 ### Word blank game
