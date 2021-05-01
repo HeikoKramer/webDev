@@ -1520,6 +1520,40 @@ console.log(switchOfStuff("222"));
 // > stuff
 ```
 
+## Multiple identical options in switch statements
+Somethimes you want a switch statement where multiple inputs give the same output. <br>
+
+```js
+function sequentialSize(val) {}
+  var answer = "";
+  switch(val) {
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  return answer;
+}
+
+console.log(sequentialSize(2));
+// > Low
+console.log(sequentialSize(5));
+// > Mid 
+console.log(sequentialSize(8));
+// > High
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
