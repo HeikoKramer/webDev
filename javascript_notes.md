@@ -1790,11 +1790,12 @@ var ourDog = {
   "friends": ["Donald", "Daisy", "Dagobert"]
 };
 
+// Update the dog's name by using dot notation
 ourDog.name = "Happy Camper";
 
-console.log(ourDog.name);
+console.log(ourDog.name); // retrieve name with dot notation
 // > Happy Camper
-console.log(ourDog["name"]);
+console.log(ourDog["name"]); // retrieve name using bracket notation
 // > Happy Camper
 ```
 
