@@ -1524,7 +1524,7 @@ console.log(switchOfStuff("222"));
 Somethimes you want a switch statement where multiple inputs give the same output. <br>
 
 ```js
-function sequentialSize(val) {}
+function sequentialSize(val) {
   var answer = "";
   switch(val) {
     case 1:
@@ -1542,6 +1542,7 @@ function sequentialSize(val) {}
     case 9:
       answer = "High";
       break;
+  }
   return answer;
 }
 
