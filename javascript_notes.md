@@ -1835,6 +1835,35 @@ console.log(myDog["bark"]);
 // > woof
 ```
 
+## Delete properties from an object
+It's simple to delete a property from an object. <br>
+
+```js
+var ourDog = {
+  "name": "Camper", // the object "properties" are the values before the colons
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Donald", "Daisy", "Dagobert"],
+  "bark": "bow-wow"
+};
+
+delete ourDog.bark;
+console.log(ourDog.bark);
+// > undefined
+
+
+var myDog = {
+  "name": "Happy Coder",
+  "legs": 4, 
+  "tails": 1,
+  "friends": ["freeCodeCamp.org", "YouTube"],
+  "bark": "woof"
+};
+
+delete myDog["tails"];
+console.log(myDog["tails"]);
+// > undefined
+```
 
 ## Code demos
 ### Word blank game
