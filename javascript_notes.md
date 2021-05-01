@@ -1778,6 +1778,26 @@ console.log(player);
 // > Montana
 ```
 
+## Updating object properties
+We can use **dot notation** to update object properties. <br>
+
+```js
+// object are defined with curly braces at the beginning and the end
+var ourDog = {
+  "name": "Camper", // the object "properties" are the values before the colons
+  "legs": 4,
+  "tails": 1,
+  "friends": ["Donald", "Daisy", "Dagobert"]
+};
+
+ourDog.name = "Happy Camper";
+
+console.log(ourDog.name);
+// > Happy Camper
+console.log(ourDog["name"]);
+// > Happy Camper
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
