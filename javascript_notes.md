@@ -1898,7 +1898,7 @@ function phoneticLookupSwitch(val) {
   }
   return result;
 }
-console.log(phoneticLookupSwitch("delta");
+console.log(phoneticLookupSwitch("delta"));
 // > Denver
 
 
@@ -1917,7 +1917,7 @@ function phoneticLookupObject(val) {
   result = lookup[val];
   return result;
 }
-console.log(phoneticLookupObject("delta");
+console.log(phoneticLookupObject("delta"));
 // > Denver
 ```
 
