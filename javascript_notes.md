@@ -2008,6 +2008,34 @@ console.log(gloveBoxContents);
 // > maps
 ```
 
+## Accessing nested arrays
+Array bracket notation can be changed to access nested arrays. <br>
+
+```js
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulpin",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine";
+      "birch"
+    ]
+  }
+];
+
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+// > pine
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
