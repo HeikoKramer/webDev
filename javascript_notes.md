@@ -1951,6 +1951,8 @@ console.log(checkObj("ice-cream"));
 ## Manipulating complex objects
 A JavaScript object is a way to store flexible data. <br>
 You can store strings, numbers, arrays – and even other objects . <br>
+In the example below we store two **objects** in an **array**, each object holds data and a property, which is the **key value format**. <br>
+This is very similar to **JSON**. <br>
 
 ```js
 // array of objects
