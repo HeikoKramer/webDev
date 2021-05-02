@@ -1985,6 +1985,29 @@ console.log(myMusic[1].title);
 // > Cereal Man
 ```
 
+## Accessing nested objects
+Here we have an object withoter objects nested inside that. <br>
+In order to access sub-properties of an object, you can chain together the dot or bracket notations. <br>
+
+```js
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box:": "maps",
+      "passenger seat": "crumbs"
+    },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+console.log(gloveBoxContents);
+// > maps
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
