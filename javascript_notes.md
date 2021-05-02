@@ -1906,7 +1906,7 @@ console.log(phoneticLookupSwitch("delta"));
 function phoneticLookupObject(val) {
   var result ="";
 
-  var lookup {
+  var lookup = {
     "alpha": "Adams",
     "bravo": "Boston",
     "charlie": "Chicago",
