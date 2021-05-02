@@ -2166,6 +2166,29 @@ console.log(myArray);
 // > [1, 3, 5, 7, 9]
 ```
 
+## Count backwards with a for loop
+A for loop can also be used to count backwards. <br>
+
+```js
+var ourArray = [];
+
+for (var i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}
+
+console.log(ourArray);
+// > [10, 8, 6, 4, 2]
+
+var myArray = [];
+
+for (var i = 9; i < 0; i -= 2) {
+  myArray.push(i);
+}
+
+console.log(myArray);
+// > [9, 7, 5, 3, 1]
+```
+
 
 ## Code demos
 ### Word blank game
