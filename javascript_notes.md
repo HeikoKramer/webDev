@@ -1993,7 +1993,7 @@ In order to access sub-properties of an object, you can chain together the dot o
 var myStorage = {
   "car": {
     "inside": {
-      "glove box:": "maps",
+      "glove box": "maps",
       "passenger seat": "crumbs"
     },
     "outside": {
