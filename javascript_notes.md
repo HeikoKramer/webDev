@@ -1948,6 +1948,40 @@ console.log(checkObj("ice-cream"));
 // > Not Found
 ```
 
+## Manipulating complex objects
+A JavaScript object is a way to store flexible data. <br>
+You can store strings, numbers, arrays – and even other objects . <br>
+
+```js
+// array of objects
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+
+  {
+    "artist": "Beau Carnes",
+    "title": "Cereal Man",
+    "release_year": 2003,
+    "formats": [
+      "YouTube video"
+    ]
+  }
+];
+
+console.log(myMusic[0].title);
+// > Piano Man
+console.log(myMusic[1].title);
+// > Cereal Man
+```
 
 ## Code demos
 ### Word blank game
