@@ -2117,6 +2117,7 @@ while(i < 5) {
 }
 
 console.log(myArray);
+// > [0, 1, 2, 3, 4]
 ```
 
 ## Code demos
