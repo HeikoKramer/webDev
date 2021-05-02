@@ -2103,6 +2103,22 @@ console.log(updateRecords(2648, "tracks", ""));
 // > {album: "1999", artist: "Prince"}
 ```
 
+## Iterate with while loops
+Loops allow you to run code multiple times. <br>
+A **while loop** runs while a condition is true and stops once it's no longer true. <br>
+
+```js
+var myArray = [];
+
+var i = 0;
+while(i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+console.log(myArray);
+```
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
