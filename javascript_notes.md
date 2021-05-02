@@ -2189,6 +2189,32 @@ console.log(myArray);
 // > [9, 7, 5, 3, 1]
 ```
 
+## Iterate through an array with a for loop
+It is common in JavaScript to iterate through the contents of an array. <br>
+
+```js
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+
+// we are using the size of the array to determin the quantity of iterations
+for (var i = 0; i < ourArr.length; i++) {
+  ourTotal += ourArr[i];
+}
+
+console.log(ourTotal);
+// > 42
+
+var myArr = [2, 3, 4, 5, 6];
+var total = 0;
+
+for (var i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+
+console.log(total);
+// > 20
+```
+
 
 ## Code demos
 ### Word blank game
