@@ -2135,7 +2135,7 @@ console.log(ourArray);
 // > [0, 1, 2, 3, 4]
 
 var myArray = [];
-for (var i = 1; 1 < 6; i++) {
+for (var i = 1; i < 6; i++) {
   myArray.push(i);
 }
 console.log(ourArray);
