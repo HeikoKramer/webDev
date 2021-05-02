@@ -1867,6 +1867,61 @@ console.log(myDog["tails"]);
 // > undefined
 ```
 
+## Using objects for lookups
+Objects can be thought of as a key value storage like a dictionary. <br>
+You can use a oject too lookup values. <br>
+
+```js
+// function with a switch statement
+function phoneticLookupSwitch(val) {
+  var result ="";
+
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+      break;
+  }
+  return result;
+}
+console.log(phoneticLookupSwitch("delta");
+// > Denver
+
+
+// function with object
+function phoneticLookupObject(val) {
+  var result ="";
+
+  var lookup {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank",  
+  };
+  result = lookup[val];
+  return result;
+}
+console.log(phoneticLookupObject("delta");
+// > Denver
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
