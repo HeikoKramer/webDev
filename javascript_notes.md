@@ -1921,6 +1921,28 @@ console.log(phoneticLookupObject("delta"));
 // > Denver
 ```
 
+## Testing objects for properties
+You can check if an Object has a property with the **hasOwnProperty** method. <br>
+
+```js
+var myObj = }
+  gift: "pony",
+  pet: "kitten",
+  bed: "sleight",
+};
+
+function checkObj(checkProb) {
+  
+  if (myObj.hasOwnProperty(checkProp)) {
+    return myObj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
+
+console.log(checkObj("gift"));
+```
+
 
 ## Code demos
 ### Word blank game
