@@ -2120,6 +2120,29 @@ console.log(myArray);
 // > [0, 1, 2, 3, 4]
 ```
 
+## Iterate with for loops
+A for loop is the most common type of loop in JavaScript. <br>
+
+```js
+var ourArray = [];
+
+// this for loop does the same as our while loop in the example above
+// it declares the i variable, specifies condition and the incrementation within the conditions
+for (var i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+console.log(ourArray);
+// > [0, 1, 2, 3, 4]
+
+var myArray = [];
+for (var i = 1; 1 < 6; i++) {
+  myArray.push(i);
+}
+console.log(ourArray);
+//> [0, 1, 2, 3, 4]
+```
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
