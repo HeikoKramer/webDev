@@ -2025,7 +2025,7 @@ var myPlants = [
     type: "trees",
     list: [
       "fir",
-      "pine";
+      "pine",
       "birch"
     ]
   }
