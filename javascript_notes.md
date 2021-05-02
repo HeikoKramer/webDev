@@ -1921,9 +1921,9 @@ console.log(phoneticLookupObject("delta"));
 // > Denver
 ```
 
-## Testing objects for properties *review*
+## Testing objects for properties
 You can check if an Object has a property with the **hasOwnProperty** method. <br>
-The function below uses our declared **checkProp parameter** as a search-term for the **hasOwnProperty method** on the **myObj onject**. <br>
+The function below uses our declared **checkProp parameter** as a search-term for the **hasOwnProperty method** on the **myObj object**. <br>
 **If** it finds a defined **property** matching that value, it **returns that property's value**. <br>
 
 ```js
