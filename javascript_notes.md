@@ -2235,6 +2235,42 @@ console.log(product);
 // > 5040
 ```
 
+## Iterate with do … while loops
+A while loop checks the condition before it runs the code in the loop. <br>
+A **do while** loop will always run at least one time and then it will check the condition. <br>
+
+```js
+var myArray = [];
+var i = 10;
+
+// while loop
+while (i < 5) {
+  myArray.push(i);
+  i++;
+}
+
+console.log(i, myArray);
+// 10, []
+
+
+var ourArray = [];
+var j = 10;
+
+
+// do while loop
+// this loop will push the value to the array although the condition equals false
+// because the condition is eveluated at the end of the loop it will execute at least once
+do { 
+  ourArray.push(j);
+  j++;
+} while (j < 5)
+
+console.log(j, ourArray);
+// 11, [10]
+```
+
+
+
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
