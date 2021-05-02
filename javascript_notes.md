@@ -2082,11 +2082,25 @@ function updateRecords(id, prop, value) {
   } else {
     collection[id][prop] = value;
   }
-  return collection;
+  return collection[id];
 }
 
+console.log(collectionCopy[5439]);
+// > {album: "ABBA Gold"}
 console.log(updateRecords(5439, "artist", "ABBA"));
+// > {album: "ABBA Gold", artist: "ABBA"}
 
+console.log(collectionCopy[1245]);
+// > {artist: "Robert Palmer", tracks: []}
+console.log(updateRecords(1245, "artist", "Michael Jackson"));
+// > {artist: "Michael Jackson", tracks: []}
+console.log(updateRecords(1245, "tracks", "Beat it"));
+// > {artist: "Michael Jackson", tracks: ["Beat it"]}
+
+console.log(collectionCopy[2648]);
+// > {album: "1999", artist: "Prince", tracks: ["1999", "Little Red Corvette"]}
+console.log(updateRecords(2648, "tracks", ""));
+// > {album: "1999", artist: "Prince"}
 ```
 
 ## Code demos
