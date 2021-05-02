@@ -2142,6 +2142,30 @@ console.log(myArray);
 //> [1, 2, 3, 4, 5]
 ```
 
+## Iterate odd numbers with a for loop
+Loops just dont have to increment one at a time. <br>
+
+```js
+var ourArray = [];
+
+// instead of incrementing i by one, we're incrementing i by two in this loop
+for (var i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+
+console.log(ourArray);
+// > [0, 2, 4, 6, 8]
+
+var myArray = [];
+
+for (var i = 1; i < 10; i += 2) {
+  myArray.push.(i);
+}
+
+console.log(myArray);
+// > [1, 3, 5, 7, 9]
+```
+
 
 ## Code demos
 ### Word blank game
