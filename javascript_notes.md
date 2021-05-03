@@ -2269,8 +2269,56 @@ console.log(j, ourArray);
 // 11, [10]
 ```
 
+## Profile lookup
+**Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
+```js
+var contacts = [
+  {
+    "firstName": "Akira",
+    "lastName": "Laine",
+    "number": "0543236543",
+    "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "number": "0994372684",
+    "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+    "firstName": "Sherlock",
+    "lastName": "Holmes",
+    "number": "0487345643",
+    "likes": ["Intriguin Cases", "Violin"]
+  },
+  {
+    "firstName": "Kristin",
+    "lastName": "Vos",
+    "number": "unknown",
+    "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
 
+function lookUpProfile(name, prop) {
+  for (var i = 0; i < contacts.length; i++) {
+  if (contacts[i].firstName === name) {
+    if (contacts[i][prop] != null) {
+      return contacts[i][prop] || "No such property";
+    } 
+  }
+    return "No such contact";
+  }
+}
 
+console.log(lookUpProfile("Akira", "lastName"));
+// > Laine
+console.log(lookUpProfile("Kristin", "number"));
+// > unknown
+console.log(lookUpProfile("Horst", "number"));
+// > No such contact
+console.log(lookUpProfile("Sherlock", "assistent"));
+// > No such property
+```
 ## Code demos
 ### Word blank game
 Demo game which builds sentences from input words. <br>
