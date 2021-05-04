@@ -2322,21 +2322,19 @@ function ourRandomRange(ourMin, ourMax) {
   return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
 }
 
-var myRandom5To15 = ourRandomRange(5, 15);
-console.log(myRandom5To15);
+console.log(ourRandomRange(5, 15));
 // > 8
-console.log(myRandom5To15);
+console.log(ourRandomRange(5, 15));
 // > 11
-console.log(myRandom5To15);
+console.log(ourRandomRange(5, 15));
 // > 9
 
 
-var myRandom20To120 = ourRandomRange(20, 120);
-console.log(myRandom20To120);
+console.log(ourRandomRange(20, 120));
 // > 47
-console.log(myRandom20To120);
+console.log(ourRandomRange(20, 120));
 // > 232
-console.log(myRandom20To120);
+console.log(ourRandomRange(20, 120));
 // > 23
 ```
 
