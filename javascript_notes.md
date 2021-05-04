@@ -2287,6 +2287,36 @@ console.log(randomFunction());
 // > 0.44651038359138484
 ```
 
+## Generate random whole numbers
+To generate a **whole number** instead of a decimal, use **Math.floor**. <br>
+This function **rounds down to the nearest whole number**. <br>
+When you multiply a random number and use the Math.floor function on it, will always round down. <br>
+So if you multiply by 20, the maximum output is 19. If you multiply by 10 the max is 9. <br>
+
+```js
+// this variable will contain a number between 0 and 19
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+
+console.log(randomNumberBetween0and19);
+// > 9
+console.log(randomNumberBetween0and19);
+// > 11
+console.log(randomNumberBetween0and19);
+// > 18
+
+// this function will return a number between 0 and 9
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+console.log(randomWholeNum());
+// > 4
+console.log(randomWholeNum());
+// > 1
+console.log(randomWholeNum());
+// > 7
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
