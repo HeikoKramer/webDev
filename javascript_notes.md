@@ -2269,7 +2269,26 @@ console.log(j, ourArray);
 // 11, [10]
 ```
 
-## Profile lookup
+## Generate random fractions
+You can use the **math.random** function to create a random **decimal** number. <br>
+The function will create a number between **0** and **1** – which can be 0, but not 1, only close to it. <br>
+
+```js
+function randomFunction() {
+
+  return Math.random();
+}
+
+console.log(randomFunction());
+// > 0.6262111698241257
+console.log(randomFunction());
+// > 0.42430890617123207
+console.log(randomFunction());
+// > 0.44651038359138484
+```
+
+## Code demos
+### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
 ```js
 var contacts = [
@@ -2317,7 +2336,7 @@ console.log(lookUpProfile("Horst", "number"));
 console.log(lookUpProfile("Sherlock", "assistent"));
 // > No such property
 ```
-## Code demos
+
 ### Word blank game
 Demo game which builds sentences from input words. <br>
 
