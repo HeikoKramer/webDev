@@ -2298,11 +2298,8 @@ So if you multiply by 20, the maximum output is 19. If you multiply by 10 the ma
 var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
 
 console.log(randomNumberBetween0and19);
-// > 9
-console.log(randomNumberBetween0and19);
 // > 11
-console.log(randomNumberBetween0and19);
-// > 18
+
 
 // this function will return a number between 0 and 9
 function randomWholeNum() {
