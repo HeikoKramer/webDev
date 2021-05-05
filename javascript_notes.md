@@ -2347,9 +2347,9 @@ function convertToInteger(str) {
   return parseInt(str);
 }
 
-console.log(convertToInterger("56"));
+console.log(convertToInteger("56"));
 // > 56
-console.log(convertToInterger("pony"));
+console.log(convertToInteger("pony"));
 // > NaN
 ```
 
