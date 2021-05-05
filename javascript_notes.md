@@ -2409,6 +2409,23 @@ console.log(trueOrFale(1, 1));
 // > true
 ```
 
+## Use multiple conditional (ternary) operators
+You can nest conditional operators within each other. <br>
+
+```js
+function checkSign(num) {
+  // each "?" is like "if true", each ":" is like "else" 
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+
+console.log(checkSign(10));
+// > positive
+console.log(checkSign(-10));
+// > negative
+console.log(checkSign(0));
+// > zero
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
