@@ -2353,6 +2353,18 @@ console.log(convertToInteger("pony"));
 // > NaN
 ```
 
+## Use the parseInt function with a radix
+The parseInt function can be used with a radix. The radix specifies the base of the number in the string. <br>
+
+```js
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+
+console.log(convertToInteger("10011"));
+// > 19
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
