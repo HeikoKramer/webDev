@@ -2365,6 +2365,50 @@ console.log(convertToInteger("10011"));
 // > 19
 ```
 
+## Use the conditional (ternary) operator
+The **ternary** operator is like a one-line if-else expression. <br>
+
+```js
+// condition ? statement-if-tru : statement-if-false;
+
+// ternary function 
+function ternaryCheckEqual(a, b) {
+  return a === b ? true : false;
+}
+
+console.log(ternaryCheckEqual(1, 2));
+// > false
+console.log(ternaryCheckEqual(1, 1));
+// > true
+
+
+// Replaces the following if-else statement
+function checkEqual(a, b) {
+  if(a === b) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+console.log(checkEqual(1, 2));
+// > false
+console.log(checkEqual(1, 1));
+// > true
+
+
+// simplest way to write this
+function trueOrFale(a, b) {
+  return a === b;
+}
+
+console.log(trueOrFale(1, 2));
+// > false
+console.log(trueOrFale(1, 1));
+// > true
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
