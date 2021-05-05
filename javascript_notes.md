@@ -2338,6 +2338,21 @@ console.log(ourRandomRange(20, 120));
 // > 23
 ```
 
+## Use the parseInt function
+The **parseInt** function takes a numeric string and returns an integer. <br>
+If you try to parse a non-numeric string, parseInt will return **NaN** – not a number. <br>
+
+```js
+function convertToInteger(str) {
+  return parseInt(str);
+}
+
+console.log(convertToInterger("56"));
+// > 56
+console.log(convertToInterger("pony"));
+// > NaN
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
