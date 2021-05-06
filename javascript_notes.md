@@ -2466,9 +2466,28 @@ console.log(catTalk());
 catName = "Marusha";
 ```
 
+## prevent coding mistakes with "use strict"
+Strict mode catches common coding mistakes and unsafe actions. <br>
+You can put "use strict at the top of a file or just in a function. <br>
+In the following example, use strict will throw an error as the *quote* variable has not been declared. <br>
+More information about strict mode: [w3schools](https://www.w3schools.com/js/js_strict.asp)
+
+```js
+let catName = "Quincy";
+
+function catTalk() {
+  quote = catName + " says Meow!";
+  return quote;
+}
+
+console.log(catTalk());
+// > ReferenceError: assignment to undeclared variable quote
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
+
 ```js
 var contacts = [
   {
