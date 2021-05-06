@@ -2466,7 +2466,7 @@ console.log(catTalk());
 catName = "Marusha";
 ```
 
-## prevent coding mistakes with "use strict"
+## Prevent coding mistakes with "use strict"
 Strict mode catches common coding mistakes and unsafe actions. <br>
 You can put "use strict at the top of a file or just in a function. <br>
 In the following example, use strict will throw an error as the *quote* variable has not been declared. <br>
@@ -2482,6 +2482,75 @@ function catTalk() {
 
 console.log(catTalk());
 // > ReferenceError: assignment to undeclared variable quote
+```
+
+## Compare scopes of the var and let keywords
+When you declare a variable with **var**, it is declared globally or locally inside a function. <br>
+The scope of **let** is limited to the block statement or expression that it was declared in. <br>
+
+```js
+// global scope/changed when declared with var
+function checkVarScope() {
+  "use strict";
+  var i = "function scope";
+  if (true) {
+    var i = "block scope";
+    console.log("Block scope i is: " + i);
+    // > Block scope i is: block scope
+  }
+  console.log("Function scope i is: " + i);
+  // > Function scope i is: block scope
+  return i;
+}
+checkVarScope();
+
+
+// limited scope/changed when declared with let
+function checkLetScope() {
+  "use strict";
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: " + i);
+    // > Block scope i is: block scope
+  }
+  console.log("Function scope i is: " + i);
+  // > Function scope i is: function scope
+  return i;
+}
+checkLetScope();
+
+
+// now lets declare that variable only within the block 
+
+// var in block – still global scope
+function checkVarBlock() {
+  "use strict";
+  if (true) {
+    var i = "block scope";
+    console.log("Block scope i is: " + i);
+    // > Block scope i is: block scope
+  }
+  console.log("Function scope i is: " + i);
+  // > Function scope i is: block scope
+  return i;
+}
+checkVarBlock();
+
+
+// let in block – local scope only, global not defined
+function checkLetBlock() {
+  "use strict";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: " + i);
+    // > Block scope i is: block scope
+  }
+  console.log("Function scope i is: " + i);
+  // > ReferenceError: i is not defined 
+  return i;
+}
+checkLetBlock();
 ```
 
 ## Code demos
