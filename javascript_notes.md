@@ -2426,6 +2426,46 @@ console.log(checkSign(0));
 // > zero
 ```
 
+## Differences between the var and let keywords
+let does not let you declare a variable twice. <br>
+This allows your program to give you an error if you've mistakenly announced the same variable twice within the same context. <br>
+
+```js
+// var allows you to declare the same variable twice
+// the first "catName" variable will be replaced by the second declaration
+var catName = "Quincy";
+var quote;
+
+var catName = "Beau";
+
+function catTalk() {
+  quote = catName + " says Meow!";
+  return quote;
+}
+
+console.log(catTalk());
+// > Beau says Meow!
+
+
+// the same script, but variables declared with let will display an error
+var catName = "Quincy";
+var quote;
+
+var catName = "Beau";
+
+function catTalk() {
+  quote = catName + " says Meow!";
+  return quote;
+}
+
+console.log(catTalk());
+// > Error: SyntaxError: unknown: Identifier 'catName' has already been declared 
+
+// of course you could still set the variable content somewhere in the code
+// set doesn't prevent you from that, it just prevents double-declaration
+catName = "Marusha";
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
