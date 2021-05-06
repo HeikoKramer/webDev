@@ -2447,11 +2447,11 @@ console.log(catTalk());
 // > Beau says Meow!
 
 
-// the same script, but variables declared with let will display an error
-var catName = "Quincy";
-var quote;
+// the same script, but letiables declared with let will display an error
+let catName = "Quincy";
+let quote;
 
-var catName = "Beau";
+let catName = "Beau";
 
 function catTalk() {
   quote = catName + " says Meow!";
