@@ -2553,6 +2553,32 @@ function checkLetBlock() {
 checkLetBlock();
 ```
 
+## Declare a read-only variable with the const keyword
+**const** is an other way to declace a variable. <br>
+It has all the features of let, but is also **read only**. <br>
+**NOTE**: If you now for sure, that you never want to reassign a variable, use const. <br>
+
+```js
+// the var declared variable "sentence" gets reassigned – outcome is changed
+function varAssignedExample(str) {
+  var sentence = str + " is cool!";
+  sentence = str + " is amazing!";
+  console.log(sentence);
+}
+varAssignedExample("freeCodeCamp");
+// > freeCodeCamp is amazing!
+
+
+// the const declared variable "sentence" gets reassigned – error is thrown
+function constAssignedExample(str) {
+  const sentence = str + " is cool!";
+  sentence = str + " is amazing!";
+  console.log(sentence);
+}
+constAssignedExample("freeCodeCamp");
+// > TypeError: invalid assignment to const 'sentence' 
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
