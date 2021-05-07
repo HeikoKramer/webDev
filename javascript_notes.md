@@ -2585,6 +2585,36 @@ const SENTENCE = str + " is cool!";
 const sentence = str + " is cool!";
 ```
 
+## Mutate an array declared with const
+While you can not reassign a variable declared with const, you can mutate an array. <br>
+
+```js
+const s = [5, 7, 2];
+function assingnWholeArray() {
+  "use strict";
+
+  s = [2, 5, 7]; // full assignment not possible 
+  // > TypeError: invalid assignment to const 's'
+
+}
+assingnWholeArray();
+
+
+const x = [5, 7, 2];
+function assigneOnlyNotation() {
+  "use strict";
+
+  // assignment via bracket notation work even with a const variable
+  x[0] = 2;
+  x[1] = 5;
+  x[2] = 7; 
+
+}
+assigneOnlyNotation();
+console.log(x);
+// > [2, 5, 7]
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
