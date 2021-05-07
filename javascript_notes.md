@@ -2577,6 +2577,12 @@ function constAssignedExample(str) {
 }
 constAssignedExample("freeCodeCamp");
 // > TypeError: invalid assignment to const 'sentence' 
+
+// NOTE
+// Good practice is to use const variables in capital letters
+const SENTENCE = str + " is cool!";
+// instead of
+const sentence = str + " is cool!";
 ```
 
 ## Code demos
