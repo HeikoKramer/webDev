@@ -2666,6 +2666,28 @@ console.log(PI);
 // > 3.14
 ```
 
+## Use arrow functions to write concise anonymous functions
+The type of function below is called an **anonymous function** – it doesn't have a name <br>
+It is assigned to the "magic" variable, but there is no name assigned to it. <br>
+Whenever you have an anonymous function, you can convert it into an **arrow function**. <br>
+An arrow function can be shortened as shown in the third example below. <br>
+
+```js
+// anonymous function
+var magic = function() {
+  return new Date();
+};
+
+
+// arrow function
+var magic = () => {
+  return new Date();
+};
+
+// shortened arrow function
+const magic = () => new Date();
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
