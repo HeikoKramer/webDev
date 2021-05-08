@@ -2708,6 +2708,25 @@ console.log(myContact([1, 2], [3, 4, 5]));
 // > [1, 2, 3, 4, 5] 
 ```
 
+## Higher order arrow functions
+Arrow functions work really well with higher order functions, such as **map**, **filter** and **reduce**. <br>
+They take functions as arguments for processing collections of data. <br>
+Whenever one function takes an other function as an argument – that's a good time for an arrow function. <br>
+
+```js
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+
+// let's filter out everything that's not a positiv integer
+const squareList = (arr) => {
+  const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x);
+  return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+// > [16, 1764, 36]
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
