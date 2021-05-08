@@ -2688,6 +2688,26 @@ var magic = () => {
 const magic = () => new Date();
 ```
 
+## Write arrow functions with paramenters
+Just like with normal functions, you can pass arguments to arrow functions. <br>
+
+```js
+// normal function with two arguments
+var myContact = function(arr1, arr2) {
+  return arr1.concat(arr2);
+};
+
+console.log(myContact([1, 2], [3, 4, 5]));
+// > [1, 2, 3, 4, 5]
+
+
+// arrow function, also with two arguments
+const myContact = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myContact([1, 2], [3, 4, 5]));
+// > [1, 2, 3, 4, 5] 
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
