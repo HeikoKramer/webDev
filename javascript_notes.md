@@ -2615,6 +2615,57 @@ console.log(x);
 // > [2, 5, 7]
 ```
 
+## Prevent object mutation
+The example above shows, const declaration alone doesn't protect your data from mutation. <br>
+But there is something called object.freeze that will prevent object mutation. <br>
+
+```js
+// the const variable gets re-assigned with dot notation
+function freezeObj() {
+  "use strict";
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex); // nothing, no error gets thrown
+  }
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+
+console.log(PI);
+// > 99
+
+
+// the frozen variable won't change – an error gets thrown when you try to reassign 
+function freezeObj() {
+  "use strict";
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+
+  // now we are freezing MATH_CONSTANTS
+  Object.freeze(MATH_CONSTANTS);
+
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex); 
+    // > TypeError: "PI" is read-only
+  }
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+
+console.log(PI);
+// > 3.14
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
