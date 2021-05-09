@@ -2746,6 +2746,32 @@ console.log(increment(5));
 // > 6
 ```
 
+## Use the rest operator with function parameters
+The **rest operator** allows you to create a function that takes a variable number of arguments. <br>
+The rest operator is three dots. <br>
+
+```js
+// classic parameter handling – pass the defined parameter
+const sum = (function() {
+  return function sum(x, y, z) {
+    const args = [x, y, z];
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3));
+// > 6
+
+
+// rest operator – parameters are not defined
+const restSum = (function() {
+  return function restSum(...args) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(restSum(1, 2, 3));
+// > 6
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
