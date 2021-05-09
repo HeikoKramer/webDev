@@ -2772,6 +2772,38 @@ console.log(restSum(1, 2, 3));
 // > 6
 ```
 
+## Use the spread operator to evaluate arrays in-place
+The **spread operator** looks just like the rest operator – three dots. <br>
+But it expands an already existing array – or it spreads out an array. <br>
+
+```js
+// arr1 gets assigned to arr2 – the change to arr1 is reflected in arr2
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+  arr2 = arr1;
+  arr1[0] = 'potato'
+})();
+console.log(arr2);
+// > ["potato", "FEB", "MAR", "APR", "MAY"]
+
+
+// spread operator: this time arr4 does not only equal arr3
+// the contents off arr3 get spread out to arr4
+// a later change to arr3 has no effect on arr4
+const arr3 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr4;
+(function() {
+  arr4 = [...arr3];
+  arr3[0] = 'potato'
+})();
+console.log(arr4);
+// > ["JAN", "FEB", "MAR", "APR", "MAY"]
+```
+
+## Use destructuring assignment to assign variables from objects
+weiter bei ––> 2:57:18
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
