@@ -96,7 +96,7 @@ var b = 2;  // this variable has been declared and assigned in one line
 
 a = 7;      // a was already declared, now we've assigned it the value 7
 
-b = a;      // you can assigne ond variable to an other 
+b = a;      // you can assign ond variable to an other 
 
 console.log(b) 
 // the console log method will display the value of variable b in the console
@@ -2601,7 +2601,7 @@ assingnWholeArray();
 
 
 const x = [5, 7, 2];
-function assigneOnlyNotation() {
+function assignOnlyNotation() {
   "use strict";
 
   // assignment via bracket notation work even with a const variable
@@ -2610,7 +2610,7 @@ function assigneOnlyNotation() {
   x[2] = 7; 
 
 }
-assigneOnlyNotation();
+assignOnlyNotation();
 console.log(x);
 // > [2, 5, 7]
 ```
@@ -2849,6 +2849,29 @@ function getTempOfTmrw(avgTemperatures) {
 
 console.log(getTempOfTmrw(AVG_TEMPERATURES));
 // > 79
+```
+
+## Destructuring assignment with nested objects
+We can also use destructuring assignment to assign variables from nested objects. <br>
+
+```js
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+
+  // we need doulbe destructuring to access the nested value
+  // we set the max that was inside tomorrow to maxOfTomorrow
+  const { tomorrow : { max : maxOfTomorrow }} = forecast;
+
+  return maxOfTomorrow;
+}
+
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+// > 84.6
 ```
 
 ## Code demos
