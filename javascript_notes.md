@@ -2802,7 +2802,54 @@ console.log(arr4);
 ```
 
 ## Use destructuring assignment to assign variables from objects
-weiter bei ––> 2:57:18
+A destructuring assignment is a special syntax for directly assigning values taken from an object to a variable. <br>
+
+```js
+// object with three elements (x,y,z)
+var voxel = {x: 3.6, y: 7.4, z: 6.54 };
+
+// old way of assigning object elements to individual variables
+var x = voxel.x; 
+console.log("x = " + x);
+// > x = 3.6
+var y = voxel.y;
+console.log("y = " + y);
+// > y = 7.4
+var z = voxel.z;
+console.log("z = " + z);
+// > z = 6.54
+
+// this is the destructuring syntax
+// we are creating variables (a,b,c) and assigning them to the values from voxel the object 
+const {x:a, y:b, z:c} = voxel;
+console.log("a = " + a);
+// > a = 3.6
+console.log("b = " + b);
+// > b = 7.4
+console.log("c = " + c);
+// > c = 6.54
+```
+
+An other example – use destructuring to get the tomorrow variable out of the AVG_TEMPERATURES object. <br>
+
+```js
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  "use strict";
+
+  // get the tomorrow field from the AVG_TEMPERATURES object
+  // and assign it to the tempOfTomorrow variable
+  const { tomorrow : tempOfTomorrow } = avgTemperatures;
+  return tempOfTomorrow;
+}
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+// > 79
+```
 
 ## Code demos
 ### Profile lookup
