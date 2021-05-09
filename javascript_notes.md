@@ -2727,6 +2727,25 @@ console.log(squaredIntegers);
 // > [16, 1764, 36]
 ```
 
+## Set default parameters for your function
+In order to create more flexible functions you can create **default parameters**. <br>
+The default parameter kicks in when the argument is not specified or is undefined. <br>
+In the example below `value = 1` sets the default parameter to **1**. <br>
+If a parameter for "value" is passed, the function will use that parameter. <br>
+If no parameter is passes, the function will increment "number" by the default – **1**. <br>
+
+```js
+const increment = (function() {
+  return function increment(number, value = 1) { // default for "value" set to "1"
+    return number + value;
+  };
+})();
+console.log(increment(5, 2));
+// > 7
+console.log(increment(5));
+// > 6
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
