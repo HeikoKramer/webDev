@@ -2934,6 +2934,38 @@ console.log(arr);
 // > [3,4,5,6,7,8,9,10]
 ```
 
+## Use destructuring assignment to pass an object as a function's parameters
+This technique is commenly used with API calls to take only needed values. <br>
+
+```js
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+const half = (function() {
+
+/*
+  // could be done like this using dot notation
+  return function half(stats) {
+    return (stats.max + stats.min) / 2.0;
+  };
+*/
+
+  // destructuring takes only needed values
+  return function half({ max, min }) {
+    return (max + min) / 2.0;
+  };
+
+
+})();
+console.log(half(stats));
+// > 28.015
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
