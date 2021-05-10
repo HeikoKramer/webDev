@@ -2910,6 +2910,30 @@ console.log("b after switching = " + b);
 // > b after switching = 8
 ```
 
+## Use destructuring assignment with the rest operator
+We can use destructuring assignment with the rest operator to reassign array elements. <br>
+
+```js
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  
+  // do nothing for the first element
+  // do nothing for the second element
+  // assign the rest to the arr variable
+  const [ , , ...arr] = list;
+  
+  // const [ a, b, ...arr] = list;
+  // this would assign the first index to variable "a"
+  // the second index to variable "b"
+  // and the rest of the array to the arr variable
+
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
+// > [3,4,5,6,7,8,9,10]
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
