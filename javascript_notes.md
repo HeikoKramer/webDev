@@ -2874,6 +2874,42 @@ console.log(getMaxOfTmrw(LOCAL_FORECAST));
 // > 84.6
 ```
 
+## Use destructuring assignment to assign variables from arrays
+You can use destructuring assignment to assign variables from arrays. <br>
+
+```js
+// we are assigning the variables z and x to the first two numbers of the array (1 and 2)
+// you can not specify which element from the array to go into a variable
+// it just goes in order
+const [z, x] = [1, 2, 3, 4, 5, 6];
+console.log(z, x);
+// > 1, 2
+
+// there is a way assign for example only the number 4 to a variable
+// you can use commas to skip the unwanted indexes and reach that number
+const [, , , y] = [1, 2, 3, 4, 5, 6];
+console.log(y);
+// > 4
+
+
+// you can use destructuring of arrays to switch the places of varaiables
+let a = 8, b = 6;
+console.log("a before switching = " + a);
+// > a before switching = 8
+console.log("b before switching = " + b);
+// > b before switching = 6
+
+(() => {
+  "use strict";
+  [a, b] = [b, a]
+})();
+
+console.log("a after switching = " + a);
+// > a after switching = 6
+console.log("b after switching = " + b);
+// > b after switching = 8
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
