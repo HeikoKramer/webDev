@@ -2988,7 +2988,30 @@ console.log(greeting);
 // > Hello, my name is Zodiac Hasbro! I am 56 years old.
 ```
 
-coding challenge ––> 3:08:20
+### Coding example
+The **makeList** function creates a html lists based on the array passed when the function is called. <br>
+
+```js
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["id-blacklist", "no-dup-keys"]
+};
+
+function makeList(arr) {
+  const resultDisplayArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+  }
+  return resultDisplayArray;
+}
+
+console.log(makeList(result.skipped));
+// > ["<li class="text-warning">id-blacklist</li>", "<li class="text-warning">no-dup-keys</li>"]
+
+console.log(makeList(result.success));
+// > ["<li class="text-warning">max-length</li>", "<li class="text-warning">no-amd</li>", "<li class="text-warning">prefer-arrow-functions</li>"]
+```
 
 ## Code demos
 ### Profile lookup
