@@ -3117,6 +3117,11 @@ const myBook = new Book("Michael Moorcock");
 let novel = myBook.writer;
 console.log(novel);
 // > Michael Moorcock
+
+myBook.writer = "Neal Stephenson";
+novel = myBook.writer;
+console.log(novel);
+// > Neal Stephenson
 ```
 
 ## Code demos
