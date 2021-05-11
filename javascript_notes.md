@@ -3036,6 +3036,27 @@ console.log(createAnotherPerson("Zodiac Hasbro", 56, "male"));
 // > {name: "Zodiac Hasbro", age: 56, gender: "male"}
 ```
 
+## Write concise declarative functions
+
+```js
+// an object can contain a function
+const bicycle = {
+  gear: 2,
+
+// this is the long way to put a function whitin an object
+// setGear: function(newGear) {
+
+// this is the short way – you can leave the function key-word
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear;
+  }
+};
+
+bicycle.setGear(3);
+console.log(bicycle.gear);
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
