@@ -2935,7 +2935,7 @@ console.log(arr);
 ```
 
 ## Use destructuring assignment to pass an object as a function's parameters
-This technique is commenly used with API calls to take only needed values. <br>
+This technique is commonly used with API calls to take only needed values. <br>
 
 ```js
 const stats = {
@@ -2965,6 +2965,30 @@ const half = (function() {
 console.log(half(stats));
 // > 28.015
 ```
+
+## Create strings using template literals
+Template literals are a special type of string that makes creating complex strings easier. <br>
+They begin and end with a back tick – as a replacement for the usual single or double quotes. <br>
+Advantages: <br>
+* multi-line strings possible (throws an error with quotes)
+* you can use quotes in the string (without escaping them)
+* you can put variables right in the string
+
+```js
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+
+// template leteral with multi-line and string interpolation
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting);
+// > Hello, my name is Zodiac Hasbro! I am 56 years old.
+```
+
+coding challenge ––> 3:08:20
 
 ## Code demos
 ### Profile lookup
