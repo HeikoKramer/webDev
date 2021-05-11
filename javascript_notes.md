@@ -3085,6 +3085,40 @@ console.log(zeus.targetPlanet)
 // > Jupiter
 ```
 
+## Use getters and setters to control access to an object
+With the class object you often want to obtain values from the object and set a value of a property within an object. <br>
+This are often called **getters** and **setters**. <br>
+**Getter** functions are meant to simply return or get the value of an object's private variable to the user, without the user directly accessing the private variable. <br>
+The private variable in our example is **_author** that gets set when you construct the object. <br>
+When we do **get writer** it's going to return **this._author**. <br>
+So you never actually interact directly with this variable. <br>
+And when you're **setting** it's the same – you never interacting with the **_author**, but you can set it with the **writer setter**. <br>
+This change could invoke calculations or even overwriting the previously value completely. <br>
+
+```js
+// constructor
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+
+// getter
+  get writer(){
+    return this._author;
+  }
+
+// setter
+  set writer(updatedAuthor){
+    this._author = updatedAuthor;
+  }
+}
+
+const myBook = new Book("Michael Moorcock");
+let novel = myBook.writer;
+console.log(novel);
+// > Michael Moorcock
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
