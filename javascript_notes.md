@@ -3013,6 +3013,29 @@ console.log(makeList(result.success));
 // > ["<li class="text-warning">max-length</li>", "<li class="text-warning">no-amd</li>", "<li class="text-warning">prefer-arrow-functions</li>"]
 ```
 
+## Write concise object literal declarations using simple fields
+
+```js
+// passed parameters are mapped to object elements
+const createPerson = (name, age, gender) => {
+  return {
+    name: name,
+    age: age,
+    gender: gender
+  };
+};
+console.log(createPerson("Zodiac Hasbro", 56, "male"));
+// > {name: "Zodiac Hasbro", age: 56, gender: "male"}
+
+
+// simpler way to archive the same result 
+// the passed parameters get assigned directly to the object elements
+// this works only if parameter and element are named identically
+const createAnotherPerson = (name, age, gender) => ( { name, age, gender });
+console.log(createAnotherPerson("Zodiac Hasbro", 56, "male"));
+// > {name: "Zodiac Hasbro", age: 56, gender: "male"}
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
