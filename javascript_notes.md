@@ -3124,6 +3124,32 @@ console.log(novel);
 // > Neal Stephenson
 ```
 
+## How to use the import and export statements
+In the past people would use the **require function** to import functions and code from other files. <br>
+But now we have **import** and **export**. <br>
+You can export code in one file and then import it in an other file. <br>
+It also allows you to only import certain functions from a file or certain variables. <br>
+
+```js
+// FILE: index.js
+// the capitalizeString function is not defined in this file
+// we are importing capitalizeString with the appropriate statement
+// the ./ points to the "working directory", you don't need to add the file extension
+import { capitalizeString } from "./string_function"
+
+const cap = capitalizeString("hello!");
+console.log(cap);
+// HELLO!
+```
+
+```js
+// FILE: string_function.js
+// this file houses the capitalizeString function
+
+// the export statement is exporting the function
+export const capitalizeString = str => str.toUpperCase()
+```
+
 ## Code demos
 ### Profile lookup
 **Coding challenge:** write a *lookUpProfile* function that takes a name and an attribute a parameters and return the appropriate values. <br>
