@@ -3140,7 +3140,7 @@ import { capitalizeString } from "./string_function"
 
 const cap = capitalizeString("hello!");
 console.log(cap);
-// HELLO!
+// > HELLO!
 ```
 
 **File 2: string_function.js**
@@ -3150,6 +3150,39 @@ console.log(cap);
 
 // the export statement is exporting the function
 export const capitalizeString = str => str.toUpperCase()
+```
+
+## Use export to reuse a code block
+You export functions and variables from one file, so that you can import them into another file. <br>
+<br>
+**File 1: index.js**
+
+```js
+import { capitalizeString, bar, foo } from "./string_function"
+
+const cap = capitalizeString("hello!");
+console.log(cap);
+// > Hello!
+console.log(bar);
+// > foo
+console.log(foo);
+// > bar
+```
+
+**File 2: string_function.js**
+
+```js
+const capitalizeString = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// you can put the export statement before the function 
+// or you can export the function like this:
+export { capitalizeString };
+
+// export variables
+export const foo = "bar";
+export const bar = "foo";
 ```
 
 ## Code demos
