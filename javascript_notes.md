@@ -3143,6 +3143,7 @@ console.log(cap);
 // HELLO!
 ```
 
+<br>
 **File 2: string_function.js**
 
 ```js
