@@ -3130,10 +3130,9 @@ But now we have **import** and **export**. <br>
 You can export code in one file and then import it in an other file. <br>
 It also allows you to only import certain functions from a file or certain variables. <br>
  <br>
-**FILE1**
+**File 1: index.js**
 
 ```js
-// FILE: index.js
 // the capitalizeString function is not defined in this file
 // we are importing capitalizeString with the appropriate statement
 // the ./ points to the "working directory", you don't need to add the file extension
@@ -3144,10 +3143,9 @@ console.log(cap);
 // HELLO!
 ```
 
-**FILE2**
+**File 2: string_function.js**
 
 ```js
-// FILE: string_function.js
 // this file houses the capitalizeString function
 
 // the export statement is exporting the function
