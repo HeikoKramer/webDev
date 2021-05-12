@@ -3129,6 +3129,8 @@ In the past people would use the **require function** to import functions and co
 But now we have **import** and **export**. <br>
 You can export code in one file and then import it in an other file. <br>
 It also allows you to only import certain functions from a file or certain variables. <br>
+ <br>
+**FILE1**
 
 ```js
 // FILE: index.js
@@ -3141,6 +3143,8 @@ const cap = capitalizeString("hello!");
 console.log(cap);
 // HELLO!
 ```
+
+**FILE2**
 
 ```js
 // FILE: string_function.js
