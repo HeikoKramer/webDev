@@ -3259,6 +3259,7 @@ console.log(wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun));
 
 # Rock Paper Scissors Tutorial
 Extra notes, taken while following this [freeCodeCamp.org web dev tutorial](https://youtu.be/jaVNP3nIAv0) <br>
+I'm storing the sample code in the [rock-paper-scissors](https://github.com/HeikoKramer/JavaScript/tree/main/rock-paper-scissors) folder of this repo. <br>
 
 ## Caching the DOM
 Caching in general means: **Storing something for future use**. <br>
