@@ -3256,3 +3256,25 @@ function wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun) {
 
 console.log(wordBlanks(myNoun, myVerb, myAdverb, my2ndNoun));
 ```
+
+# Rock Paper Scissors Tutorial
+Extra notes, taken while following this [freeCodeCamp.org web dev tutorial](https://youtu.be/jaVNP3nIAv0) <br>
+
+## Caching the DOM
+Caching in general means: **Storing something for future use**. <br>
+We are storing something in variables so that we can use it later. <br>
+Typing `userScore_span` is a lot easier to write as `document.getElementById("user-score")` every single time. <br>
+But there is also a performance factor. <br>
+`document.getElementById("user-score")` runs a process to reference that element. <br>
+Using it repetitive would mean to run that process every single time. <br>
+With the variable, we get it once and have than our reference point in that variable. <br>
+
+```js
+const userScore_span     = document.getElementById("user-score");
+const computerScore_span = document.getElementById("computer-score");
+const scoreBoard_div     = document.querySelector(".score-board");
+const result_div         = document.querySelector(".result");
+const rock_div           = document.getElementById("r");
+const paper_div          = document.getElementById("p");
+const scissors_div       = document.getElementById("s");
+```
