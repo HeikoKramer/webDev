@@ -1,12 +1,15 @@
-let userScore = 0;
-let computerScore = 0;
-const userScore_span = document.getElementById("user-score");
+let userScore            = 0;
+let computerScore        = 0;
+const userScore_span     = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector(".score-board");
-const result_p = document.querySelector(".result > p");
-const rock_div = document.getElementById("r");
-const paper_div = document.getElementById("p");
-const scissors_div = document.getElementById("s");
+const scoreBoard_div     = document.querySelector(".score-board");
+const result_p           = document.querySelector(".result > p");
+const rock_div           = document.getElementById("r");
+const paper_div          = document.getElementById("p");
+const scissors_div       = document.getElementById("s");
+const rockImage          = "images/rock.svg";
+const paperImage         = "images/paper.svg";
+const scissorsImage      = "images/scissors.svg";
 
 function getComputerChoice() {
   const choices = ['r', 'p', 's'];
@@ -20,6 +23,18 @@ function convertToWord(letter) {
   return "Scissors";
 }
 
+function convertToImage(letter) {
+  if (letter === "r") return rockImage;
+  if (letter === "p") return paperImage;
+  return scissorsImage;
+}
+
+function convertToWord(letter) {
+  if (letter === "r") return "Rock";
+  if (letter === "p") return "Paper";
+  return "Scissors";
+} 
+
 function win(userChoice, computerChoice) {
   console.log("The User wins :)");
   userScore++;
@@ -29,6 +44,8 @@ function win(userChoice, computerChoice) {
   const userChoice_div = document.getElementById(userChoice);
   userChoice_div.classList.add('green-glow');
   setTimeout(function() { userChoice_div.classList.remove('green-glow') }, 500);
+
+  displayComputerChoice(convertToImage(computerChoice));
 }
 
 function lose(userChoice, computerChoice) {
@@ -49,6 +66,22 @@ function draw(userChoice, computerChoice) {
   const userChoice_div = document.getElementById(userChoice);
   userChoice_div.classList.add('grey-glow');
   setTimeout(function() { userChoice_div.classList.remove('grey-glow') }, 500);
+}
+
+function displayComputerChoice(src) {
+  let img    = document.createElement("img");
+  img.src    = src;
+  img.width  = 80;
+  img.height = 80;
+  img.alt    = "";
+  img.id     = "compChoice";
+  
+  // This adds currently to computer label and removes image after 1sec
+  // Need to adjust it that it adds to an own element beside computer label
+
+  const computerLabel = document.getElementById("computer-label");
+  computerLabel.appendChild(img); 
+  setTimeout(function() { document.getElementById("compChoice").remove(img) }, 1000);
 }
 
 function game(userChoice) {
