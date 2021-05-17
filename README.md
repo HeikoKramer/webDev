@@ -1,7 +1,9 @@
 # WebDev
 Repo to document my learning progress on HTML, CSS, JavaScript, Node.js, Salesforce LWC, etc. … <br>
+
+## Notes
 Quick links to my notes files: <br>
-* [javascript_notes.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md).
+* [javascript_notes.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md)
 
 ## Coding samples / tutorials
 ### Rock Paper Scissors
