@@ -50,3 +50,40 @@ They won't show in the browser body, in the source code. <br>
 </html>
 ```
 
+## Meta Tags
+Meta tags are tags or snippets, that describe a page's content. <br>
+They don't appear in the body of the web page. <br>
+<br>
+When you create a new html file with VS-Code Emmet, it's going to create three default **meta tags**. <br>
+It also adds a **lang** attribute – which is not mandatory, but it describes the language of the page. <br>
+The attributes of a tag describe its properties. The meta tags are identical except for their attributes. <br>
+* charset – describes the character encoding of the page
+* the **viewport** tag describes the responsiveness to different screen sizes
+* http-equiv – describes browser comparability
+
+<br>
+The **title** is not only displayed in the browser tab, it is an very important for search engines, as it will show up there as the link to your page. <br>
+The additional text displayed in the search engine result page is the html **description**. <br>
+Another search engine related tag is the **keywords** tag. It's an other place for a content description, which is better readable for a crawler. <br>
+If you don't want your page to show up in a search result, use the **robots** tag. <br>
+**NOINDEX** will ensure your page doesn't get listed, **NOFOLLOW** specifies that no links within the page get followed and listed. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="This is my website description.">
+  <meta name="keywords" content="web dev, Salesforce, LWC, JavaScript, html, css">
+  <meta name="robots" content="NOINDEX, NOFOLLOW">
+  <title>Meta Tags</title>
+</head>
+<body>
+  
+</body>
+</html>
+```
+
