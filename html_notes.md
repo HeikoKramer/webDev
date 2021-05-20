@@ -57,6 +57,7 @@ They don't appear in the body of the web page. <br>
 When you create a new html file with VS-Code Emmet, it's going to create three default **meta tags**. <br>
 It also adds a **lang** attribute – which is not mandatory, but it describes the language of the page. <br>
 The attributes of a tag describe its properties. The meta tags are identical except for their attributes. <br>
+
 * charset – describes the character encoding of the page
 * the **viewport** tag describes the responsiveness to different screen sizes
 * http-equiv – describes browser comparability
@@ -83,6 +84,49 @@ If you don't want your page to show up in a search result, use the **robots** ta
 </head>
 <body>
   
+</body>
+</html>
+```
+
+## Headings, Paragraphs, Typography
+### Headings
+The `<H1>` to `<H6>` tags are the heading tags. **H1** is the largest, **H6** is the smallest heading. <br>
+It's good practice to have only one **H1** heading per page. <br>
+It is like the **tilte** of the page and might play a role in the search engine interpretation of you page. <br>
+## Formating
+Everything within a `<strong>something</strong>` tag is gonna be displayed **bold**. <br>
+The **emphasis** tag `<em>something</em>` is going to display everything between **italic**. <br>
+To reflect a **line break** in the browser, you need to add a self-closing `<br>` tag. <br> 
+The **horizontal rule** tag `<hr>` will insert a line across the screen. <br>
+The `<del>something</del>` tag acts like a **strike through**. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headings, Paragraphs, Typography</title>
+</head>
+<body>
+  <!-- Headings -->
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+
+  <!-- Paragraph -->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odio necessitatibus veniam in enim fuga odit! <strong>Facilis mollitia modi commodi aut expedita saepe delectus</strong> repellat deserunt cumque dolorem quidem, dicta voluptatem natus, excepturi assumenda sit possimus quis numquam adipisci, quam enim ducimus recusandae. <em>Ex itaque voluptatum, dignissimos impedit quibusdam pariatur assumenda debitis accusantium nostrum eligendi tempora, voluptatem ut.
+  <!-- Line Break -->
+  <br>
+  <br>
+  </em> Iure quae, officia enim quis nihil sed in eligendi dolore, repudiandae natus, tempore magnam laborum minima quibusdam vel voluptate tempora nemo sint blanditiis. 
+  <!-- Horizontal Rule -->
+  <hr>
+  Itaque minima error magnam quae, <del>explicabo accusamus</del> soluta. Aliquam, tenetur alias! Rem, modi esse nostrum quidem ex laborum eligendi.</p>
 </body>
 </html>
 ```
