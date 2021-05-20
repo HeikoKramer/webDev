@@ -131,3 +131,4 @@ The `<del>something</del>` tag acts like a **strike through**. <br>
 </html>
 ```
 
+![typography](/images/04_typography.png)
