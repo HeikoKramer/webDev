@@ -6,6 +6,13 @@
 The same shortcut on a out-commented line will un-comment it. <br>
 <kbd>CTRL</kbd> <kbd>ENTER</kbd> will open a new line below the cursor, without splitting the line above when the cursor is not at the end of the line. <br>
 
+## Keywords
+If you're for example in an html paragraph and you want to add some **dummy text**, just type **lorem** and <kbd>ENTER</kbd>. <br>
+
+```html
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae adipisci nemo ipsa, molestiae soluta sed repudiandae temporibus ipsum, cumque ducimus sit quas placeat optio. Exercitationem illo blanditiis iure accusamus deleniti.</p>
+```
+
 ## HTML specific
 If you're typing just a <kbd>!</kbd> and press <kbd>ENTER</kbd>, VS Code will add a whole set of default HTML tags. <br>
 
