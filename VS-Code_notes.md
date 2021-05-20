@@ -4,6 +4,7 @@
 <kbd>CTRL</kbd> <kbd>,</kbd> will open the **setup** menu. <br>
 <kbd>CTRL</kbd> <kbd>SHIFT</kbd> <kbd>7</kbd> will out-comment the current line or marked block. <br>
 The same shortcut on a out-commented line will un-comment it. <br>
+<kbd>CTRL</kbd> <kbd>ENTER</kbd> will open a new line below the cursor, without splitting the line above when the cursor is not at the end of the line. <br>
 
 ## HTML specific
 If you're typing just a <kbd>!</kbd> and press <kbd>ENTER</kbd>, VS Code will add a whole set of default HTML tags. <br>
