@@ -181,3 +181,114 @@ You can link to **internal** or **external** images, just the same way as with a
 ```
 
 ![links and images](/images/05_links_and_images.png)
+
+## List and tables
+### Lists
+An **unordered list** is wrapped in `<ul></ul>` tags and contains **list items** wrapped in `<li></li>` tags. <br>
+You can set a list-style with the **style** attribute, but usually you would do that with css. <br>
+An **ordered list** works as the unordered equivalent, but is wrapped in `<ol></ol>` tags. <br>
+The default **type** of an ordered list is a numbered list, 1., 2., 3., … <br>
+You can change the type of the list with the **type** attribute. <br>
+
+* type="1"
+  * 1.
+  * 2.
+  * 3.
+* type="A"
+  * A.
+  * B.
+  * C.
+* type="a"
+  * a.
+  * b.
+  * c.
+* type="I"
+  * I.
+  * II.
+  * III.
+* type="i"
+  * i.
+  * ii.
+  * iii.
+
+You can put a list inside a list – which is called **nested list**. <br>
+The nested list elements will be indented. <br>
+
+### Tables
+Tables are used for tabular data. They are wrapped into `<table></table>` tags. <br>
+A table can contain a **header**, a **body** and a **footer**. <br>
+The **header** contains the table **head cells** (`<th></th>`), while the **body** contains the **standard cells** (`<td></td>`). <br>
+Head and standard cells are wrapped in table row tags (`<tr></tr>`). <br>
+Although it is recommended to use css, the **style** attribute allows to adjust table attributes like the **width**. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Unordered lists -->
+  <ul style="list-style: square">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- Ordered list -->
+  <ol type="A">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ol>
+
+  <!-- Nested list -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2
+      <ul>
+        <li>Nested Item 1</li>
+        <li>Nested Item 2</li>
+      </ul>
+    </li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- Tables -->
+  <table style="width: 600px">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>jdoe@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>j.doe@gmail.com</td>
+      </tr>
+      <tr>
+      <td>Nathan</td>
+      <td>Poe</td>
+      <td>npoe@gmail.com</td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+```
+
+![Lists and Tables](/images/06_lists_tables.png)
