@@ -8,6 +8,7 @@ The same shortcut on a out-commented line will un-comment it. <br>
 <kbd>CTRL</kbd> <kbd>SHIFT</kbd> <kbd>ALT</kbd> <kbd>DOWN</kbd> copies (duplicates) the current line to the line below the cursor. <br>
 *this shortcut conflicts with a change-workspace shortcut on linux mint* <br>
 <kbd>CTRL</kbd> <kbd>LEFT</kbd> or <kbd>CTRL</kbd> <kbd>RIGHT</kbd> will navigate you **word by word** through your code. <br>
+<kbd>ALT</kbd> <kbd>UP</kbd> or <kbd>ALT</kbd> <kbd>DOWN</kbd> will move the current line up or down. <br>
 
 ## Keywords
 If you're for example in an html paragraph and you want to add some **dummy text**, just type `<p>lorem</p>` and <kbd>ENTER</kbd>. <br>
