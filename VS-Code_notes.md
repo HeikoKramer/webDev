@@ -25,6 +25,18 @@ You want to specify the number of inserted words, type for example `<p>lorem10</
 
 **Note:** If you want that longer texts break and are not displayed in a single line, you should put **wordWrap** on in the settings. <br>
 
+## General tricks
+There is an Emmit method to create multiple items of the same type: <br>
+If you want to create **4 list items**, you could enter `li`, let VS-Code create the full tag and copy it 3x. <br>
+But you can simply type `li*4` <kbd>ENTER</kbd> and VS-Code will create all items for you at once. <br>
+
+```html
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+```
+
 ## HTML specific
 If you're typing just a <kbd>!</kbd> and press <kbd>ENTER</kbd>, VS Code will add a whole set of default HTML tags. <br>
 
