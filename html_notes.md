@@ -132,3 +132,52 @@ The `<del>something</del>` tag acts like a **strike through**. <br>
 ```
 
 ![typography](/images/04_typography.png)
+
+## Links and images
+### Links
+A **link** is represented with an `<a>` tag. Every link needs an **href** attribute – that's the location, where you're linking to. <br>
+An `<a>` is an **inline** element. So if you want to show two links under each other, you'll need a `<br>` tag in between them. <br>
+Or you could wrap them into different paragraphs, which are **block level** elements. <br>
+The **target** attribute specifies where the link is opened. [Full option list](https://www.w3schools.com/tags/att_a_target.asp). <br>
+If you start your **href** content with a **/** – it's referencing a file within the same directory as the current page (internal link). <br>
+### Images
+The `<img src="" alt="">` specifies an **image**. <br>
+**src** stands for **source** (location of an image). <br>
+**alt** is the **alternative text** that will show if the image is not there or can't be shown due to some reason. <br>
+You can set the **width** and **height** in html, but it is usually better to do that in css. <br>
+The **heigth** will auto-adjust when the **width** is set. <br>
+You can link to **internal** or **external** images, just the same way as with any other link. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links and Images</title>
+</head>
+<body>
+  <!-- External link -->
+  <p>
+    <a href="http://google.com">Click for Google</a>
+  </p>
+  <p>
+    <a href="http://google.com" target="_blank">Click for Google</a>
+  </p>
+
+  <!-- Internal link -->
+  <p>
+    <a href="/04_typography.html">Typography</a>
+  </p>
+
+  <!-- Local image -->
+  <img src="/images/sample.png" alt="My Image" width="200">
+  <br>
+  <!-- Remote image -->
+  <img src="https://source.unsplash.com/200x150/?datacenter" alt="My Image2">
+</body>
+</html>
+```
+
+![links and images](/images/05_links_and_images.png)
