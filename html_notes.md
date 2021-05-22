@@ -293,29 +293,128 @@ Although it is recommended to use css, the **style** attribute allows to adjust 
 
 ![Lists and Tables](/images/06_lists_tables.png)
 
-## Forms & Input
-Forms on a website are displayed with css and html – but the processing of the input data happens in the backend, with some sort of programming lanuage. <br>
+## Forms & input
+### Forms
+Forms on a website are displayed with css and html – but the processing of the input data happens in the back end, with some sort of programming language. <br>
 <br>
-A **form** ist wrapped in `<form></form>` tags. <br>
+A **form** is wrapped in `<form></form>` tags. <br>
 The **action** attribute specifies where the form's content is handed over to. <br>
 You can separate multiple form items with `<div></div` tags (**division**). <br>
-The `<lable></lable>` tags can be used to descripe **input** fields, which are presented by an `<input>` tag. <br>
+### Labels & input
+The `<lable></lable>` tags can be used to describe **input** fields, which are presented by an `<input>` tag. <br>
 The **for** attribute of the **lable** should match with the **id** attribute of the **input** to link those two elements together. <br>
 The default type for an **input** field is **text**, but you can specify other types like **email**. <br>
-That is a html build in (client-side) datatype validation method. [List of input types](https://www.w3schools.com/html/html_form_input_types.asp) <br>
-To display lable and input field in separated lines without css, put `<br>` tags between them. <br>
-### Textarea
+That is a html build in (client-side) data type validation method. [List of input types](https://www.w3schools.com/html/html_form_input_types.asp) <br>
+To display label and input field in separated lines without css, put `<br>` tags between them. <br>
+An input field can have a **pre-populated** value, when you add the **value** attribute to it's tag. <br>
+The **placeholder** attribute will not add a value to a field, but **display an example**, which will disappear when you enter a value. <br> 
+### Text area
 There is an own tag type (`<textarea></textarea>`) for lager text fields. <br>
 The **textarea** comes with a closing tab, the size of the field can be specified without css, with the **cols** and **rows** attributes. <br>
 ### Select
 The `<select></select>` tabs are the wrapper for a basic **pick list**. <br>
 Such a pick list can contain multiple `<option></option>` tags – pick list values from which you can choose on the page. <br>
+If you want to pre-select a certain option, you can add the **selected** attribute to the option tag. <br>
 ### Numbers
 A **number** field doesn't come with an own tag, it is just an other type attribute of the `<input>` tag. <br>
 The number input field comes by default with some arrow buttons, with which you can increase and decrease the number. <br>
+### Dates
+The `type="date"` in an **input tag** will add a little calendar to your page, from which you can pick a date. <br>
+### Radio 
+`type="radio"` will provide you a **selectable** input. You don't need to put a label to display a name, just add the name after the tag. <br>
+You can add multiple radio inputs. If you want to have one pre-selected, add the **checked** attribute to the input tag. <br>
+### Checkbox
+The `type="checkbox"` is quite similar to the radio type, with the major difference, that you can **select multiple** values. <br>
+You can multi-select those values manually, but also pre-check multiple items with the **checked** attribute. <br>
+### Submit button
+There are two ways to add a submit button: <br>
+* add an input tag of `type="submit"`
+* add a button tag of `type="submit"`
+### Reset button
+You can add a **button tag** of `type="reset"` which will **reset** all entered content when pressed. <br>
+Only the hard-coded, pre-populated values will remain set when resetting the page like this. <br>
 
 ```html
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms and input</title>
+</head>
+<body>
+  <form action="process.php">
+    <!-- Text -->
+    <div>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" value="John Doe">
+    </div>
+    <br>
+    <!-- Email -->
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" placeholder="demo@example.com">
+    </div>
+    <br>
+    <!-- Textarea -->
+    <div>
+      <label for="message">Message</label><br>
+      <textarea name="message" id="message" cols="50" rows="5"></textarea>
+    </div>
+    <br>
+    <!-- Select -->
+    <div>
+      <label for="sex">Sex</label><br>
+      <select name="sex" id="sex">
+        <option value="male">Male</option>
+        <option value="female" selected>Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <br>
+    <!-- Number -->
+    <div>
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+    <br>
+    <!-- Date -->
+    <div>
+      <label for="birthdate">Birthdate</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+    <br>
+    <!-- Radio -->
+    <div>
+      <label for="membership">Membership</label><br>
+      <input type="radio" name="membership" value="simple" id="membership" > Simple
+      <input type="radio" name="membership" value="standard" id="membership" checked> Standard
+      <input type="radio" name="membership" value="super" id="membership"> Super
+    </div>
+    <br>
+    <!-- Checkbox -->
+    <div>
+      <label for="likes">I like</label><br>
+      <input type="checkbox" name="likes" value="bike" id="likes" checked> Bike
+      <input type="checkbox" name="likes" value="car" id="likes" checked> Car
+      <input type="checkbox" name="likes" value="boat" id="likes"> Boat
+    </div>
+    <br>
+    <div>
+      <!-- Input submit -->
+      <input type="submit" value="Submit">
+      <br> <br>
+      <!-- Button submit -->
+      <button type="submit">Submit</button>
+      <br> <br>
+      <!-- Button reset -->
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</body>
+</html>
 ```
 
+![Forms and Inputs](/images/07_forms_inputs.png)
 

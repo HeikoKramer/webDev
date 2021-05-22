@@ -8,33 +8,71 @@
 </head>
 <body>
   <form action="process.php">
+    <!-- Text -->
     <div>
       <label for="name">Name</label><br>
-      <input type="text" id="name">
+      <input type="text" id="name" value="John Doe">
     </div>
     <br>
+    <!-- Email -->
     <div>
       <label for="email">Email</label><br>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" id="email" placeholder="demo@example.com">
     </div>
     <br>
+    <!-- Textarea -->
     <div>
       <label for="message">Message</label><br>
       <textarea name="message" id="message" cols="50" rows="5"></textarea>
     </div>
     <br>
+    <!-- Select -->
     <div>
       <label for="sex">Sex</label><br>
       <select name="sex" id="sex">
         <option value="male">Male</option>
-        <option value="female">Female</option>
+        <option value="female" selected>Female</option>
         <option value="other">Other</option>
       </select>
     </div>
     <br>
+    <!-- Number -->
     <div>
       <label for="age">Age</label><br>
       <input type="number" name="age" id="age">
+    </div>
+    <br>
+    <!-- Date -->
+    <div>
+      <label for="birthdate">Birthdate</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+    <br>
+    <!-- Radio -->
+    <div>
+      <label for="membership">Membership</label><br>
+      <input type="radio" name="membership" value="simple" id="membership" > Simple
+      <input type="radio" name="membership" value="standard" id="membership" checked> Standard
+      <input type="radio" name="membership" value="super" id="membership"> Super
+    </div>
+    <br>
+    <!-- Checkbox -->
+    <div>
+      <label for="likes">I like</label><br>
+      <input type="checkbox" name="likes" value="bike" id="likes" checked> Bike
+      <input type="checkbox" name="likes" value="car" id="likes" checked> Car
+      <input type="checkbox" name="likes" value="boat" id="likes"> Boat
+    </div>
+    <br>
+    <div>
+      <!-- Input submit -->
+      <input type="submit" value="Submit">
+      <br> <br>
+      <!-- Button submit -->
+      <button type="submit">Submit</button>
+      <br> <br>
+      <!-- Button reset -->
+      <button type="reset">Reset</button>
     </div>
   </form>
 </body>
