@@ -292,3 +292,30 @@ Although it is recommended to use css, the **style** attribute allows to adjust 
 ```
 
 ![Lists and Tables](/images/06_lists_tables.png)
+
+## Forms & Input
+Forms on a website are displayed with css and html – but the processing of the input data happens in the backend, with some sort of programming lanuage. <br>
+<br>
+A **form** ist wrapped in `<form></form>` tags. <br>
+The **action** attribute specifies where the form's content is handed over to. <br>
+You can separate multiple form items with `<div></div` tags (**division**). <br>
+The `<lable></lable>` tags can be used to descripe **input** fields, which are presented by an `<input>` tag. <br>
+The **for** attribute of the **lable** should match with the **id** attribute of the **input** to link those two elements together. <br>
+The default type for an **input** field is **text**, but you can specify other types like **email**. <br>
+That is a html build in (client-side) datatype validation method. [List of input types](https://www.w3schools.com/html/html_form_input_types.asp) <br>
+To display lable and input field in separated lines without css, put `<br>` tags between them. <br>
+### Textarea
+There is an own tag type (`<textarea></textarea>`) for lager text fields. <br>
+The **textarea** comes with a closing tab, the size of the field can be specified without css, with the **cols** and **rows** attributes. <br>
+### Select
+The `<select></select>` tabs are the wrapper for a basic **pick list**. <br>
+Such a pick list can contain multiple `<option></option>` tags – pick list values from which you can choose on the page. <br>
+### Numbers
+A **number** field doesn't come with an own tag, it is just an other type attribute of the `<input>` tag. <br>
+The number input field comes by default with some arrow buttons, with which you can increase and decrease the number. <br>
+
+```html
+
+```
+
+
