@@ -37,6 +37,11 @@ But you can simply type `li*4` <kbd>ENTER</kbd> and VS-Code will create all item
 <li></li>
 ```
 
+<br>
+If you **mark** a word you'd like to change and press <kbd>CTRL</kbd> <kbd>d</kbd>, VS-Code will select the next appearance of that word for you. <br>
+Press <kbd>CTRL</kbd> <kbd>d</kbd> again to select a third pattern-match, and again, and again … till you've all the matches selected you'd like to change. <br>
+You will edit all that selected matches at once then. Press <kbd>ESC</kbd> to exit that multi-edit mode. <br>
+
 ## HTML specific
 If you're typing just a <kbd>!</kbd> and press <kbd>ENTER</kbd>, VS Code will add a whole set of default HTML tags. <br>
 
