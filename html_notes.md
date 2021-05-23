@@ -532,3 +532,65 @@ For the most parts you gonna use **divs**, but if you need to work **inline**, *
 
 ![ids and classes](/images/09_id_classes.png)
 
+## Entities
+Html entities are a way to display html reserved characters in the browser. <br>
+A list of html entities can be found on the [w3schools website](https://www.w3schools.com/html/html_entities.asp). <br>
+### Non-breaking space
+Have a look at the example below. You can't just use a number of spaces in a html paragraph tu move a word from another. <br>
+To at more than one space between two words, you gonna need to place the **non-breaking space** entity there. <br>
+This comes with some extra functionality: A non-breaking space will not break into a new line, the separated words will stick together. <br>
+### Greater than and less than
+You can place a greater or less than sign in a html paragraph and maybe you're lucky and it shows up correctly in the browser. <br>
+But some browsers might have issues with those signs and interpret them for open html tags. <br>
+So instead of writing `<p>5 > 2</p`> you use the **greather than entity** `&gt;`. <br>
+There is also a **less than entity**, it is `&lt;` <br>
+Additional to the text entities as **gt** and **lt**, there are number entities which reflect the same signs. <br>
+For **greater than** it is `&#62;`, for less than it is `&#60;`. <br>
+Both version will render the absolutely same thing in the browser. <br>
+There are all kind of entities as you can briefly see in the example below. <br>
+### Computer code
+If you want to display any sort of **computer code** you can use a **code block** between `<code></code>` tags. <br>
+If you need to add any sort of tag in the code block, you'll have to use the greater and less than entity to display that snipped correct. <br>
+The `<kbd>Enter</kbd>` tags will display their content like a key on the **keyboard**. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Non breaking space -->
+  <p>Hello, my name is    Heiko</p>
+  <p>Hello, my name is &nbsp; &nbsp; &nbsp; Heiko</p>
+  <!-- Greater than and less than -->
+  <p>5 &gt; 2</p>
+  <p>5 &#62; 2</p>
+  <p>1 &lt; 2</p>
+  <p>1 &#60; 2</p>
+  <!-- Copyright -->
+  <p>&copy;</p>
+  <p>&reg;</p>
+  <!-- Currency -->
+  <p>&cent;</p>
+  <p>&pound;</p>
+  <p>&yen;</p>
+  <p>&euro;</p>
+  <!-- Suits -->
+  <p>&spades;</p>
+  <p>&hearts;</p>
+  <p>&clubs;</p>
+  <p>&diams;</p>
+  <!-- Computer code -->
+  <code>
+    &lt;?php echo 'Hello' ?&gt
+  </code>
+  <p>Save the file with <kbd>Ctrl</kbd> <kbd>s</kbd></p>
+</body>
+</html>
+```
+
+![Entities](/images/10_entities.png)
