@@ -64,6 +64,7 @@ If you're typing just a <kbd>!</kbd> and press <kbd>ENTER</kbd>, VS Code will ad
 There is a shortcut, if you'd like to create a div with an id, like this: `<div id="about"></div>`. <br>
 You can use Emmit to create that tag with the id for you, just type `div#about` and press <kbd>ENTER</kbd>. <br>
 VS-Code will create the full tag for you. <br>
+This will work with any tag, but if it's a **div**, you could actually only type `#about` and press <kbd>ENTER</kbd> for the same result. <br>
 
 ## Extensions
 ### Live Server
