@@ -468,4 +468,5 @@ The **strong** tag is an **inline element within a block element** – it marks 
 </html>
 ```
 
+![block vs inline](/images/08_block_inline.png)
 
