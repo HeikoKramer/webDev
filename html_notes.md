@@ -418,3 +418,54 @@ Only the hard-coded, pre-populated values will remain set when resetting the pag
 
 ![Forms and Inputs](/images/07_forms_inputs.png)
 
+## Inline & block level elements
+Full list of **block** & **inline** elements: [w3school](https://www.w3schools.com/html/html_blocks.asp) <br>
+The difference between a block and an inline level element is, that … <br>
+* a block level element will span a 100% width of the page
+  * the next thing you put on the page will be on the next line 
+* an inline element takes only the space it needs or you give it
+  * the next element will be placed right after it
+<br>
+In the example below, we are using the **style** tag to visualize the span of each element. <br>
+You can see those three **paragraphs** will be placed under each other as they are **block elements**. <br>
+Even the one word paragraph **spans the full width** of the page. <br> 
+Those two **links** on the other hands are **inline elements** and get placed next to each other although written under each other in code. <br>
+The **strong** tag is an **inline element within a block element** – it marks some text within the paragraph to be displayed bold. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Examples for block level elements -->
+  <!-- Paragraphs -->
+  <p style="border:2px green solid">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium earum sint deserunt iure quo explicabo doloribus enim in. Obcaecati, libero. Esse hic ratione et aliquid, beatae consequuntur totam porro veniam!</p>
+  <p style="border:2px green solid">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptates provident numquam quidem quod sed libero corporis, et autem rerum.</p>
+  <p style="border:2px green solid">Lorem.</p>
+
+  <!-- Unordered lists -->
+  <ul style="border:2px green solid">
+    <li style="border:2px green solid">Item 1</li>
+    <li style="border:2px green solid">Item 2</li>
+    <li style="border:2px green solid">Item 3</li>
+  </ul>
+
+  <!-- Examples for inline elements -->
+  <!-- Links -->
+  <a href="#" style="border:2px red solid">Link 1</a>
+  <a href="#" style="border:2px red solid">Link 2</a>
+
+  <!-- Stylings (inline within block element) -->
+  <p style="border:2px green solid">Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong style="border:2px red solid" >Obcaecati dolorem sint molestiae quam</strong> deleniti adipisci architecto laborum labore voluptates saepe!</p>
+
+
+</body>
+</html>
+```
+
+
