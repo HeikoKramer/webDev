@@ -470,3 +470,65 @@ The **strong** tag is an **inline element within a block element** – it marks 
 
 ![block vs inline](/images/08_block_inline.png)
 
+## Divs & spans, classes & ids
+Ids and classes can be used to style your html with css. <br>
+An id should be unique – if you use `id="main-header` in a div, it should not appear anywhere else in the html file. <br>
+A class can be repeated and is therefor useful if you want to re-use styling schemes on multiple elements. <br>
+In the example below, we've assigned the same class (`.card`) to the about and contact div. <br>
+### Divs & spans
+In the example you see the **div** and the **span** behave different on the text block. <br>
+The div is a **block element** and is therefore spanning the complete line, while the **span** is an **inline element** which is adjusting to its content. <br>
+For the most parts you gonna use **divs**, but if you need to work **inline**, **span** is the right choice. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      background: #f4f4f4;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    .enhance {
+      color: yellow;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div id="main-header">
+    <h1>My Website</h1>
+    <p>A site about me</p>
+  </div>
+  <ul id="main-nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div id="about" class="card">
+    <h3>About</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <div class="enhance">Facere amet delectus explicabo aliquam eos in veritatis ut</div>, sint corporis, voluptas repellat quos iusto obcaecati reiciendis ea commodi nisi error! <span class="enhance">mollitia maxime molestiae et, a nulla fugit repellendus ex numquam!</span></p>
+  </div>
+  <div id="contact" class="card">
+    <h3>Contact Me</h3>
+    <ul>
+      <li>Address: 50 Somestreet, Demostate DS</li>
+      <li>Phone: (123) 456-7891</li>
+      <li>Email: some@email.demo</li>
+    </ul>
+  </div>
+  <div id="footer">
+    <p>Copyright 2019</p>
+  </div>
+</body>
+</html>
+```
+
+![ids and classes](/images/09_id_classes.png)
+
