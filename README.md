@@ -3,8 +3,9 @@ Repo to document my learning progress on HTML, CSS, JavaScript, Node.js, Salesfo
 
 ## Notes
 Quick links to my notes files: <br>
-* [javascript_notes.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md)
 * [html_notes.md](https://github.com/HeikoKramer/webDev/blob/main/html_notes.md)
+* [css_notes.md](https://github.com/HeikoKramer/webDev/blob/main/css_notes.md)
+* [javascript_notes.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md)
 * [VS-Code_notes.md](https://github.com/HeikoKramer/webDev/blob/main/VS-Code_notes.md)
 
 ## Coding samples / tutorials
