@@ -35,5 +35,48 @@ We need a `<link>` tag of type `rel="stylesheet"` so our html can recognize the 
 You need to specify the location and name of the css file in the link. `<link rel="stylesheet" href="css/style.css">` <br>
 In our example we have changed the color of **heading three** to blue with **external css**. <br>
 Out of those three options, **external css** is the preferred method to style a html page. <br>
+
+#### HTML file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Implementing CSS</title>
+  
+  <!-- Internal CSS -->
+  <style>
+    /* <-- comments in CSS look like this --> */
+    h2 {
+      color:seagreen;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h1 style="color: red">Heading One</h1>
+
+  <h2>Heading Two</h2>
+  <h3>Heading Three</h3>
+</body>
+</html>
+```
+
+#### CSS file:
+
+```css
+h3 {
+  color: blue;
+}
+```
+
+#### Browser view:
 ![css basics](/images/01_basics.png)
 
