@@ -35,6 +35,8 @@ We need a `<link>` tag of type `rel="stylesheet"` so our html can recognize the 
 You need to specify the location and name of the css file in the link. `<link rel="stylesheet" href="css/style.css">` <br>
 In our example we have changed the color of **heading three** to blue with **external css**. <br>
 Out of those three options, **external css** is the preferred method to style a html page. <br>
+<br>
+**NOTE:** We will use **internal css** for the examples within this notes, to have css and html visible in one file. <br>
 
 #### HTML file:
 
@@ -80,3 +82,98 @@ h3 {
 #### Browser view:
 ![css basics](/images/01_basics.png)
 
+## CSS Selectors
+If you put the selector `h2` in your css – all **h2 headings** will be styled as specified in css. <br>
+You can restrict the h2 headings adopting that style when you specify an **id**. <br>
+`<h2 id="green-heading">` this html heading has an id **green-heading**. <br>
+Ad an id with a **hash** sign (**#**) to the css selector, to assign that styling only to matching elements with that particular id. <br> 
+
+```css
+    h2#green-heading {
+      color: seagreen;
+    }
+```
+
+You can **only use the id** as a css selector: `#green-heading { color: seagreen; }`. <br>
+In that case you can assign that styling to all **every html element with that id**, not only to h2 headings. <br>
+But as **ids should always be unique**, it would make much more sense to put such multi-assign styling in a class. <br>
+Html: `<h2 class"green-heading">`, css: `.green-heading { color: seagreen; }`. <br>
+To **reference an id** in css, use a **hash** (**#**). To **reference a class**, use a **dot** (**.**). <br>
+### Naming conventions
+You should avoid to use something related to the styling like **green-heading**. <br>
+If you're assigning such a class to multiple elements, because it is green is companies branding, better use something like **primary-heading**. <br>
+If the branding changes later to an other color, you can easily change the styling, but maybe not that easy it's name, which is potentially used in multiple files. <br>
+So think about the future and try not to use descriptive elements in the name that can change later. <br>
+### Multi-selectors
+You can specify a styling for more than one selector at once. <br>
+Just separate the selectors **by comma** to add multiple selectors to your styling. <br>
+You can combine class, id or html element names, no problem. <br>
+### Nested selectors
+If you want your styling to be adapted by all the paragraphs of the div with the **welcome** id: <br>
+
+```css
+    #welcome p {
+      font-size: 22px;
+    }
+```
+
+Just put a space between the first and the second element – if you would place a comma there, all paragraphs would be styled (multi-selector). <br>
+### Element styling
+You can apply styling to a whole element, for example the `<body>` tag. <br>
+In case of the **body**, that would basically mean to the whole page. <br>
+Here some examples for [html5 semantic tags](https://github.com/HeikoKramer/webDev/blob/main/html_notes.md#html-semantic-tags) which are a good use case for element styling. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <style>
+    /* Element styling */
+    body {
+      background-color: #333;;
+    }
+    /* . is for classes */
+    .primary-heading {
+      color: seagreen;
+    }
+
+    /* # is for ids */
+    #welcome {
+      background-color: #f3f3f3;
+    }
+
+    /* Multiple selectors */
+    #welcome, #about, .primary-heading {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+    /* Nested selectors */
+    #welcome p {
+      font-size: 22px;
+    }
+
+    #about {
+      color: seashell;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+    <h2 class="primary-heading">Welcome</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quisquam doloribus impedit aperiam. Quas, iusto. Tenetur repellat magni neque veritatis?</p>
+  </div>
+  <div id="about">
+    <h2>About</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est corporis incidunt voluptatibus laudantium eos fuga vel deleniti temporibus ipsam molestias?</p>
+  </div>
+</body>
+</html>
+```
+
+![css selectors](/images/02_selectors.png)
