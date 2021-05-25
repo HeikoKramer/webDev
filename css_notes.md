@@ -193,7 +193,7 @@ You can **import** fonts from google fonts or include their **font links** as sh
 The appropriate **font-family** will then be available for use in your css. <br>
 
 #### Google fonts link
-![link side bar](google-fonts-links.png)
+![link side bar](/images/google-fonts-links.png)
 
 ### font-size
 The default font size of the `<html></html>` tag is **16px**. <br>
