@@ -177,3 +177,35 @@ Here some examples for [html5 semantic tags](https://github.com/HeikoKramer/webD
 ```
 
 ![css selectors](/images/02_selectors.png)
+
+## Fonts
+### Web safe fonts
+There are millions of font out there, ready to be used in your web-page. <br>
+**BUT** – if the font is not under the [web safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.asp) you should include the actual **font files** within your web page, just like a css file. <br>
+You can also link to a font file remotely. A popular service for **remote fonts** is [google fonts](https://fonts.google.com/). <br>
+
+### font-family
+The `font-family` takes a whole **font stack** and makes it available for the styling of the element where it is added. <br>
+A **font stack** is a set of fonts, with a prefered font and multiple fall-back fonts specified. <br>
+`font-family: Arial, Helvetica, sans-serif;` is going to look for Arial, then Helvetica, then sans-serif. <br>
+<br>
+You can **import** fonts from google fonts or include their **font links** as shown in the example below. <br>
+The appropriate **font-family** will then be available for use in your css. <br>
+
+#### Google fonts link
+![link side bar](google-fonts-links.png)
+
+### font-size
+The default font size of the `<html></html>` tag is **16px**. <br>
+A `font-size: 22px;` css styling for the body tag will increase the font size appropriate for the whole page. <br> 
+### line-height
+The default height is 1em I guess … `line-height: 1.4em;` spreads the space between two lines a bit. <br>
+As higher as you set the **line height** as much **space between lines** you get. <br>
+
+--> weiter bei -5:01
+
+```html
+
+```
+
+
