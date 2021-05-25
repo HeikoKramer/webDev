@@ -11,12 +11,21 @@
       /* Font settings */
       font-family: 'Ubuntu Mono', monospace;
       font-size: 22px;
-      line-height: 1.4em;
+      line-height: 1.4;
 
       /* Color settings */
       background-color: #49483E;
       color: #FFFFFF;
     }
+
+    #welcome p span {
+      font-weight: bold;
+    }
+
+    #about p span {
+      font-style: italic;
+    }
+
     h2 {
       /* Color settings */
       color: #a6e22e;
@@ -26,11 +35,11 @@
 <body>
   <div id="welcome">
     <h2 class="primary-heading">Welcome</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quisquam doloribus impedit aperiam. Quas, iusto. Tenetur repellat magni neque veritatis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Beatae quisquam doloribus impedit aperiam.</span> Quas, iusto. Tenetur repellat magni neque veritatis?</p>
   </div>
   <div id="about">
     <h2>About</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est corporis incidunt voluptatibus laudantium eos fuga vel deleniti temporibus ipsam molestias?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <span>Est corporis incidunt voluptatibus laudantium eos.</span> Fuga vel deleniti temporibus ipsam molestias?</p>
   </div> 
 </body>
 </html>

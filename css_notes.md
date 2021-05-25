@@ -201,11 +201,61 @@ A `font-size: 22px;` css styling for the body tag will increase the font size ap
 ### line-height
 The default height is 1em I guess … `line-height: 1.4em;` spreads the space between two lines a bit. <br>
 As higher as you set the **line height** as much **space between lines** you get. <br>
+### font-weight & font-style
 
---> weiter bei -5:01
+* font-weight: how bold the text will be displayed
+* fint-style: normal, italic, etc. …
+
+The technique shown in the example is not only applying to **font-weight** or **font-style**, but explains why to prefer css styling over html tags. <br>
+We could bold face the text with the html `<b>` or `<strong>` tab, but in css we have much more options on **how bold** to set the text. <br>
+Furthermore we have the option to apply **weight** or **style** to different span elements, depending on the **id of their div**. <br>
 
 ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <title>Fonts</title>
+  <style>
+    body {
+      /* Font settings */
+      font-family: 'Ubuntu Mono', monospace;
+      font-size: 22px;
+      line-height: 1.4;
 
+      /* Color settings */
+      background-color: #49483E;
+      color: #FFFFFF;
+    }
+
+    #welcome p span {
+      font-weight: bold;
+    }
+
+    #about p span {
+      font-style: italic;
+    }
+
+    h2 {
+      /* Color settings */
+      color: #a6e22e;
+    }
+  </style>
+</head>
+<body>
+  <div id="welcome">
+    <h2 class="primary-heading">Welcome</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Beatae quisquam doloribus impedit aperiam.</span> Quas, iusto. Tenetur repellat magni neque veritatis?</p>
+  </div>
+  <div id="about">
+    <h2>About</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <span>Est corporis incidunt voluptatibus laudantium eos.</span> Fuga vel deleniti temporibus ipsam molestias?</p>
+  </div> 
+</body>
+</html>
 ```
 
-
+![Fonts](/images/03_fonts.png)
