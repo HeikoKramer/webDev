@@ -259,3 +259,15 @@ Furthermore we have the option to apply **weight** or **style** to different spa
 ```
 
 ![Fonts](/images/03_fonts.png)
+
+## Colors
+### Color Types
+#### Name
+You can set the **color** of an element by referencing the color's name: `color: red;`. <br>
+[List of color names and hash-codes](https://www.w3schools.com/cssref/css_colors.asp) <br>
+#### RGB
+The RGB color type composes the target color out of the thre source colors, **red**, **green** and **blue**. <br>
+`0` is the **minimum** `255` is the **maximum** value. <br>
+`color: rgb(255, 0, 0)` corresponds to the same color from our example above – pure **red**. <br>
+`color: rgb(0, 0, 0)` equals **black**, `color: rgb(0, 0, 0)` equals **white**. <br>
+[RGB color fader + examples](https://www.w3schools.com/Css/css_colors_rgb.asp) <br>
