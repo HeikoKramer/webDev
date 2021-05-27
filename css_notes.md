@@ -264,10 +264,62 @@ Furthermore we have the option to apply **weight** or **style** to different spa
 ### Color Types
 #### Name
 You can set the **color** of an element by referencing the color's name: `color: red;`. <br>
-Further resources: [List of color names and hash-codes](https://www.w3schools.com/cssref/css_colors.asp) <br>
+Further resources: [List of color names and hex-codes](https://www.w3schools.com/cssref/css_colors.asp) <br>
 #### RGB
 The RGB color type composes the target color out of the three source colors, **red**, **green** and **blue**. <br>
 `0` is the **minimum**, `255` is the **maximum** value. <br>
 `color: rgb(255, 0, 0)` corresponds to the same color from our color-name example above – pure **red**. <br>
 `color: rgb(0, 0, 0)` equals **black**, `color: rgb(0, 0, 0)` equals **white**. <br>
 Further resources: [RGB color fader + examples](https://www.w3schools.com/Css/css_colors_rgb.asp) <br>
+#### Hex
+The **hex** code is the most common way to reference a color. <br>
+It starts with a `#`, contains **six-digits** of **numbers from 0-9** and **letters from a-f**. <br>
+`color: #000000;` equals **black**, `color: #ffffff;` equals **white**. <br>
+Hexadecimal colors also use the RGB spectrum: <br>
+
+* #**ff**ffff – the first two digits pair represents **red**
+* #ff**ff**ff – the second two digits pair represents **green**
+* #ffff**ff** – the third two digits pair represents **blue**
+
+`color: #ff0000;` will style our element in the same way **red**, as our rgb and color-name examples. <br>
+If all sic digits are the same, like **#ffffff** or **#000000**, you can shorten them to three digits: **#fff**, **#000**. <br>
+The site [color-hex.com](https://www.color-hex.com/) provides some neat color tools. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors</title>
+  <style>
+    h1 {
+      /* Color name */
+      color: red;
+    }
+
+    h2 {
+      /* RGB */
+      color: rgb(255, 0, 0)
+    }
+
+    h3 {
+      /* Hex */
+      color: #ff0000;
+    }
+    
+    body {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Heading One</h1>
+  <h2>Heading Two</h2>
+  <h3>Heading Three</h3>
+</body>
+</html>
+```
+
+![Colors](/images/04_colors.png)
