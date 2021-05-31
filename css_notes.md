@@ -323,3 +323,41 @@ The site [color-hex.com](https://www.color-hex.com/) provides some neat color to
 ```
 
 ![Colors](/images/04_colors.png)
+
+## Backgrounds & Borders
+### Border style
+You can style a border with its three attributes each in a separate line like this: <br>
+
+```css
+border-width: 8px;
+border-color: rebeccapurple;
+border-style: dashed;
+```
+
+Or all together in **one line** like this: <br>
+
+```css
+border: 8px dashed rebeccapurple;
+```
+
+You can set border only on top of an element. <br>
+
+```css
+background: beige;
+color: darkslategray;
+border-top: 8px solid darkslategray;
+```
+
+You can round your corners with **border-radius**: <br>
+
+```css
+border-radius: 10px;
+```
+
+Each corner can be styled individually. <br>
+If you want to style only the upper left corner: <br>
+
+```css
+border-top-left-radius: 10px;
+```
+
