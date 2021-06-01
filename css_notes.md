@@ -324,7 +324,7 @@ The site [color-hex.com](https://www.color-hex.com/) provides some neat color to
 
 ![Colors](/images/04_colors.png)
 
-## Backgrounds & Borders
+## Backgrounds & borders
 ### Border style
 You can style a border with its three attributes each in a separate line like this: <br>
 
@@ -360,4 +360,110 @@ If you want to style only the upper left corner: <br>
 ```css
 border-top-left-radius: 10px;
 ```
+
+### Background image
+`background-image: url('./img/stars.jpg');` places the **star.jpg** image as **background** for the styled element. <br>
+`background-repeat: no-repeat;` ensures the background isn't repeated by the browser. <br>
+You can use **background-repeat** to adjust settings for seamless textures. <br>
+With **background-position** you can move the image position within the styled element. <br>
+Examples: `background-position: -100px -100px;` or `background-position: 100px 100px;` or `background-position: center top;`. <br>
+`background-size: cover;` is going to adjust the size of the image to **cover** the whole space of the styled element. <br>
+You can combine those background settings shown above in one single **backround** line: <br>
+
+```css
+background: url('./img/stars.jpg') no-repeat center center/cover;
+```
+
+You can use `background:` also to only set an image, without specifying all the other settings. <br>
+Usually the background image would scroll with your view position on the page. <br>
+You can prevent the image from scrolling and make it hold its position on the page with `background-attachment: fixed;` <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backgrounds & Borders</title>
+  <style>
+    #box1 {
+      background-color: palevioletred;
+      border-width: 8px;
+      border-color: rebeccapurple;
+      border-style: dashed;
+      border-radius: 10px;
+    }
+    #box1b {
+      background-color: palevioletred;
+      border: 8px dashed rebeccapurple;
+      border-top-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+    #box2 {
+      background: beige;
+      color: darkslategray;
+      border-top: 8px solid darkslategray;
+    }
+    #box3 {
+      background-image: url('./img/stars.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      color: #fff;
+      height: 300px;
+      width: 600px;
+    }
+    #box3b {
+      background: url('./img/stars.jpg') no-repeat center center/cover;
+      color: #fff;
+      height: 300px;
+      width: 600px;
+    }
+    #box4 {
+      background: url('./img/leaf.png') no-repeat center center;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1">
+  <h3>Box one</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+  </div>
+  <br>
+  <div id="box1b">
+    <h3>Box one b</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+  </div>
+  <br>
+  <div id="box2">
+    <h3>Box two</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+  </div>
+  <br>
+  <div id="box3">
+    <h3>Box three</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+  </div>
+  <br>
+  <div id="box3b">
+    <h3>Box three</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+  </div>
+  <br>
+  <div id="box4">
+    <h3>Box four</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius culpa eum inventore soluta maiores tempora tenetur labore recusandae perspiciatis!</p>
+  </div>
+</body>
+</html>
+```
+
+![Background Borders](/images/05_background_borders.png)
 
