@@ -467,3 +467,28 @@ You can prevent the image from scrolling and make it hold its position on the pa
 
 ![Background Borders](/images/05_background_borders.png)
 
+## Box model, margin & padding
+Your browsers **inspector** or **developer console** helps you to better understand **margin**, **border** and ** padding**. <br>
+
+* **Margin:** is the space outside of the border to the browser side lines
+* **Border:** the element surrounding frame, might be visible, might be transparent
+* **Padding:** positioning within the inner border
+
+![Box Model](/images/box-model.png)
+
+### Reset default styling
+Some **html-elements** have **default styling settings** – like margin, font-size or font-weight for a heading. <br>
+
+You can overwrite those **default values** when setting an **custom value** for the appropriate element. <br>
+You can also **reset all styling properties** with a CSS reset: <br>
+
+```html
+<style>
+  /* CSS Reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+```
+
