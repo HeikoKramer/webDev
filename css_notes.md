@@ -672,3 +672,73 @@ Floats have to be **cleared** – which is a pain in the neck. <br>
 ```
 
 ![Float & Alignment](/images/07_float_align.png)
+
+## Links & buttons
+Links have different **states**. The **default link styling** is **blue** and **underlined**. <br>
+`text-decoration: none;` will **remove the underline**. <br>
+### link pseudo-selectors
+[w3schools pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp) <br>
+To change the link behavior on mouse hover, use the `a:hover {}` pseudo selector. <br>
+`a:visited {}` will style an **already clicked link**, `a:active {}` styles the **link while clicked**. <br>
+### style links and buttons
+The default stylings of links and buttons are different, but they can be styled similar, sharing the same styling class. <br>
+Some things like the `cursor: pointer;` come by default on **links**, but can be activated on **buttons**. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links & Buttons</title>
+  <style>
+    /* Link Styling */
+    a{
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: coral;
+      text-decoration: underline;
+    }
+
+    /*
+    a:visited {
+      color: red;
+    }
+    */
+
+    a:active {
+      color: red;
+    }
+
+    /* Button Styling */
+    .btn {
+      background: #4c6ca0;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      color: #f4f4f4;
+      background: #446190;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <a class="btn" href="#">My Link</a>
+  <br><br>
+  <button class="btn">My Button</button>
+</body>
+</html>
+```
+
+![Link and Button](/images/08_links_buttons.png)
