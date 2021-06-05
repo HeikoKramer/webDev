@@ -587,7 +587,7 @@ By default, text is aligned to the left, but you can write it out like this: `te
 You can as well align **right**, **center** or **justify** *(blocksatz)*. <br>
 ### Floating
 Floating is kind of an ancient way of positioning elements in context to each other. <br>
-There are more modern ways to do it, lice **CSS Grid** but it made it into our example for the sake of demo. <br> 
+There are more modern ways to do it, like **CSS Grid** but it made it into our example for the sake of demo. <br> 
 Floats have to be **cleared** – which is a pain in the neck. <br>
 
 ```html
