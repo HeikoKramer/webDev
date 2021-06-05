@@ -492,3 +492,87 @@ You can also **reset all styling properties** with a CSS reset: <br>
 </style>
 ```
 
+### Margin, padding and sizing properties
+`box-sizing: border-box;` restricts the **width** of an element to the **width** defined in its styling. <br>
+Without that setting, padding is added **on the outside** of the width, with it, it's added **within the specified width**. <br>
+<br>
+**NOTE:** If you define styling settings multiple-times for the same attributes in your document … <br>
+… the settings **further down** will **overrule** the prior settings up in the document. <br>
+<br>
+In the example below you see four ways to set the **padding** for an element. <br>
+
+* **(1)** Padding with single entry – means same value for all four sides
+* **(2)** Padding with four **single entries** for each **individual side**
+* **(3)** Padding with four **one-line** entries for sides: **top, right, bottom, left**
+* **(4)** Padding with two entries for grouped values: **top/bottom left/right**
+<br>
+For the **margin** setting, it works exactly the same way, as you can see in the example. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model / Margin & Padding</title>
+  <style>
+    /* CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .box {
+      background: #f4f4f4;
+      border: 2px #777 solid;
+      width: 500px;
+
+      /* (1) Padding on all sides */
+      padding: 20px;
+
+      /* (2) Padding per side */
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+
+      /* (3) Padding shorthand = top, right, bottom, left */
+      padding: 10px 20px 10px 20px;
+
+      /* (4) Padding shorthand = top/bottom left/right */
+      padding: 10px 20px;
+
+      /* Margin on all sides */
+      margin: 20px;
+
+      /* Margin per side */
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+
+      /* Margin shorthand = top, right, bottom, left */
+      margin: 10px 20px 10px 20px;
+
+      /* Margin shorthand = top/bottom left/right */
+      margin: 10px 20px;
+    }
+    .box h3 {
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>Box one</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil laudantium ea cum aspernatur facilis voluptates quis possimus amet cumque! Recusandae.</p>
+  </div>
+  <div class="box">
+    <h3>Box two</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil laudantium ea cum aspernatur facilis voluptates quis possimus amet cumque! Recusandae.</p>
+  </div>
+</body>
+</html>
+```
+
