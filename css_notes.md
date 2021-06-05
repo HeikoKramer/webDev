@@ -576,3 +576,99 @@ For the **margin** setting, it works exactly the same way, as you can see in the
 </html>
 ```
 
+## Float & alignment
+You can use a **container class div** as shown in the example below as a styling-wrapper. <br>
+It makes sense to use `max-width` over `width` ind a **container class** to ensure mobile compatibility. <br>
+A `width: 960px;` will result in a **scroll-bar** for displays with a width less 960px. <br>
+`max-width: 960px;` though will adjust the **width** to the screen when tighter, but keep a **max of 960px** for wider displays. <br>
+`margin: auto` will **center** the element in the middle of the screen (left/right). <br> 
+### Text align
+By default, text is aligned to the left, but you can write it out like this: `text-align: left;` <br>
+You can as well align **right**, **center** or **justify** *(blocksatz)*. <br>
+### Floating
+Floating is kind of an ancient way of positioning elements in context to each other. <br>
+There are more modern ways to do it, lice CSS **grid** but it made it into our example for the sake of demo. <br> 
+Floats have to be **cleared** – which is a pain in the neck. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float & Align</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4em;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 30px auto
+    }
+
+    .clr {
+      clear: both;
+    }
+
+    .box {
+      background: #c4c4c4;
+      border: 2px solid #333;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+
+    .box p {
+      /* Text Align */
+      text-align: justify;
+    }
+
+    #box-2 {
+      float: left;
+      width: 68%;
+    }
+
+    #box-3 {
+      float: right;
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div id="box-1" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis cum aut labore rerum optio
+        reprehenderit, maxime quam quidem tenetur doloribus?</p>
+    </div>
+    <div id="box-2" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis cum aut labore rerum optio
+        reprehenderit, maxime quam quidem tenetur doloribus?</p>
+    </div>
+    <div id="box-3" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis cum aut labore rerum optio
+        reprehenderit, maxime quam quidem tenetur doloribus?</p>
+    </div>
+
+    <div class="clr"></div>
+
+    <div id="box-4" class="box">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis cum aut labore rerum optio
+        reprehenderit, maxime quam quidem tenetur doloribus?</p>
+    </div>
+
+  </div>
+</body>
+</html>
+```
+
+![Float & Alignment](/images/07_float_align.png)
