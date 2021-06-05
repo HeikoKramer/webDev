@@ -742,3 +742,102 @@ Some things like the `cursor: pointer;` come by default on **links**, but can be
 ```
 
 ![Link and Button](/images/08_links_buttons.png)
+
+## Navigation menu styling
+Use `list-style: none;` to get rid of **default list bullet-points**. <br>
+We can set a styling only for the **last list element** with the appropriate **pseudo-selector**: <br>
+
+```css
+.side-menu li:last-child {
+  border: none;
+}
+```
+
+### Side menu & navbar
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Styling</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #4c6ca0;
+      border-radius: 5px;
+      overflow: auto;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;;
+    }
+
+    .navbar li a:hover {
+      background-color: #446190;
+    }
+
+    /* Side Menu Styling */
+    .side-menu {
+      list-style: none;
+      border: 2px #aaa solid;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+    }
+
+    .side-menu li {
+      font-size: 18px;
+      line-height: 2.4em;
+      border-bottom: dotted 2px #aaa;
+    }
+
+    .side-menu li:last-child {
+      border: none;
+    }
+
+    .side-menu li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .side-menu li a:hover {
+      color: coral;
+    }
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <br><br>
+  <ul class="side-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</body>
+</html>
+```
+
+![Side menu and navbar](/images/09_menus.png)
