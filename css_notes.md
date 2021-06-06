@@ -849,7 +849,7 @@ But with `display: inline;` you can change it to be **inline** which allows you 
 An **inline element** can't be centered with `margin: auto;`. <br>
 It has to be transformed to a **block level element** with `display: block;` in order to center it. <br>
 If you want to make a block element inline and you need to use **width** on it, you have to use `display: inline-block;`. <br>
-**inline-block** combines some of the capabilities of **inline and block** elements. <br>
+**inline-block** combines some of the capabilities of **inline and block** elements together. <br>
 
 ```html
 <!DOCTYPE html>
@@ -908,6 +908,6 @@ If you want to make a block element inline and you need to use **width** on it, 
 </html>
 ```
 
-![inline blocks](/images/10_inline_blocks.png)
+![inline block](/images/10_inline_block.png)
 
 
