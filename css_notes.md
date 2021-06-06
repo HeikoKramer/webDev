@@ -910,4 +910,97 @@ If you want to make a block element inline and you need to use **width** on it, 
 
 ![inline block](/images/10_inline_block.png)
 
+## Positioning
+|Position Type|Description|
+|:------------|:----------|
+|Static|Not effected by tblr (top, bottom, left, right) properties|
+|Relative|tblr values cause element to be moved from its normal position|
+|Absolute|Positioned relative to its parent element that is positioned "relative"|
+|Fixed|Positioned relative to the viewpoint|
+|Sticky|Positioned based on scroll position|
 
+Elements with `position: absolute;` will adjust within their their **parent** element. <br>
+That **parent** element must have `position: relative;` set in its properties. <br>
+An element with `position: fixed;` will hold its specified position withing the screen **when scrolling**. <br>
+The blue box (**box-4**) will keep its position exactly where it is, the other elements disappear when scrolling down. <br>
+The orange box (**box-5**) has `position: sticky;` set and will **stick** at `top: 0;` when it reaches that position while scrolling. <br>
+### z-index
+The elements layer position can be adjusted with `z-index:` – as higher the number as higher the element. <br>
+If we give our **container** `z-index: 1;` and our **box-1** `z-index: 2;`, box-1 will show in the foreground. <br>
+You can use **negative values** for your **z-index**. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning</title>
+  <style>
+    body {
+      height: 4000px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background: #333;
+      left: 300px;
+      z-index: 1;
+    }
+
+    #box-1 {
+      position: relative;
+      top: 50px;
+      left: 550px;
+      z-index: 2;
+      background: red;
+    }
+
+    #box-2 {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      background: yellow;
+    }
+
+    #box-3 {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+      background: green;
+    }
+    
+    #box-4 {
+      position: fixed;
+      left: 150px;
+      background: blue;
+    }
+    
+    #box-5 {
+      position: sticky;
+      top: 0;
+      background: orange;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="box-1" class="box"></div>
+  <div class="container">
+    <div id="box-2" class="box"></div>
+    <div id="box-3" class="box"></div>
+  </div>
+  <div id="box-4" class="box"></div>
+  <div id="box-5" class="box"></div>
+</body>
+</html>
+```
+
+![positioning](/images/11_position.png)
