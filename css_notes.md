@@ -841,3 +841,73 @@ We can set a styling only for the **last list element** with the appropriate **p
 ```
 
 ![Side menu and navbar](/images/09_menus.png)
+
+## Inline & Block Styling
+By default **list items** are **block level** elements. <br>
+But with `display: inline;` you can change it to be **inline** which allows you to use the list for something like a horizontal navbar. <br>
+**Images** are **inline elements** by default. If you place two of them together, they go next to each other within the same line. <br> 
+An **inline element** can't be centered with `margin: auto;`. <br>
+It has to be transformed to a **block level element** with `display: block;` in order to center it. <br>
+If you want to make a block element inline and you need to use **width** on it, you have to use `display: inline-block;`. <br>
+**inline-block** combines some of the capabilities of **inline and block** elements. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline & Block Styling</title>
+<style>
+  li {
+    display: inline;
+  }
+
+  li a {
+    padding-right: 20px;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  .box {
+    width: 32.99%;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">Technology</a></li>
+    <li><a href="#">Business</a></li>
+    <li><a href="#">Fashion</a></li>
+  </ul>
+  <br><br>
+  <img src="./img/leaf.png" alt="My image">
+  <br><br>
+  <div class="box">
+    <h3>Heading 1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quisquam eligendi reprehenderit pariatur at! Aperiam, quaerat tempore? Est, iure repellendus.</p>
+  </div>
+  <div class="box">
+    <h3>Heading 2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quisquam eligendi reprehenderit pariatur at! Aperiam, quaerat tempore? Est, iure repellendus.</p>
+  </div>
+  <div class="box">
+    <h3>Heading 3</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quisquam eligendi reprehenderit pariatur at! Aperiam, quaerat tempore? Est, iure repellendus.</p>
+  </div>
+</body>
+</html>
+```
+
+![inline blocks](/images/10_inline_blocks.png)
+
+
