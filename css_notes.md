@@ -1004,3 +1004,36 @@ You can use **negative values** for your **z-index**. <br>
 ```
 
 ![positioning](/images/11_position.png)
+
+## display none & visibility hidden
+Testfile without any styling: <br>
+
+![testfile](/images/testfile.png)
+
+### display none
+Now we add the following styling to the page: <br>
+
+```css
+h1 {
+  display: none;
+}
+```
+
+This will completely remove the **H1** element from the browser <br>
+That can be useful for example if you'd not like to show it on a mobile device. <br>
+
+![display-none](/images/display-none.png)
+
+### visibility hidden
+There is also a way to **hide** an element from the page: <br>
+
+```html
+h1 { 
+  visibility: hidden;
+}
+```
+
+The element will be hidden, but it still will occupy the full space as it would when visible. <br>
+
+![visibility-hidden](/images/visibility-hidden.png)
+
