@@ -1037,3 +1037,34 @@ The element will be hidden, but it still will occupy the full space as it would 
 
 ![visibility-hidden](/images/visibility-hidden.png)
 
+## Order of precedence
+### Class style
+Normally the style further down in the document is take precedence – however, targeting a class is going to overwrite the actual element. <br>
+
+**Body:**
+
+```html
+<body>
+  <h1 class="hello">Hello World</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, nihil tenetur deleniti doloremque facilis itaque!</p>
+</body>
+```
+
+**Syling**
+
+```html
+<style>
+  .hello {
+    color: red;
+  }
+  h1 { 
+    /* display: none; */
+    /* visibility: hidden; */
+    color: blue;
+  }
+</style>
+```
+
+The **h1** remains red, because the class style overwrites the element style: <br>
+
+![class-style](/images/class-style.png)
