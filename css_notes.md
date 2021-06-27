@@ -1058,8 +1058,6 @@ Normally the style further down in the document is take precedence – however, 
     color: red;
   }
   h1 { 
-    /* display: none; */
-    /* visibility: hidden; */
     color: blue;
   }
 </style>
@@ -1068,3 +1066,21 @@ Normally the style further down in the document is take precedence – however, 
 The **h1** remains red, because the class style overwrites the element style: <br>
 
 ![class-style](/images/class-style.png)
+
+### !important flag
+There is a way to overwrite either the position in the stylesheet or class styling – the `!important` flag: <br>
+
+```html
+<style>
+  h1 { 
+    color: blue !important;
+  }
+  .hello {
+    color: red;
+  }
+</style>
+```
+
+Although the class styling would overwrite the element styling by default and it is further down in the sheet, the blue color will be the dominant styling setting in this case as it has been flagged **important**. <br>
+
+![important](/images/important.png)
