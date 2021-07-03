@@ -1084,3 +1084,15 @@ There is a way to overwrite either the position in the stylesheet or class styli
 Although the class styling would overwrite the element styling by default and it is further down in the sheet, the blue color will be the dominant styling setting in this case as it has been flagged **important**. <br>
 
 ![important](/images/important.png)
+
+## :focus
+If you want to change the default outline color of an textarea or input field, you can do so with `:focus` <br>
+You have to set the outline to **none**, then specify the border color of your choice. <br>
+
+```html
+#contact-form input:focus, 
+#contact-form textarea:focus  {
+  outline: none;
+  border-color: #f7c08a;
+}
+```
