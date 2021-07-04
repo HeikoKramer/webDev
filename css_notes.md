@@ -1090,6 +1090,7 @@ If you want to change the default outline color of an textarea or input field, y
 You have to set the outline to **none**, then specify the border color of your choice. <br>
 
 ```html
+t
 #contact-form input:focus, 
 #contact-form textarea:focus  {
   outline: none;
@@ -1106,5 +1107,123 @@ Responsive design uses HTMT/CSS to make a website or app layout adapt to differe
 * media queries – different CSS styling for different screen sizes
 * rem units over px
 * mobile first method
+
+### Media queries
+The example below shows how to use media queries to set a different styling for individual device types, bases on the average screen **widths** of those devices. <br>
+It's unlikely that you want to have a totally different styling based on the device type, a typical use case for this would be different floating depending on the screen width – so for example three boxes next to each other on the desktop while there stacked below each other on a smaller screen. <br> 
+Note that the **landscape** example uses the **height** to as indicator for its styling. <br>
+You can have dedicated media style sheets and call them only if the device specification apply. <br>
+The following link under your usual stylesheet, would call it only, if the **width** is 768px or less. <br>
+
+```html
+<link rel="stylesheet" media "screen and (max-width: 768px)" href="mobile.css">
+```
+
+**smartphone**
+
+![smartphone](/images/smartphone.png)
+
+**tablet**
+
+![tablet](/images/tablet.png)
+
+**normal**
+
+![normal](/images/normal.png)
+
+**widescreen**
+
+![widescreen](/images/widescreen.png)
+
+**landscape**
+
+![landscape](/images/landscape.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: gray;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      display: none;
+    }
+
+    /* Smartphones */
+    @media(max-width: 500px) {
+      body {
+        background: red;
+      }
+
+      #smartphone h1 {
+        display: block;
+      }
+
+    }
+    /* Tablet */
+    @media(min-width: 501px) and (max-width: 768px) {
+      body {
+        background: blue;
+      }
+
+      #tablet h1 {
+        display: block;
+      }
+    }
+
+    /* Normal */
+    @media(min-width: 769px) and (max-width: 1200px) {
+      body {
+        background: green;
+      }
+
+      #normal h1 {
+        display: block;
+      }
+    }
+
+    /* Widescreen */
+    @media(min-width: 1201px) {
+      body {
+        background: black;
+      }
+
+      #widescreen h1 {
+        display: block;
+      }
+    }
+
+    /* Landscape */
+    @media(max-height: 500px) {
+      body {
+        background: orange;
+      }
+
+      #landscape h1 {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="widescreen"><h1>Widescreen</h1></div>
+  <div id="normal"><h1>Normal</h1></div>
+  <div id="tablet"><h1>Tablet</h1></div>
+  <div id="smartphone"><h1>Smartphone</h1></div>
+  <div id="landscape"><h1>Landscape</h1></div>
+</body>
+</html>
+```
 
 
