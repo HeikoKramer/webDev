@@ -1225,8 +1225,9 @@ The following link under your usual stylesheet, would call it only, if the **wid
 </body>
 </html>
 ```
-```
-### Em & Rem Units
+
+## Em & Rem units
+### Em units
 A *pixel* is a *fixed* unit, while **em** and **rem** are multipliers of certain things. <br>
 An **em** unit is relative to the **font-size** of its **parent container**. <br>
 A **rem** unit is relative to the **font-size** of the **root html element**. <br>
@@ -1300,3 +1301,53 @@ with a styling like that: <br>
 will result in a bigger font-size for the nested element as it's again orientation on the parent. <br>
 
 ![em-list](/images/em-list.png)
+
+### Rem units
+The **rem** unit is more stable in that sense as it is relative to the **root-element** size (16px by default). <br>
+<br>
+So our box <br>
+
+```html
+<div id="box-2">
+  <h3>Box Two</h3>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, voluptatibus id! Impedit, molestiae aspernatur cumque odio odit atque excepturi fuga?</p>
+</div>
+```
+
+with styling **2rem**
+
+```html
+#box-2 h3 {
+  font-size: 2rem;
+}
+```
+
+Will result in a font size of **32px** (16 x 2) for the box-heading. <br>
+
+![rem](/images/rem.png)
+
+Setting a font-size and a line-height shows the difference to the *em* unit. <br>
+
+```html
+#box-2 p {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+```
+
+With *em* the line-height value would be the calculated font-size value times 1.7, but with **rem** both values are calculated outgoing from the root element value. <br>
+
+![remrem](/images/remrem.png)
+<br>
+To set the **root element font size** simply add the following to your styling: <br>
+
+```html
+html {
+  font-size: 10px;
+}
+```
+
+Setting the root element to `10px` or an equivalent of `62.5%` gives an advantage in simple calculable **rem** values. <br>
+`1.6rem` will then calculate to **16px**, `2.5rem` to **25px** and so on … <br>
+An other advantage lies on the user's side. If the user changes the default browser font-size – your **rem** unit code will adjust to that, while it will have no effect on **em** unit code. <br>
+
