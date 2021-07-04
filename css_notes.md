@@ -1096,3 +1096,15 @@ You have to set the outline to **none**, then specify the border color of your c
   border-color: #f7c08a;
 }
 ```
+
+## Responsive Design
+Responsive design uses HTMT/CSS to make a website or app layout adapt to different screen sizes. <br>
+
+### Practices to use
+* set the viewport / scale
+* use fluid widths as oppose to fixed
+* media queries – different CSS styling for different screen sizes
+* rem units over px
+* mobile first method
+
+
