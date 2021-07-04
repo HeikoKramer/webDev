@@ -1435,3 +1435,5 @@ Note that there is the **about** section below it – but that section will appe
 </html>
 ```
 
+The image takes the whole height of the page: <br>
+![vh-demo](/images/vh-demo.png)
