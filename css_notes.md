@@ -1351,3 +1351,87 @@ Setting the root element to `10px` or an equivalent of `62.5%` gives an advantag
 `1.6rem` will then calculate to **16px**, `2.5rem` to **25px** and so on … <br>
 An other advantage lies on the user's side. If the user changes the default browser font-size – your **rem** unit code will adjust to that, while it will have no effect on **em** unit code. <br>
 
+## vh & vw units
+vh = **viewport height**, vw **viewport width**. <br>
+The **viewport** is the whole are inside the browser, basically the browser body. <br>
+No matter what size the viewport has, it always is segmented in 100 imaginative horizontal (viewport height) and 100 vertical (viewport width) slices. <br>  
+You can set your content to take anything between 0 and 100 of those vh and vw slices. <br>
+<br>
+In the example below `height: 100vh` to ensure the background image takes the whole available height of the screen. <br>
+Note that there is the **about** section below it – but that section will appear only when actively scrolling down. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vh & Vw Units</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background: #333 url('https://source.unsplash.com/daily') no-repeat center center/cover;
+      color: #fff;
+      height: 100vh;
+      /* width: 50vw; */
+      text-align: center;
+      padding: 2rem;
+      padding-top: 15rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      margin: 1rem 0;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #f4f4f4;
+      color: #333;
+      padding: 0.75rem 2rem;
+    }
+
+    .btn:hover {
+      background: #999;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    @media(max-height: 450px) {
+      header {
+        padding-top: 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to our Website</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta corrupti incidunt numquam assumenda harum culpa.</p>
+    <a href="#" class="btn">Find Out More</a>
+  </header>
+
+  <section>
+    <h3>About Our Company</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa reiciendis molestiae laborum incidunt blanditiis omnis ad ab modi ipsum accusantium ducimus, enim voluptatum libero, eveniet ipsa laboriosam fugit quaerat doloribus cumque beatae aliquam, asperiores delectus. Veritatis ipsum impedit ratione, natus aliquam omnis reprehenderit tempore nemo qui molestias quis ea temporibus?</p>
+  </section>
+</body>
+</html>
+```
+
