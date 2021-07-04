@@ -1225,5 +1225,78 @@ The following link under your usual stylesheet, would call it only, if the **wid
 </body>
 </html>
 ```
+```
+### Em & Rem Units
+A *pixel* is a *fixed* unit, while **em** and **rem** are multipliers of certain things. <br>
+An **em** unit is relative to the **font-size** of its **parent container**. <br>
+A **rem** unit is relative to the **font-size** of the **root html element**. <br>
+<br>
+So a div with a paragraph in it like this: <br>
 
+```html
+<div id="box-1">
+  <h3>Box One</h3>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, voluptatibus id! Impedit, molestiae aspernatur cumque odio odit atque excepturi fuga?</p>
+</div>
+```
 
+And a styling like that:
+
+```html
+#box-1 {
+  font-size: 20px;
+}
+
+#box-1 p {
+  font-size: 1.5em;
+}
+```
+
+results in a **paragraph font size** of **30px** (20 x 1.5). <br>
+<br>
+**NOTE**: A second **em** unit assignment does not orientate on the parent element, it orientates on the prior assignment. <br>
+
+```html
+#box-1 p {
+  font-size: 1.5em;
+  padding: 1em;
+}
+```
+
+The adding of `padding: 1em;` results in a padding of **30px** as it is relative to the prior calculated *font-size* value. <br>
+
+![em-unit](/images/em-unit.png)
+
+A similar behaviour makes it complicated to work with **em** units and nested elements. <br>
+A nested list like this: <br>
+
+```html
+  <div id="box-1">
+    <h3>Box One</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, voluptatibus id! Impedit, molestiae aspernatur cumque odio odit atque excepturi fuga?</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </li>
+      <li>4</li>
+    </ul>
+  </div>
+```
+ 
+with a styling like that: <br>
+
+```html
+#box-1 ul {
+  font-size: 1.2em;
+}
+```
+
+will result in a bigger font-size for the nested element as it's again orientation on the parent. <br>
+
+![em-list](/images/em-list.png)
