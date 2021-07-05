@@ -1437,3 +1437,20 @@ Note that there is the **about** section below it – but that section will appe
 
 The image takes the whole height of the page: <br>
 ![vh-demo](/images/vh-demo.png)
+
+## Flexbox
+What is Flexbox?
+
+* a modern layout mode in CSS3
+* **flex** is a value for the **display** property
+* replaces floats and is much more elegant to work with
+* aligns items both horizontal (row) and vertical (column)
+* flex items can be re-ordered via CSS
+
+### Alignment Properties
+* **justify-content:** Align along the main axis (horizontal)
+* **align-items:** Align items along the cross axis (vertical)
+* **align-content:** Align when extra space in cross axis
+
+![flexbox](/images/flexbox-graphic.png)
+
