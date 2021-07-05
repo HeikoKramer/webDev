@@ -11,3 +11,24 @@
   padding: 5px;
   border-bottom: #444 dotted 1px;
 }
+
+/* Home Info */
+#home-info {
+  height: 550px;
+}
+
+#home-info .info-img {
+  display: none;
+}
+
+#home-info .info-content {
+  float: none;
+  width: 100%;
+}
+
+/* Boxes */
+
+.box {
+  float: none;
+  width: 100%;
+}
