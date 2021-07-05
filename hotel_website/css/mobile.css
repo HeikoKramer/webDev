@@ -12,6 +12,16 @@
   border-bottom: #444 dotted 1px;
 }
 
+/* Showcase */
+#showcase {
+  height: 100%;
+}
+
+#showcase .showcase-content {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
 /* Home Info */
 #home-info {
   height: 550px;
@@ -46,4 +56,9 @@
 
 .l-heading {
   text-align: center;
+}
+
+/* Contact */
+#contact-info .box {
+  border-bottom: #444 dotted 1px;
 }
