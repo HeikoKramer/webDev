@@ -1454,3 +1454,60 @@ What is Flexbox?
 
 ![flexbox](/images/flexbox-graphic.png)
 
+### Flex basics
+Flex can be assigned to any parent element like th div shown in this example: <br>
+
+**html:** <br>
+
+```html
+<div id="container">
+  <div class="item"><h3>Item 1</h3></div>
+  <div class="item"><h3>Item 2</h3></div>
+  <div class="item"><h3>Item 3</h3></div>
+</div>
+```
+
+**css:** <br>
+
+```html
+<style>
+  #container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    background: #f4f4f4;
+    border: #ccc solid 1px;
+    padding: 1rem;
+    text-align: center;
+    margin: 0.75rem;
+    flex: 1;
+  }
+
+  .item:first-child {
+    flex: 2;
+  }
+</style>
+```
+
+Simply put `display: flex;` in that element's styling. <br>
+`flex-direction: row;` will put all the **child-items** in a raw (horizontal). <br>
+<br>
+`flex: 1;` on the **item** styling, will ensure each item takes equal space on the line. <br>
+All items together will take the full available space on the screen. <br>
+In the example, we have assigned the doubled size to the first item `.item:first-child`. <br>
+
+![first child](/images/1st-child.png)
+
+<br>
+The **flex raw** will break at **12** items, a horizontal **scroll-bar** will show. <br>
+Here an example with 16 items: <br>
+
+![flex-scrollbar](/images/flex-scrollbar.png)
+
+`flex-wrap: wrap;` will change that behaviour and ensure that all items are **wrapped** under each other: <br>
+
+![flex-wrap](/images/flex-wrap.png)
+
