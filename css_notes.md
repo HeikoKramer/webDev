@@ -1540,3 +1540,19 @@ This property aligns the items in the **center** of the screen. <br>
 **space-evenly** is a combination of both examples above, it puts an **even** amount of space around items and to the edges. <br>
 ![space-evenly](/images/space-evenly.png)
 
+### align-items
+**align-items** is the vertical alignment of the child-items of an element. <br>
+As with *justify-content* the value is set in the styling of the parent element. <br>
+<br>
+`align-items: stretch;` is the set default – it stretches the items to the full **height** of the parent. <br>
+![stretch](/images/stretch.png)
+<br>
+There is also `align-items: flex-start;` (top) and `align-items: flex-end;` (bottom). <br>
+![top](/images/align-top.png)
+![bottom](/images/align-bottom.png)
+<br>
+`align-items: center;` does what you'd expexct, it centers the item. <br>
+![center](/images/align-center.png)
+
+### align-content
+
