@@ -1551,8 +1551,27 @@ There is also `align-items: flex-start;` (top) and `align-items: flex-end;` (bot
 ![top](/images/align-top.png)
 ![bottom](/images/align-bottom.png)
 <br>
-`align-items: center;` does what you'd expexct, it centers the item. <br>
+`align-items: center;` does what you'd expect, it centers the item. <br>
 ![center](/images/align-center.png)
 
 ### align-content
+**align-content** aligns child-items vertical if there is extra space. <br>
+The default content alignment looks like this: <br>
+![default](/images/content-default.png)
+<br>
+`align-content: flex-start;` aligns child items at the top. <br>
+![content-start](/images/content-start.png)
+<br>
+`align-content: flex-end;` aligns child items at the bottom. <br>
+![content-end](/images/content-end.png)
+<br>
+`align-content: center;` aligns the items in the center of the screen. <br>
+![content-center](/images/content-center.png)
+<br>
+`align-content: space-around;` put an equal amount of space on the top & bottom of each item. <br>
+![content-around](/images/content-around.png)
+<br>
+`align-content: space-between;` aligns the items at top & bottom, with **space between**. <br>
+![content-between](/images/content-between.png)
+<br>
 
