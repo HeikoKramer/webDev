@@ -1575,3 +1575,10 @@ The default content alignment looks like this: <br>
 ![content-between](/images/content-between.png)
 <br>
 
+### align-self
+**align-self** is set on the item (child) level. It allows individual alignment per item. <br> 
+`align-self: flex-end;` aligns – as the other **flex-end** properties – the assigned item at the bottom. <br>
+![self-end](/images/self-end.png)
+<br>
+`align-self: center;` is another one that makes sense, it aligns the assigned item to the center. <br>
+![self-center](/images/self-center.png)
