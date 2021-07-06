@@ -1511,3 +1511,32 @@ Here an example with 16 items: <br>
 
 ![flex-wrap](/images/flex-wrap.png)
 
+## Flex alignment & order
+`flex-basis: 200px;` is basically the same as `width: 200px;` for items where `display: flex;` is assigned to the styling of the parent. <br>
+### justify-content
+The alignment property `justify-content` goes on the **parent element** and specifies the alignment of the child items. <br>
+<br>
+`justify-content: flex-start;` <br>
+**flex-start** is set as default if no further specified. It aligns the items to the **left**. <br>
+![flex-start](/images/flex-start.png)
+<br>
+`justify-content: flex-end;` <br>
+**flex-end** aligns the items to the **right** <br>
+![flex-end](/images/flex-end)
+<br>
+`justify-content: center;` <br>
+This property aligns the items in the **center** of the screen. <br> 
+![center](/images/flex-center.png)
+<br>
+`justify-content: space-around;` <br>
+**space-around** divides the space around each item equally. <br>
+![space-around](/images/space-around.png)
+<br>
+`justify-content: space-between;` <br>
+**space-between** is similar to *space-around*, but divides the space only **between** the items, and doesn't put any on the edges. <br>
+![space-between](/images/space-between)
+<br>
+`justify-content: space-evenly;` <br>
+**space-evenly** is a combination of both examples above, it puts an **even** amount of space around items and to the edges. <br>
+![space-evenly](/images/space-evenly.png)
+
