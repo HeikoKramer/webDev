@@ -1534,7 +1534,7 @@ This property aligns the items in the **center** of the screen. <br>
 <br>
 `justify-content: space-between;` <br>
 **space-between** is similar to *space-around*, but divides the space only **between** the items, and doesn't put any on the edges. <br>
-![space-between](/images/space-between)
+![space-between](/images/space-between.png)
 <br>
 `justify-content: space-evenly;` <br>
 **space-evenly** is a combination of both examples above, it puts an **even** amount of space around items and to the edges. <br>
