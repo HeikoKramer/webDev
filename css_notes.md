@@ -1522,7 +1522,7 @@ The alignment property `justify-content` goes on the **parent element** and spec
 <br>
 `justify-content: flex-end;` <br>
 **flex-end** aligns the items to the **right** <br>
-![flex-end](/images/flex-end)
+![flex-end](/images/flex-end.png)
 <br>
 `justify-content: center;` <br>
 This property aligns the items in the **center** of the screen. <br> 
