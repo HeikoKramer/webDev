@@ -1582,3 +1582,25 @@ The default content alignment looks like this: <br>
 <br>
 `align-self: center;` is another one that makes sense, it aligns the assigned item to the center. <br>
 ![self-center](/images/self-center.png)
+
+### order
+**order** provides an easy way to change the screen order of your items, without the need to adjust the actual markup. <br>
+
+```html
+<style>
+  .item-1 {
+    order: 3;
+  }
+
+  .item-2 {
+    align-self: flex-end;
+    order: 1;
+  }
+
+  .item-3 {
+    order: 2;
+  }
+</style>
+```
+
+![order](/images/order.png)
