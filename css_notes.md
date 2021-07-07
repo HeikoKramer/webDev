@@ -1604,3 +1604,50 @@ The default content alignment looks like this: <br>
 ```
 
 ![order](/images/order.png)
+
+## background-color transparency
+There is a trick to darken a background image if the font above it is to bright to be readable on the background: <br>
+Place a html layer above the layer with the background image and assign it a **black but transparent background**. <br>
+
+**html:** <br>
+
+```html
+<header id="showcase">
+    <div class="showcase-content">
+      <h1 class="l-heading">The Sky Is The Limit</h1>
+    </div>
+  </header>
+```
+
+**css:** <br>
+
+```html
+#showcase {
+  background: #333 url('../img/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+#showcase .showcase-content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  
+  /* Overlay */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+```
+
+The 0.4 in `background-color: rgba(0, 0, 0, 0.4);` regulates the transparency. <br>
+A value of **1** would overlay the background image with a fully black layer, **0.4** only darkens it a bit and makes the font readable. <br>  
+<br>
+### Image only
+![no-bg](/images/no-bg.png)
+
+### Image with transparent black overlay
+![overlay](/images/overlay.png)
