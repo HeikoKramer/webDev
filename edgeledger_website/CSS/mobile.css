@@ -60,19 +60,19 @@
     height: 200px;
     border-top: 4px solid #333;
   }
+}
 
-  @media(max-height: 568px) {
-    #showcase .showcase-content {
-      margin-top: -2rem;
-      top: 140px;
-    }
-  
-    .l-heading {
-      font-size: 3rem;
-    }
-  
-    .lead {
-      font-size: 1rem;
-    }
-    
+@media(max-height: 568px) {
+  #showcase .showcase-content {
+    margin-top: -2rem;
+    top: 140px;
+  }
+
+  .l-heading {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
 }
