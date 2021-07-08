@@ -173,7 +173,6 @@ p {
 /* Section: Who We Are */
 #who {
   display: flex;
-  margin-bottom: 1rem;
 }
 
 #who div {
