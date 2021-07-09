@@ -1688,6 +1688,7 @@ A value of **1** would overlay the background image with a fully black layer, **
 The styling above styles **all paragraphs within a div** with a background color. <br>
 The **Item 2 list element** is – as the two other paragraphs – part of a div and gets styled: <br>
 ![all childs](/images/all-childs.png)
+
 <br>
 If we ad a **>** to that styling as following, only **direct childs** – the Item 2 list won't inherit the styling as it is child of the **ul**, not the div. <br>
 
@@ -1701,3 +1702,15 @@ If we ad a **>** to that styling as following, only **direct childs** – the It
 
 **Result:** <br>
 ![direct childs](/images/direct-childs.png)
+
+### Directly after
+Add a **+** to style the element **directly after** a specific element. <br> 
+
+```html
+div + p {
+  background: #333;
+  color: #fff;
+}
+```
+
+![directly after](/images/directly-after.png)

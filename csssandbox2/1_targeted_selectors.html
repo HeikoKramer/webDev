@@ -6,8 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Targeted Selectors</title>
   <style>
+    /* Direct child */
     div > p {
       background: #ddd;
+    }
+
+    /* Directly after */
+    div + p {
+      background: #333;
+      color: #fff;
     }
   </style>
 </head>
