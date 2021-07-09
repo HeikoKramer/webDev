@@ -1707,10 +1707,34 @@ If we ad a **>** to that styling as following, only **direct childs** – the It
 Add a **+** to style the element **directly after** a specific element. <br> 
 
 ```html
-div + p {
-  background: #333;
-  color: #fff;
-}
+<style>
+  div + p {
+    background: #333;
+    color: #fff;
+  }
+</style>
 ```
 
 ![directly after](/images/directly-after.png)
+
+### By attribute
+You can assign styling only to elements that have a certain attribute. <br>
+
+```html
+<a href="#">Page 1</a> <a href="#">Page 2</a> <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+```
+
+Three link, only one of them hast the **target attribute** set. <br>
+
+```html
+<styling>
+  a[target] {
+    background: red;
+    color: #fff;
+  }
+</styling>
+```
+
+Only the W3Schools link has been assigned to our styling. <br>
+
+![attribute](/images/attribute.png)
