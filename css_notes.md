@@ -1651,3 +1651,53 @@ A value of **1** would overlay the background image with a fully black layer, **
 
 ### Image with transparent black overlay
 ![overlay](/images/overlay.png)
+
+## Target selectors
+### Direct childs
+
+**Example html:** <br>
+
+```html
+<body>
+  <div>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <ul>
+      <li>Item 1</li>
+      <li><p>Item 2</p></li>
+      <li>Item 3</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <p>Lorem ipsum dolor sit amet.</p>
+</body>
+```
+
+**Example css:** <br>
+
+```html
+<style>
+  div p {
+    background: #ddd;
+  }
+</style>
+```
+
+The styling above styles **all paragraphs within a div** with a background color. <br>
+The **Item 2 list element** is – as the two other paragraphs – part of a div and gets styled: <br>
+![all childs](/images/all-childs.png)
+<br>
+If we ad a **>** to that styling as following, only **direct childs** – the Item 2 list won't inherit the styling as it is child of the **ul**, not the div. <br>
+
+```html
+<style>
+  div > p {
+    background: #ddd;
+  }
+</style>
+```
+
+**Result:** <br>
+![direct childs](/images/direct-childs.png)
