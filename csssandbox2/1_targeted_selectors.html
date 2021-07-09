@@ -18,8 +18,9 @@
     }
 
     /* By attribute */
-    a[target] {
+    a[target='_self'] {
       background: red;
+      color: #fff;
     }
   </style>
 </head>
@@ -38,6 +39,8 @@
 
   <p>Lorem ipsum dolor sit amet.</p>
 
-  <a href="#">Page 1</a> <a href="#">Page 2</a> <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+  <a href="#">Page 1</a> 
+  <a href="#" target="_self">Page 2</a> 
+  <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
 </body>
 </html>

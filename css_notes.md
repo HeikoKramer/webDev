@@ -1721,7 +1721,9 @@ Add a **+** to style the element **directly after** a specific element. <br>
 You can assign styling only to elements that have a certain attribute. <br>
 
 ```html
-<a href="#">Page 1</a> <a href="#">Page 2</a> <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+<a href="#">Page 1</a>
+<a href="#">Page 2</a> 
+<a href="https://www.w3schools.com" target="_blank">W3Schools</a>
 ```
 
 Three link, only one of them hast the **target attribute** set. <br>
@@ -1738,3 +1740,28 @@ Three link, only one of them hast the **target attribute** set. <br>
 Only the W3Schools link has been assigned to our styling. <br>
 
 ![attribute](/images/attribute.png)
+
+If you have multiple elements with the same attribute, but different values: <br>
+
+```html
+<a href="#">Page 1</a>
+<a href="#" target="_self">Page 2</a> 
+<a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+```
+
+All elements matching the attribute criteria will adopt the styling. <br>
+
+![multi attribute](/images/multi-attribute.png)
+
+But you can also specify the attribute **value** within the styling to get finer results. <br>
+
+```html
+<styling>
+  a[target='_self'] {
+    background: red;
+    color: #fff;
+  }
+</styling>
+```
+
+![value](/images/value.png)
