@@ -1845,4 +1845,14 @@ li:nth-child(3n+0) {
 
 ![nth-child-3](/images/nth-child-3.png)
 
+### every odd
+To style every odd element of a certain type add: <br>
+
+```css
+li:nth-child(odd) {
+  background: #ccc;
+}
+```
+
+![odd](/images/odd.png)
 

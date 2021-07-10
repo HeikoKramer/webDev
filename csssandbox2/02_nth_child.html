@@ -13,9 +13,9 @@
     }
 
     /* first-child */
-    /* li:first-child {
+    li:first-child {
       background: red;
-    } */
+    }
 
     /* last-child */
     li:last-child {
@@ -23,13 +23,18 @@
     }
 
     /* Position 3 */
-    /* li:nth-child(3) {
-      background: purple !important;
-    } */
+    li:nth-child(3) {
+      background: purple;
+    }
 
     /* Every 3rd  */
-    li:nth-child(3n+1) {
+    li:nth-child(3n+0) {
       background-color: orange;
+    }
+
+    /* Every odd */
+    li:nth-child(odd) {
+      background: #ccc;
     }
   </style>
 </head>
