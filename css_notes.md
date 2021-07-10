@@ -1677,12 +1677,10 @@ A value of **1** would overlay the background image with a fully black layer, **
 
 **Example css:** <br>
 
-```html
-<style>
+```css
   div p {
     background: #ddd;
   }
-</style>
 ```
 
 The styling above styles **all paragraphs within a div** with a background color. <br>
@@ -1692,12 +1690,10 @@ The **Item 2 list element** is – as the two other paragraphs – part of a div
 <br>
 If we ad a **>** to that styling as following, only **direct childs** – the Item 2 list won't inherit the styling as it is child of the **ul**, not the div. <br>
 
-```html
-<style>
+```css
   div > p {
     background: #ddd;
   }
-</style>
 ```
 
 **Result:** <br>
@@ -1706,13 +1702,11 @@ If we ad a **>** to that styling as following, only **direct childs** – the It
 ### Directly after
 Add a **+** to style the element **directly after** a specific element. <br> 
 
-```html
-<style>
+```css
   div + p {
     background: #333;
     color: #fff;
   }
-</style>
 ```
 
 ![directly after](/images/directly-after.png)
@@ -1728,13 +1722,11 @@ You can assign styling only to elements that have a certain attribute. <br>
 
 Three link, only one of them hast the **target attribute** set. <br>
 
-```html
-<styling>
+```css
   a[target] {
     background: red;
     color: #fff;
   }
-</styling>
 ```
 
 Only the W3Schools link has been assigned to our styling. <br>
@@ -1755,13 +1747,11 @@ All elements matching the attribute criteria will adopt the styling. <br>
 
 But you can also specify the attribute **value** within the styling to get finer results. <br>
 
-```html
-<styling>
+```css
   a[target='_self'] {
     background: red;
     color: #fff;
   }
-</styling>
 ```
 
 ![value](/images/value.png)
@@ -1796,8 +1786,7 @@ We have already seen posibilities to style the first or last child of an element
 
 Item 1 and item 20 could be styled with css like this: <br>
 
-```html
-<style>
+```css
   li {
     padding: 0.25rem;
     margin: 0.25rem;
@@ -1813,7 +1802,6 @@ Item 1 and item 20 could be styled with css like this: <br>
   li:last-child {
     background: red;
   }
-</style>
 ```
 
 ![first-last](/images/first-last.png)
@@ -1859,7 +1847,7 @@ li:nth-child(odd) {
 ### every even 
 You've gussed right, to style every **even** item, the css looks like this: <br>
 
-```html
+```css
 li:nth-child(even) {
   background: #333;
   color: #fff;
