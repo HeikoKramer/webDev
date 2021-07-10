@@ -1765,3 +1765,84 @@ But you can also specify the attribute **value** within the styling to get finer
 ```
 
 ![value](/images/value.png)
+
+## nth-child Pseudo Selectors
+We have already seen posibilities to style the first or last child of an element, but here a short refresher: <br>
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+  <li>Item 7</li>
+  <li>Item 8</li>
+  <li>Item 9</li>
+  <li>Item 10</li>
+  <li>Item 11</li>
+  <li>Item 12</li>
+  <li>Item 13</li>
+  <li>Item 14</li>
+  <li>Item 15</li>
+  <li>Item 16</li>
+  <li>Item 17</li>
+  <li>Item 18</li>
+  <li>Item 19</li>
+  <li>Item 20</li>
+</ul>
+```
+
+Item 1 and item 20 could be styled with css like this: <br>
+
+```html
+<style>
+  li {
+    padding: 0.25rem;
+    margin: 0.25rem;
+    list-style: none;
+  }
+
+  /* first-child */
+  li:first-child {
+    background: red;
+  }
+
+  /* last-child */
+  li:last-child {
+    background: red;
+  }
+</style>
+```
+
+![first-last](/images/first-last.png)
+
+### styling by number
+In case you'd like to style a certain number – 3 for example – you can add the following: <br>
+
+```css
+  li:nth-child(3) {
+    background: purple; 
+  }
+```
+
+The third item will now have a purple background. <br>
+
+![nth-child](/images/nth-child.png)
+
+### repetitive styling
+You can group elements by number-pattern and style them repetitive. The example below will style every 3rd list item. <br>
+The **0** after the **+** in the brackets is the **offset** – it specifies where that pattern will start. <br>
+`(3n+0)` is actually the same as `(3n)` – it will start at the **3rd item** in the list and style every other **3rd** item from there. <br>
+`(3n+2)` would style the **2nd** item and then every **3rd** from there, so 2,5,8,11 and so on … <br>
+
+```css
+li:nth-child(3n+0) {
+  background-color: orange;
+}
+```
+
+![nth-child-3](/images/nth-child-3.png)
+
+
