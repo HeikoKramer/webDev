@@ -1846,7 +1846,7 @@ li:nth-child(3n+0) {
 ![nth-child-3](/images/nth-child-3.png)
 
 ### every odd
-To style every odd element of a certain type add: <br>
+To style every **odd** element of a certain type add: <br>
 
 ```css
 li:nth-child(odd) {
@@ -1856,3 +1856,14 @@ li:nth-child(odd) {
 
 ![odd](/images/odd.png)
 
+### every even 
+You've gussed right, to style every **even** item, the css looks like this: <br>
+
+```html
+li:nth-child(even) {
+  background: #333;
+  color: #fff;
+}
+```
+
+![even](/images/even.png)
