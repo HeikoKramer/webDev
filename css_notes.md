@@ -1930,4 +1930,4 @@ header > h1 {
 }
 ```
 
-![before](/images/before)
+![before](/images/before.png)
