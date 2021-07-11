@@ -1845,7 +1845,7 @@ li:nth-child(odd) {
 ![odd](/images/odd.png)
 
 ### every even 
-You've gussed right, to style every **even** item, the css looks like this: <br>
+You've guessed right, to style every **even** item, the css looks like this: <br>
 
 ```css
 li:nth-child(even) {
@@ -1855,3 +1855,27 @@ li:nth-child(even) {
 ```
 
 ![even](/images/even.png)
+
+## before & after pseudo selectors
+With the before and after selectors, you can add additional content to your code without adding it to the actual markup. <br>
+The addition happens via css – and could therefore easily assigned to all elements of a certain class for example. <br>
+This is particular useful for something like a **required** marker: <br>
+<br>
+**html:** <br>
+
+```html
+<label for="name" class="is-required">Name</label>
+<input type="text">
+```
+
+**css:** <br>
+
+```css
+.is-required:after {
+  content: '*';
+  color: red;
+  padding-left: 2px;
+}
+```
+
+![after](/images/after.png)
