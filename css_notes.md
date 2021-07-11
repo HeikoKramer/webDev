@@ -1857,6 +1857,7 @@ li:nth-child(even) {
 ![even](/images/even.png)
 
 ## before & after pseudo selectors
+### after
 With the before and after selectors, you can add additional content to your code without adding it to the actual markup. <br>
 The addition happens via css – and could therefore easily assigned to all elements of a certain class for example. <br>
 This is particular useful for something like a **required** marker: <br>
@@ -1879,3 +1880,54 @@ This is particular useful for something like a **required** marker: <br>
 ```
 
 ![after](/images/after.png)
+
+### before
+A common use case for the **before** selector is to use it for an overlay: <br>
+<br>
+**html:** <br>
+
+```html
+<header>
+  <h1>Hello World</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, omnis!</p>
+</header>
+```
+
+**css:** <br>
+
+```css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #fff;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+header:before {
+  content: '';
+  background: url('https://source.unsplash.com/daily') no-repeat center center/cover;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header > h1 {
+  font-size: 4rem;
+  margin: 1rem;
+}
+```
+
+![before](/images/before)
