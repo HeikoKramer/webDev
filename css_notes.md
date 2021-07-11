@@ -1931,3 +1931,77 @@ header > h1 {
 ```
 
 ![before](/images/before.png)
+
+## box-shadow
+There a multiple options to assign inner and outer **shadows** – or combinations – to an element, here some examples: <br>
+<br>
+**html:** <br>
+
+```html
+<div class="box">
+  <h3>Heading</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, enim!</p>
+</div>
+```
+
+**css:** <br>
+
+```css
+.box {
+  padding: 1rem;
+  margin: 1rem;
+  background: coral;
+  color: #fff;
+}
+```
+
+Add the following lines to the **.box** styling to gain the appropriate shadow effects: <br>
+
+### offset-x | offset-y | color
+
+```css
+box-shadow: 10px 10px teal;
+```
+
+![box-shadow_01.png](/images/box-shadow_01.png)
+
+### offset-x | offset-y | blur-radius | color
+
+```css
+box-shadow: 10px 10px 20px teal;
+```
+
+![box-shadow_02.png](/images/box-shadow_02.png)
+
+### negative values
+
+```css
+box-shadow: -5px -5px 10px teal;
+```
+
+![box-shadow_03.png](/images/box-shadow_03.png)
+
+### offset-x | offset-y | blur-radius | spread-radius | color
+
+```css
+box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.3);
+```
+
+![box-shadow_04.png](/images/box-shadow_04.png)
+
+### inset | offset-x | offset-y | color
+
+```css
+box-shadow: inset -3px -3px teal;
+```
+
+![box-shadow_05.png](/images/box-shadow_05.png)
+
+### multiple shadows
+
+```css
+box-shadow: 3px 3px teal, -3px -3px #0063b2;
+```
+
+![box-shadow_06.png](/images/box-shadow_06.png)
+
