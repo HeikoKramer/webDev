@@ -2005,3 +2005,47 @@ box-shadow: 3px 3px teal, -3px -3px #0063b2;
 
 ![box-shadow_06.png](/images/box-shadow_06.png)
 
+## text-shadow
+**text-shadow** is works in a similar way as the *box-shadow*, but for text of course: <br>
+<br>
+**html:** <br>
+
+```html
+<h1 class="a">Welcome to my page</h1>
+<h1 class="b">Welcome to my page</h1>
+<h1 class="c">Welcome to my page</h1>
+<h1 class="d">Welcome to my page</h1>
+```
+
+**css:** <br>
+
+```css
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  margin: 1rem;
+}
+
+h1.a {
+  /* h-shadow | v-shadow | color */
+  text-shadow: 0.2rem 0.2rem steelblue;
+}
+
+h1.b {
+  /* h-shadow | v-shadow | blur | color */
+  text-shadow: 0.4rem 0.3rem 0.7rem steelblue;
+}
+
+h1.c {
+  /* White Text */
+  color: #fff;
+  text-shadow: 0.2rem 0.2rem 1rem steelblue;
+}
+
+h1.d {
+  /* Negative Values */
+  text-shadow: -0.4rem -0.3rem 0.7rem steelblue;
+}
+```
+
+![text-shadow](/images/text-shadow.png)
