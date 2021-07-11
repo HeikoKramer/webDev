@@ -2049,3 +2049,107 @@ h1.d {
 ```
 
 ![text-shadow](/images/text-shadow.png)
+
+## css variables
+Like in other programming languages, a **variable** in css is also a place to store a value. <br>
+You can declare variables basically everywhere, for a **class**, **id** or **element** based, but if you'd like to use that variable within the entire stylesheet, you should declare it in the `:root {}` scope. <br>
+A variable is declared starting with two dashes `--example: #fff;` this variable would be referred so `background: var(--example);` in the target element. <br> 
+
+Let's look at this little example page, where we have variables set for the color scheme of the page, the max width and also some layout variables for the box element. <br>
+It's a small page, but could be a huge one with hundreds of references to those used colors. <br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables</title>
+  <style>
+    :root {
+      --max-width: 1100px;
+      --primary-color: steelblue;
+      --secondary-color: skyblue;
+      --light-color: #f4f4f4;
+    }
+
+    .box {
+      --box-1-width: 1;
+      --box-2-width: 1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.4;
+      background: var(--light-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      border-bottom: 10px var(--secondary-color) solid;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      margin: auto;
+      max-width: var(--max-width);
+    }
+
+    .box {
+      background-color: var(--primary-color);
+      border-bottom: 10px var(--secondary-color) solid;
+      color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+    }
+
+    .box-1 { flex: var(--box-1-width);}
+    .box-2 { flex: var(--box-2-width);}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CSS Variables</h1>
+  </header>
+
+  <div class="container">
+    <div class="box box-1">
+      <h3>Heading</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam sequi aliquam esse quae eum!</p>
+    </div>
+    <div class="box box-2">
+      <h3>Heading</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsam sequi aliquam esse quae eum!</p>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+![css variables 1](/images/css-variables_01.png)
+
+With those color variables set in `:root` and that layout variables set for `.box`, you could easily change colors and layout for the entire page now: <br>
+
+```css
+:root {
+  --max-width: 1100px;
+  --primary-color: #333;
+  --secondary-color: #666;
+  --light-color: #f4f4f4;
+}
+
+.box {
+  --box-1-width: 1;
+  --box-2-width: 2;
+}
+```
+
+![css variables 2](/images/css-variables_02.png)
