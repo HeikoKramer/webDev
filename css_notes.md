@@ -2294,4 +2294,4 @@ To transition multiple properties, separate them by comma. <br>
 }
 ```
 
-![multi-transition](/images/transition2.gif)
+![multi-transition](/images/transition_02.gif)
