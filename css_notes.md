@@ -2374,3 +2374,21 @@ You can combine transform and transition to animate the element's transformation
 ```
 
 ![animated transform](/images/animated-tranform.gif)
+
+### translate
+translate is a neat feature to move an element around without specifying top, etc. <br>
+
+```css
+    .box {
+      background: white;
+      width: 120px;
+      height: 120px;
+      transition: all 1s ease-in-out;
+    }
+
+    .box:hover {
+      transform: translateY(150px);
+    }
+```
+
+![translate](/images/translate.gif)
