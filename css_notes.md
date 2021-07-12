@@ -2314,3 +2314,31 @@ Alternatively you can as well add **all** properties to the transition: <br>
 
 ![transition all](/images/transition_03.gif)
 
+## Transform
+Transorm can be used with and without animation. <br>
+
+```css
+body {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  background: white;
+  width: 120px;
+  height: 120px;
+}
+```
+
+### rotate
+To rotate our .box class div, use the following on the .box styling: <br>
+
+```css
+transform: rotate(25deg);
+```
+
+![rotate](/images/rotete.png)
+
