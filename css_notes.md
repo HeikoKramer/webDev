@@ -2201,3 +2201,54 @@ The details can be specified one-by-one as in the example above, or in a combine
 ```
 
 ![keyframe-animation](/images/keyframe-animation.gif)
+
+## Time-step animations
+You can't just only specify an animation from a **start to an end condition**, but also create **multiple steps in the animation timeline**. <br>
+The example below shows an animation with **4 steps**, each at an equal quarter of the full timeline (100%). <br>
+Those steps doesn't have to be equal and there could be more than four … it's just an example. <br>
+
+```css
+body {
+  background: #333;
+}
+
+.box {
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: animate1 5s forwards ease-in-out;
+}
+
+@keyframes animate1 {
+  25% {
+    top: 0;
+    left: 300px;
+    background: blueviolet;
+    border-radius: 25%;
+  }
+  50% {
+    top: 300px;
+    left: 300px;
+    background: yellow;
+    border-radius: 50%;
+
+  }
+  75% {
+    top: 300px;
+    left: 0;
+    background: olivedrab;
+    border-radius: 25%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background: #fff;
+    border-radius: 0%;
+  }
+}
+```
+
+![square animation](/images/keyframe-animation_02.gif)
