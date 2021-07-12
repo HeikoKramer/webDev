@@ -2252,3 +2252,32 @@ body {
 ```
 
 ![square animation](/images/keyframe-animation_02.gif)
+
+## Transitions
+A **transition** requires an additional specification like a `:hover` selector. <br>
+The hover specifies **what changes** and the transition **how it changes**. <br>
+
+```css
+.box {
+  background: white;
+  width: 100px;
+  height: 100px;
+
+  transition-property: background;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+
+.box:hover {
+  background: red;
+}
+```
+
+Those transition values can be combined into one property: <br>
+
+```css
+transition: background 2s ease-in-out;
+```
+
+![transition](/images/transition.gif)
+
