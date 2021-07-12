@@ -2200,3 +2200,4 @@ The details can be specified one-by-one as in the example above, or in a combine
   animation: animate1 5s forwards 1s ease-in-out;
 ```
 
+![keyframe-animation](/images/keyframe-animation.gif)
