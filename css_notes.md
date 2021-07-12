@@ -2276,6 +2276,7 @@ The hover specifies **what changes** and the transition **how it changes**. <br>
 Those transition values can be combined into one property: <br>
 
 ```css
+/* property | duration | timin-function */
 transition: background 2s ease-in-out;
 ```
 
