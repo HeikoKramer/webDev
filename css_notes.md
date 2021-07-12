@@ -2342,3 +2342,10 @@ transform: rotate(25deg);
 
 ![rotate](/images/rotate.png)
 
+### skew
+
+```css
+transform: skew(25deg);
+```
+
+![skew](/images/skew.png)
