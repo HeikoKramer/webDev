@@ -2392,3 +2392,9 @@ translate is a neat feature to move an element around without specifying top, et
 ```
 
 ![translate](/images/translate.gif)
+
+You can use **negative** values to move the element into the other direction. <br>
+`translateY` – **up and down**, `translateX` **left and right**. <br>
+You can combine both values: `transform: translate(150px, 150px);` <br>
+
+![translate-both](/images/translate-both.gif)
