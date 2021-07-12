@@ -2281,3 +2281,17 @@ transition: background 2s ease-in-out;
 
 ![transition](/images/transition.gif)
 
+To transition multiple properties, separate them by comma. <br>
+
+```css
+.box {
+  transition: background, border-radius 2s ease-in-out;
+}
+
+.box:hover {
+  background: red;
+  border-radius: 50%;
+}
+```
+
+![multi-transition](/images/transition2.gif)
