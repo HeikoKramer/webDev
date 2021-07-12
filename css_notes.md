@@ -2349,3 +2349,12 @@ transform: skew(25deg);
 ```
 
 ![skew](/images/skew.png)
+
+### scale
+A **scale** of **2** will simply double the elements size. <br>
+
+```css
+transform: skew(25deg);
+```
+
+![scale](/images/scale.png)
