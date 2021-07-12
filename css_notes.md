@@ -2193,7 +2193,7 @@ Within the element styling, we can specify details regarding the animation: <br>
 }
 ```
 
-The details can be specified one-by-one as in the example above, or in a combined **animation** command as shown below: <br>
+The details can be specified one-by-one as in the example above, or in a combined `animation` command as shown below: <br>
 
 ```css
   /* name | duration | fill-mode | delay | timing-function */
