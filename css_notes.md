@@ -2340,5 +2340,5 @@ To rotate our .box class div, use the following on the .box styling: <br>
 transform: rotate(25deg);
 ```
 
-![rotate](/images/rotete.png)
+![rotate](/images/rotate.png)
 
