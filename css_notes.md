@@ -2296,3 +2296,21 @@ To transition multiple properties, separate them by comma. <br>
 ```
 
 ![multi-transition](/images/transition_02.gif)
+
+Alternatively you can as well add **all** properties to the transition: <br>
+
+```css
+.box {
+  transition: all 2s ease-in-out;
+}
+
+.box:hover {
+  background: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+```
+
+![transition all](/images/transition_03.gif)
+
