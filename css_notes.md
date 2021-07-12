@@ -2153,3 +2153,50 @@ With those color variables set in `:root` and that layout variables set for `.bo
 ```
 
 ![css variables 2](/images/css-variables_02.png)
+
+## Keyframe animation
+**Keyframe animation** is a way to animate html elements directly in css, without any additional scripting language like JavaScript. <br>
+The following animation changes a divs width from 200px to 600px, its position from 0px top to 600px below top, and its color from white to darkred: <br>
+
+```css
+@keyframes animate1 {
+  from {
+    width: 200px;
+    top: 0;
+  }
+
+  to {
+    width: 800px;
+    background-color: darkred;
+    top: 600px;
+  }
+}
+```
+
+Within the element styling, we can specify details regarding the animation: <br>
+
+```css
+.box {
+  background: white;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  
+  /* animation details */
+  animation-name: animate1;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+```
+
+The details can be specified one-by-one as in the example above, or in a combined **animation** command as shown below: <br>
+
+```css
+  /* name | duration | fill-mode | delay | timing-function */
+  animation: animate1 5s forwards 1s ease-in-out;
+```
+

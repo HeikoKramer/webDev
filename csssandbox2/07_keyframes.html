@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframes</title>
+  <style>
+    body {
+      background: #333;
+    }
+
+    .box {
+      background: white;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      /* animation-name: animate1;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out; */
+      /* name | duration | fill-mode | delay | timing-function */
+      animation: animate1 5s forwards 1s ease-in-out;
+    }
+
+    .box:hover {
+      animation: animate2 5s inherit 1s ease-in-out;
+    }
+
+    @keyframes animate1 {
+      from {
+        width: 200px;
+        top: 0;
+      }
+
+      to {
+        width: 800px;
+        background-color: darkred;
+        border-radius: 100% 0 100% 0;
+        top: 600px;
+      }
+    }
+
+    @keyframes animate2 {
+      from {
+        width: 800px;
+        background-color: darkred;
+        border-radius: 100% 0 100% 0;
+        top: 600px;
+
+      }
+
+      to {
+        width: 200px;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+
+  </div>
+</body>
+</html>
