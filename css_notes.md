@@ -2358,3 +2358,19 @@ transform: skew(25deg);
 ```
 
 ![scale](/images/scale.png)
+
+### transform & transition
+You can combine transform and transition to animate the element's transformation.
+
+```css
+.box {
+  transition: all 1s ease-in-out;
+}
+
+.box:hover {
+  transform: rotate(180deg);
+  background-color: darkslateblue;
+}
+```
+
+![animated transform](/images/animated-tranform.gif)
