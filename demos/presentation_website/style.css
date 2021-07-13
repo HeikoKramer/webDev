@@ -3,7 +3,7 @@
   --page-2-color: tan;
   --page-3-color: teal;
   --page-4-color: slateblue;
-  --animated-speed: 1s;
+  --animated-speed: 1.4s;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 #page-2 { background-color: var(--page-2-color); }
 #page-3 { background-color: var(--page-3-color); }
 #page-4 { background-color: var(--page-4-color); }
-
 
 .page {
   display: flex;
@@ -63,4 +62,28 @@ body {
 .btn-dark:hover {
   background: #f4f4f4;
   color: #333;
+}
+
+/* Page Animation */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animated-speed) forwards ease-in;
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: paragraph var(--animated-speed) forwards ease-in 0.8s;
+}
+
+/* Keyframes */
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
 }
