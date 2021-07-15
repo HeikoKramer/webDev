@@ -2494,3 +2494,6 @@ If you set a grid column to **auto** … <br>
 
 … that column will expand or reduce itself to reach the max-size of its container. <br>
 ![grid-auto-column](/images/grid-auto-column.png)
+
+So if you would like to have 4 columns that eaqually fill up the whole area: `grid-template-columns: auto auto auto auto;`. <br>
+![grid-auto-auto](/images/grid-auto-auto.png)
