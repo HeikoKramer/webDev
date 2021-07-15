@@ -2465,3 +2465,21 @@ Lets see how grid columns work on a little example: <br>
 `grid-template-columns: 200px 200px 200px;` specifies **3 columns** with the width of **200px** each. <br>
 
 ![grid-columns](/images/grid-columns.png)
+
+If we add more items to our html, they'll be adjusted in our specified grid columns: <br> 
+
+```html
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+  </div>
+```
+
+![more-items-grid](/images/more-items-grid.png)
+
