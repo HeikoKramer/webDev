@@ -2403,7 +2403,7 @@ You can combine both values: `transform: translate(150px, 150px);` <br>
 What is css grid? <br>
 * grid layout system for css
 * similar to flexbox
-  * more powerfull but a bit more difficult
+  * more powerful but a bit more difficult
 * two-dimensional layouts
 * can use "align-items", "justify-content", etc.
 * partial support for IE11
@@ -2413,7 +2413,7 @@ What is css grid? <br>
 How it works? <br>
 * `display: grid;` – creates a **grid**
 * all direct child elements are **grid items**
-* **grid-template-columns** defines width and numer of cols
+* **grid-template-columns** defines width and number of cols
 
 ![grid](/images/grid-png)
 
@@ -2461,7 +2461,7 @@ Lets see how grid columns work on a little example: <br>
 }
 ```
 
-`display: grid;` is sets **grid** as our display methode. <br>
+`display: grid;` is sets **grid** as our display method. <br>
 `grid-template-columns: 200px 200px 200px;` specifies **3 columns** with the width of **200px** each. <br>
 
 ![grid-columns](/images/grid-columns.png)
@@ -2483,3 +2483,14 @@ If we add more items to our html, they'll be adjusted in our specified grid colu
 
 ![more-items-grid](/images/more-items-grid.png)
 
+If you set a grid column to **auto** … <br>
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+    }
+```
+
+… that column will expand or reduce itself to reach the max-size of its container. <br>
+![grid-auto-column](/images/grid-auto-column.png)
