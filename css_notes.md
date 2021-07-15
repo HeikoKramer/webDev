@@ -2427,3 +2427,41 @@ Example for **one** grid: <br>
 * it is **not** one or the other
 * use **grid** for **outter elements** and **grid-like layouts**
 * use **flex** for simple alignment (**inner elements, menu items,** etc.)
+
+### Grid columns
+Lets see how grid columns work on a little example: <br>
+<br>
+
+**html:** <br>
+
+```html
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+```
+
+**css:** <br>
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+.item {
+  padding: 3rem;
+  border: #ccc 1px solid;
+  background: #f4f4f4;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+```
+
+`display: grid;` is sets **grid** as our display methode. <br>
+`grid-template-columns: 200px 200px 200px;` specifies **3 columns** with the width of **200px** each. <br>
+
+![grid-columns](/images/grid-columns.png)
