@@ -2398,3 +2398,32 @@ You can use **negative** values to move the element into the other direction. <b
 You can combine both values: `transform: translate(150px, 150px);` <br>
 
 ![translate-both](/images/translate-both.gif)
+
+## CSS Grid
+What is css grid? <br>
+* grid layout system for css
+* similar to flexbox
+  * more powerfull but a bit more difficult
+* two-dimensional layouts
+* can use "align-items", "justify-content", etc.
+* partial support for IE11
+
+<br>
+
+How it works? <br>
+* `display: grid;` – creates a **grid**
+* all direct child elements are **grid items**
+* **grid-template-columns** defines width and numer of cols
+
+![grid](/images/grid-png)
+
+### Difference between flex and grid
+Flex is **one dimensional** with grid you can have **two dimensional** layouts. <br>
+![dimensions](/images/dimensions.png)
+
+Example for **one** grid: <br>
+![one-grid](/images/one-grid.png)
+
+* it is **not** one or the other
+* use **grid** for **outter elements** and **grid-like layouts**
+* use **flex** for simple alignment (**inner elements, menu items,** etc.)
