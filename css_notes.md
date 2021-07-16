@@ -2609,3 +2609,15 @@ body {
 Three rows sized, the remaining five rows are auto-sized 1fr. <br>
 
 ![grid-rows](/images/grid-rows.png)
+
+You can cahnge that **default of 1fr** with `grid-auto-rows` <br>
+
+```css
+grid-template-rows: 1fr 2fr 3fr;
+grid-auto-rows: 3fr;
+```
+
+The first three items are specified via `grid-template-rows`. <br>
+The fourth row **and any following** will be sized after the with `grid-auto-rows` set new defaul – **3fr**. <br>
+
+![grid-auto-rows](/images/grid-auto-rows.png)
