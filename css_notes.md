@@ -2495,12 +2495,12 @@ If you set a grid column to **auto** … <br>
 … that column will expand or reduce itself to reach the max-size of its container. <br>
 ![grid-auto-column](/images/grid-auto-column.png)
 
-So if you would like to have 4 columns that eaqually fill up the whole area: `grid-template-columns: auto auto auto auto;`. <br>
+So if you would like to have 4 columns that equally fill up the whole area: `grid-template-columns: auto auto auto auto;`. <br>
 The same result can be reached with `grid-template-columns: repeat(4, auto);` <br>
 ![grid-auto-auto](/images/grid-auto-auto.png)
 
 ### The fr unit
-An other way to specify the cloumn space in a grid is the **fr** unit. <br>
+An other way to specify the column space in a grid is the **fr** unit. <br>
 Fr is a **fractional** unit and 1fr is for 1 part of the available space. <br>
 
 ```css
@@ -2532,3 +2532,34 @@ Instead of using `margin`, in a grid you use `grid-gap` to set the spacing in be
 ```
 
 ![grid-gap](/images/grid-gap.png)
+
+<br>
+So putting this all together, we have a very easy way now to create something like a website main-area plus a sidebar: <br>
+<br>
+
+**html:** <br>
+
+```html
+<main>
+  <section>
+    <h3>Welcome To My Site</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus cumque consequatur recusandae autem, veniam laudantium aliquid aliquam nihil expedita ipsum voluptatum culpa illum dolorum dicta! Ea, ad unde. Quos, beatae.</p>
+  </section>
+  <aside>
+    <h3>Hello</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quasi.</p>
+  </aside>
+</main>
+```
+
+**css:** <br>
+
+```css
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1.5rem;
+}
+```
+
+![grid-example](/images/grid-example.png)
