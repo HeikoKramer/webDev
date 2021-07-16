@@ -2754,4 +2754,4 @@ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
 It's good for some things – like an image gallery – but often not very useful for regular websites as you've much better control over your styling with media queries. <br>
 
-![auto-fit-minmax](/images/auto-fit-minmax.png)
+![auto-fit-minmax](/images/auto-fit-minmax.gif)
