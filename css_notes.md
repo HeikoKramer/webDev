@@ -2719,3 +2719,27 @@ Let's add the multi-dimensional aspect, by also defining the **row** start- and 
 Again our item ends at the 4th column line, but has now also expanded to the 3rd row line: <br> 
 
 ![row-start-end](/images/row-start-end.png)
+
+You can get to the exact same outcome by writing this: <br>
+
+```css
+.item:first-child {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+}
+```
+
+**NOTE:** With the `grid-column` / `grid-row` and **span**, not the column / row lines are counted, but 1fr units. <br>
+
+Of course you can not only set properties for the first child, use **nth-child** to pick a specific item: <br>
+
+```css
+.item:nth-child(9) {      
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 2;
+}
+```
+
+9th item, starts in 2nd column, spans 3 columns, starts in 4th row, spans over 2 rows. <br> 
+
+![nth-grid](/images/nth-grid.png)
