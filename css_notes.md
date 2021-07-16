@@ -2565,7 +2565,7 @@ main {
 ![grid-example](/images/grid-example.png)
 
 ## Grid rows
-Rows work a bit different from cloumns – you don't restrict their total number but you set the sizing properties for as many items as specified. <br>
+Rows work a bit different from columns – you don't restrict their total number but you set the sizing properties for as many items as specified. <br>
 All further appearing items will be sized the default – **1fr** <br>
 <br>
 
@@ -2610,7 +2610,7 @@ Three rows sized, the remaining five rows are auto-sized 1fr. <br>
 
 ![grid-rows](/images/grid-rows.png)
 
-You can cahnge that **default of 1fr** with `grid-auto-rows` <br>
+You can change that **default of 1fr** with `grid-auto-rows` <br>
 
 ```css
 grid-template-rows: 1fr 2fr 3fr;
@@ -2618,7 +2618,7 @@ grid-auto-rows: 3fr;
 ```
 
 The first three items are specified via `grid-template-rows`. <br>
-The fourth row **and any following** will be sized after the with `grid-auto-rows` set new defaul – **3fr**. <br>
+The fourth row **and any following** will be sized after the with `grid-auto-rows` set new default – **3fr**. <br>
 
 ![grid-auto-rows](/images/grid-auto-rows.png)
 
@@ -2705,3 +2705,17 @@ Here the end-point has been set to 4. <br>
 
 ![grid-column-end](/images/grid-column-end.png)
 
+Let's add the multi-dimensional aspect, by also defining the **row** start- and end-points: <br>
+
+```css
+.item:first-child {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+```
+
+Again our item ends at the 4th column line, but has now also expanded to the 3rd row line: <br> 
+
+![row-start-end](/images/row-start-end.png)
