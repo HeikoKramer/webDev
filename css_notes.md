@@ -2516,6 +2516,6 @@ Three columns, column-1 takes 1/4, column-2 2/4, column-3 1/4 of the available s
 grid-template-columns: 1fr 2fr 2fr;
 ```
 
-Three columns, column-1 takes 1/5, column-2 2/5, column-3 2/5 of the available space. <br>
+Three columns, *column-1* takes 1/5, *column-2* 2/5, *column-3* 2/5 of the available space. <br>
 
 ![fr-unit_02](/images/fr-unit_02.png)
