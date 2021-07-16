@@ -2743,3 +2743,15 @@ Of course you can not only set properties for the first child, use **nth-child**
 9th item, starts in 2nd column, spans 3 columns, starts in 4th row, spans over 2 rows. <br> 
 
 ![nth-grid](/images/nth-grid.png)
+
+## auto-fit & minmax
+This properties are a way to make your grit kind responsive. <br>
+You set your re-arrangement break-points in the minmax brackets. <br>
+
+```css
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+```
+
+It's good for some things – like an image gallery – but often not very useful for regular websites as you've much better control over your styling with media queries. <br>
+
+![auto-fit-minmax](/images/auto-fit-minmax.png)
