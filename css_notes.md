@@ -2621,3 +2621,19 @@ The first three items are specified via `grid-template-rows`. <br>
 The fourth row **and any following** will be sized after the with `grid-auto-rows` set new defaul – **3fr**. <br>
 
 ![grid-auto-rows](/images/grid-auto-rows.png)
+
+### multi dimensional grid
+Unlike flex, grid is multi-dimensional. So we can combine row and column settings without conflict. <br>
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-auto-rows: 3fr;
+}
+```
+
+Two equally brought columns set, first three rows specified, default for following set 3fr. <br> 
+
+![grid-columns-rows](/images/grid-columns-rows.png)
