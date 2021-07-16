@@ -2563,3 +2563,49 @@ main {
 ```
 
 ![grid-example](/images/grid-example.png)
+
+## Grid rows
+Rows work a bit different from cloumns – you don't restrict their total number but you set the sizing properties for as many items as specified. <br>
+All further appearing items will be sized the default – **1fr** <br>
+<br>
+
+**html:** <br>
+
+```html
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+  </div>
+</body>
+```
+
+**css:** <br>
+
+```css
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr;
+}
+.item {
+  padding: 1.4rem;
+  border: #ccc 1px solid;
+  background: #f4f4f4;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+```
+
+Three rows sized, the remaining five rows are auto-sized 1fr. <br>
+
+![grid-rows](/images/grid-rows.png)
