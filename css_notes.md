@@ -2688,5 +2688,20 @@ You can define the column **start** and **end** points for individual grid items
 }
 ```
 
+The start point of the first element has been set to two: <br>
+
 ![grid-column-start](/images/grid-column-start.png)
+
+
+```css
+.item:first-child {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+```
+
+Here the end-point has been set to 4. <br>
+**Note:** It is not the end of column four, but the end of column three where four lines have been passed: <br>
+
+![grid-column-end](/images/grid-column-end.png)
 
