@@ -2498,3 +2498,24 @@ If you set a grid column to **auto** … <br>
 So if you would like to have 4 columns that eaqually fill up the whole area: `grid-template-columns: auto auto auto auto;`. <br>
 The same result can be reached with `grid-template-columns: repeat(4, auto);` <br>
 ![grid-auto-auto](/images/grid-auto-auto.png)
+
+### The fr unit
+An other way to specify the cloumn space in a grid is the **fr** unit. <br>
+Fr is a **fractional** unit and 1fr is for 1 part of the available space. <br>
+
+```css
+grid-template-columns: 1fr 2fr 1fr;
+```
+
+Three columns, column-1 takes 1/4, column-2 2/4, column-3 1/4 of the available space. <br>
+
+![fr-unit_01](/images/fr-unit_01.png)
+
+
+```css
+grid-template-columns: 1fr 2fr 2fr;
+```
+
+Three columns, column-1 takes 1/5, column-2 2/5, column-3 2/5 of the available space. <br>
+
+![fr-unit_02](/images/fr-unit_02.png)
