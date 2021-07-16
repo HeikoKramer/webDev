@@ -2637,3 +2637,56 @@ Unlike flex, grid is multi-dimensional. So we can combine row and column setting
 Two equally brought columns set, first three rows specified, default for following set 3fr. <br> 
 
 ![grid-columns-rows](/images/grid-columns-rows.png)
+
+## Spanning columns & rows
+You can define the column **start** and **end** points for individual grid items like this: <br>
+<br>
+
+**html:** <br>
+
+```html
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
+    <div class="item">Item 11</div>
+    <div class="item">Item 12</div>
+    <div class="item">Item 13</div>
+    <div class="item">Item 14</div>
+    <div class="item">Item 15</div>
+  </div>
+</body>
+```
+
+**css:** <br>
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.item {
+  padding: 1.4rem;
+  border: #ccc 1px solid;
+  background: #f4f4f4;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item:first-child {
+  grid-column-start: 2;
+}
+```
+
+![grid-column-start](/images/grid-column-start.png)
+
