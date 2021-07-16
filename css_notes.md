@@ -2533,7 +2533,7 @@ Instead of using `margin`, in a grid you use `grid-gap` to set the spacing in be
 
 ![grid-gap](/images/grid-gap.png)
 
-<br>
+### sidebar example
 So putting this all together, we have a very easy way now to create something like a website main-area plus a sidebar: <br>
 <br>
 
