@@ -2516,6 +2516,19 @@ Three columns, column-1 takes 1/4, column-2 2/4, column-3 1/4 of the available s
 grid-template-columns: 1fr 2fr 2fr;
 ```
 
-Three columns, *column-1* takes 1/5, *column-2* 2/5, *column-3* 2/5 of the available space. <br>
+Three columns, column-1 takes 1/5, column-2 2/5, column-3 2/5 of the available space. <br>
 
 ![fr-unit_02](/images/fr-unit_02.png)
+
+### grid-gap
+Instead of using `margin`, in a grid you use `grid-gap` to set the spacing in between the elements. <br>
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-gap: 1rem;
+}
+```
+
+![grid-gap](/images/grid-gap.png)
