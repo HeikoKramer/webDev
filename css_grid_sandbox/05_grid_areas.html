@@ -11,13 +11,32 @@
         grid-template-areas: 
           'header header header'
           'content content sidebar'
-          'box-1 box-2 box-3'
+          'box-1 box-3 box-3'
+          'box-2 box-2 box-2'
           'footer footer footer';
         gap: 1rem;
       }
 
       .header {
         grid-area: header;
+        text-align: center;
+      }
+
+      .content {
+        grid-area: content;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+      }
+
+      .box-1 { grid-area: box-1 }
+      .box-2 { grid-area: box-2 }
+      .box-3 { grid-area: box-3 }
+
+      .footer {
+        grid-area: footer;
+        text-align: center;
       }
 
       .header,

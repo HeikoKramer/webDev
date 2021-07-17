@@ -2760,4 +2760,134 @@ It's good for some things – like an image gallery – but often not very usefu
 ![auto-fit-minmax](/images/auto-fit-minmax.gif)
 
 ## Grid template areas
+`grid-template-areas` is a way to set up a layout for your grid. <br>
+<br>
+
+**html:** <br>
+
+```html
+<body>
+  <div class="container">
+    <header class="header"><h1>My Website</h1></header>
+    <section class="content">
+      <h3>Welcome To My Site</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo suscipit
+        reprehenderit aperiam repudiandae voluptatibus, expedita ex temporibus
+        eos et mollitia velit vel molestias sint dolore at doloremque neque
+        minima optio ad tempore quisquam perferendis esse non. Aliquam illum
+        doloremque architecto! Rem voluptas at sunt sed enim eius laborum
+        dolores quaerat?
+      </p>
+    </section>
+    <aside class="sidebar">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Some Company</li>
+        <li>50 Main st, Boston MA</li>
+        <li>something@something.com</li>
+        <li>555-555-5555</li>
+      </ul>
+    </aside>
+    <div class="box-1">
+      <h3>Heading Box 1</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+        quisquam at veritatis a labore quod illo dolorem fugiat quas
+        repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+        aliquid quaerat aperiam.
+      </p>
+    </div>
+    <div class="box-2">
+      <h3>Heading Box 2</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+        quisquam at veritatis a labore quod illo dolorem fugiat quas
+        repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+        aliquid quaerat aperiam.
+      </p>
+    </div>
+    <div class="box-3">
+      <h3>Heading Box 3</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+        quisquam at veritatis a labore quod illo dolorem fugiat quas
+        repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+        aliquid quaerat aperiam.
+      </p>
+    </div>
+    <footer class="footer"><p>Copyright &copy; 2019</p></footer>
+  </div>
+</body>
+```
+
+**css:** <br>
+
+```css
+.container {
+  display: grid;
+  grid-template-areas: 
+    'header header header'
+    'content content sidebar'
+    'box-1 box-2 box-3'
+    'footer footer footer';
+  gap: 1rem;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.box-1 { grid-area: box-1 }
+.box-2 { grid-area: box-2 }
+.box-3 { grid-area: box-3 }
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+.header,
+.content,
+.sidebar,
+.box-1,
+.box-2,
+.box-3,
+.footer {
+  border: 1px #ccc solid;
+  padding: 0.5rem;
+}
+```
+
+Lets break the properties of `grid-template-areas` down: <br>
+* `'header header header'` header takes 3 columns
+* `'content content sidebar'` content takes 2, sidebar 1 column
+* `'box-1 box-2 box-3'` each of the 3 boxes take 1 column
+* `'footer footer footer'` footer takes all 3 columns
+
+![grid-template-areas](/images/grid-template-areas_01.png)
+
+If we can re-arrange the items in the layout as we want. <br>
+In this example, we moved the box-2 down, and gave the box-3 more space: <br>
+
+```css
+grid-template-areas: 
+  'header header header'
+  'content content sidebar'
+  'box-1 box-3 box-3'
+  'box-2 box-2 box-2'
+  'footer footer footer';
+```
+
+![grid-template-areas](/images/grid-template-areas_02.png)
+
 
