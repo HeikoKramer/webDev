@@ -2533,6 +2533,9 @@ Instead of using `margin`, in a grid you use `grid-gap` to set the spacing in be
 
 ![grid-gap](/images/grid-gap.png)
 
+**NOTE:** `grid-gap` has been replaced by `gap` – that's at least what VS-Code is saying: <br>
+![gap](/images/gap.png)
+
 ### sidebar example
 So putting this all together, we have a very easy way now to create something like a website main-area plus a sidebar: <br>
 <br>
@@ -2755,3 +2758,6 @@ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 It's good for some things – like an image gallery – but often not very useful for regular websites as you've much better control over your styling with media queries. <br>
 
 ![auto-fit-minmax](/images/auto-fit-minmax.gif)
+
+## Grid template areas
+
