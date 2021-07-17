@@ -2890,4 +2890,63 @@ grid-template-areas:
 
 ![grid-template-areas](/images/grid-template-areas_02.png)
 
+## Grid media queries
+Media queries in a grid layout are actually quite easy. <br>
+Se in the example below, how to make a four item layout responsive, to change from a 4-columns layout on a screen, to a 2-columns layout on a tablet and a 1-column stacked layout on a typical mobile-sized device: <br>
+<br>
 
+**html:** <br>
+
+```html
+<body>
+  <div class="grid">
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem repellendus ducimus voluptatum saepe libero temporibus.</p>
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem repellendus ducimus voluptatum saepe libero temporibus.</p>
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem repellendus ducimus voluptatum saepe libero temporibus.</p>
+    </div>
+    <div class="item">
+      <h3>Heading</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem repellendus ducimus voluptatum saepe libero temporibus.</p>
+    </div>
+  </div>
+</body>
+```
+
+**css:** <br>
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+}
+
+@media(max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+```
+
+**Screen-size:** <br>
+![media-grid_screen](/images/media-grid_screen.png)
+
+**Tablet-size:** <br>
+![media-grid_tablet](/images/media-grid_tablet.png)
+
+**Mobile-size:** <br>
+![media-grid_mobile](/images/media-grid_mobile.png)
