@@ -2950,3 +2950,23 @@ Se in the example below, how to make a four item layout responsive, to change fr
 
 **Mobile-size:** <br>
 ![media-grid_mobile](/images/media-grid_mobile.png)
+
+### media queries with grid-template-areas
+Let's have a look, how to make our  example from [above](https://github.com/HeikoKramer/webDev/blob/main/css_notes.md#grid-template-areas) responsive to look good on a mobile device. <br>
+Simple add a media query, with adjusted `grid-template-areas` properties to your css and you're good to go mobile! <br> 
+
+```css
+@media(max-width: 500px) {
+  .container {
+    grid-template-areas: 
+    'header'
+    'content'
+    'sidebar'
+    'box-1'
+    'box-2'
+    'box-3'
+    'footer';
+  }
+```
+
+![template-areas-media-query](/images/template-areas-media-query.png)
