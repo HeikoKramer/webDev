@@ -2877,7 +2877,7 @@ Lets break the properties of `grid-template-areas` down: <br>
 ![grid-template-areas](/images/grid-template-areas_01.png)
 
 If we can re-arrange the items in the layout as we want. <br>
-In this example, we moved the box-2 down, and gave the box-3 more space: <br>
+In this example, we moved the box-2 down and gave it the whole row, and gave the box-3 more space: <br>
 
 ```css
 grid-template-areas: 
