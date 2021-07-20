@@ -2970,3 +2970,31 @@ Simple add a media query, with adjusted `grid-template-areas` properties to your
 ```
 
 ![template-areas-media-query](/images/template-areas-media-query.png)
+
+## Sass
+What is Sass? <br>
+* Syntactically Awesome Style Sheets
+* CSS Preprocessor / Precompiler
+* Enhances the functionality of CSS
+
+How does Sass work?
+* it uses **.scss** or **.sass** file extensions
+* the browser does **not** read Sass, **it must be compiled**
+* Sass files are compiled to normal CSS files
+* There are many different types of Sass compilers (cli & gui)
+
+What does Sass offer?
+Sass allows you to write CSS more like a dynamic programming language. <br>
+* Variables
+* Nesting
+* Partials / Imports
+* Functions & Mixins
+* Conditionals
+* Inheritance
+* Operators & Calculations
+* Color Functions
+
+### .scss vs .sass
+**.scss** is usually preferred over **.sass** as it uses the same syntax as regular css <br>
+sass on the other hand uses **indent** instead of **{}** for element/style assignment. <br>
+![svss_vs_sass](/images/svss_vs_sass.png)
