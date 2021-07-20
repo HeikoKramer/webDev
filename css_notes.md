@@ -3027,12 +3027,60 @@ If we now run the command `npm run sass` all changes to files in the scss folder
 
 ## Variables & partials
 You can store basically everything in a Sass variable. Variables are built like this: **$**name**:**value**;**. <br>
-Partials are files where you can store values like variables. They start with an underscore, like **_variables.scss** – those files won't complie into css files. <br>
-To use those stored values in your main scs, you have to import the partial file. <br>
+Partials are files where you can store values like variables. They start with an underscore, like **_variables.scss** – those files won't compile into css files. <br>
+To use those stored values in your main scss, you have to import the partial file. <br>
 **NOTE:** no underscore or file extension is required for the import, just the file-name: <br>
 
 ```css
 @import 'variables';
 ```
 
+## Nesting & structuring
+One advantage of Sass is that you now can structure your css styling as you would do with your html – nested! <br>
+<br>
+In this scss, we are addressing a **h1** – nested within the **header** whiting. <br>
+
+```css
+header {
+  background: $dark-color;
+  color: $light-color;
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+```
+
+It compiles to the following css – only the `header h1` will be affected by this styling: <br>
+
+```css
+header {
+  background: #333;
+  color: #f4f4f4;
+  padding: 1rem; }
+  header h1 {
+    text-align: center; }
+```
+
+You can grab the superior element and add to it with th **&** sign. <br>
+The following scss has a nested `hover:` style set for the `a` tag: <br>
+
+```css
+a {
+  color: #333;
+  &:hover {
+    color: coral;
+  }
+}
+```
+
+It compiles into `a:hover` in the regular css file: <br>
+
+```css
+a {
+  color: #333; }
+  a:hover {
+    color: coral; }
+```
 
