@@ -3025,3 +3025,14 @@ Change **test** to **sass** and the command behind it, so that it looks like thi
 We create a **scss** folder, with a **main.scss** file in it. Also a **dist** folder. <br>
 If we now run the command `npm run sass` all changes to files in the scss folder will be compiled and saved to the dist folder. <br>
 
+## Variables & partials
+You can store basically everything in a Sass variable. Variables are built like this: **$**name**:**value**;**. <br>
+Partials are files where you can store values like variables. They start with an underscore, like **_variables.scss** – those files won't complie into css files. <br>
+To use those stored values in your main scs, you have to import the partial file. <br>
+**NOTE:** no underscore or file extension is required for the import, just the file-name: <br>
+
+```css
+@import 'variables';
+```
+
+
