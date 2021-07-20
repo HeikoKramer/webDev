@@ -2998,3 +2998,30 @@ Sass allows you to write CSS more like a dynamic programming language. <br>
 **.scss** is usually preferred over **.sass** as it uses the same syntax as regular css <br>
 sass on the other hand uses **indent** instead of **{}** for element/style assignment. <br>
 ![svss_vs_sass](/images/svss_vs_sass.png)
+
+## Environment setup with Node-Sass
+First you'll have to install **Node.js** — server-side JavaScript runtime and **npm** – package manager for the Node JavaScript platform. <br>
+On a Debian based Linux distro, you can check if both are installed by entering `which node; which npm` or `node --version; npm --version` into your terminal of choice. <br>
+If they're not installed: `sudo apt node -y` and `sudo apt npm -y` and you're good to go. <br>
+<br>
+After the installation, run `npm init -y` in you project folder to create a **package.json** file. <br>
+Then run `npm install node-sass` – this will create a **node_modules** folder a file **package-lock.json** and update the **package.json** file. <br>
+Open the **package.json** file, search for: <br>
+
+```json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+```
+
+Change **test** to **sass** and the command behind it, so that it looks like this: <br>
+
+```json
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  }
+```
+
+We create a **scss** folder, with a **main.scss** file in it. Also a **dist** folder. <br>
+If we now run the command `npm run sass` all changes to files in the scss folder will be compiled and saved to the dist folder. <br>
+
