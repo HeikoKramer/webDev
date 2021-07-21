@@ -3031,7 +3031,7 @@ Partials are files where you can store values like variables. They start with an
 To use those stored values in your main scss, you have to import the partial file. <br>
 **NOTE:** no underscore or file extension is required for the import, just the file-name: <br>
 
-```css
+```scss
 @import 'variables';
 ```
 
@@ -3040,7 +3040,7 @@ One advantage of Sass is that you now can structure your css styling as you woul
 <br>
 In this scss, we are addressing a **h1** – nested within the **header** whiting. <br>
 
-```css
+```scss
 header {
   background: $dark-color;
   color: $light-color;
@@ -3066,7 +3066,7 @@ header {
 You can grab the superior element and add to it with th **&** sign. <br>
 The following scss has a nested `hover:` style set for the `a` tag: <br>
 
-```css
+```scss
 a {
   color: #333;
   &:hover {
@@ -3089,7 +3089,7 @@ In Sass it's easy to share element stylings between for example multiple classes
 <br>
 Here we are defining a set of styles to be extended. **Note:** it's marked with a **%** sign: <br>
 
-```css
+```scss
 %btn-shared {
   display: inline-block;
   padding: 0.7rem 2rem;
