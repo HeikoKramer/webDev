@@ -3084,3 +3084,59 @@ a {
     color: coral; }
 ```
 
+## @extend
+In Sass it's easy to share element stylings between for example multiple classes of an element, with the `@extend` rule. <br>
+<br>
+Here we are defining a set of styles to be extended. **Note:** it's marked with a **%** sign: <br>
+
+```css
+%btn-shared {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+```
+
+This is our base-styling for a button. If we want to have a light and a dark butten, we can now extend the base styling: <br>
+
+```css
+.btn {
+  &-light {
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: #333;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: #fff;
+  }
+}
+```
+
+Extending means, we are taking the base styling `%btn-shared` and adding additional styling for the `.btn-light` and `.btn-dark` classes to it. <br>
+This is how the compiled css looks like: <br>
+
+```css
+.btn-light, .btn-dark {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem; }
+
+.btn-light {
+  background-color: #f4f4f4;
+  color: #333; }
+
+.btn-dark {
+  background-color: #333;
+  color: #fff; }
+```
+
+
