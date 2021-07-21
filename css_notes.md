@@ -3118,8 +3118,7 @@ This is our base-styling for a button. If we want to have a light and a dark but
 }
 ```
 
-Extending means, we are taking the base styling `%btn-shared` and adding additional styling for the `.btn-light` and `.btn-dark` classes to it. <br>
-This is how the compiled css looks like: <br>
+Extending means, we are taking the base styling `%btn-shared` and adding additional styling for the `.btn-light` and `.btn-dark` classes to it. The compiled css looks like this: <br>
 
 ```css
 .btn-light, .btn-dark {
