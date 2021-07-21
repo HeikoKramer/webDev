@@ -1,0 +1,8 @@
+// Set Text Color
+@function set-text-color($background) {
+  @if(lightness($background) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

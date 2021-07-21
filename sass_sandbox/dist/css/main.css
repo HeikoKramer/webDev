@@ -4,13 +4,13 @@
 
 body {
   background: #f4f4f4;
-  color: #333;
+  color: #addde0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5; }
 
 header {
-  background: #333;
-  color: #f4f4f4;
+  background: #addde0;
+  color: #000;
   padding: 1rem; }
   header h1 {
     text-align: center; }
@@ -39,5 +39,5 @@ header {
   color: #333; }
 
 .btn-dark {
-  background-color: #333;
+  background-color: #addde0;
   color: #fff; }

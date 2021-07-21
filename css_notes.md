@@ -3138,4 +3138,55 @@ Extending means, we are taking the base styling `%btn-shared` and adding additio
   color: #fff; }
 ```
 
+## Functions & mixins
+The main difference between a function and a mixin is that a function returns something, a mixing is basically a set of styles that you want to include. <br>
+<br>
+Here an example function that checks for the lightness of the background and sets the text color light or dark, depending on the result: <br>
 
+```scss
+// Set Text Color
+@function set-text-color($background) {
+  @if(lightness($background) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+```
+
+I have put that function in a partial file called *_functions.scss* so I've to import it into my *main.scss* with `@import 'functions';`. <br>
+Done so, I can now use it, here in the header, to dynamically change the text color: <br>
+
+```scss
+header {
+  background: $dark-color;
+  color: set-text-color($dark-color);
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+```
+
+As we have passed over a dark color to the function, the text is set white: <br>
+![sass-functions_01](/images/sass-functions_01.png)
+
+The `#fff` value has found it's way in the compiled css file: <br>
+
+```css
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem; }
+  header h1 {
+    text-align: center; }
+```
+
+If we change the `$dark-color` variable now to a brighter color, the text color will switch dark: <br>
+
+```scss
+$dark-color: #addde0;
+```
+
+![sass-functions_02](/images/sass-functions_02.png)
