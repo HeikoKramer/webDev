@@ -3084,7 +3084,7 @@ a {
     color: coral; }
 ```
 
-## @extend
+## @extend 
 In Sass it's easy to share element stylings between for example multiple classes of an element, with the `@extend` rule. <br>
 <br>
 Here we are defining a set of styles to be extended. **Note:** it's marked with a **%** sign: <br>
@@ -3140,7 +3140,7 @@ Extending means, we are taking the base styling `%btn-shared` and adding additio
 
 ## Functions & mixins
 The main difference between a function and a mixin is that a function returns something, a mixing is basically a set of styles that you want to include. <br>
-<br>
+## Functions
 Here an example function that checks for the lightness of the background and sets the text color light or dark, depending on the result: <br>
 
 ```scss
@@ -3190,3 +3190,64 @@ $dark-color: #addde0;
 ```
 
 ![sass-functions_02](/images/sass-functions_02.png)
+
+### Mixins
+A mixin stores a set of styles – for example to transform an element. <br>
+
+```scss
+// Transform mixin
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+```
+
+The mixin can live with your functions in a partial document. To use that mixin in your main scss document, you need to `@import` that document and to `@include` the mixin. <br>
+Here we include the **transform** mixin from above, to rotate the buttons on hover: <br>
+
+```scss
+.btn {
+  &-light {
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: set-text-color($light-color);
+
+    &:hover {
+      @include transform(rotate(20deg));
+    }
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+
+    &:hover {
+      @include transform(rotate(-20deg));
+    }
+  }
+}
+```
+
+Here's how the compiled css looks: <br>
+
+```css
+.btn-light {
+  background-color: #f4f4f4;
+  color: #000; }
+  .btn-light:hover {
+    -webkit-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg); }
+
+.btn-dark {
+  background-color: #333;
+  color: #fff; }
+  .btn-dark:hover {
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+```
+
+![mixin](/images/mixin.gif)
