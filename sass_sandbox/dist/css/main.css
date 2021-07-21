@@ -40,7 +40,8 @@ header {
   .btn-light:hover {
     -webkit-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
-    transform: rotate(20deg); }
+    transform: rotate(20deg);
+    background-color: #c1c1c1; }
 
 .btn-dark {
   background-color: #333;
@@ -48,4 +49,5 @@ header {
   .btn-dark:hover {
     -webkit-transform: rotate(-20deg);
     -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg); }
+    transform: rotate(-20deg);
+    background-color: #666666; }

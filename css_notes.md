@@ -3251,3 +3251,66 @@ Here's how the compiled css looks: <br>
 ```
 
 ![mixin](/images/mixin.gif)
+
+### built-in functions
+There are lots of built-in functions in Saas: <br>
+* [String Functions](https://www.w3schools.com/sass/sass_functions_string.php)
+* [Numeric Functions](https://www.w3schools.com/sass/sass_functions_numeric.php)
+* [List Functions](https://www.w3schools.com/sass/sass_functions_list.php)
+* [Map Functions](https://www.w3schools.com/sass/sass_functions_map.php)
+* [Selector Functions](https://www.w3schools.com/sass/sass_functions_selector.php)
+* [Introspection](https://www.w3schools.com/sass/sass_functions_introspection.php)
+* [Color Functions](https://www.w3schools.com/sass/sass_functions_color.php)
+
+The `lightness` in our `set-text-color()` function above is an example for a **Sass get color function**. <br>
+Here are two examples for a **Sass manipulate color functions**, we manipulate our button color brightness with `darken` and `lighten` on hover: <br>
+
+```scss
+.btn {
+  &-light {
+    @extend %btn-shared;
+    background-color: $light-color;
+    color: set-text-color($light-color);
+
+    &:hover {
+      @include transform(rotate(20deg));
+      background-color: darken($light-color, 20%);
+    }
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+
+    &:hover {
+      @include transform(rotate(-20deg));
+      background-color: lighten($dark-color, 20%);
+    }
+  }
+}
+```
+
+In the compiled css, the values for the appropriate brighter / darker colors get actual set: <br>
+
+```css
+.btn-light {
+  background-color: #f4f4f4;
+  color: #000; }
+  .btn-light:hover {
+    -webkit-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    background-color: #c1c1c1; }
+
+.btn-dark {
+  background-color: #333;
+  color: #fff; }
+  .btn-dark:hover {
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    background-color: #666666; }
+```
+
+![darken-lighten](/images/darken-lighten.gif)
