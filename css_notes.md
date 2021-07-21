@@ -3102,7 +3102,7 @@ Here we are defining a set of styles to be extended. **Note:** it's marked with 
 
 This is our base-styling for a button. If we want to have a light and a dark butten, we can now extend the base styling: <br>
 
-```css
+```scss
 .btn {
   &-light {
     @extend %btn-shared;
