@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono:wght@700&display=swap");
 
-/* Variables ----------------------------------- */
+/* Variables ---------------------------------- */
 :root {
   /* Fonts */
   --pixel: "Press Start 2P", cursive;
@@ -18,4 +18,88 @@
   --monokai-white: #f9f9f5;
   --monokai-background: #1f0629;
 }
-/* END Variables ------------------------------- */
+/* END Variables ------------------------------ */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--monokai-background);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-column: 2 / span 1;
+}
+
+/* Information Block -------------------------- */
+.info-block {
+  color: var(--monokai-grey);
+  font-family: var(--ubuntu);
+  font-size: 26px;
+}
+
+.info-block ul {
+  list-style: none;
+}
+
+.info-block ul a {
+  color: var(--monokai-purple);
+  text-decoration: none;
+}
+
+.heading {
+  color: var(--monokai-yellow);
+  font-weight: bolder;
+}
+/* END Information Block ---------------------- */
+
+/* Command Line ------------------------------- */
+.commandline h1 {
+  font-family: var(--ubuntu);
+  color: var(--monokai-grey);
+}
+
+.spacer {
+}
+
+.cursor {
+  font-weight: 700;
+  animation: 1s blink step-end infinite;
+  letter-spacing: -19px;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: var(--text-color);
+  }
+}
+/* END Command Line --------------------------- */
+
+/* Logo ----------------------------------------- */
+code {
+  color: var(--monokai-purple);
+  background: var(--monokai-background);
+  display: inline-block;
+  white-space: pre;
+  font-family: var(--ubuntu);
+  font-size: 14px;
+}
+
+.highlight {
+  color: var(--monokai-yellow);
+}
+/* END Logo ------------------------------------- */
