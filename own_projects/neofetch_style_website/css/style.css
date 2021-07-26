@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono:wght@700&display=swap");
+
+/* Variables ----------------------------------- */
+:root {
+  /* Fonts */
+  --pixel: "Press Start 2P", cursive;
+  --ubuntu: "Ubuntu Mono", monospace;
+
+  /* Colors */
+  --monokai-grey: #75715e;
+  --monokai-dark-grey: #272822;
+  --monokai-red: #f92672;
+  --monokai-green: #a6e22e;
+  --monokai-yellow: #f4bf75;
+  --monokai-blue: #66d9ef;
+  --monokai-purple: #ae81ff;
+  --monokai-dark-green: #2aa198;
+  --monokai-white: #f9f9f5;
+  --monokai-background: #1f0629;
+}
+/* END Variables ------------------------------- */
