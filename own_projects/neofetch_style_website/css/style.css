@@ -17,6 +17,8 @@
   --monokai-dark-green: #2aa198;
   --monokai-white: #f9f9f5;
   --monokai-background: #1f0629;
+  --terminal-green: #16ff42;
+  --terminal-glow: #6aff85;
 }
 /* END Variables ------------------------------ */
 
@@ -33,7 +35,7 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  height: 70vh;
+  height: 60vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -66,6 +68,14 @@ body {
 .commandline h1 {
   font-family: var(--ubuntu);
   color: var(--monokai-grey);
+}
+
+.breaker {
+  color: var(--monokai-dark-grey);
+}
+
+.path {
+  color: #f92672;
 }
 
 .spacer {
@@ -103,3 +113,30 @@ code {
   color: var(--monokai-yellow);
 }
 /* END Logo ------------------------------------- */
+
+/* Box ------------------------------------------ */
+.hidden {
+  display: none;
+}
+
+#cv,
+#soft-skills,
+#it-skills,
+#contact {
+  color: var(--monokai-dark-green);
+  cursor: pointer;
+}
+
+.wb-body {
+  background: #111;
+  color: var(--terminal-green);
+  text-shadow: 0 0 4px var(--terminal-glow);
+  font-family: var(--pixel);
+  padding: 20px;
+  line-height: 1.4rem;
+}
+
+.wb-body .cursor {
+  text-shadow: none;
+}
+/* END Box -------------------------------------- */
