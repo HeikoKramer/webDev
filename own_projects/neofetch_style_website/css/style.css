@@ -42,6 +42,10 @@ body {
   grid-column: 2 / span 1;
 }
 
+.text-logo {
+  display: none;
+}
+
 /* Information Block -------------------------- */
 .info-block {
   color: var(--monokai-grey);

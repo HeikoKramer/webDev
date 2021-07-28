@@ -12,10 +12,7 @@ cv.addEventListener("click", () => {
     title: "CV",
     width: "780px",
     height: "540px",
-    top: 500,
-    right: 50,
-    bottom: 50,
-    left: 50,
+    modal: true,
     mount: cvContent,
     onfocus: function () {
       this.setBackground("#1E1E1E");
@@ -31,10 +28,7 @@ softSkills.addEventListener("click", () => {
     title: "Soft-Skills",
     width: "380px",
     height: "450px",
-    top: 20,
-    right: 50,
-    bottom: 50,
-    left: 540,
+    modal: true,
     mount: softSkillsContent,
     onfocus: function () {
       this.setBackground("#1E1E1E");
@@ -50,10 +44,7 @@ itSkills.addEventListener("click", () => {
     title: "it-Skills",
     width: "380px",
     height: "600px",
-    top: 480,
-    right: 50,
-    bottom: 50,
-    left: 960,
+    modal: true,
     mount: itSkillsContent,
     onfocus: function () {
       this.setBackground("#1E1E1E");
@@ -69,10 +60,7 @@ contact.addEventListener("click", () => {
     title: "Interests / contact",
     width: "500px",
     height: "220px",
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 20,
+    modal: true,
     mount: contactContent,
     onfocus: function () {
       this.setBackground("#1E1E1E");
