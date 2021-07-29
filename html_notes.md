@@ -1,4 +1,5 @@
 # HTML Notes
+Those notes were taken wile watching Brad Traversy's [Modern HTML and CSS from the Beginning](https://subscription.packtpub.com/video/web-development/9781838822828/113179/113180/welcome-to-the-course) on packthub.com – a course that I can highly recommend, it's comprehensive, beginner friendly and hands-on focused, with a lot of really cool practice examples. <br>
 
 ## Tag Syntax
 A tag is an element surrounded in angle brackets. <br>
