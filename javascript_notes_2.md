@@ -44,3 +44,15 @@ console.log({ a: 1, b: 2 }); // log Objects
 ```
 
 ![console log](/images/console_log.png)
+
+## console.table()
+With `console.table()` you can print objects out as a table. <br>
+
+```js
+// Print object out as a table
+console.table({ a: 1, b: 2 });
+```
+
+![console table](/images/console_table.png)
+
+

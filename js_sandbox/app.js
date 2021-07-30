@@ -1,4 +1,5 @@
 // Display on screen
+alert("Ei Gude!");
 
 // Log to console
 console.log("Ei Gude wie!?"); // <-- log String
@@ -8,4 +9,6 @@ var greeting = "Gude!";
 console.log(greeting); // <-- log Variable
 console.log([1, 2, 3, 4]); // <-- log Array
 console.log({ a: 1, b: 2 }); // log Objects
-alert(greeting);
+
+// Print object out as a table
+console.table({ a: 1, b: 2 });
