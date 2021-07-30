@@ -55,4 +55,13 @@ console.table({ a: 1, b: 2 });
 
 ![console table](/images/console_table.png)
 
+## console.error()
+You can set console error notifications with `console.error()`. <br>
+The error notification will indicate its position in the code block by providing the line number. <br>
 
+```js
+// Print out error notifications
+console.error('This is an error!')
+```
+
+![console error](/images/console_error.png)

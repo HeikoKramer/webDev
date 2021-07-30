@@ -12,3 +12,6 @@ console.log({ a: 1, b: 2 }); // log Objects
 
 // Print object out as a table
 console.table({ a: 1, b: 2 });
+
+// Print out error notifications
+console.error("This is an error!");
