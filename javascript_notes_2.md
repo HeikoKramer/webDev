@@ -27,3 +27,4 @@ An alert will display the content you put in there on the screen. <br>
 alert("Ei Gude!");
 ```
 
+![alert](/images/alert.png)
