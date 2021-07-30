@@ -19,3 +19,11 @@ There are two ways to JavaScript to a HTML file: <br>
 <script src="app.js"></script>
 ```
 
+## alert()
+An alert will display the content you put in there on the screen. <br>
+
+```js
+// Display on screen
+alert("Ei Gude!");
+```
+
