@@ -31,4 +31,4 @@ console.log("Ei Gude wie!?");
 console.timeEnd("Hello");
 
 // Clear the entire console
-// console.clear();
+console.clear();
