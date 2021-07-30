@@ -1,5 +1,5 @@
 # JavaScript Notes 2
-Additional notes to my initial [note file](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md) to document my learning progress on JavaScript. <br>
+Additional notes to my initial [JavaScript Notes file](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md) to document my learning progress on JavaScript. <br>
 I'm taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com while writing these notes. <br>
 
 ## Add JavaScript to your HTML file
@@ -65,3 +65,25 @@ console.error('This is an error!')
 ```
 
 ![console error](/images/console_error.png)
+
+## console.warning()
+`console.warning` will basically do the same thing as `console.error()` – but gives you a yellow instead as a red symbol. <br>
+The warning also indicates its position in the code block. *(in Chrom, apparently not in Firefox)* <br>
+
+```js
+// Print out a warning
+console.warn("This is a warning");
+```
+
+![console warning](/images/console_warning.png)
+
+## console.clear()
+`console.clear()` clears the entire console output above the clear function. <br>
+
+```js
+// Clear the entire console
+console.clear();
+```
+
+![console clear](/images/console_clear.png)
+

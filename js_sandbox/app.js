@@ -15,3 +15,9 @@ console.table({ a: 1, b: 2 });
 
 // Print out error notifications
 console.error("This is an error!");
+
+// Print out a warning
+console.warn("This is a warning");
+
+// Clear the entire console
+// console.clear();
