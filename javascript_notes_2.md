@@ -87,3 +87,20 @@ console.clear();
 
 ![console clear](/images/console_clear.png)
 
+## console.time()
+You can measure the execution time of your code by setting a timer. <br>
+Place `console.time("Indicator-Name");` at the befinning and `console.timeEnd("Indicator-Name");` at the end of the code block you'd like to measure: <br>
+
+```js
+console.time("Hello");
+  console.log("Ei Gude wie!?");
+  console.log("Ei Gude wie!?");
+  console.log("Ei Gude wie!?");
+  console.log("Ei Gude wie!?");
+  console.log("Ei Gude wie!?");
+  console.log("Ei Gude wie!?");
+  console.log("Ei Gude wie!?");
+console.timeEnd("Hello");
+```
+
+![console time](/images/console_time.png)

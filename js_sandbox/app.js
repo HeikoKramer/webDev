@@ -19,5 +19,16 @@ console.error("This is an error!");
 // Print out a warning
 console.warn("This is a warning");
 
+// measure the execution time between two points
+console.time("Hello");
+console.log("Ei Gude wie!?");
+console.log("Ei Gude wie!?");
+console.log("Ei Gude wie!?");
+console.log("Ei Gude wie!?");
+console.log("Ei Gude wie!?");
+console.log("Ei Gude wie!?");
+console.log("Ei Gude wie!?");
+console.timeEnd("Hello");
+
 // Clear the entire console
 // console.clear();
