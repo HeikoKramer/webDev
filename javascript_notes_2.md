@@ -149,3 +149,25 @@ var FirstName = 'Tom'; // Pascal case
 // Pascal case is reccomended in some situations, like for classes, but not variables 
 var firstname = 'Susan' // all lower case;
 ```
+
+### let
+`let` works exactly like `var`. <br>
+
+```js
+let name = "John Doe";
+console.log(name);
+name = "Steve Smith";
+console.log(name);
+```
+
+![let](/images/let.png)
+
+Initializing as undefined will also work with `let`: <br>
+
+```js
+let name;
+name = "John Doe";
+console.log(name);
+```
+
+![let2](/images/let2.png)
