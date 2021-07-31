@@ -124,7 +124,7 @@ console.log(greeting);
 
 ![Variables](/images/variables01.png)
 
-### Variables conventions 
+### Variable conventions 
 A variable can only contain **letters**, **numbers**, **_** (underscore) and **$** (the dollar sign). <br>
 They can **not** start with a number. If we try that, we will maybe see an error in the editor already, but at the latest in the console.<br>
 
@@ -138,3 +138,14 @@ var 1up = 'Mario';
 You can start a variable with an underscore or a dollar sign, but that is not recommended. <br>
 Dollar sign variables are common in JQuery, underscore variables are used as private variables in frameworks. <br>
 
+### Multi word variable conventions
+Camel case is the is the commonly used convention for multi word variables in JavaScript. <br>
+
+```js
+var firstName = 'John'; // Camel Case  <-- use this!
+
+var first_name ='Sara'; // Underscore (common in PHP)
+var FirstName = 'Tom'; // Pascal case
+// Pascal case is reccomended in some situations, like for classes, but not variables 
+var firstname = 'Susan' // all lower case;
+```
