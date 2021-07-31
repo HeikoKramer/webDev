@@ -21,9 +21,30 @@
 // var FirstName = 'Tom'; // Pascal case
 // var firstname;
 
-// LET
-let name;
-name = "John Doe";
-console.log(name);
-// name = "Steve Smith";
+// // LET
+// let name;
+// name = "John Doe";
 // console.log(name);
+// // name = "Steve Smith";
+// // console.log(name);
+
+// CONST
+// const name = "John";
+// console.log(name);
+// // Can not Re-assign
+// name = "Sarah";
+// const greeting;
+
+// const person = {
+//   name: "John",
+//   age: 30,
+// };
+// console.log(person);
+
+// person.name = "Sara";
+// person.age = 32;
+// console.log(person);
+
+const numbers = [1, 2, 3, 4, 5];
+numbers = [1, 2, 3, 4, 5, 6];
+console.log(numbers);

@@ -171,3 +171,66 @@ console.log(name);
 ```
 
 ![let2](/images/let2.png)
+
+### const
+`const` works differently form `var` and `let`. <br>
+Const stand for **constant** and it can't be changed or re-assigned. <br>
+If you try to re-assign a constant, you'll run into an error. <br>
+
+```js
+// CONST
+const name = 'John';
+console.log(name);
+// Can not Re-assign
+name = 'Sarah';
+```
+
+![const](/images/const.png)
+
+You also need to assign a value to the constant when you initialize it. <br>
+A `const` without an assigned value will throw an error too. <br>
+
+```js
+const greeting;
+```
+
+![const2](/images/const2.png)
+
+Things are a bit different for `const` **objects**. <br>
+You can't change the **person** attributes like **name** or **age**, but you can change the values assigned to them. <br>
+
+```js
+const person = {
+  name: 'John',
+  age: 30
+}
+console.log(person);
+
+person.name = 'Sara';
+person.age = 32;
+console.log(person);
+```
+
+![const3](/images/const3.png)
+
+Same thing with **arrays**. <br>
+You can add and take from an constant array … <br>
+
+```js
+const numbers = [1,2,3,4,5];
+console.log(numbers);
+numbers.push(6);
+console.log(numbers);
+```
+
+![const4](/images/const4.png)
+
+… but you can not assign a whole new array to it. <br>
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+numbers = [1, 2, 3, 4, 5, 6];
+console.log(numbers);
+```
+
+![const5](/images/const5.png)
