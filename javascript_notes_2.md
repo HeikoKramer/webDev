@@ -123,3 +123,13 @@ console.log(greeting);
 ```
 
 ![Variables](/images/variables01.png)
+
+### Variables conventions 
+A variable can only contain **letters**, **numbers**, **_** (underscore) and **$** (the dollar sign). <br>
+They can **not** start with a number. If we try that, we will maybe see an error in the editor already, but at the latest in the console.<br>
+
+```js
+var 1up = 'Mario';
+```
+
+![number variable](/images/number_variable.png)
