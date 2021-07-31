@@ -133,3 +133,8 @@ var 1up = 'Mario';
 ```
 
 ![number variable](/images/number_variable.png)
+
+
+You can start a variable with an underscore or a dollar sign, but that is not recommended. <br>
+Dollar sign variables are common in JQuery, underscore variables are used as private variables in frameworks. <br>
+
