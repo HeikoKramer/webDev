@@ -89,7 +89,7 @@ console.clear();
 
 ## console.time()
 You can measure the execution time of your code by setting a timer. <br>
-Place `console.time("Indicator-Name");` at the befinning and `console.timeEnd("Indicator-Name");` at the end of the code block you'd like to measure: <br>
+Place `console.time("Indicator-Name");` at the beginning and `console.timeEnd("Indicator-Name");` at the end of the code block you'd like to measure: <br>
 
 ```js
 console.time("Hello");
@@ -104,3 +104,22 @@ console.timeEnd("Hello");
 ```
 
 ![console time](/images/console_time.png)
+
+## Variables
+Variables can be declared with a value in it, or as a empty (**undefined**) vessel in which you later put a value. <br> 
+An other value can be assigned to that variable, using the `var` statement or only the variable's name. <br>
+
+```js
+var name = "John Doe";
+console.log(name);
+var name = "Steve Smith";
+console.log(name);
+
+// Init var
+var greeting;
+console.log(greeting);
+greeting = "Hello";
+console.log(greeting);
+```
+
+![Variables](/images/variables01.png)
