@@ -271,7 +271,7 @@ console.log(numbers);
 `typeof` provides a way to verify the data type of a variable. <br>
 **NOTE:** A bit weird is the fact that `typeof null === 'object';`. <br>
 Null is a primitive data type and it should look like this: `typeof null === 'null'` <br>
-That is some historical issue that I don't really care about, but if you're interested, ready the [typeof null explanations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null). <br>
+That is some historical issue that I don't really care about, but if you're interested, read this [typeof null explanation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null). <br>
 **Reference Types** will all come back as **objects**. <br>
 
 ```js
