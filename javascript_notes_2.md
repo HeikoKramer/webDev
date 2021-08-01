@@ -396,3 +396,19 @@ console.log(val.length);
 ```
 
 ![date to string](/images/date_to_string.png)
+
+### Array to string
+No big news here, works similar to the examples above. <br>
+
+```js
+// Array to string
+console.log("– Array to string  –");
+val = String([1, 2, 3, 4]);
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+```
+
+![Array to string](/images/array_to_string.png)
