@@ -260,3 +260,11 @@ console.log(numbers);
 * Dates
 * Anything else …
 
+### JavaScript is a dynamically typed language
+* types are associated with values not variables
+* the same variable can hold multiple types
+* we don't need to specify types
+* most other languages are statically typed (Java, C#, C++)
+* there are supersets of JS and addons to allow static typing (TypeScript, Flow)
+
+
