@@ -362,6 +362,7 @@ console.log(val.length);
 ```
 
 The math in the brackets gets calculated and the outcome is converted into an string. <br> 
+
 ![number to string](/images/number_to_string2.png)
 
 ### Boolean to string
@@ -379,3 +380,19 @@ console.log(val.length);
 ```
 
 ![bool to string](/images/bool_to_string.png)
+
+### Date to string
+Same counts for the date to string conversion. The whole date output gets converted to a string. <br>
+
+```js
+// Date to string
+console.log("– Date to string  –");
+val = String(new Date());
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+```
+
+![date to string](/images/date_to_string.png)

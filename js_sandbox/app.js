@@ -8,9 +8,9 @@ console.log(val);
 console.log(typeof val);
 console.log(val.length);
 
-// Bool to string
-console.log("– Bool to string  –");
-val = String(true);
+// Date to string
+console.log("– Date to string  –");
+val = String(new Date());
 
 // Output
 console.log(val);
