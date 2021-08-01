@@ -8,9 +8,9 @@ console.log(val);
 console.log(typeof val);
 console.log(val.length);
 
-console.log("– C O N V E R T E D  –");
-// Number to string
-val = String(9 * 9 + 9 * 3);
+// Bool to string
+console.log("– Bool to string  –");
+val = String(true);
 
 // Output
 console.log(val);

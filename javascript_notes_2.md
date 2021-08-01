@@ -363,3 +363,19 @@ console.log(val.length);
 
 The math in the brackets gets calculated and the outcome is converted into an string. <br> 
 ![number to string](/images/number_to_string2.png)
+
+### Boolean to string
+Works in the same way as the example above … <br>
+
+```js
+// Bool to string
+console.log("– Bool to string  –");
+val = String(true);
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+```
+
+![bool to string](/images/bool_to_string.png)
