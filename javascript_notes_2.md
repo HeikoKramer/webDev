@@ -234,3 +234,18 @@ console.log(numbers);
 ```
 
 ![const5](/images/const5.png)
+
+## Data types in JavaScript
+### Primitive vs reference data types
+**Primitive data types** <br>
+* stored directly in the location the variable accesses
+* stored on the stack
+
+**Referenced data types** <br>
+* accessed by reference
+* objects that are stored on the heap
+* pointer to a location in memory
+
+### Primitive data types
+[x] String
+
