@@ -315,3 +315,51 @@ console.log("datatype of today: " + typeof today);
 ```
 
 ![data types](/images/datatypes.png)
+
+## Type conversion
+Sometimes you need to convert a variable into an other data type. <br>
+JavaScript hat multiple ways to handle that. <br>
+
+### Number to string
+Here we have the variable **val** assigned to a number and later converted into a string. <br>
+
+```js
+let val;
+
+// Assigned to number
+val = 5;
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+
+console.log("– C O N V E R T E D  –");
+// Number to string
+val = String(val);
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+```
+
+Note that the **length** shows *undefined* for the number as this is a string method. <br>
+
+![number to string](/images/number_to_string.png)
+
+An notable thing in the number to string conversion is the following: <br>
+
+```js
+console.log("– C O N V E R T E D  –");
+// Number to string
+val = String(9 * 9 + 9 * 3);
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
+```
+
+The math in the brackets gets calculated and the outcome is converted into an string. <br> 
+![number to string](/images/number_to_string2.png)
