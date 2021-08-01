@@ -247,5 +247,16 @@ console.log(numbers);
 * pointer to a location in memory
 
 ### Primitive data types
-[x] String
+* String
+* Number
+* Boolean
+* Undefined
+* Symbols (ES6)
+
+### Reference data types / objects
+* Arrays
+* Object literals
+* Functions
+* Dates
+* Anything else …
 
