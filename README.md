@@ -6,6 +6,7 @@ Quick links to my notes files: <br>
 * [html_notes.md](https://github.com/HeikoKramer/webDev/blob/main/html_notes.md)
 * [css_notes.md](https://github.com/HeikoKramer/webDev/blob/main/css_notes.md)
 * [javascript_notes.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes.md)
+* [javascript_notes_2.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes_2.md)
 * [VS-Code_notes.md](https://github.com/HeikoKramer/webDev/blob/main/VS-Code_notes.md)
 
 ## Coding samples / tutorials
