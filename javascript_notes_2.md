@@ -460,7 +460,7 @@ console.log("arr: " + arr.length);
 
 ![toString](/images/toString.png)
 
-## String to number
+## Converting to number
 Converting other data types into numbers can be done with the `number()` function. <br>
 If a value is not convertible into a number – like *text-strings* or *arrays* – the value **NaN** will be shown. <br>
 **NaN** stands for **Not a Number**. <br>
@@ -549,3 +549,4 @@ console.log("float: " + float.toFixed(2));
 ```
 
 ![parse int float](/images/parse_int_float.png)
+
