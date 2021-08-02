@@ -91,20 +91,27 @@
 // console.log("arr: " + typeof arr);
 // console.log("arr: " + arr.toFixed(2));
 
-// parseInt
-console.log("– parseInt –");
-int = parseInt("100.3");
+// // parseInt
+// console.log("– parseInt –");
+// int = parseInt("100.3");
 
-// Output
-console.log("int: " + int);
-console.log("int: " + typeof int);
-console.log("int: " + int.toFixed(2));
+// // Output
+// console.log("int: " + int);
+// console.log("int: " + typeof int);
+// console.log("int: " + int.toFixed(2));
 
-// parseFloat
-console.log("– parseFloat –");
-float = parseFloat("100.3");
+// // parseFloat
+// console.log("– parseFloat –");
+// float = parseFloat("100.3");
 
-// Output
-console.log("float: " + float);
-console.log("float: " + typeof float);
-console.log("float: " + float.toFixed(2));
+// // Output
+// console.log("float: " + float);
+// console.log("float: " + typeof float);
+// console.log("float: " + float.toFixed(2));
+
+const value1 = 5;
+const value2 = "9";
+let sum = value1 + value2;
+
+console.log(sum);
+console.log(typeof sum);

@@ -550,3 +550,18 @@ console.log("float: " + float.toFixed(2));
 
 ![parse int float](/images/parse_int_float.png)
 
+## Type coercion
+Type coercion means, that two values of different data types get harmonised in one data type automatically by JavaScript. <br>
+In the example below we add a number to a number-string – the number is added at the end, the resulting data type is a string. <br>
+It's the same result when if we make `5` the **number** and `'9'` the **string**. <br>
+
+```js
+const value1 = '5';
+const value2 = 9;
+let sum = value1 + value2;
+
+console.log(sum);
+console.log(typeof sum);
+```
+
+![coercion](/images/coercion.png)
