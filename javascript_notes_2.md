@@ -459,3 +459,93 @@ console.log("arr: " + arr.length);
 ```
 
 ![toString](/images/toString.png)
+
+## String to number
+Converting other data types into numbers can be done with the `number()` function. <br>
+If a value is not convertible into a number – like *text-strings* or *arrays* – the value **NaN** will be shown. <br>
+**NaN** stands for **Not a Number**. <br>
+Booleans convert only to the number **0 (false)** or the number **1 (true)**. <br>
+
+```js
+// String to number
+console.log("– String (number) to number –");
+nuStr = Number("5");
+
+// Output
+console.log("nuStr: " + nuStr);
+console.log("nuStr: " + typeof nuStr);
+console.log("nuStr: " + nuStr.toFixed(2));
+
+// String to number
+console.log("– String (text) to number –");
+texStr = Number("Gude!");
+
+// Output
+console.log("texStr: " + texStr);
+console.log("texStr: " + typeof texStr);
+console.log("texStr: " + texStr.toFixed(2));
+
+// Boolean to number
+console.log("– Boolean (true) to number –");
+bouTrue = Number(true);
+
+// Output
+console.log("bouTrue: " + bouTrue);
+console.log("bouTrue: " + typeof bouTrue);
+console.log("bouTrue: " + bouTrue.toFixed(2));
+
+// Boolean to number
+console.log("– Boolean (false) to number –");
+bouFalse = Number(false);
+
+// Output
+console.log("bouFalse: " + bouFalse);
+console.log("bouFalse: " + typeof bouFalse);
+console.log("bouFalse: " + bouFalse.toFixed(2));
+
+// null to number
+console.log("– null to number –");
+nul = Number(null);
+
+// Output
+console.log("nul: " + nul);
+console.log("nul: " + typeof nul);
+console.log("nul: " + nul.toFixed(2));
+
+// Array to number
+console.log("– Array to number –");
+arr = Number([1, 2, 3]);
+
+// Output
+console.log("arr: " + arr);
+console.log("arr: " + typeof arr);
+console.log("arr: " + arr.toFixed(2));
+```
+
+![to number](/images/to_number.png)
+
+### parseInt() & parseFloat()
+`parseInt()` and `parseFloat()` are two further options to convert number strings to a number. <br>
+Only `parseFloat()` will handle decimals correctly, `parseInt()` will handle only the number before the decimal point. <br>
+
+```js
+// parseInt
+console.log("– parseInt –");
+int = parseInt("100.3");
+
+// Output
+console.log("int: " + int);
+console.log("int: " + typeof int);
+console.log("int: " + int.toFixed(2));
+
+// parseFloat
+console.log("– parseFloat –");
+float = parseFloat("100.3");
+
+// Output
+console.log("float: " + float);
+console.log("float: " + typeof float);
+console.log("float: " + float.toFixed(2));
+```
+
+![parse int float](/images/parse_int_float.png)
