@@ -714,7 +714,7 @@ console.log(val);
 ![random](/images/random.png)
 
 If you want to get full number out of `Math.random()`, you need to round it down and multiply it with the number that marks the desired range. <br>
-This example will generate a number between 0 and 20: <br>
+This example will generate a number between **0 and 20**: <br>
 
 ```js
 val = Math.floor(Math.random() * 21);
@@ -722,10 +722,27 @@ val = Math.floor(Math.random() * 21);
 console.log(val);
 ```
 
-This example will generate a number between 1 and 20: <br>
+This example will generate a number between **1 and 20**: <br>
 
 ```js
 val = Math.floor(Math.random() * 20 + 1);
 
 console.log(val);
 ```
+
+## String methods & concatenation
+String **concatenation** in JavaScript is done with the **+** sign: <br>
+
+```js
+const firstName = 'William';
+const lastName = 'Johnson';
+
+let val;
+
+// Concatenation
+val = firstName + ' ' + lastName;
+
+console.log(val);
+```
+
+![concatenation](/images/concatenation.png)
