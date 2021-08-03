@@ -843,6 +843,18 @@ console.log(val);
 // > i
 ```
 
+### get last char
+The `charAt()` method in combination with the `length` property can be used to get the last character of a string: <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+val = firstName.charAt(firstName.length - 1);
+console.log(val);
+// > m
+```
+
 ### .indexOf() & lastIndexOf()
 You can kind of do the other way arround of what we just did and find the first and the last index of a certian pattern in a strin. <br>
 

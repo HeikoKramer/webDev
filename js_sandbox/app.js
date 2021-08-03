@@ -1,7 +1,6 @@
 const firstName = "William";
 const lastName = "Johnson";
 
-// String index
-val = firstName.charAt("4");
+val = firstName.charAt(firstName.length - 1);
 console.log(val);
-// > i
+// > m
