@@ -636,7 +636,7 @@ console.log(upper);
 
 ![ceil](/images/ceil.png)
 
-**floor** is going to round the number down. <br>
+**floor** is going to round the number **down**. <br>
 
 ```js
 downer = Math.floor(2.4);
