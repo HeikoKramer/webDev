@@ -1,8 +1,8 @@
 const firstName = "William";
 const lastName = "Johnson";
 
-let val;
-
-// Length
-val = firstName.concat(" ", lastName);
-console.log(val);
+// Change case
+upp = firstName.toUpperCase();
+low = firstName.toLowerCase();
+console.log(upp);
+console.log(low);

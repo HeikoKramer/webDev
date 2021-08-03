@@ -799,3 +799,18 @@ console.log(val);
 // > 7
 ```
 
+### toUpperCase() & toLowerCase()
+You can **upper** or **lower** the case of your string with these two methods: <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+// Change case
+upp = firstName.toUpperCase();
+low = firstName.toLowerCase();
+console.log(upp);
+// > WILLIAM
+console.log(low);
+// > william
+```
