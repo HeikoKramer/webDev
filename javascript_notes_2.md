@@ -748,6 +748,21 @@ console.log(val);
 
 ![concatenation](/images/concatenation.png)
 
+#### .concat()
+The exact same result as above can be archived by using the `.concat()` method. <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+let val;
+
+// Length
+val = firstName.concat(" ", lastName);
+console.log(val);
+// > William Johnson
+```
+
 ### Append
 To **append** a string, you use the **+=** signs: <br>
 

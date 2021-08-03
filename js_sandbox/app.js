@@ -4,5 +4,5 @@ const lastName = "Johnson";
 let val;
 
 // Length
-val = firstName.length;
+val = firstName.concat(" ", lastName);
 console.log(val);
