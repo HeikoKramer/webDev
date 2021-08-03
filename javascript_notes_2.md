@@ -876,4 +876,16 @@ console.log(val);
 // > 4
 ```
 
+### substring()
+You can pull out a certain **substring** from the in index with the `substring()` method: <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+//  substring
+val = firstName.substring(0, 4);
+console.log(val);
+// > Will
+```
 

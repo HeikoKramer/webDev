@@ -1,6 +1,7 @@
 const firstName = "William";
 const lastName = "Johnson";
 
-val = firstName.charAt(firstName.length - 1);
+//  substring
+val = firstName.substring(0, 4);
 console.log(val);
 // > m
