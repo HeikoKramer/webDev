@@ -593,3 +593,16 @@ console.log(val);
 ```
 
 ![simple math](/images/simple_math.png)
+
+### the math object
+The math object comes with a lot of useful math functions. <br>
+<br>
+The `PI` function generates the mathematical constant pi. <br>
+
+```js
+val = Math.PI;
+
+console.log(val);
+```
+
+![pi](/images/pi.png)
