@@ -905,7 +905,7 @@ console.log(val);
 
 ### split()
 `split()` is a very cool method to transform a string into an array by **splitting** it at an specified separator. <br>
-In the example below we're splitting a sentence into an array of strings, where each index represents a word: <br>
+In the example below we're splitting a sentence by the **space** into an array of strings, where each index represents a word: <br>
 
 ```js
 const str = "This is a very cool test";
@@ -916,3 +916,15 @@ console.log(val);
 ```
 
 ![split](/images/split.png)
+
+### replace()
+The `replace()` method works exactly like the **search & replace** functionalities in common text editors. <br>
+
+```js
+const str = "This is a very cool test";
+
+//  replace
+val = str.replace("cool", "lame");
+console.log(val);
+// >  This is a very lame test
+```

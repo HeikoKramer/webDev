@@ -3,6 +3,6 @@ const lastName = "Johnson";
 
 const str = "This is a very cool test";
 
-//  split
-val = str.split(" ");
+//  replace
+val = str.replace("cool", "lame");
 console.log(val);
