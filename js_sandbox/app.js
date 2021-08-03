@@ -26,6 +26,6 @@ let val;
 // console.log(downer);
 // console.log(upper);
 
-val = Math.sqrt(64);
+val = Math.abs(-4);
 
 console.log(val);
