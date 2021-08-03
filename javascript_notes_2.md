@@ -759,3 +759,11 @@ console.log(val);
 ```
 
 ![append](/images/append.png)
+
+### Escaping
+You can **escape** characters with special meaning with the backslash character **\**. <br>
+If you escape the single quotes like this, the string will print out correctly: <br>
+
+```js
+val = 'That\'s awesome, I can\'t wait';
+```
