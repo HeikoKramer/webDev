@@ -26,6 +26,6 @@ let val;
 // console.log(downer);
 // console.log(upper);
 
-val = Math.abs(-4);
+val = Math.pow(8, 2);
 
 console.log(val);

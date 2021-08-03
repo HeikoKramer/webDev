@@ -669,3 +669,14 @@ console.log(val)
 ```
 
 ![absolute](/images/absolute.png)
+
+#### Math.pow()
+`Math.pow()` gives you the power of a number. <br>
+
+```js
+val = Math.pow(8, 2);
+
+console.log(val);
+```
+
+![power](/images/power.png)
