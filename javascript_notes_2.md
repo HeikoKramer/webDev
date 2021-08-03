@@ -731,6 +731,7 @@ console.log(val);
 ```
 
 ## String methods & concatenation
+### Concatenation
 String **concatenation** in JavaScript is done with the **+** sign: <br>
 
 ```js
@@ -746,3 +747,15 @@ console.log(val);
 ```
 
 ![concatenation](/images/concatenation.png)
+
+### Append
+To **append** a string, you use the **+=** signs: <br>
+
+```js
+val = "Heiko";
+val += " Krämer";
+
+console.log(val);
+```
+
+![append](/images/append.png)
