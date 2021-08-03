@@ -671,7 +671,7 @@ console.log(val)
 ![absolute](/images/absolute.png)
 
 #### Math.pow()
-`Math.pow()` gives you the power of a number. <br>
+`Math.pow()` gives you the **power** of a number. <br>
 
 ```js
 val = Math.pow(8, 2);
@@ -680,3 +680,24 @@ console.log(val);
 ```
 
 ![power](/images/power.png)
+
+#### Math.min() & Math.max()
+Use `Math.min()` to find the **minimum** and `Math.max()` to find the **maximum** of a number chain. <br>
+**NOTE:** I did expect that this would work with **arrays** out of the box – but it doesn't. <br>
+If you pass an array into the `.min()` or `.max()` method it will give you a result of **NaN**. <br>
+[This article](https://medium.com/@vladbezden/how-to-get-min-or-max-of-an-array-in-javascript-1c264ec6e1aa) explains why and how to process an array with min/max. <br>
+The method shown in the example below is called **destructuring assignment** – you've simply to at three dots `...` in front of the array variable to make this work. <br>
+
+```js
+arr = [3, 45, 2, -23, 653, 11];
+
+min = Math.min(3, 45, 2, -23, 653, 11);
+max = Math.max(3, 45, 2, -23, 653, 11);
+val = Math.min(...arr);
+
+console.log("min: " + min);
+console.log("max: " + max);
+console.log("array min: " + val);
+```
+
+![min max](/images/min_max.png)

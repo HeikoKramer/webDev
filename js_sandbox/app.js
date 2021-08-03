@@ -26,6 +26,12 @@ let val;
 // console.log(downer);
 // console.log(upper);
 
-val = Math.pow(8, 2);
+arr = [3, 45, 2, -23, 653, 11];
 
-console.log(val);
+min = Math.min(3, 45, 2, -23, 653, 11);
+max = Math.max(3, 45, 2, -23, 653, 11);
+val = Math.min(...arr);
+
+console.log("min: " + min);
+console.log("max: " + max);
+console.log("array min: " + val);
