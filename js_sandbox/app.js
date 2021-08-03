@@ -20,4 +20,8 @@ let val;
 //  Math Object
 val = Math.PI;
 
-console.log(val);
+downer = Math.floor(2.4);
+upper = Math.floor(2.5);
+
+console.log(downer);
+console.log(upper);

@@ -595,8 +595,9 @@ console.log(val);
 ![simple math](/images/simple_math.png)
 
 ### the math object
-The math object comes with a lot of useful math functions. <br>
-<br>
+The math object comes with a lot of useful math functions, like the pi-function and methods like `Math.round()`. <br>
+
+#### the PI function
 The `PI` function generates the mathematical constant pi. <br>
 
 ```js
@@ -606,3 +607,43 @@ console.log(val);
 ```
 
 ![pi](/images/pi.png)
+
+#### Math.round()
+The `.round()` method is going to round a given number up and down. <br>
+Everything up to .4 gets rounded down, everything from .5 gets rounded up. <br>
+
+```js
+downer = Math.round(2.4);
+upper = Math.round(2.5);
+
+console.log(downer);
+console.log(upper);
+```
+
+![math round](/images/math_round.png)
+
+#### Math.ceil() & Math.floor()
+`.ceil()` and `.floor()` are also math rounding methods, but with those methods you can specify if the number should be rounded up or down. <br>
+**ceil** is going to round the number **up**. <br>
+
+```js
+downer = Math.ceil(2.4);
+upper = Math.ceil(2.5);
+
+console.log(downer);
+console.log(upper);
+```
+
+![ceil](/images/ceil.png)
+
+**floor** is going to round the number down. <br>
+
+```js
+downer = Math.floor(2.4);
+upper = Math.floor(2.5);
+
+console.log(downer);
+console.log(upper);
+```
+
+![floor](/images/floor.png)
