@@ -2,14 +2,6 @@ const firstName = "William";
 const lastName = "Johnson";
 
 // String index
-val = firstName.indexOf("l");
+val = firstName.charAt("4");
 console.log(val);
-// > 2
-
-val = firstName.indexOf("li");
-console.log(val);
-// > 3
-
-val = firstName.lastIndexOf("i");
-console.log(val);
-// > 4
+// > i

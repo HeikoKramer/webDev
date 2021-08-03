@@ -815,7 +815,7 @@ console.log(low);
 // > william
 ```
 
-### Index of a string
+### String Index & charAt()
 You can get a letter of a string, by addressing its index, like you'de do with an array. <br>
 
 ```js
@@ -828,6 +828,17 @@ console.log(val);
 // > W
 
 val = firstName[4];
+console.log(val);
+// > i
+```
+
+The same result can be archived with the `charAt()` method: <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+val = firstName.charAt("4");
 console.log(val);
 // > i
 ```
@@ -852,3 +863,5 @@ val = firstName.lastIndexOf("i");
 console.log(val);
 // > 4
 ```
+
+
