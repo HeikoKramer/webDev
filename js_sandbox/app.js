@@ -1,6 +1,6 @@
-const num1 = 100;
-const num2 = 50;
-let val;
+// const num1 = 100;
+// const num2 = 50;
+// let val;
 
 // // Simple math with numbers
 // val = num1 + num2;
@@ -26,12 +26,14 @@ let val;
 // console.log(downer);
 // console.log(upper);
 
-arr = [3, 45, 2, -23, 653, 11];
+// arr = [3, 45, 2, -23, 653, 11];
 
-min = Math.min(3, 45, 2, -23, 653, 11);
-max = Math.max(3, 45, 2, -23, 653, 11);
-val = Math.min(...arr);
+// min = Math.min(3, 45, 2, -23, 653, 11);
+// max = Math.max(3, 45, 2, -23, 653, 11);
 
-console.log("min: " + min);
-console.log("max: " + max);
-console.log("array min: " + val);
+// console.log("min: " + min);
+// console.log("max: " + max);
+
+val = Math.floor(Math.random() * 21);
+
+console.log(val);

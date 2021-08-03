@@ -701,3 +701,31 @@ console.log("array min: " + val);
 ```
 
 ![min max](/images/min_max.png)
+
+#### Math.random()
+`Math.random()` gives us a random decimal in the range 0 to less than 1. <br>
+
+```js
+val = Math.random();
+
+console.log(val);
+```
+
+![random](/images/random.png)
+
+If you want to get full number out of `Math.random()`, you need to round it down and multiply it with the number that marks the desired range. <br>
+This example will generate a number between 0 and 20: <br>
+
+```js
+val = Math.floor(Math.random() * 21);
+
+console.log(val);
+```
+
+This example will generate a number between 1 and 20: <br>
+
+```js
+val = Math.floor(Math.random() * 20 + 1);
+
+console.log(val);
+```
