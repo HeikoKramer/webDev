@@ -928,3 +928,15 @@ val = str.replace("cool", "lame");
 console.log(val);
 // >  This is a very lame test
 ```
+
+### includes()
+Includes gives you a boolean **true** or **false** depending on if a string **includes** the given search term or nor: <br>
+
+```js
+const str = "This is a very cool test";
+
+//  includes
+val = str.includes("cool");
+console.log(val);
+// >  true
+```
