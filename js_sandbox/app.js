@@ -1,8 +1,15 @@
 const firstName = "William";
 const lastName = "Johnson";
 
-// Change case
-upp = firstName.toUpperCase();
-low = firstName.toLowerCase();
-console.log(upp);
-console.log(low);
+// String index
+val = firstName.indexOf("l");
+console.log(val);
+// > 2
+
+val = firstName.indexOf("li");
+console.log(val);
+// > 3
+
+val = firstName.lastIndexOf("i");
+console.log(val);
+// > 4

@@ -814,3 +814,41 @@ console.log(upp);
 console.log(low);
 // > william
 ```
+
+### Index of a string
+You can get a letter of a string, by addressing its index, like you'de do with an array. <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+// String index
+val = firstName[0];
+console.log(val);
+// > W
+
+val = firstName[4];
+console.log(val);
+// > i
+```
+
+### .indexOf() & lastIndexOf()
+You can kind of do the other way arround of what we just did and find the first and the last index of a certian pattern in a strin. <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+// String index
+val = firstName.indexOf("l");
+console.log(val);
+// > 2
+
+val = firstName.indexOf("li");
+console.log(val);
+// > 3
+
+val = firstName.lastIndexOf("i");
+console.log(val);
+// > 4
+```
