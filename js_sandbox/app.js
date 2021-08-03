@@ -2,6 +2,6 @@ const firstName = "William";
 const lastName = "Johnson";
 
 //  substring
-val = firstName.substring(0, 4);
+val = firstName.slice(-3);
 console.log(val);
-// > m
+// > iam

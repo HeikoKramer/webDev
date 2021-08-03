@@ -816,7 +816,7 @@ console.log(low);
 ```
 
 ### String Index & charAt()
-You can get a letter of a string, by addressing its index, like you'de do with an array. <br>
+You can get a letter of a string, by addressing its index, like you'd do with an array. <br>
 
 ```js
 const firstName = "William";
@@ -856,7 +856,7 @@ console.log(val);
 ```
 
 ### .indexOf() & lastIndexOf()
-You can kind of do the other way arround of what we just did and find the first and the last index of a certian pattern in a strin. <br>
+You can kind of do the other way around of what we just did and find the first and the last index of a certain pattern in a string. <br>
 
 ```js
 const firstName = "William";
@@ -889,3 +889,16 @@ console.log(val);
 // > Will
 ```
 
+### slice()
+The `slice()` method is very similar to `substring()` in fact `val = firstName.slice(0, 4);` will do the exact same thing as the substring method above. <br>
+But slice works also with negative numbers, so you can **slice** an amount of letters from the back of a string: <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+//  substring
+val = firstName.slice(-3);
+console.log(val);
+// > iam
+```
