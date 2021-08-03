@@ -767,3 +767,20 @@ If you escape the single quotes like this, the string will print out correctly: 
 ```js
 val = 'That\'s awesome, I can\'t wait';
 ```
+
+### .length
+Length is a string property – so it doesn't require brackets at the end. <br>
+It will return a number for the amount of character in the passed string. <br>
+
+```js
+const firstName = "William";
+const lastName = "Johnson";
+
+let val;
+
+// Length
+val = firstName.length;
+console.log(val);
+// > 7
+```
+
