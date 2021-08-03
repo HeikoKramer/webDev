@@ -18,10 +18,14 @@ let val;
 // val = num1 % num2;
 
 //  Math Object
-val = Math.PI;
+// val = Math.PI;
 
-downer = Math.floor(2.4);
-upper = Math.floor(2.5);
+// downer = Math.floor(2.4);
+// upper = Math.floor(2.5);
 
-console.log(downer);
-console.log(upper);
+// console.log(downer);
+// console.log(upper);
+
+val = Math.sqrt(64);
+
+console.log(val);

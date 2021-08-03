@@ -647,3 +647,14 @@ console.log(upper);
 ```
 
 ![floor](/images/floor.png)
+
+#### Math.sqrt()
+`Math.sqrt()` is a method to find the square number. <br>
+
+```js
+val = Math.sqrt(64);
+
+console.log(val);
+```
+
+![square](/images/square.png)
