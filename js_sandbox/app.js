@@ -1,7 +1,8 @@
 const firstName = "William";
 const lastName = "Johnson";
 
-//  substring
-val = firstName.slice(-3);
+const str = "This is a very cool test";
+
+//  split
+val = str.split(" ");
 console.log(val);
-// > iam

@@ -902,3 +902,17 @@ val = firstName.slice(-3);
 console.log(val);
 // > iam
 ```
+
+### split()
+`split()` is a very cool method to transform a string into an array by **splitting** it at an specified separator. <br>
+In the example below we're splitting a sentence into an array of strings, where each index represents a word: <br>
+
+```js
+const str = "This is a very cool test";
+
+//  split
+val = str.split(" ");
+console.log(val);
+```
+
+![split](/images/split.png)
