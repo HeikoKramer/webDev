@@ -1,9 +1,19 @@
-const firstName = "William";
-const lastName = "Johnson";
+const name = "John";
+const age = 30;
+const job = "Web Developer";
+const city = "Miami";
+let html;
 
-const str = "This is a very cool test";
+// Without template strings (es5)
+html =
+  "<ul><li>Name: " +
+  name +
+  "</li><li>Age: " +
+  age +
+  " </li><li>Job: " +
+  job +
+  " </li><li>City: " +
+  city +
+  " </li></ul>";
 
-//  includes
-val = str.includes("cool");
-console.log(val);
-// >  true
+document.body.innerHTML = html;

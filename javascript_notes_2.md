@@ -940,3 +940,31 @@ val = str.includes("cool");
 console.log(val);
 // >  true
 ```
+
+## Template Literals
+You can output content from JavaScript to a website with html. <br>
+Here an example how that looks like without template strings: <br>
+
+```js
+const name = "John";
+const age = 30;
+const job = "Web Developer";
+const city = "Miami";
+let html;
+
+// Without template strings (es5)
+html =
+  "<ul><li>Name: " +
+  name +
+  "</li><li>Age: " +
+  age +
+  " </li><li>Job: " +
+  job +
+  " </li><li>City: " +
+  city +
+  " </li></ul>";
+
+document.body.innerHTML = html;
+```
+
+![template literals 1](/images/template_literals_01.png)
