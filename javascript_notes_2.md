@@ -1031,3 +1031,13 @@ val = numbers.length;
 console.log(val);
 // > 7
 ```
+
+### Array.isArray()
+With the `isArray()` method of the `Array` object, you can determine if a variable is an array or nor. <br>
+
+```js
+// Check if ts array
+val = Array.isArray(numbers);
+console.log(val);
+// > true
+```
