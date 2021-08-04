@@ -1020,3 +1020,14 @@ console.log(mixed);
 ```
 
 ![arrays](/images/arrays.png)
+
+### .length
+You can check the amount of items stored within the array with `.length`. <br>
+
+```js
+// Ger array length
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+val = numbers.length;
+console.log(val);
+// > 7
+```
