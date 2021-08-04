@@ -1025,8 +1025,9 @@ console.log(mixed);
 You can check the amount of items stored within the array with `.length`. <br>
 
 ```js
-// Ger array length
 const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+// Ger array length
 val = numbers.length;
 console.log(val);
 // > 7
@@ -1036,8 +1037,12 @@ console.log(val);
 With the `isArray()` method of the `Array` object, you can determine if a variable is an array or nor. <br>
 
 ```js
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
 // Check if ts array
 val = Array.isArray(numbers);
 console.log(val);
 // > true
 ```
+
+
