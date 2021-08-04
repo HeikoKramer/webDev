@@ -1005,3 +1005,18 @@ document.body.innerHTML = html;
 
 ![template literals 2](/images/template_literals_02.png)
 
+## Arrays
+Arrays allow us to store multiple values in one variable, they can be mutated and iterated through. <br>
+You can create an array by setting comma separated values in square brackets `[a, b, c]` or by using the array constructor `new Array(a, b, c)`. <br>
+An array in JavaScript can store all kind of data types – interesting in JavaScript is, that arrays can also store combinations of mixed data types. <br>
+
+```js
+const number = [42, 56, 33, 23, 44, 36, 5];
+const number2 = new Array(22, 67, 24, 77, 14);
+const fruits = ["Apple", "Banana", "Orange", "Pear"];
+const mixed = [22, "Heĺlo", true, undefined, null, { a: 1, b: 1 }, new Date()];
+
+console.log(mixed);
+```
+
+![arrays](/images/arrays.png)
