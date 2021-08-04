@@ -943,6 +943,7 @@ console.log(val);
 
 ## Template Literals
 You can output content from JavaScript to a website with html. <br>
+### Without template strings (ES5)
 Here an example how that looks like without template strings: <br>
 
 ```js
@@ -968,3 +969,39 @@ document.body.innerHTML = html;
 ```
 
 ![template literals 1](/images/template_literals_01.png)
+
+### With template strings (ES6)
+If you're using backtick charakters around your html, you can write it like you would in an usual .html file. <br>
+To add content from a variable, use the syntax `${var}`. <br>
+You can as well include expressions that way, which will be shown evaluated in the html. <br>
+You can even do conditionals, as you can see below in the last list element. <br>
+
+```js
+const name = "John";
+const age = 30;
+const job = "Web Developer";
+const city = "Miami";
+let html;
+
+function hello() {
+  return "hello";
+}
+
+// With template strings (es6)
+html = `
+  <ul>
+    <li>Name: ${name}</li>
+    <li>Age: ${age}</li>
+    <li>Job: ${job}</li>
+    <li>City: ${city}</li>
+    <li>${2 + 2}</li>
+    <li>${hello()}</li>
+    <li>${age > 30 ? "Over 30" : "Under 30"}</li>
+  </ul>
+`;
+
+document.body.innerHTML = html;
+```
+
+![template literals 2](/images/template_literals_02.png)
+
