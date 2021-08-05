@@ -1045,4 +1045,15 @@ console.log(val);
 // > true
 ```
 
+### Get single value
+Arrays store there value at a certain index. The index of an JavaScript array starts at 0. <br>
+To get a specific value out of an array, you can call it by its index: <br>
 
+```js
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+//  Get single value
+val = numbers[3];
+console.log(val);
+// > 23
+```
