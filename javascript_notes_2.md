@@ -1082,3 +1082,20 @@ val = numbers.indexOf(36);
 console.log(val);
 // > 5
 ```
+
+## Mutating Arrays
+### add to an array
+You can add a value to the **end** of an array with `push()` and to the **front** with `unshift()`. <br>
+
+```js
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+//  add to end of an array
+numbers.push(777);
+console.log(numbers);
+// > [42, 56, 33, 23, 44, 36, 5, 777]
+
+numbers.unshift(999);
+console.log(numbers);
+// > [999, 42, 56, 33, 23, 44, 36, 5, 777]
+```
