@@ -1117,3 +1117,21 @@ numbers.shift();
 console.log(numbers);
 // > [42, 56, 33, 23, 44, 36, 5]
 ```
+
+#### splice
+You can also **splice** out certain values or a value chain from an array. <br>
+In the `splice()` method, you specify the **index** range you want to take out. <br>
+`splice(1,1)` will take out the values from **index 1** to **index 1** – so only that **one** value. <br>
+`splice(1,3)` will take the values from **index 1** to **index 3** – so it takes **three** values. <br> 
+
+```js
+//  splice out certain valuey
+numbers.splice(1, 1);
+console.log(numbers);
+// > [42, 33, 23, 44, 36, 5]
+
+//  splice out valuey chain
+numbers.splice(1, 3);
+console.log(numbers);
+// > [42, 36, 5]
+```

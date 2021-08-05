@@ -3,14 +3,14 @@ const numbers2 = new Array(22, 67, 24, 77, 14);
 const fruits = ["Apple", "Banana", "Orange", "Pear"];
 const mixed = [22, "Heĺlo", true, undefined, null, { a: 1, b: 1 }, new Date()];
 
-const numbers = [999, 42, 56, 33, 23, 44, 36, 5, 777];
+const numbers = [42, 56, 33, 23, 44, 36, 5];
 
-//  take from end of an array
-numbers.pop();
+//  splice out certain valuey
+numbers.splice(1, 1);
 console.log(numbers);
-// > [999, 42, 56, 33, 23, 44, 36, 5, 777]
+// > [42, 33, 23, 44, 36, 5]
 
-//  take from front of an array
-numbers.shift();
+//  splice out valuey chain
+numbers.splice(1, 3);
 console.log(numbers);
-// > [42, 56, 33, 23, 44, 36, 5]
+// > [42, 36, 5]
