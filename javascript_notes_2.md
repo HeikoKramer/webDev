@@ -1057,3 +1057,16 @@ val = numbers[3];
 console.log(val);
 // > 23
 ```
+
+### Insert into array
+You can insert a value into the array, by setting a certain index to it. <br>
+
+```js
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+//  Insert into array
+numbers[2] = 100;
+console.log(numbers);
+```
+
+![array insert](/images/array_insert.png)

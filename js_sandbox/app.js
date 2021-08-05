@@ -5,7 +5,6 @@ const mixed = [22, "Heĺlo", true, undefined, null, { a: 1, b: 1 }, new Date()];
 
 const numbers = [42, 56, 33, 23, 44, 36, 5];
 
-//  Get single value
-val = numbers[3];
-console.log(val);
-// > 33
+//  Insert into array
+numbers[2] = 100;
+console.log(numbers);
