@@ -1085,7 +1085,7 @@ console.log(val);
 
 ## Mutating Arrays
 ### add to an array
-You can add a value to the **end** of an array with `push()` and to the **front** with `unshift()`. <br>
+You can **add** a value to the **end** of an array with `push()` and to the **front** with `unshift()`. <br>
 
 ```js
 const numbers = [42, 56, 33, 23, 44, 36, 5];
@@ -1095,7 +1095,25 @@ numbers.push(777);
 console.log(numbers);
 // > [42, 56, 33, 23, 44, 36, 5, 777]
 
+//  add to front of an array
 numbers.unshift(999);
 console.log(numbers);
 // > [999, 42, 56, 33, 23, 44, 36, 5, 777]
+```
+
+### take from array
+You can **take** from the **end** of an array with `pop()` and from its **beginning** with `shift()`. <br>
+
+```js
+const numbers = [999, 42, 56, 33, 23, 44, 36, 5, 777];
+
+//  take from end of an array
+numbers.pop();
+console.log(numbers);
+// > [999, 42, 56, 33, 23, 44, 36, 5]
+
+//  take from front of an array
+numbers.shift();
+console.log(numbers);
+// > [42, 56, 33, 23, 44, 36, 5]
 ```
