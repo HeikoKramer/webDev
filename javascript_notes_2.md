@@ -1070,3 +1070,15 @@ console.log(numbers);
 ```
 
 ![array insert](/images/array_insert.png)
+
+### Find index of value
+To find the index of a certain value within your array, use the `.indexOf()` method. <br>
+
+```js
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+//  Find index of value
+val = numbers.indexOf(36);
+console.log(val);
+// > 5
+```
