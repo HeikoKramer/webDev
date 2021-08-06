@@ -1,12 +1,12 @@
 // Create some arrays
-const numbers2 = new Array(22, 67, 24, 77, 14);
 const fruits = ["Apple", "Banana", "Orange", "Pear"];
 const mixed = [22, "Heĺlo", true, undefined, null, { a: 1, b: 1 }, new Date()];
 
 const numbers = [42, 56, 33, 23, 44, 36, 5];
+const numbers2 = [22, 67, 24, 77, 14];
 
-//  reverse
-numbers.reverse();
+// Concatenate arrays
+val = numbers.concat(numbers2);
 
-console.log(numbers);
-// > [42, 36, 5]
+console.log(val);
+// > [5, 36, 44, 23, 33, 56, 42]
