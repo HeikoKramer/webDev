@@ -1202,3 +1202,44 @@ console.log(val);
 // > [56, 44, 42, 36, 33, 23, 5]
 ```
 
+## Object literals
+Objects are initiated with curly brackets. They can store all kind of values, including arrays, other objects and functions. <br>
+<br>
+You can access a specific object value with **dot notation:** `object.value` or with this syntax `object['value']`. <br>
+
+
+```js
+const person = {
+  firstName: "Steve",
+  lastName: "Smith",
+  age: 30,
+  email: "steve@aol.com",
+  hobbies: ["music", "sports"],
+  address: {
+    city: "Miami",
+    state: "FL",
+  },
+  getBirthYear: function () {
+    return 1987;
+  },
+};
+
+let val;
+val = person;
+
+// Get specific value
+val = person.firstName;
+console.log(val);
+val = person.age;
+console.log(val);
+val = person.hobbies[1];
+console.log(val);
+val = person.address;
+console.log(val);
+val = person.address.city;
+console.log(val);
+val = person.getBirthYear();
+console.log(val)
+```
+
+![object](/images/object.png)

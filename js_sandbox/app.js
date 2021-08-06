@@ -1,28 +1,31 @@
-// Create some arrays
-const mixed = [22, "Heĺlo", true, undefined, null, { a: 1, b: 1 }, new Date()];
-const numbers2 = [22, 67, 24, 77, 14];
+const person = {
+  firstName: "Steve",
+  lastName: "Smith",
+  age: 30,
+  email: "steve@aol.com",
+  hobbies: ["music", "sports"],
+  address: {
+    city: "Miami",
+    state: "FL",
+  },
+  getBirthYear: function () {
+    return 1987;
+  },
+};
 
-const fruits = ["Orange", "Pear", "Banana", "Apple"];
+let val;
+val = person;
 
-// Sorting arrays
-val = fruits.sort();
-
+// Get specific value
+val = person.firstName;
 console.log(val);
-// > ["Apple", "Banana", "Orange", "Pear"]
-
-//  Sorting number arrays
-const numbers = [42, 56, 33, 23, 44, 36, 5];
-
-val = numbers.sort(function (x, y) {
-  return x - y;
-});
-
+val = person.age;
 console.log(val);
-// > [5, 23, 33, 36, 42, 44, 56]
-
-val = numbers.sort(function (x, y) {
-  return y - x;
-});
-
+val = person.hobbies[1];
 console.log(val);
-// > [5, 23, 33, 36, 42, 44, 56]
+val = person.address;
+console.log(val);
+val = person.address.city;
+console.log(val);
+val = person.getBirthYear();
+console.log(val);
