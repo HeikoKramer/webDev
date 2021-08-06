@@ -1176,4 +1176,29 @@ console.log(val);
 // > ["Apple", "Banana", "Orange", "Pear"]
 ```
 
+### Sorting number arrays
+To bring number strings in order, you have to use the **compare function**. <br>
+
+```js
+//  Sorting number arrays
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+val = numbers.sort(function (x, y) {
+  return x - y;
+});
+
+console.log(val);
+// > [5, 23, 33, 36, 42, 44, 56]
+```
+
+You can reverse the order by switching **x - y** to **y - x**. <br>
+
+```js
+val = numbers.sort(function (x, y) {
+  return y - x;
+});
+
+console.log(val);
+// > [56, 44, 42, 36, 33, 23, 5]
+```
 
