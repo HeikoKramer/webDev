@@ -1118,7 +1118,7 @@ console.log(numbers);
 // > [42, 56, 33, 23, 44, 36, 5]
 ```
 
-#### splice
+#### splice()
 You can also **splice** out certain values or a value chain from an array. <br>
 In the `splice()` method, you specify the **index** range you want to take out. <br>
 `splice(1,1)` will take out the values from **index 1** to **index 1** – so only that **one** value. <br>
@@ -1134,4 +1134,17 @@ console.log(numbers);
 numbers.splice(1, 3);
 console.log(numbers);
 // > [42, 36, 5]
+```
+
+### reverse()
+Use `reverse()` to **reverse** the order of an arry. <br>
+
+```js
+const numbers = [42, 56, 33, 23, 44, 36, 5];
+
+//  reverse
+numbers.reverse();
+
+console.log(numbers);
+// > [5, 36, 44, 23, 33, 56, 42]
 ```
