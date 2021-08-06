@@ -1137,7 +1137,7 @@ console.log(numbers);
 ```
 
 ### reverse()
-Use `reverse()` to **reverse** the order of an arry. <br>
+Use `reverse()` to **reverse** the order of an array. <br>
 
 ```js
 const numbers = [42, 56, 33, 23, 44, 36, 5];
@@ -1161,6 +1161,19 @@ val = numbers.concat(numbers2);
 
 console.log(val);
 // > [42, 56, 33, 23, 44, 36, 5, 22, 67, 24, 77, 14]
+```
+
+### Sorting string arrays
+An array of **strings** can be sorted in alphabetical order with `sort()`. <br>
+
+```js
+const fruits = ["Orange", "Pear", "Banana", "Apple"];
+
+// Sorting arrays
+val = fruits.sort();
+
+console.log(val);
+// > ["Apple", "Banana", "Orange", "Pear"]
 ```
 
 
