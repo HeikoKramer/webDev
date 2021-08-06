@@ -1247,8 +1247,8 @@ console.log(val)
 ### .this
 Whitin objects you can access other properties of that object with the **this** keyword. <br>
 In this example, we're using **this** in the `getBirthYear` function to access the age. <br>
-Without **this** we would recive an error: *ReferenceError: age is not defined* <br
->
+Without **this** we would recive an error: *ReferenceError: age is not defined* <br>
+
 ```js
 const person = {
   firstName: "Steve",
