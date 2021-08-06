@@ -9,23 +9,10 @@ const person = {
     state: "FL",
   },
   getBirthYear: function () {
-    return 1987;
+    return 2021 - age;
   },
 };
 
-let val;
-val = person;
-
-// Get specific value
-val = person.firstName;
-console.log(val);
-val = person.age;
-console.log(val);
-val = person.hobbies[1];
-console.log(val);
-val = person.address;
-console.log(val);
-val = person.address.city;
-console.log(val);
 val = person.getBirthYear();
 console.log(val);
+// >> 1991

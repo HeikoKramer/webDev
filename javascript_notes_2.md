@@ -1243,3 +1243,29 @@ console.log(val)
 ```
 
 ![object](/images/object.png)
+
+### .this
+Whitin objects you can access other properties of that object with the **this** keyword. <br>
+In this example, we're using **this** in the `getBirthYear` function to access the age. <br>
+Without **this** we would recive an error: *ReferenceError: age is not defined* <br
+>
+```js
+const person = {
+  firstName: "Steve",
+  lastName: "Smith",
+  age: 30,
+  email: "steve@aol.com",
+  hobbies: ["music", "sports"],
+  address: {
+    city: "Miami",
+    state: "FL",
+  },
+  getBirthYear: function () {
+    return 2021 - this.age;
+  },
+};
+
+val = person.getBirthYear();
+console.log(val);
+// >> 1991
+```
