@@ -40,10 +40,22 @@
 // }
 // // > INCORRECT
 
+// if (typeof id !== "undefined") {
+//   console.log(`The Id is ${id}`);
+// } else {
+//   console.log("No Id");
+// }
+
 // let id = 100;
 
-if (typeof id !== "undefined") {
-  console.log(`The Id is ${id}`);
+const color = "orange";
+
+if (color === "red") {
+  console.log("Color is red");
+} else if (color === "blue") {
+  console.log("Color is blue");
+} else if (color === "orange") {
+  console.log("Color is orange");
 } else {
-  console.log("No Id");
+  console.log("Color unknown, or no color");
 }

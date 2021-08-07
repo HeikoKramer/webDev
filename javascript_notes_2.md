@@ -1473,3 +1473,28 @@ if (typeof id !== "undefined") {
 ```
 
 Now the console will show **No Id**, as we have not defined that variable here. <br>
+
+### if else
+With `else if` you can evaluate further conditions after the initial `if`. <br>
+The code in an `else if` will only execute if its condition is true, the code in an `else` will execute when all prior evaluations were false. <br>
+<br>
+In the example below, we have dedicated logic **if** the value of the color variable is red, blue or orange. <br>
+Everything **else** will lead to execution of the code in the else statement. <br>
+
+```js
+const color = "orange";
+
+if (color === "red") {
+  console.log("Color is red");
+} else if (color === "blue") {
+  console.log("Color is blue");
+} else if (color === "orange") {
+  console.log("Color is orange");
+} else {
+  console.log("Color unknown, or no color");
+}
+
+// > Color is orange
+```
+
+
