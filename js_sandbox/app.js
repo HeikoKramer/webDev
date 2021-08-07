@@ -6,18 +6,25 @@
 // console.log(val);
 // console.log(typeof val);
 
-const birthday = new Date("October 9 1981 14:30:00");
+let birthday = new Date("October 9 1981 14:30:00");
 console.log(birthday);
 // > Date Fri Oct 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
 
-console.log(birthday.getHours());
-// > 14
-console.log(birthday.getMinutes());
-// > 30
-console.log(birthday.getMilliseconds());
-// > 0
+birthday.setMonth(2);
+console.log(birthday);
+// > Date Fri Mar 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
 
-console.log(birthday.getTime());
-// > 0
+birthday.setDate(15);
+console.log(birthday);
+// > Date Sun Mar 15 1981 14:30:00 GMT+0100 (Central European Standard Time)
 
-console.log(349126 * 60 * 60);
+birthday.setFullYear(2021);
+console.log(birthday);
+// > Date Mon Mar 15 2020 14:30:00 GMT+0100 (Central European Standard Time)
+
+// Set Time
+birthday.setHours(16);
+birthday.setMinutes(45);
+birthday.setFullYear(2021);
+console.log(birthday);
+// > Date Mon Mar 15 2020 14:30:00 GMT+0100 (Central European Standard Time)

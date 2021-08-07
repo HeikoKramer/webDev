@@ -1350,7 +1350,7 @@ console.log(birthday.getDay());
 // > 5
 ```
 
-### get a specific time element
+### Get a specific time element
 As with the date elements, you can get specific time element values out with date functions. <br>
 
 ```js
@@ -1365,3 +1365,33 @@ console.log(birthday.getMinutes());
 console.log(birthday.getMilliseconds());
 // > 0
 ```
+
+### Set values for date elements
+We have seen date functions to get date element values – this works as well the other way around. <br>
+You can define specific values of a date element, with its appropriate set function. <br>
+
+```js
+let birthday = new Date("October 9 1981 14:30:00");
+console.log(birthday);
+// > Date Fri Oct 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
+
+birthday.setMonth(2);
+console.log(birthday);
+// > Date Fri Mar 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
+
+birthday.setDate(15);
+console.log(birthday);
+// > Date Sun Mar 15 1981 14:30:00 GMT+0100 (Central European Standard Time)
+
+birthday.setFullYear(2021);
+console.log(birthday);
+// > Date Mon Mar 15 2020 14:30:00 GMT+0100 (Central European Standard Time)
+
+// Set Time
+birthday.setHours(16);
+birthday.setMinutes(45);
+birthday.setFullYear(2021);
+console.log(birthday);
+// > Date Mon Mar 15 2020 16:45:00 GMT+0100 (Central European Standard Time)
+```
+
