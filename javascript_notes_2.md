@@ -1269,3 +1269,17 @@ val = person.getBirthYear();
 console.log(val);
 // >> 1991
 ```
+
+## Dates & times
+In JavaScript we have the **Date** object to do certain things with dates. <br>
+Here we are creating a date object, which will – when ever it's called – contain the date of that moment. <br>
+The type of that variable isn't neither date nor string, it is **object**. <br>
+
+```js
+const today = new Date();
+console.log(today);
+console.log(typeof today);
+```
+
+![date](/images/date.png)
+
