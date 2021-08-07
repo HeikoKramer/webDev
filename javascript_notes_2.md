@@ -1444,3 +1444,32 @@ if (id !== 100) {
 }
 // > INCORRECT
 ```
+
+### !== undefined
+If you want something to happen if a certain variable exists, you could do something like this: <br>
+
+```js
+let id = 100;
+
+if (id) {
+  console.log(`The Id is ${id}`);
+} else {
+  console.log("No Id");
+}
+```
+
+Testing that code would actually work fine, the console shows **The Id is 100**. <br>
+If you comment the id variable out, you'd expect it to show **No Id** in the console, but instead you'll run into an error: <br>
+*Uncaught ReferenceError: id is not defined* <br>
+The id is not defined, so the first if can not be evaluated. <br>
+You can avoid that error, by checking if the variable exists (is not undefined). <br>
+
+```js
+if (typeof id !== "undefined") {
+  console.log(`The Id is ${id}`);
+} else {
+  console.log("No Id");
+}
+```
+
+Now the console will show **No Id**, as we have not defined that variable here. <br>
