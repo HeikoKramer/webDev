@@ -1294,3 +1294,26 @@ console.log(typeof val);
 ```
 
 ![toString](/images/to_string.png)
+
+If you want to set a specific date, enter that date in the brackets. <br>
+
+```js
+const birthday = new Date("10/09/1981");
+console.log(birthday);
+// > Date Fri Oct 09 1981 00:00:00 GMT+0100 (Central European Standard Time)
+```
+
+There are quite a bit of [formatting options](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). <br>
+The example below will lead to the exact same result as the one above –an there are other ways to archive this. <br>
+
+```js
+const birthday = new Date("October 9 1981");
+```
+
+You can as well specify the time for that date: <br>
+
+```js
+const birthday = new Date("October 9 1981 14:30:00");
+console.log(birthday);
+// > Date Fri Oct 09 1981 14:30:00 GMT+0100 (Central European Standard Time)
+```
