@@ -1295,6 +1295,8 @@ console.log(typeof val);
 
 ![toString](/images/to_string.png)
 
+### Specify the date
+
 If you want to set a specific date, enter that date in the brackets. <br>
 
 ```js
