@@ -1319,3 +1319,37 @@ const birthday = new Date("October 9 1981 14:30:00");
 console.log(birthday);
 // > Date Fri Oct 09 1981 14:30:00 GMT+0100 (Central European Standard Time)
 ```
+
+### Date functions – get a specific date element
+There are several date functions to get a single element out of the date object. <br>
+**NOTE:** Like with arrays, the index of a date's month is **0-based**!. <br>
+A date object in **October** will give you a month of number **9** – because the index starts at 0 (January). <br> 
+So keep in mind that the number of the month will be **-1** while day, year or hour won't. <br>
+Another special index is with the `getday()` function. That index is also **0-based** and constructed as following: <br>
+
+* 0 = Sunday
+* 1 = Monday
+* 2 = Tuesday
+* 3 = Wednesday
+* 4 = Thursday
+* 5 = Friday
+* 6 = Saturday
+
+```js
+const birthday = new Date("October 9 1981 14:30:00");
+console.log(birthday);
+// > Date Fri Oct 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
+
+console.log(birthday.getMonth());
+// > 9
+console.log(birthday.getFullYear());
+// > 1981
+console.log(birthday.getDate());
+// > 9
+console.log(birthday.getHours());
+// > 14
+console.log(birthday.getMinutes());
+// > 30
+console.log(birthday.getDay());
+// > 5
+```
