@@ -1,30 +1,43 @@
-// let val;
+let id = 100;
 
-// const today = new Date();
+// NOT VALIDATED –––––––––––––
+// this would work with a string "100" as well
 
-// val = today.toString();
-// console.log(val);
-// console.log(typeof val);
+// EQUAL TO
+if (id == 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > CORRECT
 
-let birthday = new Date("October 9 1981 14:30:00");
-console.log(birthday);
-// > Date Fri Oct 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
+// NOT EQUAL TO
+if (id != 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > INCORRECT
 
-birthday.setMonth(2);
-console.log(birthday);
-// > Date Fri Mar 9 1981 14:30:00 GMT+0100 (Central European Standard Time)
+// VALIDATED –––––––––––––––––
 
-birthday.setDate(15);
-console.log(birthday);
-// > Date Sun Mar 15 1981 14:30:00 GMT+0100 (Central European Standard Time)
+// EQUAL TO VALUE & TYPE
+// this works only with a number 100
+// a string "100"
 
-birthday.setFullYear(2021);
-console.log(birthday);
-// > Date Mon Mar 15 2020 14:30:00 GMT+0100 (Central European Standard Time)
+id = "100";
 
-// Set Time
-birthday.setHours(16);
-birthday.setMinutes(45);
-birthday.setFullYear(2021);
-console.log(birthday);
-// > Date Mon Mar 15 2020 14:30:00 GMT+0100 (Central European Standard Time)
+if (id === 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > CORRECT
+
+// NOT EQUAL TO VALUE & TYPE
+if (id !== 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > INCORRECT

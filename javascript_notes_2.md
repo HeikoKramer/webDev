@@ -1395,3 +1395,52 @@ console.log(birthday);
 // > Date Mon Mar 15 2020 16:45:00 GMT+0100 (Central European Standard Time)
 ```
 
+## If statements & comparison operators
+### Equal / not equal & validated / not validated
+JavaScript doesn't by default validate the data type of a data type with an **equal operator** `==` or the **not equal operator** `!=` <br>
+The if from the example below `if (id == 100)` would accept either an id of a number value 100 or a string value of "100". <br>
+The **equal / not equal** operators with data type validation are extended by one **equal sign** `===` and `!==`  <br>
+
+```js
+let id = 100;
+
+// NOT VALIDATED –––––––––––––
+// this would work with a string "100" as well
+
+// EQUAL TO
+if (id == 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > CORRECT
+
+// NOT EQUAL TO
+if (id != 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > INCORRECT
+
+// VALIDATED –––––––––––––––––
+
+// EQUAL TO VALUE & TYPE
+// this works only with a number 100
+// a string "100" would reverse the results from this example
+
+if (id === 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > CORRECT
+
+// NOT EQUAL TO VALUE & TYPE
+if (id !== 100) {
+  console.log("CORRECT");
+} else {
+  console.log("INCORRECT");
+}
+// > INCORRECT
+```
