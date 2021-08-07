@@ -1283,3 +1283,14 @@ console.log(typeof today);
 
 ![date](/images/date.png)
 
+If you want to transform it into a **string**, use the `toString()` function: <br>
+
+```js
+const today = new Date();
+
+val = today.toString();
+console.log(val);
+console.log(typeof val);
+```
+
+![toString](/images/to_string.png)
