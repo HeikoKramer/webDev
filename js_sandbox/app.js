@@ -60,14 +60,24 @@
 //   console.log("Color unknown, or no color");
 // }
 
-const name = "Steve";
-const age = 22;
+// const name = "Steve";
+// const age = 22;
 
-// && (AND)
-if (age > 0 && age <= 12) {
-  console.log(`${name} is a child`);
-} else if (age >= 13 && age <= 19) {
-  console.log(`${name} is a teenager`);
+// // && (AND)
+// if (age > 0 && age <= 12) {
+//   console.log(`${name} is a child`);
+// } else if (age >= 13 && age <= 19) {
+//   console.log(`${name} is a teenager`);
+// } else {
+//   console.log(`${name} is an adult`);
+// }
+
+const name = "Steve";
+const age = 4;
+
+// || (OR)
+if (age < 16 || age > 65) {
+  console.log(`${name} can not run in race`);
 } else {
-  console.log(`${name} is an adult`);
+  console.log(`${name} is registered for the race`);
 }

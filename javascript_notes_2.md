@@ -1499,9 +1499,9 @@ if (color === "red") {
 
 ## Logical operators
 ### && (AND) 
-You can concetinate conditions with the **AND** opeartor, which is written `&&` in JavaScript. <br>
+You can concatenate conditions with the **AND** operator, which is written `&&` in JavaScript. <br>
 In the example below, we are evaluation an age-range by setting a **greater than** and a **less than** condition and combining them with an `&&`. <br>
-Both conmditions must evaluate **true** to execute the code block linked to them. <br>
+Both conditions must evaluate **true** to execute the code block linked to them. <br>
 
 ```js
 const name = "Steve";
@@ -1519,4 +1519,20 @@ if (age > 0 && age <= 12) {
 // > Steve is an adult
 ```
 
+### || (OR)
+The **OR** operator, written `||` in JavaScript, is used when there are at least two conditions and either one of them or both should be **true** to execute the related code block. <br>
+So in the example below, *Steve can not run in race*, because he is neither younger than 16, the first condition is and the denial gets executed. <br>
 
+```js
+const name = "Steve";
+const age = 4;
+
+// || (OR)
+if (age < 16 || age > 65) {
+  console.log(`${name} can not run in race`);
+} else {
+  console.log(`${name} is registered for the race`);
+}
+
+// > Steve can not run in race
+```
