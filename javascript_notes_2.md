@@ -1497,6 +1497,7 @@ if (color === "red") {
 // > Color is orange
 ```
 
+### No curly brackets required
 **NOTE:** An interesting fact is that JavaScript actually doesn't require curly to function correctly. <br>
 The code below will execute fine without those curly brackets. <br>
 
