@@ -23,7 +23,28 @@
 // })();
 // // IFIE Ran..
 
-(function (name) {
-  console.log("Hello " + name);
-})("Brad");
-// Hello Brad
+// (function (name) {
+//   console.log("Hello " + name);
+// })("Brad");
+// // Hello Brad
+
+// PROPERTY METHODS
+
+const todo = {
+  add: function () {
+    console.log("Add todo..");
+  },
+  edit: function (id) {
+    console.log(`Edit todo ${id}`);
+  },
+};
+
+todo.delete = function () {
+  console.log("Delete todo..");
+};
+
+todo.add();
+// > Add todo..
+todo.edit(22);
+// > Edit todo 22
+todo.delete();

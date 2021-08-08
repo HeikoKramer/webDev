@@ -1723,3 +1723,29 @@ These functions can also take in parameters: <br>
 
 We declared it and it just run right away. <br>
 
+### Property methods
+When a **function** is put inside an **object** it is called a **method**. <br>
+In this example we have defined the **object** todo, which carries two functions that can be called via **dot notation**. <br> 
+With dot notation we can also define an object method outside the object – see the delete method in the example. <br>
+
+```js
+const todo = {
+  add: function () {
+    console.log("Add todo..");
+  },
+  edit: function (id) {
+    console.log(`Edit todo ${id}`);
+  },
+};
+
+todo.delete = function () {
+  console.log("Delete todo..");
+};
+
+todo.add();
+// > Add todo..
+todo.edit(22);
+// > Edit todo 22
+todo.delete();
+```
+
