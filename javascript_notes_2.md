@@ -1629,6 +1629,7 @@ console.log(day);
 Functions are blocks of code that can be defined and than called at a later time. <br>
 In some cases they are defined and called at the same time. <br>
 There are different types of functions in JavaScript. <br>
+
 ### Function declarations
 Functions can take over **parameters** – also called **arguments**, do something with those values and then **return** a result. <br>
 Heres a little example for that: <br>
@@ -1673,6 +1674,31 @@ function greet(firstName = "John", lastName = "Doe") {
 
 console.log(greet());
 //  > Hello John Doe
+```
+
+### Function expressions 
+A function expression is when you put a function as a variable assignment. <br>
+Usually you have a named variable and an anonymous function: <br>
+
+```js
+const square = function(){}
+```
+
+You could also name the function, but it is not required: <br>
+
+```js
+const square = function square(){}
+```
+
+Here's an example of a full function expression: <br>
+
+```js
+const square = function (x) {
+  return x * x;
+};
+
+console.log(square(8));
+// > 64
 ```
 
 
