@@ -48,14 +48,26 @@
 
 // let id = 100;
 
-const color = "orange";
+// const color = "orange";
 
-if (color === "red") {
-  console.log("Color is red");
-} else if (color === "blue") {
-  console.log("Color is blue");
-} else if (color === "orange") {
-  console.log("Color is orange");
+// if (color === "red") {
+//   console.log("Color is red");
+// } else if (color === "blue") {
+//   console.log("Color is blue");
+// } else if (color === "orange") {
+//   console.log("Color is orange");
+// } else {
+//   console.log("Color unknown, or no color");
+// }
+
+const name = "Steve";
+const age = 22;
+
+// && (AND)
+if (age > 0 && age <= 12) {
+  console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+  console.log(`${name} is a teenager`);
 } else {
-  console.log("Color unknown, or no color");
+  console.log(`${name} is an adult`);
 }

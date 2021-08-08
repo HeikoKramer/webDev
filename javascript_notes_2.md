@@ -1497,4 +1497,26 @@ if (color === "red") {
 // > Color is orange
 ```
 
+## Logical operators
+### && (AND) 
+You can concetinate conditions with the **AND** opeartor, which is written `&&` in JavaScript. <br>
+In the example below, we are evaluation an age-range by setting a **greater than** and a **less than** condition and combining them with an `&&`. <br>
+Both conmditions must evaluate **true** to execute the code block linked to them. <br>
+
+```js
+const name = "Steve";
+const age = 22;
+
+// && (AND)
+if (age > 0 && age <= 12) {
+  console.log(`${name} is a child`);
+} else if (age >= 13 && age <= 19) {
+  console.log(`${name} is a teenager`);
+} else {
+  console.log(`${name} is an adult`);
+}
+
+// > Steve is an adult
+```
+
 
