@@ -1624,3 +1624,55 @@ switch (new Date().getDay()) {
 
 console.log(day);
 ```
+
+## Functions
+Functions are blocks of code that can be defined and than called at a later time. <br>
+In some cases they are defined and called at the same time. <br>
+There are different types of functions in JavaScript. <br>
+### Function declarations
+Functions can take over **parameters** – also called **arguments**, do something with those values and then **return** a result. <br>
+Heres a little example for that: <br>
+
+```js
+function greet(firstName, lastName) {
+  return "Hello " + firstName + " " + lastName;
+}
+
+console.log(greet("John", "Doe"));
+// > Hello John Doe
+```
+
+We are calling those function for the console, providing a first- and a last-name as defined in the function. <br>
+If we call the function without passing all specified parameters, their outcome will show as **undefined**. <br>
+You can set default values to prevent this, how to set such a default has improved with ES6. <br>
+In ES5 the definition of defaults had to happen by evaluating the parameter's type within the function like that: <br>
+
+```js
+function greet(firstName, lastName) {
+  if (typeof firstName === "undefined") {
+    firstName = "John";
+  }
+  if (typeof lastName === "undefined") {
+    lastName = "Doe";
+  }
+  return "Hello " + firstName + " " + lastName;
+}
+
+console.log(greet());
+// > Hello John Doe
+```
+
+"Hello John Doe" gets returned although the function was called without parameters, as John & Doe have been set as the default values for firstName and lastName. <br>
+<br>
+In ES6 it is easier to do that – the default can be set directly in the declaration of the parameter: <br>
+
+```js
+function greet(firstName = "John", lastName = "Doe") {
+  return "Hello " + firstName + " " + lastName;
+}
+
+console.log(greet());
+//  > Hello John Doe
+```
+
+
