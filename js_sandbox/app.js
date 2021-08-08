@@ -9,8 +9,21 @@
 
 // FUNCTION EXPRESSION
 
-const square = function (x) {
-  return x * x;
-};
+// const square = function (x) {
+//   return x * x;
+// };
 
-console.log(square(8));
+// console.log(square(8));
+// // > 64
+
+// IMMIDIATELY INVOKABLE FUNCTION EXPRESSIONS – IFESs
+
+// (function () {
+//   console.log("IFIE Ran..");
+// })();
+// // IFIE Ran..
+
+(function (name) {
+  console.log("Hello " + name);
+})("Brad");
+// Hello Brad

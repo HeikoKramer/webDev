@@ -1701,4 +1701,25 @@ console.log(square(8));
 // > 64
 ```
 
+### Immidiatley invokable function expressions – IIFEs
+IIFEs are function that you declare and run at the same time. <br>
+To do that, we need it to be an expression and we can make it an expression, by putting it into parenthesis. <br>
+
+```js
+(function() {
+  console.log("IFIE Ran..");
+})();
+// IFIE Ran..
+```
+
+These functions can also take in parameters: <br>
+
+```js
+(function (name) {
+  console.log("Hello " + name);
+})("Brad");
+// Hello Brad
+```
+
+We declared it and it just run right away. <br>
 
