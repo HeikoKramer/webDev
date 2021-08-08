@@ -1497,6 +1497,21 @@ if (color === "red") {
 // > Color is orange
 ```
 
+**NOTE:** An interesting fact is that JavaScript actually doesn't require curly to function correctly. <br>
+The code below will execute fine without those curly brackets. <br>
+
+```js
+const id = 100;
+
+// Whithout Brackets
+if (id === 100) console.log("CORRECT");
+else console.log("INCORRECT");
+
+// > CORRECT
+```
+
+But it is recommended to use them for a better readability and to better optically match that c-style syntax. <br> 
+
 ## Logical operators
 ### && (AND) 
 You can concatenate conditions with the **AND** operator, which is written `&&` in JavaScript. <br>

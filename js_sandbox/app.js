@@ -82,8 +82,12 @@
 //   console.log(`${name} is registered for the race`);
 // }
 
+// // TERNARY OPERATOR
+// console.log(id === 100 ? "CORRECT" : "INCORRECT");
+// // > CORRECT
+
 const id = 100;
 
-// TERNARY OPERATOR
-console.log(id === 100 ? "CORRECT" : "INCORRECT");
-// > CORRECT
+// Whithout Brackets
+if (id === 100) console.log("CORRECT");
+else console.log("INCORRECT");
