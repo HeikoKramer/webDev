@@ -72,12 +72,18 @@
 //   console.log(`${name} is an adult`);
 // }
 
-const name = "Steve";
-const age = 4;
+// const name = "Steve";
+// const age = 4oover;
 
-// || (OR)
-if (age < 16 || age > 65) {
-  console.log(`${name} can not run in race`);
-} else {
-  console.log(`${name} is registered for the race`);
-}
+// // || (OR)
+// if (age < 16 || age > 65) {
+//   console.log(`${name} can not run in race`);
+// } else {
+//   console.log(`${name} is registered for the race`);
+// }
+
+const id = 100;
+
+// TERNARY OPERATOR
+console.log(id === 100 ? "CORRECT" : "INCORRECT");
+// > CORRECT

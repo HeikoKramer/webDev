@@ -1536,3 +1536,17 @@ if (age < 16 || age > 65) {
 
 // > Steve can not run in race
 ```
+
+### Ternary operator
+The conditional (ternary) operator is the only JavaScript operator that takes three operands: <br>
+A **condition** followed by a question mark `?`, then an **expression** to execute if the condition is true, followed by a colon `:`, which is acting like an **else**, whit a final expression that executes if the first condition was false. <br>
+This operator is frequently used as a shortcut for the if statement.  <br>
+
+```js
+const id = 100;
+
+// TERNARY OPERATOR
+console.log(id === 100 ? "CORRECT" : "INCORRECT");
+
+// > CORRECT
+```
