@@ -1566,3 +1566,27 @@ console.log(id === 100 ? "CORRECT" : "INCORRECT");
 
 // > CORRECT
 ```
+
+## Switches
+Switches are an other way to validate conditions. <br> It's basically doing what an **else-if** is doing, although it might be more readable for many conditions. <br>
+One thing you have to keep in mind is that you have to write a **break** after the expression for each condition. <br>
+Without a **break**, the next expression will get executed as well. <br>
+
+```js
+const color = "blue";
+
+switch (color) {
+  case "red":
+    console.log("Color is red");
+    break;
+  case "blue":
+    console.log("Color is blue");
+    break;
+  default:
+    console.log("Color is not red or blue");
+    break;
+}
+
+// > Color is blue
+```
+
