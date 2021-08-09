@@ -1829,4 +1829,28 @@ while (i < 10) {
 
 ![while loop 1](/images/while_loop_1.png)
 
+### Do while loops
+The do while loop has a bit of a weird feature that it runs at least one time – even if its condition isn't met. <br>
 
+```js
+let i = 0;
+
+do {
+  console.log("Number " + i);
+  i++;
+} while (i < 10);
+```
+
+![do while loop](/images/do_while_loop.png)
+
+So far no difference to the other loop types, but if we change the variable to 100, what is of course higher then 10, the expression is executed anyhow one time. <br>
+
+```js
+let i = 100;
+
+do {
+  console.log("Number " + i);
+  i++;
+} while (i < 10);
+// > Number 100
+```

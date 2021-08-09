@@ -16,9 +16,16 @@
 
 //  WHILE LOOP
 
-let i = 0;
+// let i = 0;
 
-while (i < 10) {
+// while (i < 10) {
+//   console.log("Number " + i);
+//   i++;
+// }
+
+let i = 100;
+
+do {
   console.log("Number " + i);
   i++;
-}
+} while (i < 10);
