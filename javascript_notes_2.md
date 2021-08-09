@@ -1854,3 +1854,17 @@ do {
 } while (i < 10);
 // > Number 100
 ```
+
+### Loop through arrays
+#### Arry for loop
+You can loop through an arry, using the incrementing integer `i` as the array's index indicatior `[0]`. <br>
+
+```js
+const cars = ["Ford", "Opel", "Honda", "Toyota"];
+
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]);
+}
+```
+
+![array for loop](/images/array_for_loop.png)

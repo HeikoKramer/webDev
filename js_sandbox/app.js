@@ -23,9 +23,15 @@
 //   i++;
 // }
 
-let i = 100;
+// let i = 100;
 
-do {
-  console.log("Number " + i);
-  i++;
-} while (i < 10);
+// do {
+//   console.log("Number " + i);
+//   i++;
+// } while (i < 10);
+
+const cars = ["Ford", "Opel", "Honda", "Toyota"];
+
+for (let i = 0; i < cars.length; i++) {
+  console.log(cars[i]);
+}
