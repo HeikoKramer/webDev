@@ -30,8 +30,12 @@
 //   i++;
 // } while (i < 10);
 
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
 const cars = ["Ford", "Opel", "Honda", "Toyota"];
 
-for (let i = 0; i < cars.length; i++) {
-  console.log(cars[i]);
-}
+cars.forEach(function (car) {
+  console.log(car);
+});
