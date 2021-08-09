@@ -1901,3 +1901,20 @@ console.log(ids);
 ```
 
 ![map](/images/map.png)
+
+### for in loop
+The for in loop can be used to loop through an object. <br>
+
+```js
+const user = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 40,
+};
+
+for (let x in user) {
+  console.log(`${x} : ${user[x]}`);
+}
+```
+
+![for in loop](/images/for_in_loop.png)
