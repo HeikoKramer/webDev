@@ -1881,3 +1881,23 @@ cars.forEach(function(car) {
 Both techniques will output the same result. <br>
 
 ![array for loop](/images/array_for_loop.png)
+
+### Map
+With map you can get through an **array of objects** and assign certain values of that user to an other variable. <br>
+In the example below we are extracting the id for each user and putting it in the ids variable. <br>
+
+```js
+const users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Sara" },
+  { id: 3, name: "Karen" },
+];
+
+const ids = users.map(function (user) {
+  return user.id;
+});
+
+console.log(ids);
+```
+
+![map](/images/map.png)

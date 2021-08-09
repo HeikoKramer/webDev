@@ -34,8 +34,21 @@
 //   console.log(cars[i]);
 // }
 
-const cars = ["Ford", "Opel", "Honda", "Toyota"];
+// const cars = ["Ford", "Opel", "Honda", "Toyota"];
 
-cars.forEach(function (car) {
-  console.log(car);
+// cars.forEach(function (car) {
+//   console.log(car);
+// });
+
+// MAP
+const users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Sara" },
+  { id: 3, name: "Karen" },
+];
+
+const ids = users.map(function (user) {
+  return user.id;
 });
+
+console.log(ids);
