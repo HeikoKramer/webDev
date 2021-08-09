@@ -1856,9 +1856,8 @@ do {
 ```
 
 ### Loop through arrays
-You can loop through an array, using the incrementing integer `i` as the array's index indicator `[0]`. <br>
-
 #### Array for loop
+In the **for loop** you're using the incrementing integer `i` as the array's index indicator `[0]`. <br>
 
 ```js
 const cars = ["Ford", "Opel", "Honda", "Toyota"];
@@ -1869,6 +1868,7 @@ for (let i = 0; i < cars.length; i++) {
 ```
 
 #### Array for each loop
+In the **for each loop** you're using an anonymous function to execute an expression *for each* index of the array. <br>
 
 ```js
 const cars = ["Ford", "Opel", "Honda", "Toyota"];
