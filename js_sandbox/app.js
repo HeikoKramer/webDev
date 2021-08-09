@@ -1,50 +1,15 @@
-// FUNCTION DECLARATIONS
+// FOR
 
-// function greet(firstName = "John", lastName = "Doe") {
-//   return "Hello " + firstName + " " + lastName;
-// }
+for (let i = 0; i < 10; i++) {
+  if (i === 2) {
+    console.log("2 is my favorite number");
+    continue;
+  }
 
-// console.log(greet());
-// //  > Hello John Doe
+  if (i === 5) {
+    console.log("Stop the loop");
+    break;
+  }
 
-// FUNCTION EXPRESSION
-
-// const square = function (x) {
-//   return x * x;
-// };
-
-// console.log(square(8));
-// // > 64
-
-// IMMIDIATELY INVOKABLE FUNCTION EXPRESSIONS – IFESs
-
-// (function () {
-//   console.log("IFIE Ran..");
-// })();
-// // IFIE Ran..
-
-// (function (name) {
-//   console.log("Hello " + name);
-// })("Brad");
-// // Hello Brad
-
-// PROPERTY METHODS
-
-const todo = {
-  add: function () {
-    console.log("Add todo..");
-  },
-  edit: function (id) {
-    console.log(`Edit todo ${id}`);
-  },
-};
-
-todo.delete = function () {
-  console.log("Delete todo..");
-};
-
-todo.add();
-// > Add todo..
-todo.edit(22);
-// > Edit todo 22
-todo.delete();
+  console.log("Number " + i);
+}

@@ -1749,3 +1749,65 @@ todo.edit(22);
 todo.delete();
 ```
 
+## General loops
+### For loops
+For loops in JavaScript work as for loops in any other programming language. <br>
+`for (let i = 0; i < 10; i++)` you have an **integer** `i`, which you set to a starting point, the **condition** (*as long as i is smaller than 10*) and the `i++` – which will increase `i` after each iteration. <br>
+Lets have a look on some characteristics. <br>
+<br>
+Here we have a loop printing a string and the current value of `i` out to the terminal. <br>
+If `i` is **equal** to 2, an other sentence is printed out to the terminal (additionally). <br>
+Note that "Number 2" is also printed out to the console. <br>
+
+```js
+for (let i = 0; i < 10; i++) {
+
+  if (i === 2) {
+    console.log("2 is my favorite number");
+  }
+
+  console.log("Number " + i);
+}
+```
+
+![for loop 1](/images/for-loop_01.png)
+
+If we want to break out of the default behaviour of the loop, when a certain condition is met and only execute our conditional expression we have to use `continue`. <br>
+`continue` will stop all further evaluations for that iteration and jump to the next cycle. <br>
+
+```js
+for (let i = 0; i < 10; i++) {
+  if (i === 2) {
+    console.log("2 is my favorite number");
+    continue;
+  }
+
+  console.log("Number " + i);
+}
+```
+
+Now the "Number 2" print out is gone. <br>
+
+![for loop 2](/images/for-loop_02.png)
+
+If you want the loop to **stop** completely when a certain condition is met, you can use `break`. <br>
+
+```js
+for (let i = 0; i < 10; i++) {
+  if (i === 2) {
+    console.log("2 is my favorite number");
+    continue;
+  }
+
+  if (i === 5) {
+    console.log("Stop the loop");
+    break;
+  }
+
+  console.log("Number " + i);
+}
+```
+
+Now the loop breaks at our specified point. <br>
+
+![for loop 3](/images/for-loop_03.png)
