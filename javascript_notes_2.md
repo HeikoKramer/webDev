@@ -1811,3 +1811,22 @@ for (let i = 0; i < 10; i++) {
 Now the loop breaks at our specified point. <br>
 
 ![for loop 3](/images/for-loop_03.png)
+
+### While loops
+Which type of loop to use is often just personal preference, but there is some saying: <br>
+When you know exactly how often your loop is running, use a for loop, if that's unclear, use a while loop. <br>
+<br>
+The while loop works nearly the same way as the for loop, but the integer is defined outside of the loop and the increment is set as part of the expression. <br>
+
+```js
+let i = 0;
+
+while (i < 10) {
+  console.log("Number " + i);
+  i++;
+}
+```
+
+![while loop 1](/images/while_loop_1.png)
+
+
