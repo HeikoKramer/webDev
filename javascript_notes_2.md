@@ -1976,3 +1976,27 @@ if (confirm("Are you sure")) {
 ```
 
 ![confirm](/images/confirm.gif)
+
+### Get the hight and the width of the window
+You can get the inner & outer hight & width of the window: <br>
+
+```js
+hight = window.outerHeight;
+console.log("hight: " + hight);
+
+width = window.outerWidth;
+console.log("width: " + width);
+```
+
+![hight width](/images/hight-width.png)
+
+The inner hight & width doesn't count any scroll bar or console. <br>
+
+```js
+hight = window.innerHeight;
+console.log("hight: " + hight);
+
+width = window.innerWidth;
+console.log("width: " + width);
+```
+![inner hight width](/images/inner_hight_width.png)
