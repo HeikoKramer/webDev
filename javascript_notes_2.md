@@ -1936,4 +1936,6 @@ If we enter **window** in the browser's console, we can access all the stuff it 
 
 ![window](/images/window.png)
 
+Browsing through that list you'll see, that you've used stuff from the window object all the time, like for example `console.log()`. <br>
 
+![console](/images/console.png)
