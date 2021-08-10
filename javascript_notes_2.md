@@ -1936,12 +1936,14 @@ If we enter **window** in the browser's console, we can access all the stuff it 
 
 ![window](/images/window.png)
 
+### Console
 Browsing through that list you'll see, that you've used stuff from the window object all the time, like for example `console.log()`. <br>
 
 ![console](/images/console.png)
 
 Instead of `console.log()` you could also write `window.console.log()` but you don't need to, as you're already **on top of the window object**. <br>
-<br>
+
+### Alert
 The same is true for **alert** which is a **window method** that pops up a little window on the screen. <br>
 It can be written without the **window**, but is **a part of the window object** and can therefor as well be addressed like this: <br>
 
@@ -1951,3 +1953,15 @@ window.alert("hello world");
 ```
 
 ![alert](/images/alert1.png)
+
+### Promt
+Promt is similar to alert except it takes an input. <br>
+
+```js
+// Promt
+const input = prompt();
+alert(input);
+```
+
+![prompt](/images/prompt.gif)
+
