@@ -2000,3 +2000,12 @@ width = window.innerWidth;
 console.log("width: " + width);
 ```
 ![inner hight width](/images/inner_hight_width.png)
+
+### scrollY & scrollX
+You can determin the scroll position of the site with `scrollY` & `scrollX`. <br>
+
+```js
+//  Scroll points
+scrX = window.scrollY;
+scrY = window.scrollX;
+```
