@@ -1965,3 +1965,14 @@ alert(input);
 
 ![prompt](/images/prompt.gif)
 
+### Confirm
+This is used often, when you're deleting something – to avoid the user clicked it by accident. 
+
+```js
+// Confirm
+if (confirm("Are you sure")) {
+  alert("you clicked yes");
+}
+```
+
+![confirm](/images/confirm.gif)
