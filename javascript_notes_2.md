@@ -1918,3 +1918,22 @@ for (let x in user) {
 ```
 
 ![for in loop](/images/for_in_loop.png)
+
+## The window object
+The window is the global object in client side JavaScript. <br>
+Node.js is a JavaScript runtime that runs as a standalone process on your machine or on a server – the system is your environment in node.js. <br>
+In client side JavaScript, the window (the browser) is the global environment. <br>
+Node.js and chrome both use the same JavaScript engine, called V8, from Google. <br>
+Firefox use an engine called SpiderMonkey, developed by Mozilla and also used by the GNOME Shell for extension support. <br>
+<br>
+The window object has a lot to it what JavaScript developers use all the time, like <br>
+* local storage
+* the fetch API
+* the navigator object
+* methods like alert, and promt and confirm
+
+If we enter **window** in the browser's console, we can access all the stuff it has in it. <br>
+
+![window](/images/window.png)
+
+
