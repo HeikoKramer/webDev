@@ -2009,3 +2009,25 @@ You can determin the scroll position of the site with `scrollY` & `scrollX`. <br
 scrX = window.scrollY;
 scrY = window.scrollX;
 ```
+
+### Location
+The location object provides you access to information like the **host**, **hostname**, the **port** as well as methods like **reload**, **replace** or **search**, there is quite a lot in `window.location`. <br>
+
+```js
+// Location Object
+val = window.location;
+console.log(val);
+// > http://127.0.0.1:5500/index.html
+
+val = window.location.hostname;
+console.log(val);
+// 127.0.0.1
+
+val = window.location.port;
+console.log(val);
+// 5500
+
+val = window.location.href;
+console.log(val);
+//  http://127.0.0.1:5500/index.html
+```
