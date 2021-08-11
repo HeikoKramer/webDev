@@ -2033,7 +2033,7 @@ console.log(val);
 ```
 
 #### search
-`window.location.search` won't give you anything on the index page of your sandbox, but in a more complex setup, it can be used to determin, what the user has searched for or what they have clicked on. <br>
+`window.location.search` won't give you anything on the index page of your sandbox, but in a more complex setup, it can be used to determine, what the user has searched for or what they have clicked on. <br>
 
 ![search](/images/search.png)
 
@@ -2045,4 +2045,7 @@ window.location.href = "http://heikokraemer.de/";
 ```
 
 ![redirect](/images/redirect.png)
+
+#### reload
+You can initiate a **reload** of a page with `window.location.reload()`. <br>
 
