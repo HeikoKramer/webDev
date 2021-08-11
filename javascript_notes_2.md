@@ -2036,3 +2036,13 @@ console.log(val);
 `window.location.search` won't give you anything on the index page of your sandbox, but in a more complex setup, it can be used to determin, what the user has searched for or what they have clicked on. <br>
 
 ![search](/images/search.png)
+
+#### href redirect
+`window.location.href` can be used to **redirect** the user to an other **location**. <br>
+
+```js
+window.location.href = "http://heikokraemer.de/";
+```
+
+![redirect](/images/redirect.png)
+

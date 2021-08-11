@@ -36,5 +36,5 @@
 // console.log(val);
 // // 5500
 
-val = window.location.search;
-console.log(val);
+window.location.href = "http://heikokraemer.de/";
+alert("you have been redirected");
