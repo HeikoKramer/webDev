@@ -2031,3 +2031,8 @@ val = window.location.href;
 console.log(val);
 //  http://127.0.0.1:5500/index.html
 ```
+
+#### search
+`window.location.search` won't give you anything on the index page of your sandbox, but in a more complex setup, it can be used to determin, what the user has searched for or what they have clicked on. <br>
+
+![search](/images/search.png)
