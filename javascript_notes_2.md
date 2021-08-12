@@ -2049,3 +2049,20 @@ window.location.href = "http://heikokraemer.de/";
 #### reload
 You can initiate a **reload** of a page with `window.location.reload()`. <br>
 
+#### history
+The window **history** object can be used to brows and navigate through the users history. <br>
+<br>
+This command will navigate the user back to the last page he visited: <br>
+
+```js
+window.history.go(-1);
+```
+
+With the following method you can get the number of pages the user visited before he came to the current page: <br>
+
+```js
+val = window.history.length;
+console.log(val);
+```
+
+
