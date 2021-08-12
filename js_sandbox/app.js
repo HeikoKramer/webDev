@@ -1,45 +1,24 @@
-// WINDOW METHODS / OBJECTS / PROPERTIES
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
 
-// Alert
-// window.alert("hello world");
+// Function Scope
+function test() {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log("Function Scope: ", a, b, c);
+}
 
-// Promt
-// const input = prompt();
-// alert(input);
+test();
 
-// // Confirm
-// if (confirm("Are you sure")) {
-//   alert("you clicked yes");
-// }
+// Block Scope
+if (true) {
+  var a = 7;
+  let b = 8;
+  const c = 9;
+  console.log("IF Scope: ", a, b, c);
+}
 
-// Inner height and with
-// hight = window.innerHeight;
-// console.log("hight: " + hight);
-
-// width = window.innerWidth;
-// console.log("width: " + width);
-
-//  Scroll points
-// scrX = window.scrollY;
-// scrY = window.scrollX;
-
-// Location Object
-// val = window.location;
-// console.log(val);
-// // > http://127.0.0.1:5500/index.html
-
-// val = window.location.hostname;
-// console.log(val);
-// // 127.0.0.1
-
-// val = window.location.port;
-// console.log(val);
-// // 5500
-
-// window.location.href = "http://heikokraemer.de/";
-// alert("you have been redirected");
-
-// History
-
-val = window.navigator.language;
-console.log(val);
+console.log("Global Scope: ", a, b, c);

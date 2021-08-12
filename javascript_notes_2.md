@@ -2109,3 +2109,46 @@ val = window.navigator.language;
 console.log(val);
 // > en-US
 ```
+
+## Scope
+Depending on where in your code a variable is used, it is part of a **scope**. <br>
+If it appears in the document (at the beginning for example) without any further brackets around it, it has **global scope**. <br>
+If it is part of a function = **function scope**. <br>
+When written into the inner of an **if** or a **loop** = **block scope** <br>
+<br>
+The variables in the **function scope** are totally independent from the **global scope**. <br>
+They have no impact on each other, although they are declared with identical names. <br>
+<br>
+Variables declared with an identical name in **block** and **global** scope will influence each other if declared with **var**. <br>
+**let** and **const** variables are stable in their scope context. <br>
+<br>
+In this example you see that all variables remained stable within their scope – except for the **var a**, which has been *globaly* overwritten in the **block scope**. <br> 
+
+```js
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
+
+// Function Scope
+function test() {
+  var a = 4;
+  let b = 5;
+  const c = 6;
+  console.log("Function Scope: ", a, b, c);
+}
+
+test();
+
+// Block Scope
+if (true) {
+  var a = 7;
+  let b = 8;
+  const c = 9;
+  console.log("IF Scope: ", a, b, c);
+}
+
+console.log("Global Scope: ", a, b, c);
+```
+
+![scope](/images/scope.png)
