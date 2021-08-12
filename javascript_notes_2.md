@@ -2065,4 +2065,47 @@ val = window.history.length;
 console.log(val);
 ```
 
+### navigator
+The **navigator object** has to do with the browser itself. It is named after the **netscape navigator**, which was the dominant web browser in the 90s. <br>
+We can get all kind of browser information with `window.navigator`. <br>
+<br>
+To get a full overview, try this: <br>
 
+```js
+val = window.navigator;
+console.log(val);
+```
+
+![navigator](/images/navigator.png)
+
+To determine the users **browser version**, you can use the following: <br>
+
+```js
+val = window.navigator.appVersion;
+console.log(val);
+// >  5.0 (X11)
+```
+
+Or `userAgent` to get even more information regarding browser, version and system: <br>
+
+```js
+val = window.navigator.userAgent;
+console.log(val);
+// >  Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:90.0) Gecko/20100101 Firefox/90.0
+```
+
+If you ever decide only to show some content of your site to **Linux** users, use `platform` to get that information: <br>
+
+```js
+val = window.navigator.platform;
+console.log(val);
+// > Linux x86_64
+```
+
+The set `language` is an other useful information you can get with `navigator`: <br>
+
+```js
+val = window.navigator.language;
+console.log(val);
+// > en-US
+```

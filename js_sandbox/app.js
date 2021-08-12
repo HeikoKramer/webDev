@@ -41,5 +41,5 @@
 
 // History
 
-val = window.history.length;
+val = window.navigator.language;
 console.log(val);
