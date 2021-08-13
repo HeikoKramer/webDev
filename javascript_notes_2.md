@@ -2152,3 +2152,8 @@ console.log("Global Scope: ", a, b, c);
 ```
 
 ![scope](/images/scope.png)
+
+
+## The DOM
+I've excluded my notes on the DOCUMENT OBJECT MODEL into an other file. <br>
+
