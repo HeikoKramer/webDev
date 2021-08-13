@@ -84,9 +84,9 @@ We could get stuff from the form: <br>
 </form>
 ```
 
-**css:** <br>
+**js:** <br>
 
-```css
+```js
 val = document.forms[0].id;
 console.log(val);
 // > task-form
