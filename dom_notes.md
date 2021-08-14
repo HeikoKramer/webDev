@@ -238,3 +238,6 @@ document.getElementById("task-title").style.display = "none";
 
 ![display-style](/images/display-style.png)
 
+You don't want to do this just to style your page – therefor use CSS! <br>
+Use this method for dynamic functionality, when you introduce **event-based styling**. <br>
+
