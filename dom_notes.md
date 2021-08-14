@@ -1,4 +1,8 @@
 # The DOM
+
+*This document is an extension to my [JavaScript Notes 2](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes_2.md). <br>
+I'm writing this notes while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com* 
+
 **DOM** stands for **DOCUMENT OBJECT MODEL**. What it is: <br>
 * Tree of nodes/elements created by the browser
 * JavaScript can be used to read/write/manipulate the DOM
