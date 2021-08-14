@@ -284,3 +284,19 @@ const taskTitle = document.getElementById("task-title");
 
 Now we could replace all those `document.getElementById("task-title")` strings with just `taskTitle`, which is much cleaner. <br>
 
+### document.querySelector()
+The `document.querySelector()` is newer and much mor powerful as `document.getElementById()`. <br>
+With the **query selector** we don't have to select elements by **id** – we can select them by anything. <br>
+
+If we want to get our h5 `<h5 id="task-title" class="test" >Tasks</h5>`, we can use either the **id**, the **class** or the **element** itself. <br>
+**NOTE:** If there would be **more than one** h5 on the page, we would **get the first one**! <br>
+
+```js
+console.log(document.querySelector("#task-title"));
+console.log(document.querySelector(".test"));
+console.log(document.querySelector("h5"));
+```
+
+All queries brought us the same result: <br>
+
+![querySelector-get](/images/querySelector-get.png)
