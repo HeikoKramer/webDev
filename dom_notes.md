@@ -213,3 +213,28 @@ console.log(document.getElementById("task-title").className);
 //  > test
 ```
 
+#### change styling
+We can manipulate the styling of the selected element by adding `.style` and the property you want to change. <br>
+Anything you can do in **CSS** you can do here and assign it to the element's styling. <br>
+
+This is our page as it looks **before** we style it: <br>
+
+![before-style](/images/before-style.png)
+
+Now we **assign styling to the element:** <br>  
+
+```js
+document.getElementById("task-title").style.background = "#333";
+document.getElementById("task-title").style.color = "#fff";
+document.getElementById("task-title").style.padding = "5px";
+```
+![after-style](/images/after-style.png)
+
+We can even make the element disappear: <br>
+
+```js
+document.getElementById("task-title").style.display = "none";
+```
+
+![display-style](/images/display-style.png)
+
