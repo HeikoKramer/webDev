@@ -20,6 +20,15 @@
 //   '<span style="color:red">Task List</span>';
 
 // document.querySelector()
-console.log(document.querySelector("#task-title"));
-console.log(document.querySelector(".test"));
-console.log(document.querySelector("h5"));
+// console.log(document.querySelector("#task-title"));
+// console.log(document.querySelector(".test"));
+// console.log(document.querySelector("h5"));
+
+// document.querySelector("li").style.color = "red";
+
+// document.querySelector("ul li").style.color = "blue";
+// document.querySelector("ul li:last-child").style.color = "red";
+// document.querySelector("ul li:nth-child(3)").style.color = "green";
+// document.querySelector("ul li:nth-child(4)").textContent = "Ai Gude, wie !?";
+
+document.querySelector("ul li:nth-child(odd)").style.background = "#ccc";

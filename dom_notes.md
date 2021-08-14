@@ -300,3 +300,64 @@ console.log(document.querySelector("h5"));
 All queries brought us the same result: <br>
 
 ![querySelector-get](/images/querySelector-get.png)
+
+<br>
+
+Let's look at a multi-element scenario in more detail: <br>
+We have an unordered list with the class of collection in our page. <br>
+That ul contains five identical list items like this: <br>
+
+```html
+<li class="collection-item">
+  List Item
+  <a href="#" class="delete-item secondary-content">
+    <i class="fa fa-remove"></i>
+  </a>
+</li> 
+```
+
+This is how it looks on the page: <br>
+
+![list-items](/images/list-items.png)
+
+If we are using `querySelector("li").style` to **assign styling to list items**, we will only reach the **first li** of the page: <br>
+
+```js
+document.querySelector("li").style.color = "red";
+```
+
+![first-list](/images/first-list.png)
+
+`querySelector` is a **single element selector** – its only gonna get the **first element**. <br>
+
+You can use **sub classes** to better specify which element you're addressing, but this will also affect only the first matching item: <br>
+
+```js
+document.querySelector("ul li").style.color = "blue";
+```
+
+![first-ul-li](/images/first-ul-li.png)
+
+We can use **CSS3 sudo classes** to specify certain elements to style them – or also to change their content: <br>
+
+```js
+document.querySelector("ul li").style.color = "blue";
+document.querySelector("ul li:last-child").style.color = "red";
+document.querySelector("ul li:nth-child(3)").style.color = "green";
+document.querySelector("ul li:nth-child(4)").textContent = "Ai Gude, wie !?";
+```
+
+![sudo-class-styling](/images/sudo-class-styling.png)
+
+<br>
+
+As `querySelector` is a **single element selector** not all **sudo classes** will work properly. <br>
+
+```js
+document.querySelector("ul li:nth-child(odd)").style.background = "#ccc"; 
+```
+
+This won't change the background for **all the odd** elements .. it has affect only on the first item. <br>
+
+![single-odd](/images/single-odd.png)
+
