@@ -285,7 +285,7 @@ const taskTitle = document.getElementById("task-title");
 Now we could replace all those `document.getElementById("task-title")` strings with just `taskTitle`, which is much cleaner. <br>
 
 ### document.querySelector()
-The `document.querySelector()` is newer and much mor powerful as `document.getElementById()`. <br>
+The `document.querySelector()` is newer and much more powerful as `document.getElementById()`. <br>
 With the **query selector** we don't have to select elements by **id** – we can select them by anything. <br>
 
 If we want to get our h5 `<h5 id="task-title" class="test" >Tasks</h5>`, we can use either the **id**, the **class** or the **element** itself. <br>
@@ -364,7 +364,7 @@ This won't change the background for **all the odd** elements .. it has affect o
 ## DOM selectors for multiple elements
 ### document.getElementsByClassName()
 You can get **all elements** of a specific **class** with `document.getElementsByClassName()`. <br>
-The output will be a **HTML collection** of those items and you can access all their atributes via that collection. <br>
+The output will be a **HTML collection** of those items and you can access all their attributes via that collection. <br>
 
 ```js
 const items = document.getElementsByClassName("collection-item");
@@ -373,4 +373,29 @@ console.log(items);
 
 ![getElementsByClassName](/images/getElementsByClassName.png)
 
+You can treat the collection like an array and access a specific item via its index: <br>
+`console.log(items[0]);` will display only the first item of the collection. <br>
+
+![item-1](/images/item-1.png)
+
+Like with the **single element selectors** you can query and manipulate specific elements via index. <br> 
+
+```js
+items[0].style.color = "red";
+items[2].textContent = "Ei Gude";
+items[4].style.background = "#ccc";
+```
+
+![index-style](/images/index-style.png)
+
+If you had more than one **element type with the same class name** and would like to select only a **specific type**, you could use the `querySelector()` from our previous examples, to filter the type. <br> 
+
+
+```js
+const listItems = document.querySelector("ul").getElementsByClassName("collection-item");
+console.log(listItems);
+```
+
+This will bring exactly the same result as before, a collection of 5 list items. <br>
+But if we would have elements with that class outside the **ul**, they would be left out now. <br>
 
