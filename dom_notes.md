@@ -241,3 +241,35 @@ document.getElementById("task-title").style.display = "none";
 You don't want to do this just to style your page – therefor use CSS! <br>
 Use this method for dynamic functionality, when you introduce **event-based styling**. <br>
 
+#### change content
+There are a few different methods that can be used to **change content**. <br>
+<br>
+Page **before change:** <br>
+
+![change-before](/images/change-before.png)
+
+Change with `textContent`: <br>
+
+```js
+document.getElementById("task-title").textContent = "Task List";
+```
+
+The heading has been changed: <br>
+
+![textContent](/images/textContent.png)
+
+The same could be archived with `innerText`: <br>
+
+```js
+document.getElementById("task-title").innerText = "My Tasks";
+```
+
+![innerText](/images/innerText.png)
+
+You can also **inject HTML** to the element, with `innerHTML`: <br>
+
+```js
+document.getElementById("task-title").innerHTML = '<span style="color:red">Task List</span>';
+```
+
+![innerHTML](/images/innerHTML.png)
