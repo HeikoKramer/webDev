@@ -361,3 +361,16 @@ This won't change the background for **all the odd** elements .. it has affect o
 
 ![single-odd](/images/single-odd.png)
 
+## DOM selectors for multiple elements
+### document.getElementsByClassName()
+You can get **all elements** of a specific **class** with `document.getElementsByClassName()`. <br>
+The output will be a **HTML collection** of those items and you can access all their atributes via that collection. <br>
+
+```js
+const items = document.getElementsByClassName("collection-item");
+console.log(items);
+```
+
+![getElementsByClassName](/images/getElementsByClassName.png)
+
+
