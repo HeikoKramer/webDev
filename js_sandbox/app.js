@@ -1,3 +1,3 @@
 // document.getElementById()
 
-console.log(document.getElementById("task-title"));
+console.log(document.getElementById("task-title").id);
