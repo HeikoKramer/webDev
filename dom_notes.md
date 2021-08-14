@@ -273,3 +273,14 @@ document.getElementById("task-title").innerHTML = '<span style="color:red">Task 
 ```
 
 ![innerHTML](/images/innerHTML.png)
+
+#### use variables
+**NOTE:** We have used `document.getElementById("task-title")` a lot in all those examples above. <br>
+I we are planning to do multiple **get** or **manipulation** methods on an element, we should setup a **variable** for it, to make our code more readable. <br>
+
+```js
+const taskTitle = document.getElementById("task-title");
+```
+
+Now we could replace all those `document.getElementById("task-title")` strings with just `taskTitle`, which is much cleaner. <br>
+
