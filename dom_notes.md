@@ -156,3 +156,36 @@ console.log(scriptsArray);
 ```
 
 ![scripts_array](/images/scripts_array.png)
+
+## DOM selectors for single elements
+These selectors allow us to pull things from the DOM and than do stuff with it. <br>
+For a long time, JQuery was used for DOM selection and DOM manipulation, but it has become much easier to do that in vanilla JavaScript. <br>
+JQuery still has its place, its good if you quickly want to add plugins or scripts. <br>
+<br>
+In vanilla JavaScript we have a couple of different selectors, which are falling into two main categories: <br>
+* single element selectors
+* multi element selectors
+
+**Single element selectors** allow you to grab one element by its **id** or **class** – and it only stores one thing. <br>
+If you have a class that appears more than once in the DOM, it just gonna grab the first one. <br>
+<br>
+**Multipli element selectors** will get all of the elements with that class – and than return a **html collection** or a **node list** depending on the selector you're using. <br>
+### document.getElementById()
+This selector does just was it says – it selects elements by there **id**. <br>
+You can't select a **class** or a **tag** there are more flexible selectors for that. <br>
+
+In the example below, we have an H5, with an id of *task-title*, we get it by that id and show it in the console: <br>
+
+**HTML:**
+
+```html
+<h5 id="task-title">Tasks</h5>
+```
+
+**JavaScript:**
+
+```js
+console.log(document.getElementById("task-title"));
+```
+
+![getElementById](/images/getElementById.png)
