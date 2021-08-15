@@ -533,3 +533,19 @@ val = list.children;
 ```
 
 ![children](/images/children.png)
+
+You can do all manipulations like in the examples above `list.children[2].textContent = 'Hello';` for example. <br>
+You can also get children of children: <br>
+
+```js
+const list = document.querySelector('ul.collection');
+val = list.children[3].children;
+
+console.log(val);
+```
+
+This will give us a **HTML collection** with an **a tag** in it, as that's the only thing what's inside the list item. <br>
+
+![child-of-child](/images/child-of-child.png)
+
+

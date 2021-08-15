@@ -13,7 +13,11 @@ val = list;
 val = list.childNodes;
 
 console.log(val[0].nodeType);
+
+
 // get children
-// val = list.children;
+val = list.children;
+
+val = list.children[3].children;
 
 console.log(val);
