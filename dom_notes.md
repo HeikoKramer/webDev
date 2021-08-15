@@ -548,4 +548,22 @@ This will give us a **HTML collection** with an **a tag** in it, as that's the o
 
 ![child-of-child](/images/child-of-child.png)
 
+### firstChild & firstElementChild
+You can also get only the first child of an element, with `firstChild` or `firstElementChild`. <br>
+`firstChild` will give you all the possible node elements, so in out example it will give you a text node again. <br>
+Use `firstElementChild` if you want to get the first HTML element. <br>
 
+```js
+const list = document.querySelector('ul.collection');
+
+val = list.firstChild;
+console.log(val);
+//  > #text
+
+val = list.firstElementChild;
+console.log(val);
+// > <li class="collection-item">
+```
+
+### lastChild & lastElementChild
+I won't write this down with coding examples … `lastChild` and `lastElementChil` exist and they work exactly as `firstChild` and `firstElementChilde`, just from the other direction. <br>
