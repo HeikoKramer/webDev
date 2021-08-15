@@ -485,3 +485,21 @@ for(let i = 0; i < liEven.length; i++){
 ```
 
 ![node-list-styling](/images/node-list-styling.png)
+
+## Traversing the DOM
+### childNodes
+We can get the child elements of an element with `childNodes`. <br>
+The output will be a **NodeList** and there will be a bit more to it as you'd maybe expect. <br>
+If we're doing this for our **ul**, we get all the **list items** it contains, but also a lot of **text nodes**. <br>
+Those **text nodes** are actually the **line breaks** within the HTML document. <br>
+So if you don't write all your list items in one line `<li>item1</li><li>item2</li>` you're going to see **text nodes**. <br>
+
+
+```js
+const list = document.querySelector('ul.collection');
+val = list.childNodes;
+console.log(val);
+```
+
+![text-nodes](/images/text-nodes.png)
+
