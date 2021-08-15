@@ -399,3 +399,32 @@ console.log(listItems);
 This will bring exactly the same result as before, a collection of 5 list items. <br>
 But if we would have elements with that class outside the **ul**, they would be left out now. <br>
 
+### document.getElementsByTagName()
+`getElementsByTagName()` will does what you'd expect from it – get elements by their **tag names**. <br>
+Everything else works similar like with our examples above. <br>
+
+```js
+const lis = document.getElementsByTagName("li");
+console.log(lis);
+```
+
+We also get our **HTML collection of 5 lists** as a result of the above query. <br>
+Everything else, like getting and manipulating specific items via **index** – exactly the same as above. <br>
+<br>
+**Reminder:** A **HTML collection** is not an **array**. **Array methods** like `reverse` **won't work** with collections. <br>
+But you can easily **transform a collection into an array** like this: <br>
+
+```js
+let lis = document.getElementsByTagName("li");
+
+// Transform collection into array
+lis = Array.from(lis);
+
+console.log(lis);
+```
+
+The former collection is now an array and you can use array methods with it: <br>
+
+![transformed-array](/images/transformed-array.png)
+
+**NOTE:** The transformation won't work if you've declared the variable as **const**. <br>
