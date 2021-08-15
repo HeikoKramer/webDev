@@ -423,8 +423,22 @@ lis = Array.from(lis);
 console.log(lis);
 ```
 
-The former collection is now an array and you can use array methods with it: <br>
+**NOTE:** The transformation won't work if you've declared the variable as **const**. <br>
 
 ![transformed-array](/images/transformed-array.png)
 
-**NOTE:** The transformation won't work if you've declared the variable as **const**. <br>
+The former collection is now an array and you can use array methods and loops: <br>
+
+```js
+lis.reverse();
+
+lis.forEach(function(li, index) {
+  li.textContent = `Item Number: ${index + 1}`
+  console.log(li.textContent);
+});
+```
+
+![demo-array](/images/demo-array.png)
+
+We have **reversed** the output, changed the content **for each** element and displayed the content of **each item** in the console. <br> 
+

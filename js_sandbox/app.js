@@ -14,10 +14,18 @@
 // document.getElementsByTagName()
 let lis = document.getElementsByTagName("li");
 
-
+// Transform collection into array
 lis = Array.from(lis);
 
-console.log(lis);
+lis.reverse();
+
+lis.forEach(function(li, index) {
+  li.textContent = `Item Number: ${index + 1}`
+  console.log(li.textContent);
+});
+
+
+// console.log(lis);
 // console.log(items[0]);
 
 // lis[0].style.color = "red";
