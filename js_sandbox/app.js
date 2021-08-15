@@ -32,9 +32,6 @@
 // console.log(val);
 // // > <li class="collection-item">
 
-
-const listItem = document.querySelector('li.collection-item:first-child');
-
 // // Get parent node
 // val = listItem.parentNode;
 // console.log(val);
@@ -44,6 +41,14 @@ const listItem = document.querySelector('li.collection-item:first-child');
 // console.log(val);
 // // > <ul class="collection"> 
 
-val = listItem.parentElement.parentElement;
-console.log(val);
+// val = listItem.parentElement.parentElement;
+// console.log(val);
 // > <ul class="collection"> 
+
+const listItem = document.querySelector('li.collection-item:first-child');
+
+// val = listItem.nextSibling;
+// console.log(val);
+
+val = listItem.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+console.log(val);

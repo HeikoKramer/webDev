@@ -583,7 +583,7 @@ console.log(val);
 You can get the **parent** of something with `parentNode` or `parentElement`. <br>
 In most cases both gonna return the exact same thing. <br>
 <br>
-In our example below, we start at the first of five list items, which sit whitin an **ul** – which is what we get returned. <br>
+In our example below, we start at the first of five list items, which sit within an **ul** – which is what we get returned. <br>
 
 ```js
 const listItem = document.querySelector('li.collection-item:first-child');
@@ -606,4 +606,32 @@ console.log(val);
 ```
 
 ![parent-parent](/images/parent-parent.png)
+
+### nextSibling & nextElementSibling
+To get the next item in the same hierarchy layer, use `nextSibling` or `nextElementSibling`. <br>
+`nextSibling` will get you everything what's there, like the **text nodes**. <br>
+`nextElementSibling` will get only the **HTML elements**. <br>
+
+```js
+const listItem = document.querySelector('li.collection-item:first-child');
+
+val = listItem.nextSibling;
+console.log(val);
+// > #text
+
+val = listItem.nextElementSibling;
+console.log(val);
+// > <li class="collection-item">
+```
+
+You can get the next … and the next … and the next sibling if you like. <br>
+
+```js
+val = listItem.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+console.log(val);
+```
+
+![next-next-sibling](/images/next-next-sibling.png)
+
+If you have reached the last element there there are **no more next elements**, `nextElementSibling` will return *null*. <br>
 
