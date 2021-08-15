@@ -433,7 +433,7 @@ The former collection is now an array and you can use array methods and loops: <
 lis.reverse();
 
 lis.forEach(function(li, index) {
-  li.textContent = `Item Number: ${index + 1}`
+  li.textContent = `Item Number: ${index + 1}`;
   console.log(li.textContent);
 });
 ```

@@ -20,7 +20,7 @@ lis = Array.from(lis);
 lis.reverse();
 
 lis.forEach(function(li, index) {
-  li.textContent = `Item Number: ${index + 1}`
+  li.textContent = `Item Number: ${index + 1}`;
   console.log(li.textContent);
 });
 
