@@ -442,3 +442,46 @@ lis.forEach(function(li, index) {
 
 We have **reversed** the output, changed the content **for each** element and displayed the content of **each item** in the console. <br> 
 
+
+### document.querySelectorAll()
+`querySelectorAll()` will return a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList), which is different from a collection. <br>
+It allows us to do **for each loops**, without to convert it – but it can also be converted. <br>
+
+```js
+const items = document.querySelectorAll('ul.collection li.collection-item');
+
+console.log(items);
+```
+
+Again we get our **5 list items** with the **class "collection-item** out of the **ul** with the class **collection**. <br>
+If we shrink the query down to `document.querySelectorAll('ul.collection')` we get the **ul**. <br>
+<br>
+Now we can – without converting it to an array – loop through the NodeList and manipulate things. <br>
+In the example below we change the textContent of all elements, than we do a separate styling for the odd and for the even items. <br>
+
+```js
+// document.querySelectorAll()
+const items = document.querySelectorAll('ul.collection li.collection-item');
+
+// loop through the NodeList and change the text content for each item
+items.forEach(function(item, index) {
+  item.textContent = `Item Number: ${index + 1}`;
+});
+
+// get odd and even index number and style them separately
+const liOdd = document.querySelectorAll('li:nth-child(odd)');
+const liEven = document.querySelectorAll('li:nth-child(even)');
+
+// for each – make background purple and font white for odd numbers
+liOdd.forEach(function(odd, index) {
+  odd.style.background = 'purple';
+  odd.style.color = 'white';
+});
+
+// foor loop – make background yellow for even numbers
+for(let i = 0; i < liEven.length; i++){
+  liEven[i].style.background = 'yellow';
+}
+```
+
+![node-list-styling](/images/node-list-styling.png)
