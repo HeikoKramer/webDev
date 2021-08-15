@@ -653,3 +653,39 @@ console.log(val);
 
 Also, if there is no previous element, you'll get a *null* value. <br>
 
+## Creating elements
+You can create elements in JavaScript and insert them into the DOM. <br>
+Use … <br> 
+* `document.createElement` to create the element
+* `.className` to assign a class to it
+* `.id` to assign it a id
+* `setAttribute()` to give it specific attributes
+* `appendChild()` to …
+  * add a child element like a **text node** to our new element 
+  * Inject our new element into the DOM, by appending it as a child to an other element
+
+In the below example we create a new **list item** step by step and **append it** to the parent **ul**. <br>
+
+```js
+// Create the element
+const li = document.createElement('li');
+
+//  Add class
+li.className = 'collection-item'
+
+// Add id
+li.id = 'new-item';
+
+// Add attribute
+li.setAttribute('title', 'New Item');
+
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
+
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
+```
+
+![createElement](/images/createElement.png)

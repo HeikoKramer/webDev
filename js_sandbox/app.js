@@ -1,64 +1,19 @@
-// let val;
+// Create the element
+const li = document.createElement('li');
 
-// const list = document.querySelector('ul.collection');
-// const listItem = document.querySelector('li.collection-item:first-child');
+//  Add class
+li.className = 'collection-item'
 
-// //  gets first list item
-// val = listItem;
+// Add id
+li.id = 'new-item';
 
-// // gets the ul
-// val = list;
+// Add attribute
+li.setAttribute('title', 'New Item');
 
-// // get child nodes
-// val = list.childNodes;
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
 
-// console.log(val[0].nodeType);
+// Append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
 
-
-// // get children
-// val = list.children;
-
-// const list = document.querySelector('ul.collection');
-
-// val = list.childElementCount;
-// console.log(val);
-// //  > 5
-
-// val = list.firstChild;
-// console.log(val);
-// //  > #text
-
-// val = list.firstElementChild;
-// console.log(val);
-// // > <li class="collection-item">
-
-// // Get parent node
-// val = listItem.parentNode;
-// console.log(val);
-// // > <ul class="collection">
-
-// val = listItem.parentElement;
-// console.log(val);
-// // > <ul class="collection"> 
-
-// val = listItem.parentElement.parentElement;
-// console.log(val);
-// > <ul class="collection"> 
-
-
-
-// val = listItem.nextSibling;
-// console.log(val);
-
-// val = listItem.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
-// console.log(val);
-
-const listItem = document.querySelector('li.collection-item:last-child');
-
-val = listItem.previousSibling;
-console.log(val);
-// #text
-
-val = listItem.previousElementSibling;
-console.log(val);
-// #text
+console.log(li);
