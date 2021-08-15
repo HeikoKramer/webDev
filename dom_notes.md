@@ -635,3 +635,21 @@ console.log(val);
 
 If you have reached the last element there there are **no more next elements**, `nextElementSibling` will return *null*. <br>
 
+### previousSibling & previousElementSibling
+`previousSibling` and `previousElementSibling` work exactly as the previous properties, but from the other side. <br>
+Use `previousSibling` to get everything, `previousElementSibling` to get only the **HTML elements**. <br>
+
+```js
+const listItem = document.querySelector('li.collection-item:last-child');
+
+val = listItem.previousSibling;
+console.log(val);
+// #text
+
+val = listItem.previousElementSibling;
+console.log(val);
+// <li class="collection-item">
+```
+
+Also, if there is no previous element, you'll get a *null* value. <br>
+
