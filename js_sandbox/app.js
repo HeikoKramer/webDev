@@ -12,4 +12,8 @@ val = list;
 // get child nodes
 val = list.childNodes;
 
+console.log(val[0].nodeType);
+// get children
+// val = list.children;
+
 console.log(val);

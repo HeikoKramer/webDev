@@ -503,3 +503,33 @@ console.log(val);
 
 ![text-nodes](/images/text-nodes.png)
 
+#### nodeType
+You can get the type of your node element with `nodeType`. <br>
+
+```js
+const list = document.querySelector('ul.collection');
+val = list.childNodes;
+
+console.log(val[0].nodeType);
+// > 3
+```
+
+The output is going to be a number – 3 in our example, 3 means "text node". <br>
+Here a list to decode the output: <br>
+* 1  – Element
+* 2  – Attribute (deprecated)
+* 3  – Text node
+* 8  – Comment
+* 9  – Document itself
+* 10 – Doctype
+
+### children
+If you wan to receive only the **children**, without the **text nodes**, you can use `children`. <br>
+**NOTE:** This will give you a **HTML collection**, so you need to transform it in order to loop through it. <br>
+
+```js
+const list = document.querySelector('ul.collection');
+val = list.children;
+```
+
+![children](/images/children.png)
