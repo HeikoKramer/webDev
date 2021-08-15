@@ -578,3 +578,32 @@ val = list.childElementCount;
 console.log(val);
 //  > 5
 ```
+
+### parentNode & parentElement
+You can get the **parent** of something with `parentNode` or `parentElement`. <br>
+In most cases both gonna return the exact same thing. <br>
+<br>
+In our example below, we start at the first of five list items, which sit whitin an **ul** – which is what we get returned. <br>
+
+```js
+const listItem = document.querySelector('li.collection-item:first-child');
+
+// Get parent node
+val = listItem.parentNode;
+console.log(val);
+// > <ul class="collection">
+
+val = listItem.parentElement;
+console.log(val);
+// > <ul class="collection"> 
+```
+
+You can also get the parent of the parent that way, which is the div in which the ul is nested in our case. <br>
+
+```js
+val = listItem.parentElement.parentElement;
+console.log(val);
+```
+
+![parent-parent](/images/parent-parent.png)
+
