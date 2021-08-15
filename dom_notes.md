@@ -567,3 +567,14 @@ console.log(val);
 
 ### lastChild & lastElementChild
 I won't write this down with coding examples … `lastChild` and `lastElementChil` exist and they work exactly as `firstChild` and `firstElementChilde`, just from the other direction. <br>
+
+### childElementCount
+`childElementCount` will give you the number of children of the requested element. <br>
+
+```js
+const list = document.querySelector('ul.collection');
+
+val = list.childElementCount;
+console.log(val);
+//  > 5
+```

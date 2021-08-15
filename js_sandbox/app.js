@@ -20,6 +20,10 @@
 
 const list = document.querySelector('ul.collection');
 
+val = list.childElementCount;
+console.log(val);
+//  > 5
+
 val = list.firstChild;
 console.log(val);
 //  > #text
