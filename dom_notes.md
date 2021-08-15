@@ -658,11 +658,11 @@ You can create elements in JavaScript and insert them into the DOM. <br>
 Use … <br> 
 * `document.createElement` to create the element
 * `.className` to assign a class to it
-* `.id` to assign it a id
+* `.id` to assign it an id
 * `setAttribute()` to give it specific attributes
 * `appendChild()` to …
   * add a child element like a **text node** to our new element 
-  * Inject our new element into the DOM, by appending it as a child to an other element
+  * inject our new element into the DOM, by appending it as a child to an other element
 
 In the below example we create a new **list item** step by step and **append it** to the parent **ul**. <br>
 
@@ -689,3 +689,28 @@ console.log(li);
 ```
 
 ![createElement](/images/createElement.png)
+
+Our list item is missing a link and an icon like all its siblings have. <br>
+We could add all that before we append it to the ul, but to keep the example shorter, I've separated those steps. <br>
+So let's add it subsequently to the insertion, therefor we grab our list item (last child) and append the link: <br>
+
+```js
+// Grab the last list item 
+const lastListItem = document.querySelector('li.collection-item:last-child');
+
+// Create new link element
+const link = document.createElement('a');
+
+// Add classes
+link.className = 'delete-item secondary-content';
+
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+// Append link to list ite,
+lastListItem.appendChild(link);
+```
+
+![comple-list-item](/images/comple-list-item.png)
+
+Now our list item is complete. <br>

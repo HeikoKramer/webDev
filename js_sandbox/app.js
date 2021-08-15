@@ -17,3 +17,14 @@ li.appendChild(document.createTextNode('Hello World'));
 document.querySelector('ul.collection').appendChild(li);
 
 console.log(li);
+
+const lastListItem = document.querySelector('li.collection-item:last-child');
+
+// Create new link element
+const link = document.createElement('a');
+// Add classes
+link.className = 'delete-item secondary-content';
+// Add icon html
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+lastListItem.appendChild(link);
