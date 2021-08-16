@@ -755,3 +755,27 @@ cardAction.replaceChild(newHeading, oldHeading);
 We have successfully replaced the "Tasks" h2 with an "Task List" h5: <br>
 
 ![replaced-header](/images/replaced-header.png)
+
+### Remove something
+Its actually pretty easy to remove an element, just select it and use the `remove()` method on it. <br>
+
+This will remove the **1st** list item: <br>
+
+```js
+const lis = document.querySelectorAll('li');
+
+// Remove list item
+lis[0].remove();
+```
+
+You can also remove elements from a parent, with `removeChild()`: <br>
+
+```js
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+// Remove child element
+list.removeChild(lis[3]);
+```
+
+
