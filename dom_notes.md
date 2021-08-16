@@ -802,3 +802,19 @@ Classes in a **DOMTokenList** can be accessed individually: <br>
 console.log(link.classList[0]);
 // > delete-item
 ```
+
+#### add classes
+We cann add classes to an element, with `classList.add():` <br>
+
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+link.classList.add('my-demo-class');
+
+console.log(link.className);
+console.log(link.classList);
+```
+
+![add-class](/images/add-class.png)
+
