@@ -714,3 +714,44 @@ lastListItem.appendChild(link);
 ![comple-list-item](/images/comple-list-item.png)
 
 Now our list item is complete. <br>
+
+## Removing & replacing elements
+### Replace something
+To replace an item, you need to … <br>
+* create the item you want to insert
+* query the item you want to replace
+* query its parent
+* use `thereplaceChild()` on the parent to swap the old/new elements
+
+Our H5 with an id of *task-title* is nested within a div with the class of *card-action*. <br> 
+
+**HTML:**
+
+```html
+<div class="card-action">
+  <h5 id="task-title" class="test" >Tasks</h5>
+```
+
+**JavaScript:**
+
+```js
+//  Create element 
+const newHeading = document.createElement('h2');
+// Add id
+newHeading.id = 'task-title';
+// New text node
+newHeading.appendChild(document.createTextNode('Task List'));
+
+
+// Get the old heading
+const oldHeading = document.getElementById('task-title');
+// Get parent
+const cardAction = document.querySelector('.card-action');
+
+// Replace
+cardAction.replaceChild(newHeading, oldHeading);
+```
+
+We have successfully replaced the "Tasks" h2 with an "Task List" h5: <br>
+
+![replaced-header](/images/replaced-header.png)
