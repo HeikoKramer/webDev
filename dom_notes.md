@@ -778,4 +778,27 @@ const list = document.querySelector('ul');
 list.removeChild(lis[3]);
 ```
 
+### Classes & attributes
+#### get classes
+You can get **classes** & **attributes** of an element. <br>
+Here we get classes of the link of our first list item: <br>
 
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+console.log(link.className);
+console.log(link.classList);
+```
+
+The link has two classes. `className` will return one string containing those two classes as they're added in the HTML tag. <br>
+`classList` will return a **DOMTokenList** with two separated classes. <br>
+
+![classes](/images/classes.png)
+
+Classes in a **DOMTokenList** can be accessed individually: <br>
+
+```js
+console.log(link.classList[0]);
+// > delete-item
+```
