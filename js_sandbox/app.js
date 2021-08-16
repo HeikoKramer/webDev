@@ -31,7 +31,7 @@ list.removeChild(lis[3]);
 const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
-link.classList.add('my-demo-class');
+link.classList.remove('secondary-content', 'delete-item');
 
 console.log(link.className);
 console.log(link.classList);

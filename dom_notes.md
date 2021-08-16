@@ -816,5 +816,20 @@ console.log(link.className);
 console.log(link.classList);
 ```
 
+#### remove classes
 ![add-class](/images/add-class.png)
+`classList.remove` removes specified classes: <br>
 
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+link.classList.remove('secondary-content', 'delete-item');
+
+console.log(link.className);
+console.log(link.classList);
+```
+
+Both classes removed .. nothing left here: <br>
+
+![removed-classes](/images/removed-classes.png)
