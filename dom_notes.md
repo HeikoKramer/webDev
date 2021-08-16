@@ -859,3 +859,17 @@ link.setAttribute('href', 'http://heikokraemer.de');
 console.log(link.getAttribute('href'));
 // > http://heikokraemer.de
 ```
+
+#### check for attribute
+We can check if an element has a certain attribute or not with the `hasAttribute` method. <br>
+
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+console.log(link.hasAttribute('href'));
+// > true
+console.log(link.hasAttribute('title'));
+// > false
+```
+
