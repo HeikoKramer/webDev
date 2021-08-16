@@ -42,4 +42,5 @@
 const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
+link.setAttribute('href', 'http://heikokraemer.de');
 console.log(link.getAttribute('href'));

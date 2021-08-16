@@ -835,7 +835,7 @@ Both classes removed .. nothing left here: <br>
 ![removed-classes](/images/removed-classes.png)
 
 ### Attributes
-#### get attribute
+#### get attributes
 We can get an elements attribute with the `getAttribute()` method. <br>
 
 ```js
@@ -848,3 +848,14 @@ console.log(link.getAttribute('href'));
 
 We got the **href** attribute of our link, which in this case is only a **hash sign**. <br>
 
+#### set attributes
+You can set en elements attribute with the `setAttribute` method: <br>
+
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+link.setAttribute('href', 'http://heikokraemer.de');
+console.log(link.getAttribute('href'));
+// > http://heikokraemer.de
+```
