@@ -42,7 +42,6 @@
 const firstLi = document.querySelector('li:first-child');
 const link = firstLi.children[0];
 
+link.removeAttribute('href');
 console.log(link.hasAttribute('href'));
-// > true
-console.log(link.hasAttribute('title'));
-// > true
+// > false

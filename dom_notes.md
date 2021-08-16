@@ -860,7 +860,7 @@ console.log(link.getAttribute('href'));
 // > http://heikokraemer.de
 ```
 
-#### check for attribute
+#### check for attributes
 We can check if an element has a certain attribute or not with the `hasAttribute` method. <br>
 
 ```js
@@ -870,6 +870,18 @@ const link = firstLi.children[0];
 console.log(link.hasAttribute('href'));
 // > true
 console.log(link.hasAttribute('title'));
+// > false
+```
+
+#### remove attributes
+You can also remove attributes from an element, with the `removeAttribute` method. <br>
+
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+link.removeAttribute('href');
+console.log(link.hasAttribute('href'));
 // > false
 ```
 
