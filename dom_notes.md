@@ -778,7 +778,7 @@ const list = document.querySelector('ul');
 list.removeChild(lis[3]);
 ```
 
-### Classes & attributes
+### Classes
 #### get classes
 You can get **classes** & **attributes** of an element. <br>
 Here we get classes of the link of our first list item: <br>
@@ -833,3 +833,18 @@ console.log(link.classList);
 Both classes removed .. nothing left here: <br>
 
 ![removed-classes](/images/removed-classes.png)
+
+### Attributes
+#### get attribute
+We can get an elements attribute with the `getAttribute()` method. <br>
+
+```js
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
+
+console.log(link.getAttribute('href'));
+// > #
+```
+
+We got the **href** attribute of our link, which in this case is only a **hash sign**. <br>
+
