@@ -885,3 +885,15 @@ console.log(link.hasAttribute('href'));
 // > false
 ```
 
+## Event listeners and the event object
+We can listen on any element within the DOM. <br>
+In the example below we **add an event listener** to the butten with the **class of clear-tasks**. <br>
+That listener will fire **on click** and exectue the **anonymous function** attached to it. <br>
+
+```js
+document.querySelector('.clear-tasks').addEventListener('click', function(){
+  console.log('Hello World');
+});
+```
+
+![on-click](/images/on-click.gif)
