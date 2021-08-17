@@ -6,14 +6,11 @@ document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
 function onClick(e){
   
-  // Event type
-  console.log('Target: ' + e.type);
-};
+  // Coords relative to the window
+  console.log('clientY: ' + e.clientY);
+  console.log('clientX: ' + e.clientX);
 
-document.querySelector('.clear-tasks').addEventListener('mouseover', onHover);
-
-function onHover(e){
-  
-  // Event type
-  console.log('Target: ' + e.type);
+  // Coords relative to the window
+  console.log('offsetY: ' + e.offsetY);
+  console.log('offsetX: ' + e.offsetX);
 };

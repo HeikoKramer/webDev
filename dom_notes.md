@@ -979,3 +979,24 @@ function onHover(e){
 ```
 
 ![event-type](/images/event-type.gif)
+
+#### coordinations
+You can get the coordinations related to the **window**, with `clientX` and `clientY`. <br>
+Or as well the coordinations related to the **element**, with `offsetY` and `offsetY`. <br>
+
+```js
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  
+  // Coords relative to the window
+  console.log('clientY: ' + e.clientY);
+  console.log('clientX: ' + e.clientX);
+
+  // Coords relative to the element
+  console.log('offsetY: ' + e.offsetY);
+  console.log('offsetX: ' + e.offsetX);
+};
+```
+
+![event-coordinations](/images/event-coordinations.gif)
