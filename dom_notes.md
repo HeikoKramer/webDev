@@ -887,8 +887,8 @@ console.log(link.hasAttribute('href'));
 
 ## Event listeners and the event object
 We can listen on any element within the DOM. <br>
-In the example below we **add an event listener** to the butten with the **class of clear-tasks**. <br>
-That listener will fire **on click** and exectue the **anonymous function** attached to it. <br>
+In the example below we **add an event listener** to the button with the **class of clear-tasks**. <br>
+That listener will fire **on click** and execute the **anonymous function** attached to it. <br>
 
 ```js
 document.querySelector('.clear-tasks').addEventListener('click', function(){
@@ -897,3 +897,17 @@ document.querySelector('.clear-tasks').addEventListener('click', function(){
 ```
 
 ![on-click](/images/on-click.gif)
+
+You can also used a **named function**, which can be located separate from the event listener. <br>
+
+```js
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(){
+  console.log('Clicked!');
+};
+```
+
+![clicked](/images/clicked.gif)
+
+
