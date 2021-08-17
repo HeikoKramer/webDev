@@ -957,3 +957,25 @@ function onClick(e){
 
 ![event-target](/images/event-target.gif)
 
+#### type
+You can determine the **type** of an event, here we have two different events: <br>
+
+```js
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  
+  // Event type
+  console.log('Target: ' + e.type);
+};
+
+document.querySelector('.clear-tasks').addEventListener('mouseover', onHover);
+
+function onHover(e){
+  
+  // Event type
+  console.log('Target: ' + e.type);
+};
+```
+
+![event-type](/images/event-type.gif)
