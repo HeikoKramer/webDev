@@ -933,5 +933,27 @@ That object carries a lot of useful information linked related to its the event.
 It stores for example where the event happened on the page, in **clientX** and **clientY**. <br>
 Or you can see if the **ctrlKey** was pressed, when the event was initiated. <br>
 The most important thing is the **target**. <br>
+
+#### target
 The **target** represents the **element** where the event happened on. <br>
+You can access and manipulate the attributes of the target: <br>
+
+```js
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  
+  // Event target element
+  console.log('Target: '    + e.target);
+  console.log('Id: '        + e.target.id);
+  console.log('className: ' + e.target.className);
+  console.log('classList: ' + e.target.classList);
+  console.log('innerText: ' + e.target.innerText);
+
+  e.target.innerText = 'Hello';
+  e.target.style.color = "red";
+};
+```
+
+![event-target](/images/event-target.gif)
 
