@@ -1060,3 +1060,25 @@ Note: `mouseenter` and `mouseleave` fire only when entering / leaving the card. 
 `mouseleave` and `mouseout` fire as well on all the elements within the cards element. <br>
 
 ![hover-events](/images/hover-events.gif)
+
+### mousemove
+`mousemove` tracks the position of the cursor continuously. <br>
+This can be used for games of other scopes, where the cursor position is of relevance. <br>
+<br>
+In this example, we don't output the position in the console, but manipulate our task header to display the cursor's coordinates.
+Note that the event runs on the whole card, but the coordinates get displayed per child element. <br>
+
+```js
+const heading = document.querySelector('h5');
+const card = document.querySelector('.card');
+
+// Mousemove
+card.addEventListener('mousemove', runEvent);
+
+// Event Handler
+function runEvent(e) {
+  heading.innerHTML = `MouseX: ${e.offsetX} MouseY ${e.offsetY}`;
+}
+```
+
+![mousemove](/images/mousemove.gif)
