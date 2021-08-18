@@ -1004,14 +1004,22 @@ function onClick(e){
 ## Mouse events
 ### click events
 There are several **click events** which fire related to an interaction with the mouse button. <br>
-#### click
-The `click` event is quite simple, it reflects a simple **singe click** with the mouse. <br>
+* `click` simple **singe click** 
+* `dblclick` **two** quick repeated **clicks**  
+* `mousdown` fires when the mouse button **is pressed**
+* `mouseup` fires when the mouse button is **released**
 
 ```js
 const clearBtn = document.querySelector('.clear-tasks');
 
 // Click
 clearBtn.addEventListener('click', runEvent);
+// Doubleclick – click twice
+clearBtn.addEventListener('dblclick', runEvent);
+// Mousedown – click and hold
+clearBtn.addEventListener('mousedown', runEvent);
+// Mouseup – click and release
+clearBtn.addEventListener('mouseup', runEvent);
 
 // Event Handler
 function runEvent(e) {
@@ -1019,4 +1027,7 @@ function runEvent(e) {
 }
 ```
 
-![click](/images/click.gif)
+The gif shows all for above events fired, the button was **double-clicked**. <br>
+Note the order: mousedown, mouseup -> click! After the second click -> dblick! <br>
+
+![click-events](/images/click-events.gif)

@@ -2,7 +2,7 @@
 // const card = document.querySelector('.card');
 // const heading = document.querySelector('h5');
 
-// // Click
+// Click
 // clearBtn.addEventListener('click', runEvent);
 // // Doubleclick – click twice
 // clearBtn.addEventListener('dblclick', runEvent);
@@ -38,6 +38,12 @@ const clearBtn = document.querySelector('.clear-tasks');
 
 // Click
 clearBtn.addEventListener('click', runEvent);
+// Doubleclick – click twice
+clearBtn.addEventListener('dblclick', runEvent);
+// Mousedown – click and hold
+clearBtn.addEventListener('mousedown', runEvent);
+// Mouseup – click and release
+clearBtn.addEventListener('mouseup', runEvent);
 
 // Event Handler
 function runEvent(e) {
