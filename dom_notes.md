@@ -1031,3 +1031,32 @@ The gif shows all of the above mentioned events fired, the button was **double-c
 Note the order: mousedown, mouseup -> click! After the second click -> dblick! <br>
 
 ![click-events](/images/click-events.gif)
+
+### hover events
+There are two types of hover event – **hover over** and **hover away** from an element. <br>
+`mouseenter` and `mouseover` fire when you **hover over** something … <br>
+`mouseleave` and `mouseout` kick in when you **hover away** from something. <br>
+<br>
+`mouseenter` and `mouseleave` fire only **once**, when you **enter** or **leave** the specified element. <br>
+`mouseover` and `mouseout` kick when you enter or leave the specified element + when you hover **over** and **out** its child elements. <br>  
+
+```js
+const card = document.querySelector('.card');
+
+// Mouseenter & Mouseover – when you hover over the element
+card.addEventListener('mouseenter', runEvent);
+card.addEventListener('mouseover', runEvent);
+// Mouseleave & Mouseout – when you hover away from the element
+card.addEventListener('mouseleave', runEvent);
+card.addEventListener('mouseout', runEvent);
+
+// Event Handler
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);
+}
+```
+
+Note: `mouseenter` and `mouseleave` fire only when entering / leaving the card. <br>
+`mouseleave` and `mouseout` fire as well on all the elements within the cards element. <br>
+
+![hover-events](/images/hover-events.gif)
