@@ -1082,3 +1082,33 @@ function runEvent(e) {
 ```
 
 ![mousemove](/images/mousemove.gif)
+
+## Keyboard & input events
+### submit
+You can interact with forms with the `submit` event. <br>
+In the example below, we clear the form input (which has a default set). <br>
+Then on **submit** we display the event type and the input value in the console. 
+Also we clear the input fiel out again. <br>
+
+```js
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+
+// Clear input
+taskInput.value = '';
+
+form.addEventListener('submit', runEvent);
+
+function runEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+
+  // Get input value
+  console.log(taskInput.value);
+
+  // Clear again
+  taskInput.value = '';
+  e.preventDefault();
+}
+```
+
+![submit](/images/submit.gif)
