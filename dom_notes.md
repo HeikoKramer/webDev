@@ -1027,7 +1027,7 @@ function runEvent(e) {
 }
 ```
 
-The gif shows all for above events fired, the button was **double-clicked**. <br>
+The gif shows all of the above mentioned events fired, the button was **double-clicked**. <br>
 Note the order: mousedown, mouseup -> click! After the second click -> dblick! <br>
 
 ![click-events](/images/click-events.gif)
