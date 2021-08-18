@@ -1000,3 +1000,23 @@ function onClick(e){
 ```
 
 ![event-coordinations](/images/event-coordinations.gif)
+
+## Mouse events
+### click events
+There are several **click events** which fire related to an interaction with the mouse button. <br>
+#### click
+The `click` event is quite simple, it reflects a simple **singe click** with the mouse. <br>
+
+```js
+const clearBtn = document.querySelector('.clear-tasks');
+
+// Click
+clearBtn.addEventListener('click', runEvent);
+
+// Event Handler
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);
+}
+```
+
+![click](/images/click.gif)
