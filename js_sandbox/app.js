@@ -20,3 +20,7 @@ function runUpEvent(e){
   heading.innerText = e.target.value;
   console.log(e.target.value);
 }
+
+// 18:39:33.910 sSSSSS app.js:21:11
+// 18:39:35.346 EVENT TYPE: keypress app.js:13:11
+// 18:39:35.486 EVENT TYPE: keyup app.js:19:11

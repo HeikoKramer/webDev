@@ -1144,3 +1144,6 @@ function runUpEvent(e){
 ```
 
 ![keydown-keyup](/images/keydown-keyup.gif)
+
+**NOTE:** There is an other event – `keypress` – which behaves nearly exactly like `keydown`. <br>
+The difference here is that `keypress` won't fire for **command keys**, such as <kbd>ESC</kbd>, <kbd>TAB</kbd> or <kbd>SHIFT</kbd>. <br>
