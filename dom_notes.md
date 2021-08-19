@@ -1112,3 +1112,35 @@ function runEvent(e){
 ```
 
 ![submit](/images/submit.gif)
+
+### keydown & keyup
+With the `keydown` and `keyup` events, we trigger things related to those keyboard activities. <br> 
+<br>
+In the example below, we trigger the **runDownEvent** when a key is **pressed down** in the `<input>` element with the id *task*. <br>
+That function prints the event type *keydown* in the console. <br>
+When that key is **released**, the **runUpEvent** function is triggered. <br>
+This function manipulates the heading with the target value and prints the target value and the event type *keyup* in the console. <br>
+
+```js
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+
+// Clear input
+taskInput.value = '';
+
+taskInput.addEventListener('keydown', runDownEvent);
+
+function runDownEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+}
+
+taskInput.addEventListener('keyup', runUpEvent);
+
+function runUpEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+  heading.innerText = e.target.value;
+  console.log(e.target.value);
+}
+```
+
+![keydown-keyup](/images/keydown-keyup.gif)
