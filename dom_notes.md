@@ -1182,3 +1182,27 @@ function runEvent(e){
 ```
 
 ![cut-copy-paste-select](/images/cut-copy-paste-select.gif)
+
+### input & change
+`input` fires on the most input related events we already covered above. It fires on: <br>
+* `keydown`
+* `cut`
+* `copy`
+* `paste`
+* also when you delete something vie <kbd>DEL</kbd> or <kbd>BACKSPACE</kbd>
+
+`change` fires when a value has **finished changing** – so in case of an input field, when you wrote something and left the field. <br>
+This is probably more useful for something like a **select list** where the value **changed** after you made your choice. <br>
+
+```js
+const taskInput = document.getElementById('task');
+
+taskInput.addEventListener('input', runEvent);
+taskInput.addEventListener('change', runEvent);
+
+function runEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+}
+```
+
+![input-change](/images/input-change.gif)
