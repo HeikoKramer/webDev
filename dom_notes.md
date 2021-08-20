@@ -1301,3 +1301,23 @@ function deleteItem(){
 
 An other case for which you need event delegation are **DOM injected elements**. <br>
 To reach **injected elements** that are not part of the original HTML, you require delegation. <br>
+<br>
+So to delegate an event, **assign it to a parent of your target(s)** and than **filter for the target in the function**. <br>
+So here we are targeting the **body** of the document – so every click somewhere would trigger our event. <br>
+But we later restrict that, to fire only **if** the element has our wanted class in its class list. <br>
+**NOTE:** `e.target` gives us the lowest element, the image within the link, so we even have to climb one layer higher, with `parentElement`. <br>
+
+```js
+// EVENT DELEGATION
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e){
+  if(e.target.parentElement.classList.contains('delete-item')){
+    console.log('delete item');
+  }
+}
+```
+
+Now we trigger our event on click of every item with the appropriate class: <br>
+
+![delegation](/images/delegation.gif)

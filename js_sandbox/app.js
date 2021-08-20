@@ -21,11 +21,10 @@
 // });:
 
 // EVENT DELEGATION
+document.body.addEventListener('click', deleteItem);
 
-const delItem = document.querySelector('.delete-item');
-
-delItem.addEventListener('click', deleteItem);
-
-function deleteItem(){
-  console.log('delete item');
+function deleteItem(e){
+  if(e.target.parentElement.classList.contains('delete-item')){
+    console.log('delete item');
+  }
 }
