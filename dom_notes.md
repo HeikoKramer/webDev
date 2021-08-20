@@ -1211,7 +1211,7 @@ function runEvent(e){
 **Event bubbling** is the **bubbling up of events through the DOM**. <br>
 If an event is happening on an event, it will be bubbling up through its parents. <br>
 **Event delegation** is the opposite of event bubbling. There we **put the listener on one of the parent elements, but targeting childs**. <br> 
-### bubbling
+### event bubbling
 The example below is a demonstration of **event bubbline**. <br>
 We trigger a **click event** on the *card-title* class span, which is the lowest element in our hierarchy. <br>
 The event bubbles up and triggers the click events on the higher levels. <br>
@@ -1257,3 +1257,47 @@ function(){
 
 ![event-bubbling](/images/event-bubbling.gif)
 
+### event delegation
+Event delegation is needed when you have multiple elements of the same type, class, etc. and you want an event happen on all of them. <br>
+Without delegation only the first matching element will trigger an appropriate event. <br>
+The example below shows that behavior. We have multiple list items with the class off *delete-item*, but only the first triggers our event. <br>
+
+**HTML:**
+
+```html
+<div class="card-action">
+  <h5 id="task-title" class="test" >Tasks</h5>
+  <ul class="collection">
+    <li class="collection-item">
+      List Item
+      <a href="#" class="delete-item secondary-content">
+        <i class="fa fa-remove"></i>
+      </a>
+    </li> 
+    <li class="collection-item">
+      List Item
+      <a href="#" class="delete-item secondary-content">
+        <i class="fa fa-remove"></i>
+      </a>
+    </li> 
+<!-- . . .  -->
+```
+
+**JavaScript:**
+
+```js
+const delItem = document.querySelector('.delete-item');
+
+delItem.addEventListener('click', deleteItem);
+
+function deleteItem(){
+  console.log('delete item');
+}
+```
+
+**No delegation**, only the first matching element triggers our event: <br> 
+
+![no-delegation](/images/no-delegation.gif)
+
+An other case for which you need event delegation are **DOM injected elements**. <br>
+To reach **injected elements** that are not part of the original HTML, you require delegation. <br>
