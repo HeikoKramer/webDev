@@ -1147,3 +1147,20 @@ function runUpEvent(e){
 
 **NOTE:** There is an other event – `keypress` – which behaves nearly exactly like `keydown`. <br>
 The difference here is that `keypress` won't fire for **command keys**, such as <kbd>ESC</kbd>, <kbd>TAB</kbd> or <kbd>SHIFT</kbd>. <br>
+
+### focus & blur
+`focus` is when you click inside of an input – and you set it to **focus mode**. <br>
+`blur` is the opposite of it, that event fires, when you click outside of an input and leave its focus. <br> 
+
+```js
+const taskInput = document.getElementById('task');
+
+taskInput.addEventListener('focus', runEvent);
+taskInput.addEventListener('blur', runEvent);
+
+function runEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+}
+```
+
+![focus-blur](/images/focus-blur.gif)

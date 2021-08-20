@@ -7,20 +7,10 @@ taskInput.value = '';
 
 // form.addEventListener('submit', runEvent);
 
-taskInput.addEventListener('keydown', runDownEvent);
+taskInput.addEventListener('focus', runEvent);
+taskInput.addEventListener('blur', runEvent);
 
-function runDownEvent(e){
+function runEvent(e){
   console.log(`EVENT TYPE: ${e.type}`);
 }
 
-taskInput.addEventListener('keyup', runUpEvent);
-
-function runUpEvent(e){
-  console.log(`EVENT TYPE: ${e.type}`);
-  heading.innerText = e.target.value;
-  console.log(e.target.value);
-}
-
-// 18:39:33.910 sSSSSS app.js:21:11
-// 18:39:35.346 EVENT TYPE: keypress app.js:13:11
-// 18:39:35.486 EVENT TYPE: keyup app.js:19:11
