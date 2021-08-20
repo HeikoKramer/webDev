@@ -1164,3 +1164,21 @@ function runEvent(e){
 ```
 
 ![focus-blur](/images/focus-blur.gif)
+
+### cut, copy, paste, select
+`cut`, `copy`, `paste`, `select` – Those events do exactly what you'd expect, they fire on those standard text-edit methods. <br>
+
+```js
+const taskInput = document.getElementById('task');
+
+taskInput.addEventListener('cut', runEvent);
+taskInput.addEventListener('copy', runEvent);
+taskInput.addEventListener('paste', runEvent);
+taskInput.addEventListener('select', runEvent);
+
+function runEvent(e){
+  console.log(`EVENT TYPE: ${e.type}`);
+}
+```
+
+![cut-copy-paste-select](/images/cut-copy-paste-select.gif)
