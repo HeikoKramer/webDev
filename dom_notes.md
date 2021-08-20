@@ -1210,10 +1210,11 @@ function runEvent(e){
 ## Event bubbling & delegation
 **Event bubbling** is the **bubbling up of events through the DOM**. <br>
 If an event is happening on an event, it will be bubbling up through its parents. <br>
-**Event delegation** is the opposit of event bubbling. There we **put the listener on one of the parent elements, but targeting childs**. <br> 
+**Event delegation** is the opposite of event bubbling. There we **put the listener on one of the parent elements, but targeting childs**. <br> 
 ### bubbling
 The example below is a demonstration of **event bubbline**. <br>
-
+We trigger a **click event** on the *card-title* class span, which is the lowest element in our hierarchy. <br>
+The event bubbles up and triggers the click events on the higher levels. <br>
 
 **HTML:**
 
@@ -1255,3 +1256,4 @@ function(){
 ```
 
 ![event-bubbling](/images/event-bubbling.gif)
+
