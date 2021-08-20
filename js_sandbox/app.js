@@ -1,14 +1,21 @@
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
+// EVENT BUBBLING 
 
-// Clear input
-taskInput.value = '';
+document.querySelector('.card-title').addEventListener('click', 
+function(){
+  console.log('card title');
+});
 
-taskInput.addEventListener('input', runEvent);
-taskInput.addEventListener('change', runEvent);
+document.querySelector('.card-content').addEventListener('click', 
+function(){
+  console.log('card content');
+});
 
-function runEvent(e){
-  console.log(`EVENT TYPE: ${e.type}`);
-}
+document.querySelector('.card').addEventListener('click', 
+function(){
+  console.log('card');
+});
 
+document.querySelector('.col').addEventListener('click', 
+function(){
+  console.log('col');
+});

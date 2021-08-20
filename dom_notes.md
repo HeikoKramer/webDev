@@ -1206,3 +1206,52 @@ function runEvent(e){
 ```
 
 ![input-change](/images/input-change.gif)
+
+## Event bubbling & delegation
+**Event bubbling** is the **bubbling up of events through the DOM**. <br>
+If an event is happening on an event, it will be bubbling up through its parents. <br>
+**Event delegation** is the opposit of event bubbling. There we **put the listener on one of the parent elements, but targeting childs**. <br> 
+### bubbling
+The example below is a demonstration of **event bubbline**. <br>
+
+
+**HTML:**
+
+```html
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+<!-- . . .  -->
+```
+
+**JavaScript:**
+
+```js
+// EVENT BUBBLING 
+
+document.querySelector('.card-title').addEventListener('click', 
+function(){
+  console.log('card title');
+});
+
+document.querySelector('.card-content').addEventListener('click', 
+function(){
+  console.log('card content');
+});
+
+document.querySelector('.card').addEventListener('click', 
+function(){
+  console.log('card');
+});
+
+document.querySelector('.col').addEventListener('click', 
+function(){
+  console.log('col');
+});
+```
+
+![event-bubbling](/images/event-bubbling.gif)
