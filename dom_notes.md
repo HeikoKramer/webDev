@@ -1363,3 +1363,22 @@ We can **remove** it, by using the `removeItem()` method: <br>
 localStorage.removeItem('name');
 ```
 
+### get from storage
+You can get from **local** and **session** storage with `getItem()`: <br>
+
+```js
+// set local storage item
+localStorage.setItem('name', 'John');
+
+// set session storage item
+sessionStorage.setItem('name', 'Beth');
+
+// get from storage
+const nameLocal = localStorage.getItem('name');
+console.log('name in local storage: ' + nameLocal)
+
+const nameSession = sessionStorage.getItem('name');
+console.log('name in session storage: ' + nameSession)
+```
+
+![getItem](/images/getItem.png)
