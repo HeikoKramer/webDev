@@ -1334,7 +1334,7 @@ Other than that, the API is the exact same. <br>
 ![localStorage](/images/localStorage.png)
 
 ### set local storage item
-To set a local storage item is as easy as this: <br>
+To set a **local storage** item is as easy as this: <br>
 
 ```js
 localStorage.setItem('name', 'John');
@@ -1343,3 +1343,14 @@ localStorage.setItem('name', 'John');
 The new **item** – the **key** *name* with **value** *John* – has been set in local storage: <br>
 
 ![localStorage-item](/images/localStorage-item.png)
+
+### set session storage item
+To set an item in **session storage** is as easy as to set in in local storage: <br>
+
+```js
+sessionStorage.setItem('name', 'Beth');
+```
+
+![sessionStorage-item](/images/sessionStorage-item.png)
+
+**NOTE:** When we comment out those the `localStorage` and `sessionStorage` lines in our code now, **close** and then **re-open** our browser then -> the name we had stored in the **session storage will be gone**, while the name stored in **local storage will remain**. <br> 
