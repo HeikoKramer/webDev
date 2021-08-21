@@ -1390,3 +1390,50 @@ console.log('name in session storage: ' + nameSession)
 ```
 
 ![getItem](/images/getItem.png)
+
+### add an array to storage
+We can add values from a submit to local storage like this: <br>
+
+```js
+document.querySelector('form').addEventListener('submit', 
+function(e){
+  const task = document.getElementById('task').value;
+
+  localStorage.setItem('task', task);
+  alert('Task saved');
+
+  e.preventDefault();
+});
+```
+
+**Problem:** As soon as we submit the next value, the previous value gets overwritten: <br>
+
+![task-in-storage](/images/task-in-storage.gif)
+
+To solve that, you have to work with quite a work-around. <br>
+Basically you work with an **array** – you try to get already stored values form **local storage** if they exist, you add your new task to it, if not you create a new array. <br>
+That way you can store multiple values in storage .. you just have to JSON parse it back and forward. <br>
+
+```js
+document.querySelector('form').addEventListener('submit', 
+function(e){
+  const task = document.getElementById('task').value;
+
+  let tasks;
+
+  if(localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  tasks.push(task);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  alert('Task saved');
+
+  e.preventDefault();
+});
+```
+
+![task-array](/images/task-array.gif)
