@@ -1332,3 +1332,14 @@ The difference between **local** and **session** storage is, that local will sta
 Other than that, the API is the exact same. <br>
 
 ![localStorage](/images/localStorage.png)
+
+### set local storage item
+To set a local storage item is as easy as this: <br>
+
+```js
+localStorage.setItem('name', 'John');
+```
+
+The new **item** – the **key** *name* with **value** *John* – has been set in local storage: <br>
+
+![localStorage-item](/images/localStorage-item.png)
