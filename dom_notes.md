@@ -1363,6 +1363,14 @@ We can **remove** it, by using the `removeItem()` method: <br>
 localStorage.removeItem('name');
 ```
 
+### clear storage
+If you have more than one item in **local** or **session** session storage, you can get rid of everything with the `clear()` method. <br>
+
+```js
+localStorage.clear();
+sessionStorage.clear();
+```
+
 ### get from storage
 You can get from **local** and **session** storage with `getItem()`: <br>
 
