@@ -1354,3 +1354,12 @@ sessionStorage.setItem('name', 'Beth');
 ![sessionStorage-item](/images/sessionStorage-item.png)
 
 **NOTE:** When we comment out those the `localStorage` and `sessionStorage` lines in our code now, **close** and then **re-open** our browser then -> the name we had stored in the **session storage will be gone**, while the name stored in **local storage will remain**. <br> 
+
+### remove from storage
+Our item *name* is still in **local storage** although we have commented it out in our code and re-opened the page. <br>
+We can **remove** it, by using the `removeItem()` method: <br>
+
+```js
+localStorage.removeItem('name');
+```
+
