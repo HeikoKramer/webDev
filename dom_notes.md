@@ -1321,3 +1321,14 @@ function deleteItem(e){
 Now we trigger our event on click of every item with the appropriate class: <br>
 
 ![delegation](/images/delegation.gif)
+
+## Local & session storage
+`localStorage` is part of the browser, so you can find it in the `window` object. <br>
+You can set **key-value-pairs**, what you set as a value has to be a **string**. <br>
+You can still save arrays and objects and stuff, you just have to turn them into a string first. <br>
+For that you use a method called [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and to parse it back [JSON.pars](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). <br>
+<br>
+The difference between **local** and **session** storage is, that local will stay until you manually clear it out through your settings or a program and session storage will clear automatically once your browser is closed. <br>
+Other than that, the API is the exact same. <br>
+
+![localStorage](/images/localStorage.png)
