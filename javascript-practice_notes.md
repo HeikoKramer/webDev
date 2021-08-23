@@ -35,3 +35,13 @@ function loadEventListeners() {
 }
 ```
 
+## Check for valid input
+Include **input validation** in your code. For example, if you have a function to add a task – make sure that the task ain't empty: <br>
+
+```js
+function addTask(e){
+  if(taskInput.value === ''){
+    alert('Add a task');
+  }
+// [. . .]
+```
