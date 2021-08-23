@@ -16,3 +16,22 @@ const filter    = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 ```
 
+## Load event listeners 
+To load all event listeners at once, add them to a **function**. Call that function in your JS document. <br>
+
+```js
+// Load all event listeners
+loadEventListeners();
+
+function loadEventListeners() {
+  // Add task event
+  form.addEventListener('submit', addTask);
+  // Remove task event
+  taskList.addEventListener('click', removeTask);
+  // Clear task event 
+  clearBtn.addEventListener('click', clearTasks);
+  // Filter tasks event
+  filter.addEventListener('keyup', filterTasks)
+}
+```
+
