@@ -76,5 +76,7 @@ function filterTasks(e){
     } else {
       task.style.display = 'none';
     }
+    console.log(item);
+    console.log('indexOf text: ' + item.toLowerCase().indexOf(text));
   });
 }
