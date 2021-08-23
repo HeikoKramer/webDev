@@ -9,6 +9,7 @@ Quick links to my notes files: <br>
 * [javascript_notes_2.md](https://github.com/HeikoKramer/JavaScript/blob/main/javascript_notes_2.md)
 * [VS-Code_notes.md](https://github.com/HeikoKramer/webDev/blob/main/VS-Code_notes.md)
 * [dom_notes.md](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md)
+* [javascript-practice_notes.md](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md)
 
 ## Coding samples / tutorials
 ### Rock Paper Scissors
