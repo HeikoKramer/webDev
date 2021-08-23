@@ -100,4 +100,4 @@ Now we enter **u**, the combined filter value becomes **mu** – which only appe
 There its index position is **0** as it appears at the beginning. <br> 
 The **-1** index tasks get filtered out, the *Multi Task* with index 0 is now the only one displayed in th UI. <br> 
 
-![filter-demo-3](/images/filter-demo-3.png)
+![filter-demo-3](/images/filter-demo-3.gif)
