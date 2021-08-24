@@ -157,3 +157,50 @@ function getTasks(){
   })
 }
 ```
+
+### Remove something from / clear local storage
+In our example we have as well logic to **delete** single tasks and to **clear** the complete tasks list with a single click. <br>
+As we have stored our tasks in **local storage** so that the browser "remembers" added task when re-loading … we must not forget to **delete them from local storage when delting them in the UI**. <br>
+Otherwise they will **re-appear in UI when reloading the page**. <br>
+<br>
+So, the actual easy part is to **clear the whole list** – there is a method for this. <br>
+If those tasks are the only thing in your local storage .. just wipe the whole thing with `localStorage.clear()` and you're good. <br>
+<br>
+Things get more complicated, when you're trying to delete a specific task. <br>
+We call the `removeTaskFromLocalStorage()` function from our `removeTask()` function, passing over the item, we delete in the UI.  <br>
+In the function, we retrieve all tasks from local storage and JSON.parse them. <br>
+We loop through the results and check if the string we have before us equals the **textContent** of the element that started the process (our deleted task). <br>
+Is it matches, we remove the item from the result we've got from local storage `tasks.splice(index, 1)`. <br>
+At the end we set **tasks** in local storage to our reduced version of it – JSON.stringify is required again to bring it in the right format. <br>
+
+```js
+// Remove Task
+function removeTask(e) {
+  if(e.target.parentElement.classList.contains('delete-item')){
+    if(confirm('Are you sure?')){
+      e.target.parentElement.parentElement.remove();
+
+      //  Remove from local storage
+      removeTaskFromLocalStorage(e.target.parentElement.parentElement);
+    }
+  }
+}
+
+//  Remove from local storage
+function removeTaskFromLocalStorage(taskItem){
+  let tasks;
+  if(localStorage.getItem('tasks') === null){
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  tasks.forEach(function(task, index){
+    if(taskItem.textContent === task){
+      tasks.splice(index, 1);
+    }
+  });
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+```
