@@ -101,3 +101,59 @@ There its index position is **0** as it appears at the beginning. <br>
 The **-1** index tasks get filtered out, the *Multi Task* with index 0 is now the only one displayed in th UI. <br> 
 
 ![filter-demo-3](/images/filter-demo-3.gif)
+
+## Load something from local storage
+You need to trigger an appropriate function in order to load something – in our example tasks – from local storage. <br>
+In the example we load our relevant `getTasks()` function with our `loadEventListeners()` function, when entering the page. <br>
+We use the **DOMContentLoaded** event type, which fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. [Click for detailed explanation](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event).
+The `getTasks()` function gets tasks from local storage (here the [documentation how they got in there](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md#add-an-array-to-storage)) and injects them into the DOM. <br>
+
+![local-storage-dom-injection](/images/local-storage-dom-injection.png)
+
+There is actually not much of the later task in local storage. <br>
+It is basically an **array of strings** what we have available there. <br>
+The whole construction of the task (**list element** with the class of *collection-item*, containing a link .. and so on) happens in our code. <br>
+The only thing we really take from local storage is the task's name, which we place in form of a **text node** as a child of our list element. <br> 
+
+```js
+const taskList  = document.querySelector('.collection');
+
+// Load all event listeners
+loadEventListeners();
+
+function loadEventListeners() {
+  // DOM load event
+  document.addEventListener('DOMContentLoaded', getTasks);
+}
+
+// Get Tasks from LS
+function getTasks(){
+  let tasks;
+  if(localStorage.getItem('tasks') === null){
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  // Inject the tasks from local storage into the DOM
+  tasks.forEach(function(task){
+    // Create li element
+    const li = document.createElement('li');
+    // Add class
+    li.className = 'collection-item';
+    // Create text node and append to li
+    li.appendChild(document.createTextNode(task));
+    // Create new link element
+    const link = document.createElement('a');
+    // Add class
+    link.className = 'delete-item secondary-content';
+    // Add icon html
+    link.innerHTML = '<i class="fa fa-remove"></i>';
+    // Append the link to li
+    li.appendChild(link);
+
+    // Append li to ul
+    taskList.appendChild(li);
+  })
+}
+```

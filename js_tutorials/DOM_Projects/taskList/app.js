@@ -30,6 +30,7 @@ function getTasks(){
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
 
+  // Inject the tasks from local storage into the DOM
   tasks.forEach(function(task){
     // Create li element
     const li = document.createElement('li');
