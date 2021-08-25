@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Loan Calculator</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
-    <title>Loan Calculator</title>
+    <style>
+      #loading, #result {
+        display: none;
+      }
+    </style>
   </head>
   <body class="bg-dark">
     <div class="container">
@@ -37,9 +41,9 @@
               </div>
             </form>
             <!-- LOADER HERE -->
-            <!-- <div id="loading">
+            <div id="loading">
               <img src="img/loading.gif" alt="">
-            </div> -->
+            </div>
             <!-- RESULTS -->
             <div id="results" class="pt-4">
               <h5>Results</h5>
