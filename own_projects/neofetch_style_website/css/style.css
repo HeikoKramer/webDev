@@ -50,6 +50,23 @@ body {
   background: var(--monokai-background);
 }
 
+.scheme-picker {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.scheme-picker form select {
+  font-family: var(--ubuntu);
+  height: 40px;
+  background: none;
+  color: var(--terminal-green);
+  text-shadow: 0 0 4px var(--terminal-glow);
+  font-family: var(--pixel);
+  padding: 5px;
+  border: none;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;

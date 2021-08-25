@@ -11,6 +11,12 @@
   padding-top: 2rem;
 }
 
+.scheme-picker {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .container {
   max-width: 600px;
   padding: 1rem;
