@@ -10,7 +10,7 @@ GAME FUNCTION:
 // Game values
 let min         = 1,
     max         = 10,
-    winningNum  = 2,
+    winningNum  = getRandomNum(min, max),
     guessesLeft = 3;
 
 // UI Elements
@@ -53,7 +53,7 @@ guessBtn.addEventListener('click', function(){
 
       if(guessesLeft === 0){
         // Game over – lost
-        gameOver(false, `${guess} was also not right – you lost!`)
+        gameOver(false, `${guess} was also not right, the wanted number was ${winningNum} – you lost!`)
 
       } else {
         // Game continues – answer wrong
@@ -84,6 +84,11 @@ function gameOver(won, msg){
   // Play again?
   guessBtn.value      = 'Play Again';
   guessBtn.className += 'play-again';
+}
+
+// Get winning number
+function getRandomNum(){
+  return Math.floor(Math.random()*(max-min+1)+min);
 }
 
 // Set message
