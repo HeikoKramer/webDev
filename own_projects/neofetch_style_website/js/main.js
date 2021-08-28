@@ -1,12 +1,29 @@
-const cv = document.querySelector("#cv");
-const softSkills = document.querySelector("#soft-skills");
-const itSkills = document.querySelector("#it-skills");
-const contact = document.querySelector("#contact");
-const cvContent = document.querySelector("#cv-content");
-const softSkillsContent = document.querySelector("#soft-skills-content");
-const itSkillsContent = document.querySelector("#it-skills-content");
-const contactContent = document.querySelector("#contact-content");
+// UI Variables
+const cv                = document.querySelector('#cv');
+const softSkills        = document.querySelector('#soft-skills');
+const itSkills          = document.querySelector('#it-skills');
+const contact           = document.querySelector('#contact');
+const cvContent         = document.querySelector('#cv-content');
+const softSkillsContent = document.querySelector('#soft-skills-content');
+const itSkillsContent   = document.querySelector('#it-skills-content');
+const contactContent    = document.querySelector('#contact-content');
+const colorScheme       = document.querySelector('#scheme-select');
 
+// Event Listeners
+colorScheme.addEventListener('change', changeColorScheme);
+
+// Functions
+function changeColorScheme(e){
+  const schemeChoice = colorScheme.value;
+
+  if(localStorage.getItem('scheme') === null) {
+    scheme = [];
+  }
+
+  localStorage.setItem('scheme', schemeChoice);
+}
+
+//  WinBox Functions
 cv.addEventListener("click", () => {
   const cvBox = new WinBox({
     title: "CV",
