@@ -10,10 +10,17 @@ const contactContent    = document.querySelector('#contact-content');
 const colorScheme       = document.querySelector('#scheme-select');
 
 // Event Listeners
-colorScheme.addEventListener('change', changeColorScheme);
+document.addEventListener('DOMContentLoaded', getColorFromLokalStorage);
+colorScheme.addEventListener('change', changeColorInLokalStorage);
 
 // Functions
-function changeColorScheme(e){
+function getColorFromLokalStorage(e){
+  if(localStorage.getItem('scheme') !== null) {
+    colorScheme.value = localStorage.getItem('scheme');
+  }
+}
+
+function changeColorInLokalStorage(e){
   const schemeChoice = colorScheme.value;
 
   if(localStorage.getItem('scheme') === null) {
