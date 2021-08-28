@@ -8,6 +8,7 @@ const softSkillsContent = document.querySelector('#soft-skills-content');
 const itSkillsContent   = document.querySelector('#it-skills-content');
 const contactContent    = document.querySelector('#contact-content');
 const colorScheme       = document.querySelector('#scheme-select');
+const logo              = document.querySelector('logo');
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', getColorFromLokalStorage);
@@ -16,7 +17,37 @@ colorScheme.addEventListener('change', changeColorInLokalStorage);
 // Functions
 function getColorFromLokalStorage(e){
   if(localStorage.getItem('scheme') !== null) {
-    colorScheme.value = localStorage.getItem('scheme');
+    const chosenColor = localStorage.getItem('scheme');
+    colorScheme.value = chosenColor;
+    setColorScheme(chosenColor);
+  }
+}
+
+function setColorScheme(chosenColor){
+  var bodyStyles = window.getComputedStyle(document.body);
+  console.log(chosenColor);  
+  if(chosenColor === 'dracula'){
+    document.body.style.setProperty('--grey', bodyStyles.getPropertyValue('--dracula-grey'));
+    document.body.style.setProperty('--dark-grey', bodyStyles.getPropertyValue('--dracula-dark-grey'));
+    document.body.style.setProperty('--red', bodyStyles.getPropertyValue('--dracula-red'));
+    document.body.style.setProperty('--green', bodyStyles.getPropertyValue('--dracula-green'));
+    document.body.style.setProperty('--yellow', bodyStyles.getPropertyValue('--dracula-yellow'));
+    document.body.style.setProperty('--blue', bodyStyles.getPropertyValue('--dracula-blue'));
+    document.body.style.setProperty('--purple', bodyStyles.getPropertyValue('--dracula-purple'));
+    document.body.style.setProperty('--dark-green', bodyStyles.getPropertyValue('--dracula-dark-green'));
+    document.body.style.setProperty('--white', bodyStyles.getPropertyValue('--dracula-white'));
+    document.body.style.setProperty('--background', bodyStyles.getPropertyValue('--dracula-background'));
+  } else {
+    document.body.style.setProperty('--grey', bodyStyles.getPropertyValue('--monokai-grey'));
+    document.body.style.setProperty('--dark-grey', bodyStyles.getPropertyValue('--monokai-dark-grey'));
+    document.body.style.setProperty('--red', bodyStyles.getPropertyValue('--monokai-red'));
+    document.body.style.setProperty('--green', bodyStyles.getPropertyValue('--monokai-green'));
+    document.body.style.setProperty('--yellow', bodyStyles.getPropertyValue('--monokai-yellow'));
+    document.body.style.setProperty('--blue', bodyStyles.getPropertyValue('--monokai-blue'));
+    document.body.style.setProperty('--purple', bodyStyles.getPropertyValue('--monokai-purple'));
+    document.body.style.setProperty('--dark-green', bodyStyles.getPropertyValue('--monokai-dark-green'));
+    document.body.style.setProperty('--white', bodyStyles.getPropertyValue('--monokai-white'));
+    document.body.style.setProperty('--background', bodyStyles.getPropertyValue('--monokai-background'));
   }
 }
 
@@ -28,6 +59,10 @@ function changeColorInLokalStorage(e){
   }
 
   localStorage.setItem('scheme', schemeChoice);
+  window.location.reload();
+  // Logo reload
+  var content = logo.innerHTML;
+  logo.innerHTML= content;
 }
 
 //  WinBox Functions

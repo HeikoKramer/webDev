@@ -8,6 +8,18 @@
 
   /* Colors */
 
+  /* Defaults */
+  --grey: #75715e;
+  --dark-grey: #272822;
+  --red: #f92672;
+  --green: #a6e22e;
+  --yellow: #f4bf75;
+  --blue: #66d9ef;
+  --purple: #ae81ff;
+  --dark-green: #2aa198;
+  --white: #f9f9f5;
+  --background: #1f0629;
+
   /* MONOKAI */
   --monokai-grey: #75715e;
   --monokai-dark-grey: #272822;
@@ -47,7 +59,7 @@
 }
 
 body {
-  background: var(--monokai-background);
+  background: var(--background);
 }
 
 .scheme-picker {
@@ -83,7 +95,7 @@ body {
 
 /* Information Block -------------------------- */
 .info-block {
-  color: var(--monokai-grey);
+  color: var(--grey);
   font-family: var(--ubuntu);
   font-size: 26px;
 }
@@ -93,12 +105,12 @@ body {
 }
 
 .info-block ul a {
-  color: var(--monokai-purple);
+  color: var(--purple);
   text-decoration: none;
 }
 
 .heading {
-  color: var(--monokai-yellow);
+  color: var(--yellow);
   font-weight: bolder;
 }
 /* END Information Block ---------------------- */
@@ -106,11 +118,11 @@ body {
 /* Command Line ------------------------------- */
 .commandline h1 {
   font-family: var(--ubuntu);
-  color: var(--monokai-grey);
+  color: var(--grey);
 }
 
 .breaker {
-  color: var(--monokai-dark-grey);
+  color: var(--dark-grey);
 }
 
 .path {
@@ -140,8 +152,9 @@ body {
 
 /* Logo ----------------------------------------- */
 code {
-  color: var(--monokai-purple);
-  background: var(--monokai-background);
+  color: var(--purple);
+  margin-right: 80px;
+  /* background: var(--background); */
   display: inline-block;
   white-space: pre;
   font-family: var(--ubuntu);
@@ -149,7 +162,7 @@ code {
 }
 
 .highlight {
-  color: var(--monokai-yellow);
+  color: var(--yellow);
 }
 /* END Logo ------------------------------------- */
 
@@ -162,7 +175,7 @@ code {
 #soft-skills,
 #it-skills,
 #contact {
-  color: var(--monokai-dark-green);
+  color: var(--dark-green);
   cursor: pointer;
 }
 
