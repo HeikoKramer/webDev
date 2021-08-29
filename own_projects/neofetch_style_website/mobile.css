@@ -1,0 +1,51 @@
+.logo {
+  display: none;
+}
+
+.text-logo {
+  display: grid;
+  font-family: var(--pixel);
+  font-size: 42px;
+  color: var(--purple);
+  text-shadow: -3px 3px var(--yellow);
+  padding-top: 2rem;
+}
+
+.scheme-picker {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 600px;
+  padding: 1rem;
+  margin: auto;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  grid-column: 2 / span 1;
+}
+
+@media screen and (max-width: 760px) {
+  /* rules for small screens */
+  .win-boxes {
+    display: none;
+  }
+
+  .info-block {
+    font-size: 20px;
+  }
+
+  .path {
+    display: none;
+  }
+
+  .breaker {
+    display: none;
+  }
+}
+
+.wb-body {
+}

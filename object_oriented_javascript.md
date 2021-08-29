@@ -91,4 +91,41 @@ console.log(this);
 
 ![console-log_this](/images/console-log_this.png)
 
---> weiter bei 5:30
+You can specify additional **properties and arguments** in your constructor: <br>
+
+```js
+// Person constructor
+function Person(name, age) {
+  this.name = name;
+  this.age  = age;
+}
+
+const brad = new Person('Brad', 36);
+const john = new Person('John', 22);
+
+console.log(john.age);
+// > 22
+```
+
+### Adding a method
+A function in an object constructor becomes a **method** of that object. <br>
+See our example below, where we calculate the age of the person with the **calculateAge** function. <br>
+You can now call that function for any person, simply by referencing it via dot notation: <br>
+
+```js
+// Person constructor
+function Person(name, dob) {
+  this.name            = name;
+  this.birthday        = new Date(dob);
+  this.calculateAge    = function(){
+    const diff    = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+}
+
+const brad = new Person('Brad', '1981-9-10');
+
+console.log(brad.calculateAge());
+// > 39
+```
