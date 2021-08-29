@@ -2157,3 +2157,5 @@ console.log("Global Scope: ", a, b, c);
 ## The DOM
 I've excluded [my notes on the DOCUMENT OBJECT MODEL](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md) into an other file. <br>
 
+## Object Oriented JavaScript
+[Click here for my notes on **object oriented JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/object_oriented_javascript.md) 
