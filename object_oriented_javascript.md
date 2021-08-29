@@ -90,3 +90,5 @@ console.log(this);
 ```
 
 ![console-log_this](/images/console-log_this.png)
+
+--> weiter bei 5:30

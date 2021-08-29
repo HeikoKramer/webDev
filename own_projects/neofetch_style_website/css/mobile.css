@@ -6,8 +6,8 @@
   display: grid;
   font-family: var(--pixel);
   font-size: 42px;
-  color: var(--monokai-purple);
-  text-shadow: -3px 3px var(--monokai-yellow);
+  color: var(--purple);
+  text-shadow: -3px 3px var(--yellow);
   padding-top: 2rem;
 }
 
