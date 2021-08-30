@@ -482,3 +482,43 @@ Customer.prototype.constructor = Customer;
 
 We can overwrite inherited methods to be different from the original method. <br>
 
+## Object.create()
+We can store **prototypes** in a variable and create an **object** with `Object.create()` passing over those prototypes as an **argument**. <br>
+Below we are creating an **object** by passing over the prior created *personPrototypes*. <br>
+The **properties** of the object are than defined with **dot notatione**. <br>
+Both methods `getsMarried()` and `greeting()` from the passed *personPrototypes* are working on the *mary* object: <br>
+
+```js
+const personPrototypes = {
+  greeting: function(){
+    return `Hello ${this.firstName} ${this.lastName}`;
+  },
+  getsMarried: function(newLastName){
+    this.lastName = newLastName;
+  }
+}
+
+const mary = Object.create(personPrototypes);
+mary.firstName = 'Mary';
+mary.lastName  = 'Miller';
+mary.age       = 30;
+
+mary.getsMarried('Thompson');
+
+console.log(mary.greeting());
+// > Hello Mary Thompson
+```
+
+There is an other syntax we can use to create an **object with properties**. <br>
+Here we're also passing over our *personPrototypes* in `Object.create()`, but this time we define our **properties** directly: <br>
+
+```js
+const brad = Object.create(personPrototypes, {
+  firstName: {value: 'Brad'},
+  lastName:  {value: 'Traversy'},
+  age:       {value: 36}
+});
+
+console.log(brad.greeting());
+// > Hello Brad Traversy
+```
