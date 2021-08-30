@@ -1,18 +1,21 @@
-// String
-const name1 = 'Jeff';
-const name2 = new String('Jeff');
+// Number
+const num1 = 5;
+const num2 = new Number(5);
 
-if(name1 === 'Jeff'){
-  console.log('name1 is equal to "Jeff"');
-} else {
-  console.log('name1 is NOT equal to "Jeff"');
-}
+console.log(num1);
+console.log(typeof(num1));
 
-if(name2 === 'Jeff'){
-  console.log('name2 is equal to "Jeff"');
-} else {
-  console.log('name2 is NOT equal to "Jeff"');
-}
+console.log(num2);
+console.log(typeof(num2));
 
+// Boolean
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+console.log(bool1);
+console.log(typeof(bool1));
+
+console.log(bool2);
+console.log(typeof(bool2));
 
 

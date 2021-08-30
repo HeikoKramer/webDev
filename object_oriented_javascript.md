@@ -200,3 +200,24 @@ if(name2 === 'Jeff'){
 }
 // > name2 is NOT equal to "Jeff"
 ```
+
+### Number
+The **number** can also be **declared as a primitive** or **constructed as an object**. <br>
+
+```js
+// Number
+const num1 = 5;
+const num2 = new Number(5);
+
+console.log(num1);
+// > 5
+console.log(typeof(num1));
+// > number
+
+console.log(num2);
+// > Number { 5 }
+console.log(typeof(num2));
+// > object
+```
+
+
