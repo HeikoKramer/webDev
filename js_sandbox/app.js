@@ -1,43 +1,36 @@
-// Object.prototype
-// Person.prototype
-
 // Person constructor
-function Person(firstName, lastName, dob) {
-  this.firstName    = firstName;
-  this.lastName     = lastName;  
-  this.birthday     = new Date(dob);
-  // this.calculateAge = function(){
-  //   const diff    = Date.now() - this.birthday.getTime();
-  //   const ageDate = new Date(diff);
-  //   return Math.abs(ageDate.getUTCFullYear() - 1970);
-  // }
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName  = lastName;  
 }
 
-// Calculate age
-Person.prototype.calculateAge = function(){
-  const diff    = Date.now() - this.birthday.getTime();
-  const ageDate = new Date(diff);
-  return Math.abs(ageDate.getUTCFullYear() - 1970);
+// Greeting
+Person.prototype.greeting = function(){
+  return ` Hello ${this.firstName} ${this.lastName}!`;
 }
 
-// Get full name
-Person.prototype.getFullName = function(){
-  return `${this.firstName} ${this.lastName}`
+const person1 = new Person('Mary', 'Meyer');
+
+console.log(person1.greeting());
+// > Hello Mary Meyer!
+
+
+// Customer constructor
+function Customer(firstName, lastName, phone, membership) {
+  Person.call(this, firstName, lastName);
+  this.phone      = phone;
+  this.membership = membership;
 }
 
-// Gets married
-Person.prototype.getsMarried = function(newLastName){
-  this.lastName = newLastName;
-}
+// Inherit the Person prototype methods
+Customer.prototype = Object.create(Person.prototype);
 
-const mary = new Person('Mary', 'Meyer', '1998-4-23');
-const john = new Person('John', 'Smith', '1990-8-12');
+// Make Customer.prototype return Customer()
+Customer.prototype.constructor = Customer;
 
-john.getsMarried(mary.lastName);
+const customer1 = new Customer('John', 'Smith', '555-555-5555', 'Gold');
 
-console.log('firstName: '    + mary.hasOwnProperty('firstName'));
-console.log('lastName: '     + mary.hasOwnProperty('lastName'));
-console.log('birthday: '     + mary.hasOwnProperty('birthday'));
-console.log('calculateAge: ' + mary.hasOwnProperty('calculateAge'));
-console.log('getFullName: '  + mary.hasOwnProperty('getFullName'));
-console.log('getsMarried: '  + mary.hasOwnProperty('getsMarried'));
+console.log(customer1);
+
+console.log(customer1.greeting());
+// > Hello John Smith!

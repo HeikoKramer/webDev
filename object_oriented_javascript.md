@@ -407,3 +407,78 @@ The methods we have written in the **prototype** return **false** when we check 
 It is a property of the prototype. <br> 
 
 ![object-or-prototype](/images/object-or-prototype.png)
+
+## Prototypal inheritance
+If we want to create a **customer** object, which is from its type close to the **person** object, we can **inherit** `Person.property`. <br>
+<br>
+Below we are **constructing** the new object *customer*. <br>
+The first two arguments are identical, a customer has a `firstName` and `lastName`, like a person. <br>
+So we can construct our customer with `Person.call(this, firstName, lastName)`, to use the properties we need from there. <br>
+**NOTE:** The `this` key-word must be the first **argument** when calling an other constructor. <br>
+
+```js
+// Person constructor
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName  = lastName;  
+}
+
+// Greeting
+Person.prototype.greeting = function(){
+  return ` Hello ${this.firstName} ${this.lastName}!`;
+}
+
+const person1 = new Person('Mary', 'Meyer');
+
+console.log(person1.greeting());
+// > Hello Mary Meyer!
+
+
+// Customer constructor
+
+function Customer(firstName, lastName, phone, membership) {
+  Person.call(this, firstName, lastName);
+  this.phone      = phone;
+  this.membership = membership;
+}
+
+const customer1 = new Customer('John', 'Smith', '555-555-5555', 'Gold');
+
+console.log(customer1);
+// > Object { firstName: "John", lastName: "Smith", phone: "555-555-5555", membership: "Gold" }
+
+console.log(customer1.greeting());
+// > Uncaught TypeError: customer1.greeting is not a function
+```
+
+But `console.log(customer1.greeting())` throws us an error – the prototype method has not been inherited with `Person.call()`. <br>
+We have to set `Customer.prototype` to **equal** `Object.create(Person.prototype)` to inherit the Person's prototype: <br>
+
+```js
+// Customer constructor
+function Customer(firstName, lastName, phone, membership) {
+  Person.call(this, firstName, lastName);
+  this.phone      = phone;
+  this.membership = membership;
+}
+
+// Inherit the Person prototype methods
+Customer.prototype = Object.create(Person.prototype);
+
+const customer1 = new Customer('John', 'Smith', '555-555-5555', 'Gold');
+
+console.log(customer1.greeting());
+// > Hello John Smith!
+```
+
+Now we can call the Person's method `greetings()` also on a Customer. <br>
+With such an inherited prototype will show as a prototype of the inherited object. <br>
+Add the following to your code if you want the **Customer's prototype** to return a **constructor of type Customer**: <br>
+
+```js
+// Make Customer.prototype return Customer()
+Customer.prototype.constructor = Customer;
+```
+
+We can overwrite inherited methods to be different from the original method. <br>
+
