@@ -220,4 +220,22 @@ console.log(typeof(num2));
 // > object
 ```
 
+### Boolean
+Same situation for the **boolean**, **declaration as primitive** or **construction as an object**, both is possible. <br> 
+
+```js
+// Boolean
+const bool1 = true;
+const bool2 = new Boolean(true);
+
+console.log(bool1);
+// > true
+console.log(typeof(bool1));
+// boolean
+
+console.log(bool2);
+// > Boolean { true }
+console.log(typeof(bool2));
+//  > object
+```
 
