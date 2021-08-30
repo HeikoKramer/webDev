@@ -262,3 +262,18 @@ console.log(getSum2(2,1));
 console.log(getSum2);
 // > function anonymous(x, y)
 ```
+
+### Object
+You can **construct an object** but there is no difference between the declared and constructed result. <br>
+Both versions will be of **type Object**: <br>
+
+```js
+// Object
+const john1 = {name: "John"};
+const john2 = new Object({name: "John"});
+
+console.log(john1);
+// > Object { name: "John" }
+console.log(john2);
+// > Object { name: "John" }
+```

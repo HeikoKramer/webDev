@@ -26,15 +26,21 @@ console.log(typeof(bool2));
 const getSum1 = function(x, y){
   return x + y;
 }
+const getSum2 = new Function('x', 'y', 'return x + y');
 
 console.log(getSum1(1,1));
 // > 2
 console.log(getSum1);
 // > function getSum1(x, y)
 
-const getSum2 = new Function('x', 'y', 'return x + y');
-
 console.log(getSum2(2,1));
-// > 2
+// > 3
 console.log(getSum2);
 // > function getSum2(x, y)
+
+// Object
+const john1 = {name: "John"};
+const john2 = new Object({name: "John"});
+
+console.log(john1);
+console.log(john2);
