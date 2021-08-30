@@ -11,7 +11,8 @@ class Person {
 
 const mary = new Person('Mary', 'Miller');
 
-// console.log(mary.addNumbers(1,2));
+console.log(mary.addNumbers(1,2));
 // > Uncaught TypeError: mary.addNumbers is not a function
 
 console.log(Person.addNumbers(1,2));
+// > 3
