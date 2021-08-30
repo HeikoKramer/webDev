@@ -4,15 +4,20 @@ class Person {
     this.lastName  = lastName;
   }
 
-  static addNumbers(x, y) {
-    return x + y;
+  greetings() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
   }
 }
 
-const mary = new Person('Mary', 'Miller');
+class Customer extends Person {
+  constructor(firstName, lastName, phone, membership) {
+    super(firstName, lastName); 
 
-console.log(mary.addNumbers(1,2));
-// > Uncaught TypeError: mary.addNumbers is not a function
+    this.phone      = phone;
+    this.membership = membership;
+  }
+}
 
-console.log(Person.addNumbers(1,2));
-// > 3
+const john = new Customer('John', 'Doe', '555-555-5555', 'Gold Premium Plus');
+
+console.log(john.greetings());

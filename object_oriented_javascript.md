@@ -593,3 +593,46 @@ console.log(mary.addNumbers(1,2));
 console.log(Person.addNumbers(1,2));
 // > 3
 ```
+
+## Sub classes
+A **class** which is **extending** an other **class** is able to access the **methods** from that class. <br>
+An example for that is the **Customer class** below. It **extends the Person class**. <br>
+`john` is a `Customer` but we can use the `greetings()` function and show `john.greetings()` in the console. <br>
+We can also write individual methods for the new class. <br>
+The **extending class** can access the methods from the **extended class** – but not the other way around. <br>
+`Person.getMembershipCost()` would throw an **error** – `getMembershipCost()` is a `Customer` method and `Customer` is **not extended**. <br>
+
+```js
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName  = lastName;
+  }
+
+  greetings() {
+    return `Hello there ${this.firstName} ${this.lastName}`;
+  }
+}
+
+class Customer extends Person {
+  constructor(firstName, lastName, phone, membership) {
+    super(firstName, lastName); 
+
+    this.phone      = phone;
+    this.membership = membership;
+  }
+
+  static getMembershipCost() {
+    return 500;
+  }
+}
+
+const john = new Customer('John', 'Doe', '555-555-5555', 'Gold Premium Plus');
+
+console.log(john.greetings());
+// > Hello there John Doe
+
+console.log(Customer.getMembershipCost());
+// > 500
+```
+
