@@ -1,72 +1,29 @@
-// Number
-const num1 = 5;
-const num2 = new Number(5);
+// Object.prototype
+// Person.prototype
 
-console.log(num1);
-console.log(typeof(num1));
-
-console.log(num2);
-console.log(typeof(num2));
-
-// Boolean
-const bool1 = true;
-const bool2 = new Boolean(true);
-
-console.log(bool1);
-// > true
-console.log(typeof(bool1));
-// boolean
-
-console.log(bool2);
-// > Boolean { true }
-console.log(typeof(bool2));
-//  > object
-
-// Function
-const getSum1 = function(x, y){
-  return x + y;
+// Person constructor
+function Person(firstName, lastName, dob) {
+  this.firstName    = firstName;
+  this.lastName     = lastName;  
+  this.birthday     = new Date(dob);
+  // this.calculateAge = function(){
+  //   const diff    = Date.now() - this.birthday.getTime();
+  //   const ageDate = new Date(diff);
+  //   return Math.abs(ageDate.getUTCFullYear() - 1970);
+  // }
 }
-const getSum2 = new Function('x', 'y', 'return x + y');
 
-console.log(getSum1(1,1));
-// > 2
-console.log(getSum1);
-// > function getSum1(x, y)
+// Calculate age
+Person.prototype.calculateAge = function(){
+  const diff    = Date.now() - this.birthday.getTime();
+  const ageDate = new Date(diff);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
 
-console.log(getSum2(2,1));
-// > 3
-console.log(getSum2);
-// > function getSum2(x, y)
+const mary = new Person('Mary', 'Meyer', '1998-4-23');
+const john = new Person('John', 'Smith', '1990-8-12');
 
-// Object
-const john1 = {name: "John"};
-const john2 = new Object({name: "John"});
-
-console.log(john1);
-// > Object { name: "John" }
-console.log(john2);
-// > Object { name: "John" }
-
-// Array
-const arr1 = [1,2,3,4];
-const arr2 = new Array(1,2,3,4);
-
-console.log(arr1);
-// > Array(4) [ 1, 2, 3, 4 ]
-console.log(typeof(arr1));
-// object
-
-console.log(arr2);
-// > Array(4) [ 1, 2, 3, 4 ]
-console.log(typeof(arr2));
-//  > object
-
-// Regular Expressions
-const re1 = /\w+/;
-const re2 = new RegExp('\\w+')
-
-console.log(re1);
-// > /\w+/
-
-console.log(re2);
-// > /\w+/
+console.log(mary.calculateAge());
+// > 23
+console.log(john.calculateAge());
+// > 31

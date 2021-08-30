@@ -310,3 +310,46 @@ console.log(re1);
 console.log(re2);
 // > /\w+/
 ```
+
+## Prototypes
+Each **object** in JavaScript has a **prototype**. <br>
+A **prototype** is an **object** itself. <br>
+All objects inherit their properties and methods from their prototype. <br> 
+When you're dealing with object literals, then you're inheriting from an object called object.prototype. <br>
+<br>
+Let's have a look on the **person contructor** that we have used in an example before. <br>
+We have put the `calculateAge` **function** there. That function is identical for every person, it's a formula. <br>
+Such general, for all records identical, properties, should be part of the **Person.prototype**. <br>
+So let's comment let's comment out the original `calculateAge` and put it into the **prototype**: <br>
+
+```js
+// Object.prototype
+// Person.prototype
+
+// Person constructor
+function Person(firstName, lastName, dob) {
+  this.firstName    = firstName;
+  this.lastName     = lastName;  
+  this.birthday     = new Date(dob);
+  // this.calculateAge = function(){
+  //   const diff    = Date.now() - this.birthday.getTime();
+  //   const ageDate = new Date(diff);
+  //   return Math.abs(ageDate.getUTCFullYear() - 1970);
+  // }
+}
+
+// Calculate age
+Person.prototype.calculateAge = function(){
+  const diff    = Date.now() - this.birthday.getTime();
+  const ageDate = new Date(diff);
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+const mary = new Person('Mary', 'Meyer', '1998-4-23');
+const john = new Person('John', 'Smith', '1990-8-12');
+
+console.log(mary.calculateAge());
+// > 23
+console.log(john.calculateAge());
+// > 31
+```
