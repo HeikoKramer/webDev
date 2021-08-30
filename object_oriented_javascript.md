@@ -239,3 +239,26 @@ console.log(typeof(bool2));
 //  > object
 ```
 
+### Function
+You can even **construct a function**. <br>
+The **last set of arguments** will be the **function body**. <br>
+See in our example below the same function, 1 x declared and 1 x constructed. <br>
+**NOTE:** The **constructed** function is not of type **object** as the constructed primitives were, it is of type **anonymous function**. <br>
+
+```js
+// Function
+const getSum1 = function(x, y){
+  return x + y;
+}
+const getSum2 = new Function('x', 'y', 'return x + y');
+
+console.log(getSum1(1,1));
+// > 2
+console.log(getSum1);
+// > function getSum1(x, y)
+
+console.log(getSum2(2,1));
+// > 3
+console.log(getSum2);
+// > function anonymous(x, y)
+```
