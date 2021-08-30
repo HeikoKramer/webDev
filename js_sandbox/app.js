@@ -43,4 +43,30 @@ const john1 = {name: "John"};
 const john2 = new Object({name: "John"});
 
 console.log(john1);
+// > Object { name: "John" }
 console.log(john2);
+// > Object { name: "John" }
+
+// Array
+const arr1 = [1,2,3,4];
+const arr2 = new Array(1,2,3,4);
+
+console.log(arr1);
+// > Array(4) [ 1, 2, 3, 4 ]
+console.log(typeof(arr1));
+// object
+
+console.log(arr2);
+// > Array(4) [ 1, 2, 3, 4 ]
+console.log(typeof(arr2));
+//  > object
+
+// Regular Expressions
+const re1 = /\w+/;
+const re2 = new RegExp('\\w+')
+
+console.log(re1);
+// > /\w+/
+
+console.log(re2);
+// > /\w+/
