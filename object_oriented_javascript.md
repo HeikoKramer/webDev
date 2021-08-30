@@ -522,3 +522,49 @@ const brad = Object.create(personPrototypes, {
 console.log(brad.greeting());
 // > Hello Brad Traversy
 ```
+
+## ES6 classes
+In *ES6* there is an other way to define objects – **classes**. <br>
+The **class** is just an other syntax to introduce an **object**, with **properties** and **methods**. <br> 
+Note that the `this` keyword can be used anywhere within the class. <br>
+In the example below we see our Person object as we have used it in previous examples, but now declared as a class. <br>
+
+```js
+class Person {
+  constructor(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName  = lastName;
+    this.birthday  = new Date(dob);
+  }
+
+  greeting() {
+    return `Hello ${this.firstName} ${this.lastName}`;
+  }
+
+  calculateAge() {
+    const diff = Date.now() - this.birthday.getTime();
+    const ageDate = new Date(diff);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
+
+  getsMarried(newLastName) {
+    this.lastName = newLastName;
+  }
+}
+
+const mary = new Person('Mary', 'Miller', '1980-11-13');
+
+console.log(mary);
+// > Object { firstName: "Mary", lastName: "Miller" }
+console.log(mary.greeting());
+// > Hello Mary Miller
+
+console.log(mary.birthday);
+// > Date Thu Nov 13 1980 01:00:00 GMT+0100 (Central European Standard Time)
+console.log(mary.calculateAge());
+// > 40
+
+mary.getsMarried('Bush');
+console.log(mary.greeting());
+// > Hello Mary Bush
+```
