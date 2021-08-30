@@ -35,7 +35,9 @@ const john = new Person('John', 'Smith', '1990-8-12');
 
 john.getsMarried(mary.lastName);
 
-console.log(mary.getFullName());
-// > Mary Miller
-console.log(john.getFullName());
-// > John Smith
+console.log('firstName: '    + mary.hasOwnProperty('firstName'));
+console.log('lastName: '     + mary.hasOwnProperty('lastName'));
+console.log('birthday: '     + mary.hasOwnProperty('birthday'));
+console.log('calculateAge: ' + mary.hasOwnProperty('calculateAge'));
+console.log('getFullName: '  + mary.hasOwnProperty('getFullName'));
+console.log('getsMarried: '  + mary.hasOwnProperty('getsMarried'));

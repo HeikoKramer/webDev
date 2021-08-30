@@ -391,3 +391,19 @@ console.log(mary.getFullName());
 console.log(john.getFullName());
 // > John Meyer
 ```
+
+We can check if a property belongs to the **object** or to the **prototype**: <br>
+
+```js
+console.log('firstName: '    + mary.hasOwnProperty('firstName'));
+console.log('lastName: '     + mary.hasOwnProperty('lastName'));
+console.log('birthday: '     + mary.hasOwnProperty('birthday'));
+console.log('calculateAge: ' + mary.hasOwnProperty('calculateAge'));
+console.log('getFullName: '  + mary.hasOwnProperty('getFullName'));
+console.log('getsMarried: '  + mary.hasOwnProperty('getsMarried'));
+```
+
+The methods we have written in the **prototype** return **false** when we check it with `hasOwnProperty` on the **person** record. <br>
+It is a property of the prototype. <br> 
+
+![object-or-prototype](/images/object-or-prototype.png)
