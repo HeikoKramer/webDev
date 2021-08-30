@@ -173,3 +173,30 @@ console.log(typeof(name2));
 The property **foo** has been added to the **string object** name2, but had no effect on the **primitive string** name1: <br>
 
 ![string-object](/images/string-object.png)
+
+
+So let's have a look at when we run into problems. <br>
+In the example below we check `if(name1 === 'Jeff')` and `if(name2 === 'Jeff')`. <br>
+Both have the **value** of *Jeff*, but the evaluation is only **true** for name1. <br>
+name2 is of the type **object**, not string, and the triple **===** sign checks both, **value & type**. <br>
+The double **==** checks only for the value, so `if(name2 == 'Jeff')` would evaluate **true**. <br>
+
+```js
+// String
+const name1 = 'Jeff';
+const name2 = new String('Jeff');
+
+if(name1 === 'Jeff'){
+  console.log('name1 is equal to "Jeff"');
+} else {
+  console.log('name1 is NOT equal to "Jeff"');
+}
+// > name1 is equal to "Jeff"
+
+if(name2 === 'Jeff'){
+  console.log('name2 is equal to "Jeff"');
+} else {
+  console.log('name2 is NOT equal to "Jeff"');
+}
+// > name2 is NOT equal to "Jeff"
+```
