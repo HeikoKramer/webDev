@@ -568,3 +568,28 @@ mary.getsMarried('Bush');
 console.log(mary.greeting());
 // > Hello Mary Bush
 ```
+
+### Static methods
+A **static method** is a method that doesn't make use of the `this` keyword. <br>
+It is static and can not be called from a person record, only directly via the object: <br>
+
+```js
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName  = lastName;
+  }
+
+  static addNumbers(x, y) {
+    return x + y;
+  }
+}
+
+const mary = new Person('Mary', 'Miller');
+
+console.log(mary.addNumbers(1,2));
+// > Uncaught TypeError: mary.addNumbers is not a function
+
+console.log(Person.addNumbers(1,2));
+// > 3
+```
