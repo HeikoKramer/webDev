@@ -20,10 +20,15 @@ Person.prototype.calculateAge = function(){
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
+// Get full name
+Person.prototype.getFullName = function(){
+  return `${this.firstName} ${this.lastName}`
+}
+
 const mary = new Person('Mary', 'Meyer', '1998-4-23');
 const john = new Person('John', 'Smith', '1990-8-12');
 
-console.log(mary.calculateAge());
+console.log(mary.getFullName());
 // > 23
-console.log(john.calculateAge());
+console.log(john.getFullName());
 // > 31

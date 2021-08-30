@@ -353,3 +353,20 @@ console.log(mary.calculateAge());
 console.log(john.calculateAge());
 // > 31
 ```
+
+ Let's add another method to the `Person.prototype`, here we are using a function to return the full name: <br>
+
+```js
+// Get full name
+Person.prototype.getFullName = function(){
+  return `${this.firstName} ${this.lastName}`
+}
+
+const mary = new Person('Mary', 'Meyer', '1998-4-23');
+const john = new Person('John', 'Smith', '1990-8-12');
+
+console.log(mary.getFullName());
+// > Mary Meyer
+console.log(john.getFullName());
+// > John Smith
+```
