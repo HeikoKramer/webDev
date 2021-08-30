@@ -129,3 +129,26 @@ const brad = new Person('Brad', '1981-9-10');
 console.log(brad.calculateAge());
 // > 39
 ```
+
+## Built in constructors
+There are multiple **core objects** in JavaScript, which have **built in constructors**. <br>
+Most of them are not advisable to use. Primitives like **numbers** or **booleans** can actually be created as objects, but that can be confusing and come with problems later in the code, like issues when comparing with the **strict equality operator (===)**. <br>
+### String
+Here an example for the **string** primitive. <br>
+A string can just be **assigned** to a variable, as you'd usually do it. <br>
+But it can as well be **constructed** as shown below. <br>
+**NOTE:** Our second **string** is of type **object** and therefore different to our primitive string. <br>
+
+```js
+// String
+const name1 = 'Jeff';
+const name2 = new String('Jonas');
+
+console.log(name1);
+console.log(typeof(name1));
+
+console.log(name2);
+console.log(typeof(name2));
+```
+
+![constructed-string](/images/constructed-string.png)

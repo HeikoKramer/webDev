@@ -1,16 +1,11 @@
-// Person constructor
-function Person(name, dob) {
-  this.name            = name;
-  this.birthday        = new Date(dob);
-  this.calculateAge    = function(){
-    const diff    = Date.now() - this.birthday.getTime();
-    const ageDate = new Date(diff);
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
-  }
-}
+// String
 
-const brad = new Person('Brad', '1981-9-10');
+const name1 = 'Jeff';
+const name2 = new String('Jonas');
 
-console.log(brad.calculateAge());
-// > 22
+console.log(name1);
+console.log(typeof(name1));
+
+console.log(name2);
+console.log(typeof(name2));
 
