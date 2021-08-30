@@ -370,3 +370,24 @@ console.log(mary.getFullName());
 console.log(john.getFullName());
 // > John Smith
 ```
+
+We can also **manipulate data** with an object's **prototype method**. <br>
+The example shows a new method `getsMarried` where we set a new last name. <br>
+*john* `getsMaried` to *mary*, we pass over her queried `lastName` as an **argument** and this overwrites `john.lastName`. <br>
+
+```js
+// Gets married
+Person.prototype.getsMarried = function(newLastName){
+  this.lastName = newLastName;
+}
+
+const mary = new Person('Mary', 'Meyer', '1998-4-23');
+const john = new Person('John', 'Smith', '1990-8-12');
+
+john.getsMarried(mary.lastName);
+
+console.log(mary.getFullName());
+// > Mary Meyer
+console.log(john.getFullName());
+// > John Meyer
+```

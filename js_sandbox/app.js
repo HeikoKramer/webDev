@@ -25,10 +25,17 @@ Person.prototype.getFullName = function(){
   return `${this.firstName} ${this.lastName}`
 }
 
+// Gets married
+Person.prototype.getsMarried = function(newLastName){
+  this.lastName = newLastName;
+}
+
 const mary = new Person('Mary', 'Meyer', '1998-4-23');
 const john = new Person('John', 'Smith', '1990-8-12');
 
+john.getsMarried(mary.lastName);
+
 console.log(mary.getFullName());
-// > 23
+// > Mary Miller
 console.log(john.getFullName());
-// > 31
+// > John Smith
