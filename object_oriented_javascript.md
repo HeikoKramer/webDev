@@ -152,3 +152,22 @@ console.log(typeof(name2));
 ```
 
 ![constructed-string](/images/constructed-string.png)
+
+Now that the second string is an **object**, you can assign properties to it: <br>
+
+```js
+// String
+const name1 = 'Jeff';
+name1.foo   = 'bar';
+
+const name2 = new String('Jonas');
+name2.foo   = 'bar';
+
+console.log(name1);
+console.log(typeof(name1));
+
+console.log(name2);
+console.log(typeof(name2));
+```
+
+![string-object](/images/string-object.png)
