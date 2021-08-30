@@ -170,4 +170,6 @@ console.log(name2);
 console.log(typeof(name2));
 ```
 
+The property **foo** has been added to the **string object** name2, but had no effect on the **primitive string** name1: <br>
+
 ![string-object](/images/string-object.png)
