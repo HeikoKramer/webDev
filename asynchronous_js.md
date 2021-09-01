@@ -100,7 +100,8 @@ function  loadData() {
 
 ![http200](/images/http200.gif)
 
-If we try to load *datas.txt*, we get a **404** status code and our *bad request* console message, as that file doesn't exist.
+If we try to load *datas.txt*, we get a **404** status code and our *bad request* console message, as that file doesn't exist. <br>
+
 ![http404](/images/http404.gif)
 
 
