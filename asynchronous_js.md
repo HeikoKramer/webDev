@@ -18,7 +18,7 @@ There are a few ways to work with asynchronous code: <br>
 * Promises
 * Async/Await
 
-## Ajax
+## Ajax & XHR intro
 ### What is **Ajax**?
 * Asynchronous JavaScript & XML
 * Set of web technologies
@@ -37,3 +37,15 @@ There is **no page reload required** to **fetch data**. <br>
 * Methods transfer data between client / server
 * Can be used with other protocols than HTTP
 * Can work with data other than XML (JSON, plain text)
+
+### Libraries & other methods
+* Fetch API
+* Axios
+* Superagent
+* jQuery
+* Node HTTP
+
+The **Fetch API** is part of core JavaScript and therewith part of your browser. <br>
+Then there are **external libraries** to do requests, like **Axios**, **Superagent**, **jQuery** or **Node HTTP** if you're on Node.js. <br>
+jQuery is a full DOM manipulation library, so just using it for Ajax doesn't make much sense. <br>
+
