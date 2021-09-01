@@ -7,12 +7,19 @@ function  loadData() {
   // Open
   xhr.open('GET', 'datas.txt', true);
 
-  xhr.onload = function() {
+  // xhr.onload = function() {
+  //   console.log(this.status);
+  //   if(this.status === 200) {
+  //     console.log(this.responseText);
+  //   } else {
+  //     console.log("bad request");
+  //   }
+  // }
+
+  xhr.onreadystatechange = function() {
     console.log(this.status);
-    if(this.status === 200) {
+    if(this.status === 200 && this.readyState === 4) {
       console.log(this.responseText);
-    } else {
-      console.log("bad request");
     }
   }
 

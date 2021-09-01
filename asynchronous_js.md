@@ -104,4 +104,23 @@ If we try to load *datas.txt*, we get a **404** status code and our *bad request
 
 ![http404](/images/http404.gif)
 
+`onload` is a rather new feature, before you had to validate the `readyState` value number **4**, as shown below: <br>
+
+```js
+// readyState Version
+xhr.onreadystatechange = function() {
+  console.log(this.status);
+  if(this.status === 200 && this.readyState === 4) {
+    console.log(this.responseText);
+  }
+}
+
+// readyState Values
+// 0: request not initialized
+// 1: server connection established
+// 2: request received
+// 3: processing request
+// 4: request finished and response is ready
+```
+
 
