@@ -50,4 +50,57 @@ Then there are **external libraries** to do requests, like **Axios**, **Superage
 jQuery is a full DOM manipulation library, so just using it for Ajax doesn't make much sense. <br>
 
 ## XHR object methods & working with text
+To use **XHR** create first a **XMLHttp request**: `const xhr = new XMLHttpRequest()` <br>
+We are initiating XHR like any other object. It hat properties and methods associated with it. <br>
+One of those methods is `open(type of request: string, url/filename: string, async: boolean)`. <br>
+In the example below, we are … <br>
+* we have an event listener on click of our button
+* which calls the `loadData()` function  
+* where we create a new instance of the **xhr object**
+* we call the `open()` function, passing in …
+  * the **type of request** – *GET* (read the file)
+  * the source / file what we are **reading in** – *data.txt*
+  * the **boolean** determine if **async** – *true*
+* `onload` contains the **response**
+  * here we check for the **status**  
+    * if its *200* (which means *Ok*), we display the loaded text in the console
+    * else we display *bad request* in the console
+* `send()` has to be included to actual **send** and make everything work
+
+```js
+document.getElementById('button').addEventListener('click', loadData);
+
+function  loadData() {
+  // Create an XHR Object
+  const xhr = new XMLHttpRequest();
+
+  // Open
+  xhr.open('GET', 'data.txt', true);
+
+  xhr.onload = function() {
+    console.log(this.status);
+    if(this.status === 200) {
+      console.log(this.responseText);
+    } else {
+      console.log("bad request");
+    }
+  }
+
+  // Send
+  xhr.send();
+}
+
+  // HTTP Statuses
+    // 200: "OK"
+    // 403: "Forbidden"
+    // 404: "Not Found"
+```
+
+*data.txt* has been loaded successfully (HTTP Status **200**) and is displayed in the console: <br>
+
+![http200](/images/http200.gif)
+
+If we try to load *datas.txt*, we get a **404** status code and our *bad request* console message, as that file doesn't exist.
+![http404](/images/http404.gif)
+
 
