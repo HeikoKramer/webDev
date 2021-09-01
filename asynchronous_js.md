@@ -30,3 +30,10 @@ Ajax **makes async requests in the background**. <br>
 There is **no page reload required** to **fetch data**. <br>
 
 ![ajax](/images/ajax.png)
+
+### XMLHttpRequest (XHR Object)
+* API in the form of an object
+* Provided by the browsers JS environment
+* Methods transfer data between client / server
+* Can be used with other protocols than HTTP
+* Can work with data other than XML (JSON, plain text)
