@@ -2159,3 +2159,6 @@ I've excluded [my notes on the DOCUMENT OBJECT MODEL](https://github.com/HeikoKr
 
 ## Object Oriented JavaScript
 [Click here for my notes on **object oriented JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/object_oriented_javascript.md) 
+
+## Asynchronous JavaScript
+[Click here for my notes on **asynchronous JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/asynchronous_js.md)
