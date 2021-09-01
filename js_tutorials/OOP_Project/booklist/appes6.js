@@ -154,5 +154,3 @@ document.getElementById('book-list').addEventListener('click', function(e) {
 
   e.preventDefault();
 })
-
-// 10:28
