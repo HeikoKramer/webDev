@@ -49,3 +49,5 @@ The **Fetch API** is part of core JavaScript and therewith part of your browser.
 Then there are **external libraries** to do requests, like **Axios**, **Superagent**, **jQuery** or **Node HTTP** if you're on Node.js. <br>
 jQuery is a full DOM manipulation library, so just using it for Ajax doesn't make much sense. <br>
 
+## XHR object methods & working with text
+
