@@ -3,3 +3,18 @@
 *This document is an extension to my [JavaScript Notes 2](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes_2.md). <br>
 I'm writing these notes while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com* 
 
+## What is asynchronous programming?
+To understand the need for **asynchronous** programming, it is essential to take a look at **synchronous** programming first. <br>
+**Synchronous** programming means that you can run into **blocking code** – a bottleneck, like the response of a called server, which delays the execution of further code within your application. <br>
+**Asynchronous** programming provides methods, like passing in a **call back function**, to overcome such bottlenecks and keep our code execution going. <br>
+As an outcome of this, **asynchronous** code will execute faster. <br>
+Most asynchronous code will be part of an **API** or **library**: <br>
+* XMLHttpRequest & Fetch
+* jQuery Ajax, Axios, other HTTP libraries
+* Node.js fs (filesystem) module
+
+There are a few ways to work with asynchronous code: <br>
+* Callbacks
+* Promises
+* Async/Await
+
