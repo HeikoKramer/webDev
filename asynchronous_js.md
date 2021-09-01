@@ -18,3 +18,15 @@ There are a few ways to work with asynchronous code: <br>
 * Promises
 * Async/Await
 
+## Ajax
+### What is **Ajax**?
+* Asynchronous JavaScript & XML
+* Set of web technologies
+* Send & Receive data asynchronously
+* Does not interfere with current page
+* JSON has replaced XML for the most part
+
+Ajax **makes async requests in the background**. <br>
+There is **no page reload required** to **fetch data**. <br>
+
+![ajax](/images/ajax.png)
