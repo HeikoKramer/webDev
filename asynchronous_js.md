@@ -123,7 +123,7 @@ xhr.onreadystatechange = function() {
 // 4: request finished and response is ready
 ```
 
-With `onload` it is not required anylonger to make checks for the `readyState`. <br>
+With `onload` it is not required any longer to make checks for the `readyState`. <br>
 `onload` is only called when `readyState` **4** is reached – by default. <br>
 
 ```js
@@ -149,4 +149,15 @@ function  loadData() {
       // > READYSTATE 4
     }
   }
+```
+
+You can execute something at `readyState` **3** with `onprogress`. <br>
+This is often used to indicate a loading progress to the user. <br>
+
+```js
+// Optional – used for spinners / loaders
+xhr.onprogress = function() {
+  console.log('READYSTATE', xhr.readyState);
+  // > READYSTATE 3
+}
 ```

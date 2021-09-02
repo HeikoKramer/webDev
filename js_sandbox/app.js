@@ -10,6 +10,11 @@ function  loadData() {
   console.log('READYSTATE', xhr.readyState);
   // > READYSTATE 1
 
+  xhr.onprogress = function() {
+    console.log('READYSTATE', xhr.readyState);
+    // > READYSTATE 3
+  }
+
   xhr.onload = function() {
     console.log(this.status);
     if(this.status === 200) {
