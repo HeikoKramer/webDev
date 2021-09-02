@@ -161,3 +161,11 @@ xhr.onprogress = function() {
   // > READYSTATE 3
 }
 ```
+
+**Errors** can be handled with `onerror` – this will catch the error and you can execute code when it appears. <br>
+
+```js
+  xhr.onerror = function(){
+    console.log('Request Error');
+  }
+```

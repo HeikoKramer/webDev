@@ -5,11 +5,12 @@ function  loadData() {
   const xhr = new XMLHttpRequest();
 
   // Open
-  xhr.open('GET', 'datas.txt', true);
+  xhr.open('GET', 'data.txt', true);
 
   console.log('READYSTATE', xhr.readyState);
   // > READYSTATE 1
 
+  // Optional – used for spinners / loaders
   xhr.onprogress = function() {
     console.log('READYSTATE', xhr.readyState);
     // > READYSTATE 3
@@ -26,6 +27,11 @@ function  loadData() {
       console.log('READYSTATE', xhr.readyState);
       // > READYSTATE 4
     }
+  }
+
+  xhr.onerror = function(){
+    console.log('READYSTATE', xhr.readyState);
+    console.log('Request Error');
   }
 
 
