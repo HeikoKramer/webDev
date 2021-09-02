@@ -123,4 +123,30 @@ xhr.onreadystatechange = function() {
 // 4: request finished and response is ready
 ```
 
+With `onload` it is not required anylonger to make checks for the `readyState`. <br>
+`onload` is only called when `readyState` **4** is reached – by default. <br>
 
+```js
+function  loadData() {
+  // Create an XHR Object
+  const xhr = new XMLHttpRequest();
+
+  // Open
+  xhr.open('GET', 'datas.txt', true);
+
+  console.log('READYSTATE', xhr.readyState);
+  // > READYSTATE 1
+
+  xhr.onload = function() {
+    console.log(this.status);
+    if(this.status === 200) {
+      console.log(this.responseText);
+      console.log('READYSTATE', xhr.readyState);
+      // > READYSTATE 4
+    } else {
+      console.log("bad request");
+      console.log('READYSTATE', xhr.readyState);
+      // > READYSTATE 4
+    }
+  }
+```

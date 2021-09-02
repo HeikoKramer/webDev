@@ -7,21 +7,22 @@ function  loadData() {
   // Open
   xhr.open('GET', 'datas.txt', true);
 
-  // xhr.onload = function() {
-  //   console.log(this.status);
-  //   if(this.status === 200) {
-  //     console.log(this.responseText);
-  //   } else {
-  //     console.log("bad request");
-  //   }
-  // }
+  console.log('READYSTATE', xhr.readyState);
+  // > READYSTATE 1
 
-  xhr.onreadystatechange = function() {
+  xhr.onload = function() {
     console.log(this.status);
-    if(this.status === 200 && this.readyState === 4) {
+    if(this.status === 200) {
       console.log(this.responseText);
+      console.log('READYSTATE', xhr.readyState);
+      // > READYSTATE 4
+    } else {
+      console.log("bad request");
+      console.log('READYSTATE', xhr.readyState);
+      // > READYSTATE 4
     }
   }
+
 
   // Send
   xhr.send();
