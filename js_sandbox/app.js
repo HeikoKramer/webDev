@@ -1,41 +1,16 @@
 document.getElementById('button').addEventListener('click', loadData);
 
 function  loadData() {
-  // Create an XHR Object
   const xhr = new XMLHttpRequest();
 
-  // Open
   xhr.open('GET', 'data.txt', true);
 
-  console.log('READYSTATE', xhr.readyState);
-  // > READYSTATE 1
-
-  // Optional – used for spinners / loaders
-  xhr.onprogress = function() {
-    console.log('READYSTATE', xhr.readyState);
-    // > READYSTATE 3
-  }
-
   xhr.onload = function() {
-    console.log(this.status);
     if(this.status === 200) {
-      console.log(this.responseText);
-      console.log('READYSTATE', xhr.readyState);
-      // > READYSTATE 4
-    } else {
-      console.log("bad request");
-      console.log('READYSTATE', xhr.readyState);
-      // > READYSTATE 4
+      document.getElementById('output').innerHTML = `<h1>${this.responseText}</h1>`;
     }
   }
 
-  xhr.onerror = function(){
-    console.log('READYSTATE', xhr.readyState);
-    console.log('Request Error');
-  }
-
-
-  // Send
   xhr.send();
 }
 
