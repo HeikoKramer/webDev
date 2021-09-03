@@ -361,11 +361,13 @@ function getJokes(e) {
 * All APIs have their own rules and structures
 
 ### HTTP Requests
-* **GET**: Retrieve data from a specific resource
-* **POST**: Submit data to be processed to a specified resource
-* **PUT**: Update a specified resource
-* **DELETE**: Delete a specified resource
+* `GET`: Retrieve data from a specific resource
+* `POST`: Submit data to be processed to a specified resource
+* `PUT`: Update a specified resource
+* `DELETE`: Delete a specified resource
 
-* **HEAD**: Same as get but does not return body
-* **OPTIONS**: Returns the supported HTTP methods
-* **PATCH**: Update partial resources
+* `HEAD`: Same as get but does not return body
+* `OPTIONS`: Returns the supported HTTP methods
+* `PATCH`: Update partial resources
+
+
