@@ -374,9 +374,9 @@ function getJokes(e) {
 Here some examples how an **API endpoint** could look like. <br>
 Note that the URLs look the same, but the type of request specifies the action you're undertaking with your call. <br>
 
-**GET**        https://someurl.com/api/users       //Get all users
-**GET**        https://someurl.com/api/users/1     //Get single user
-**POST**       https://someurl.com/api/users       //Add user
-**PUT**        https://someurl.com/api/users/1     //Update user
-**DELETE**     https://someurl.com/api/users/1     //Delete user
+**GET**        https://someurl.com/api/users       //Get all users <br>
+**GET**        https://someurl.com/api/users/1     //Get single user <br>
+**POST**       https://someurl.com/api/users       //Add user <br>
+**PUT**        https://someurl.com/api/users/1     //Update user <br>
+**DELETE**     https://someurl.com/api/users/1     //Delete user <br>
 
