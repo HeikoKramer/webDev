@@ -305,3 +305,6 @@ function loadCustomers(e) {
   xhr.send();
 }
 ```
+
+## Data from an external API
+
