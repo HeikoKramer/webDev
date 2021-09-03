@@ -198,9 +198,8 @@ function  loadData() {
 In JSON, all **keys** have to be wrapped in **double quotes** (`"id": 12345`). <br>
 All **strings** have to be wrapped in **double quotes** either (`"firstName": "Heiko"`) <br>
 
-Here is an example how to output a list with multiple attributes of customer to the browser window, that has been called from a JSON file: <br>
-
-*customer.json*
+Here is an example how to output a list with multiple attributes of customer to the browser window. <br>
+That has customer has been called from the *customer.json* file: <br>
 
 ```json
 {
@@ -210,6 +209,8 @@ Here is an example how to output a list with multiple attributes of customer to 
   "phone": "444-555-6666"
 }
 ```
+
+We have to `JSON.parse` the file, before we can access the attributes and inject it as HTML: <br>
 
 ```js
 document.getElementById('button1'),addEventListener('click', loadCustomer);
