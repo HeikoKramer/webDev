@@ -196,7 +196,7 @@ function  loadData() {
 ### JSON
 **JSON** = **J**ava**S**cript **O**bject **N**otation
 In JSON, all **keys** have to be wrapped in **double quotes** (`"id": 12345`). <br>
-All **strings** have to be wrapped in **double quotes** either (`"firstName": "Heiko"`) <br>
+All **strings** have to be wrapped in **double quotes** either (`"firstName": "Heiko"`). <br>
 
 Here is an example how to output a list with multiple attributes of customer to the browser window. <br>
 That has customer has been called from the *customer.json* file: <br>
@@ -241,3 +241,67 @@ function loadCustomer(e) {
 ```
 
 ![json-parse](/images/json-parse.gif)
+
+### JSON array
+An **JSON array** is wrapped **square brakets** `[]`, the individual array elements are wrapped in **curly brackets** `{}`. <br>
+The array elements are separated with a comma. <br>
+Here our *customers.json* file, that contains three individual customers: <br>
+
+```js
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "company": "123 Designs",
+    "phone": "444-555-6666"
+  },
+  {
+    "id": 2,
+    "name": "Steve McCoy",
+    "company": "ABC Corp",
+    "phone": "555-444-7777"
+  },
+  {
+    "id": 3,
+    "name": "Kim Lee",
+    "company": "Tea-Kwon-Donuts Inc",
+    "phone": "333-555-4444"
+  }
+]
+```
+
+In the example below, we load an **array** of **multiple customers** from *customers.json*. <br>
+Then we loop through that list of objects, assign the object's attributes to HTML list elements and **append** each customer to the output. <br>
+
+```js
+document.getElementById('button2'),addEventListener('click', loadCustomers);
+
+function loadCustomers(e) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', 'customers.json', true);
+
+  let output = '';
+
+  xhr.onload = function(){
+    if(this.status == 200) {
+      const customers = JSON.parse(this.responseText);
+
+      customers.forEach(function(customer){
+      output += `
+      <ul>
+        <li>ID: ${customer.id}</li>
+        <li>Name: ${customer.name}</li>
+        <li>Company: ${customer.company}</li>
+        <li>Phone: ${customer.phone}</li>
+      </ul>
+      `;
+      });
+
+      document.getElementById('customers').innerHTML = output;
+    }
+  }
+
+  xhr.send();
+}
+```
