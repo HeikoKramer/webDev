@@ -385,4 +385,59 @@ A **callback** is simply a function that is passed in as a **parameter** to an o
 So whenever we call a function within a `forEach` for example .. that's actually a **callback**. <br>
 That particular function is not asynchronous, it stops everything from happening until it's done. <br>
 
+Two examples, here the synchronous way: <br>
 
+```js
+const posts = [
+  {title: 'Post One', body: 'This is post one'},
+  {title: 'Post Two', body: 'This is post two'}
+];
+
+function createPost(post) {
+  setTimeout(function() {
+    posts.push(post);
+  }, 2000);
+}
+
+function getPosts() {
+  setTimeout(function() {
+    let output = '';
+    posts.forEach(function(post) {
+      output += `<li>${post.title}</li>`
+    });
+    document.body.innerHTML = output;
+  }, 1000);
+}
+
+createPost({title: 'Post Three', body: 'This is post three'});
+
+getPosts();
+```
+
+Asynchronously with a **callback function**, now the third post appears as well: <br>
+
+```js
+const posts = [
+  {title: 'Post One', body: 'This is post one'},
+  {title: 'Post Two', body: 'This is post two'}
+];
+
+function createPost(post, callback) {
+  setTimeout(function() {
+    posts.push(post);
+    callback();
+  }, 2000);
+}
+
+function getPosts() {
+  setTimeout(function() {
+    let output = '';
+    posts.forEach(function(post) {
+      output += `<li>${post.title}</li>`
+    });
+    document.body.innerHTML = output;
+  }, 1000);
+}
+
+createPost({title: 'Post Three', body: 'This is post three'}, getPosts);
+```
