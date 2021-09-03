@@ -200,6 +200,8 @@ All **strings** have to be wrapped in **double quotes** either (`"firstName": "H
 
 Here is an example how to output a list with multiple attributes of customer to the browser window, that has been called from a JSON file: <br>
 
+*customer.json*
+
 ```json
 {
   "id": 1,
