@@ -345,3 +345,17 @@ function getJokes(e) {
 ```
 
 ![chuck-norris](/images/chuck-norris.gif)
+
+## REST APIs & HTTP Requests
+### What is an API?
+* **A**pplication **P**rogramming **I**nterface
+* Contract provided by one piece of software to another
+* Structured request and response
+
+### What is REST?
+* **Re**presentational **S**tate **T**ransfer
+* Architecture style for designing networked applications
+* Relies on a stateless, client-server protocol, **almost always HTTP**
+* Treats server objects as resources that can be created or destroyed
+* Can be used by virtually any programming language
+* All APIs have their own rules and structures
