@@ -380,3 +380,9 @@ Note that the URLs look the same, but the type of request specifies the action y
 **PUT**        https://someurl.com/api/users/1     //Update user <br>
 **DELETE**     https://someurl.com/api/users/1     //Delete user <br>
 
+## Callback Functions
+A **callback** is simply a function that is passed in as a **parameter** to an other function and than it's **run inside that function's body**. <br>
+So whenever we call a function within a `forEach` for example .. that's actually a **callback**. <br>
+That particular function is not asynchronous, it stops everything from happening until it's done. <br>
+
+
