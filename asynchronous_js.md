@@ -359,3 +359,13 @@ function getJokes(e) {
 * Treats server objects as resources that can be created or destroyed
 * Can be used by virtually any programming language
 * All APIs have their own rules and structures
+
+### HTTP Requests
+* **GET**: Retrieve data from a specific resource
+* **POST**: Submit data to be processed to a specified resource
+* **PUT**: Update a specified resource
+* **DELETE**: Delete a specified resource
+
+* **HEAD**: Same as get but does not return body
+* **OPTIONS**: Returns the supported HTTP methods
+* **PATCH**: Update partial resources
