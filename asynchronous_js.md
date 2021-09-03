@@ -191,3 +191,50 @@ function  loadData() {
 ```
 
 ![onload](/images/onload.gif)
+
+## Working with Ajax & JSON
+### JSON
+**JSON** = **J**ava**S**cript **O**bject **N**otation
+In JSON, all **keys** have to be wrapped in **double quotes** (`"id": 12345`). <br>
+All **strings** have to be wrapped in **double quotes** either (`"firstName": "Heiko"`) <br>
+
+Here is an example how to output a list with multiple attributes of customer to the browser window, that has been called from a JSON file: <br>
+
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "company": "123 Designs",
+  "phone": "444-555-6666"
+}
+```
+
+```js
+document.getElementById('button1'),addEventListener('click', loadCustomer);
+
+function loadCustomer(e) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', 'customer.json', true);
+
+  xhr.onload = function(){
+    if(this.status == 200) {
+      const customer = JSON.parse(this.responseText);
+      const output = `
+      <ul>
+        <li>ID: ${customer.id}</li>
+        <li>Name: ${customer.name}</li>
+        <li>Company: ${customer.company}</li>
+        <li>Phone: ${customer.phone}</li>
+      </ul>
+      `;
+
+      document.getElementById('customer').innerHTML = output;
+    }
+  }
+
+  xhr.send();
+}
+```
+
+![json-parse](/images/json-parse.gif)
