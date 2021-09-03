@@ -307,4 +307,41 @@ function loadCustomers(e) {
 ```
 
 ## Data from an external API
+In the example below we query a specific number of Chuck Norris jokes via an appropriate API. <br>
+We inject those jokes into the DOM and display them in the browser window: <br>
 
+```js
+document.querySelector('.get-jokes').addEventListener('click', getJokes);
+ 
+function getJokes(e) {
+  const number = document.querySelector('input[type="number"]').value;
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
+
+  xhr.onload = function() {
+    if(this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      
+      let output = '';
+
+      if(response.type === 'success') {
+        response.value.forEach(function(joke){
+          output += `<li>${joke.joke}</li>`
+        });
+      } else {
+        output += '<li>Something went wrong</li>';
+      }
+
+      document.querySelector('.jokes').innerHTML = output;
+    }
+  }
+
+  xhr.send();
+
+  e.preventDefault();
+}
+```
+
+![chuck-norris](/images/chuck-norris.gif)
