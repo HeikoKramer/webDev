@@ -441,3 +441,50 @@ function getPosts() {
 
 createPost({title: 'Post Three', body: 'This is post three'}, getPosts);
 ```
+
+## ES6 Promises
+**Promises** are part of the **ES6** standard and an alternative way to **callbacks** to handle asynchronous operations. <br>
+While they are handling asynchronous operations, they can **promise** to do something **when the operation is finished**. <br>
+We handle a **promise response** with a `.then()` – inside there define what happens when the promise is complete. <br>
+<br>
+In the example below, we add a promise to the `createPost` function. <br>
+If its successful we'll call the `getPosts` function, else we will throw an error. <br>
+
+```js
+const posts = [
+  {title: 'Post One', body: 'This is post one'},
+  {title: 'Post Two', body: 'This is post two'}
+];
+
+function createPost(post) {
+  return new Promise(function(resolve, reject) {
+    setTimeout(function() {
+      posts.push(post);
+
+      const error = false;
+
+      if(!error) {
+        resolve();
+      } else {
+        reject('Error: Something went wrong!');
+      }
+    }, 2000);
+  });
+}
+
+function getPosts() {
+  setTimeout(function() {
+    let output = '';
+    posts.forEach(function(post) {
+      output += `<li>${post.title}</li>`
+    });
+    document.body.innerHTML = output;
+  }, 1000);
+}
+
+createPost({title: 'Post Three', body: 'This is post three'})
+.then(getPosts)
+.catch(function(err) {
+  console.log(err);
+});
+```
