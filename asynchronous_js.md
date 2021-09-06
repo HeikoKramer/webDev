@@ -518,4 +518,4 @@ function getText() {
 }
 ```
 
---> weiter bei 8:10
+--> weiter bei 8:10 (notes machen)
