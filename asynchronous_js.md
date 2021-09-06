@@ -495,10 +495,11 @@ createPost({title: 'Post Three', body: 'This is post three'})
 In the example below, we … <br>
 * **fetch** data from a text file with `fetch('test.txt')`
 * get the **response** with `.then(function(res)`
-  * (here could be an **if** to react on the **status code**
+  * (here could be an **if** to react on the **status code**)
 * with `return res.text();` we **return** the content of our text file
 * `.then(function(data)` catches that data 
 * `console.log(data)` writes it to the console
+* if an error is thrown, we can **catch** it with `.catch(function(err)`
 
 ```js
 document.getElementById('button1').addEventListener('click', getText);
@@ -510,6 +511,11 @@ function getText() {
     })
     .then(function(data) {
       console.log(data);
+    })
+    .catch(function(err) {
+      console.log(err);
     });
 }
 ```
+
+
