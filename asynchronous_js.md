@@ -488,3 +488,28 @@ createPost({title: 'Post Three', body: 'This is post three'})
   console.log(err);
 });
 ```
+
+## The Fetch API
+`fetch()` returns **promises** – to use a response from a promise, you have to use `.then()`. <br>
+<br>
+In the example below, we … <br>
+* **fetch** data from a text file with `fetch('test.txt')`
+* get the **response** with `.then(function(res)`
+  * (here could be an **if** to react on the **status code**
+* with `return res.text();` we **return** the content of our text file
+* `.then(function(data)` catches that data 
+* `console.log(data)` writes it to the console
+
+```js
+document.getElementById('button1').addEventListener('click', getText);
+
+function getText() {
+  fetch('test.txt')
+    .then(function(res){
+      return res.text();
+    })
+    .then(function(data) {
+      console.log(data);
+    });
+}
+```
