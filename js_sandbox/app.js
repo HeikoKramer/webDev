@@ -6,6 +6,8 @@
 //   console.log('Hello');
 // }
 
-const sayHello = () => console.log('Hello');
+// const sayHello = () => console.log('Hello');
 
-sayHello();
+const sayHello = () => 'Hello';
+
+console.log(sayHello());

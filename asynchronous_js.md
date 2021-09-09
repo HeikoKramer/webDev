@@ -614,3 +614,21 @@ const sayHello = () => console.log('Hello');
 
 sayHello();
 ```
+
+Also very simple if you want to **return something**. <br>
+
+```js
+const sayHello = () => 'Hello';
+
+console.log(sayHello());
+```
+
+One line arrow function above, compared to multi line classic function below. <br>
+
+```js
+const sayHello = function() {
+  return 'Hello';
+}
+
+console.log(sayHello());
+```
