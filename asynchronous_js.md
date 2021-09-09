@@ -531,7 +531,7 @@ To load a **local JSON file** works the same way … <br>
 * we **append** an list element with the post title to the output variable:
   * `output += `<li>${post.title}</li>``
 * then we inject it to our html output div:
-  * ``document.getElementById('output').innerHTML = output``
+  * `    `document.getElementById('output').innerHTML = output`    `
 * errors are again chtched with `.catch(function(err)`
 
 ```js
