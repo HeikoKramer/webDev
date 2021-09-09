@@ -555,3 +555,29 @@ function getJson() {
     });
 }
 ```
+
+Getting data from an **external API** works basically the same. <br>
+Of course you'll have to exchange the link to your local file with your target API endpoint. <br>
+In the example below, we are requesting a bunch of users from the GitHub API and injecting it into our page. <br>
+
+```js
+// Get external JSON data from API
+function getExternal() {
+  fetch('https://api.github.com/users')
+    .then(function(res){
+      console.log(res);
+      return res.json();
+    })
+    .then(function(data) {
+      console.log(data);
+      let output = '';
+      data.forEach(function(user){
+        output += `<li>${user.login}</li>`;
+      });
+      document.getElementById('output').innerHTML = output;
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+}
+```
