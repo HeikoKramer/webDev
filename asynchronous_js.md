@@ -632,3 +632,24 @@ const sayHello = function() {
 
 console.log(sayHello());
 ```
+
+### Return object literal
+You can run into trouble, when returning an object literal. <br>
+If you try this for example: <br>
+
+```js
+const sayHello = () => { msg: 'Hello' };
+
+console.log(sayHello());
+// > undefined
+```
+
+You'll receive **undefined** as the curly brackets will be seen as the **function body**. <br>
+To fix this, just wrap your object in parentheses and you'll receive the object correctly. <br>
+
+```js
+const sayHello = () => ({ msg: 'Hello' });
+
+console.log(sayHello());
+// Object { msg: "Hello" }
+```
