@@ -14,6 +14,12 @@
 //   return 'Hello';
 // }
 
-const sayHello = () => ({ msg: 'Hello' });
+// const sayHello = () => ({ msg: 'Hello' });
 
-console.log(sayHello());
+const sayHello = name => console.log(`Hello ${name}`);
+
+sayHello('Heiko');
+
+const sayHelloFull = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+
+sayHelloFull('Heiko', 'Krämer');

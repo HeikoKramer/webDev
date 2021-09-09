@@ -651,5 +651,24 @@ To fix this, just wrap your object in parentheses and you'll receive the object 
 const sayHello = () => ({ msg: 'Hello' });
 
 console.log(sayHello());
-// Object { msg: "Hello" }
+// > Object { msg: "Hello" }
+```
+
+### Parameters
+If your function needs only **one parameter**, you can do it like this, without parentheses: <br>
+
+```js
+const sayHello = name => console.log(`Hello ${name}`);
+
+sayHello('Heiko');
+// > Hello Heiko
+```
+
+**Multiple parameters** have to be **wrapped in parantheses**: <br>
+
+```js
+const sayHelloFull = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+
+sayHelloFull('Heiko', 'Krämer');
+// > Hello Heiko Krämer
 ```
