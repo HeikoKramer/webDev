@@ -499,18 +499,22 @@ In the example below, we … <br>
 * with `return res.text();` we **return** the content of our text file
 * `.then(function(data)` catches that data 
 * `console.log(data)` writes it to the console
+* with `document.getElementById('output').innerHTML = data` we are putting it on to the screen
 * if an error is thrown, we can **catch** it with `.catch(function(err)`
 
 ```js
 document.getElementById('button1').addEventListener('click', getText);
 
+// Get local text file data
 function getText() {
   fetch('test.txt')
     .then(function(res){
+      console.log(res);
       return res.text();
     })
     .then(function(data) {
       console.log(data);
+      document.getElementById('output').innerHTML = data;
     })
     .catch(function(err) {
       console.log(err);
@@ -518,4 +522,36 @@ function getText() {
 }
 ```
 
---> weiter bei 8:10 (notes machen)
+To load a **local JSON file** works the same way … <br>
+* we fetch the data with `fetch('posts.json')`
+* we return the data with `return res.json()`
+* `.then(function(data)` lets us process the data further
+* the data is an **array** of **objects** so we have to **loop** through it
+  * therefore we use `data.forEach(function(post)`
+* we **append** an list element with the post title to the output variable:
+  * `output += `<li>${post.title}</li>``
+* then we inject it to our html output div:
+  * ``document.getElementById('output').innerHTML = output``
+* errors are again chtched with `.catch(function(err)`
+
+```js
+// Get local JSON data
+function getJson() {
+  fetch('posts.json')
+    .then(function(res){
+      console.log(res);
+      return res.json();
+    })
+    .then(function(data) {
+      console.log(data);
+      let output = '';
+      data.forEach(function(post){
+        output += `<li>${post.title}</li>`;
+      });
+      document.getElementById('output').innerHTML = output;
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+}
+```
