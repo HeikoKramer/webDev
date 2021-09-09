@@ -581,3 +581,36 @@ function getExternal() {
     });
 }
 ```
+
+## Arrow functions
+**Arrow functions** give us a lot of benefit in terms of saving lines of code. <br>
+<br>
+Here's an example how to make a function **more compect**. <br> 
+*Example 1:* Classic function **with function key-word**. <br> 
+
+```js
+const sayHello = function() {
+  console.log('Hello');
+}
+
+sayHello();
+```
+
+*Example 2:* Arrow function **without function key-word**. `() =>` replaces `function()`. <br> 
+
+```js
+const sayHello = () => {
+  console.log('Hello');
+}
+
+sayHello();
+```
+
+*Example 3:* Arrow function **without curly brackets**.  <br>
+As our function contained only one action, we can even leave out the `{ curly brackets }` and initiate the whole function with `() =>`. <br>
+
+```js
+const sayHello = () => console.log('Hello');
+
+sayHello();
+```
