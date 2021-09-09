@@ -529,9 +529,9 @@ To load a **local JSON file** works the same way … <br>
 * the data is an **array** of **objects** so we have to **loop** through it
   * therefore we use `data.forEach(function(post)`
 * we **append** an list element with the post title to the output variable:
-  * `output += `<li>${post.title}</li>``
+  * `output += <li>${post.title}</li>` (li wrapped in **backticks**) 
 * then we inject it to our html output div:
-  * `    `document.getElementById('output').innerHTML = output`    `
+  * `document.getElementById('output').innerHTML = output` (wrapped in **backticks**)
 * errors are again chtched with `.catch(function(err)`
 
 ```js
