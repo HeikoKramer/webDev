@@ -713,3 +713,17 @@ console.log(nameLengths);
 ```
 
 The shortest version is only a one-liner and actual cleaner than the other versions. <br>
+
+## Async & Await
+If you put `async` in front of a function, it will not longer only return its values, it will return a **promise**.  <br>
+As the function is returning a promise, we can use `.then()` to process the **response**. <br>
+
+```js
+async function myFunc() {
+  return 'Hello';
+}
+
+myFunc()
+  .then(res => console.log(res));
+  //  > Hello
+```
