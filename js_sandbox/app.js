@@ -16,10 +16,26 @@
 
 // const sayHello = () => ({ msg: 'Hello' });
 
-const sayHello = name => console.log(`Hello ${name}`);
+// const sayHello = name => console.log(`Hello ${name}`);
 
-sayHello('Heiko');
+// sayHello('Heiko');
+// > Hello Heiko
 
-const sayHelloFull = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+// const sayHelloFull = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
 
-sayHelloFull('Heiko', 'Krämer');
+// sayHelloFull('Heiko', 'Krämer');
+// > Hello Heiko Krämer
+
+const users = ['Nathan', 'John', 'William'];
+
+// const nameLengths = users.map(function(name) {
+//   return name.length;
+// });
+
+// const nameLengths = users.map((name) => {
+//   return name.length;
+// });
+
+const nameLengths = users.map(name => name.length);
+
+console.log(nameLengths);

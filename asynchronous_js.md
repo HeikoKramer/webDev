@@ -672,3 +672,41 @@ const sayHelloFull = (firstName, lastName) => console.log(`Hello ${firstName} ${
 sayHelloFull('Heiko', 'Krämer');
 // > Hello Heiko Krämer
 ```
+
+### Arrow functions as callbacks
+Below we are placing a function in the *nameLengths* variable, to return the lengths of all names in the *users* variable. <br>
+`map()` is used to run the specified function on all the positions of the array. <br>
+
+```js
+const users = ['Nathan', 'John', 'William'];
+
+const nameLengths = users.map(function(name) {
+  return name.length;
+});
+
+console.log(nameLengths);
+```
+
+Shorter **arrow** version: <br>
+
+```js
+const users = ['Nathan', 'John', 'William'];
+
+const nameLengths = users.map((name) => {
+  return name.length;
+});
+
+console.log(nameLengths);
+```
+
+Shortest version, **arrow without curly brackets**: <br>
+
+```js
+const users = ['Nathan', 'John', 'William'];
+
+const nameLengths = users.map(name => name.length);
+
+console.log(nameLengths);
+```
+
+The shortest version is only a one-liner and actual cleaner than the other versions. <br>
