@@ -3,11 +3,17 @@ async function myFunc() {
     setTimeout(() => resolve('Hello'), 1000);
   });
 
-  // Wait until promise is resolved
-  const res = await promise; 
-  return res;
+  const error = true;
+
+  if(!error){
+    const res = await promise; 
+    return res;
+  } else {
+    await Promise.reject(new Error('Something went wrong'));
+  }
 }
 
 myFunc()
-  .then(res => console.log(res));
-  //  > Hello
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+  // Error: Something went wrong

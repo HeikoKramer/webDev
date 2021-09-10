@@ -748,3 +748,28 @@ myFunc()
   .then(res => console.log(res));
   //  > Hello
 ```
+
+Here the same example with a basic error handling. <br>
+If error is true, we throw an error, otherwise we return *Hello* after a second. <br>
+
+```js
+async function myFunc() {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Hello'), 1000);
+  });
+
+  const error = true;
+
+  if(!error){
+    const res = await promise; 
+    return res;
+  } else {
+    await Promise.reject(new Error('Something went wrong'));
+  }
+}
+
+myFunc()
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
+  // Error: Something went wrong
+```
