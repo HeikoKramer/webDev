@@ -715,12 +715,33 @@ console.log(nameLengths);
 The shortest version is only a one-liner and actual cleaner than the other versions. <br>
 
 ## Async & Await
+### Async
 If you put `async` in front of a function, it will not longer only return its values, it will return a **promise**.  <br>
 As the function is returning a promise, we can use `.then()` to process the **response**. <br>
 
 ```js
 async function myFunc() {
   return 'Hello';
+}
+
+myFunc()
+  .then(res => console.log(res));
+  //  > Hello
+```
+
+### Await
+With `await` you can **wait until a promise is resolved**. <br>
+The example below will return *Hello* after one second, as we used `const res = await promise` to wait for promise. <br>
+
+```js
+async function myFunc() {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Hello'), 1000);
+  });
+
+  // Wait until promise is resolved
+  const res = await promise; 
+  return res;
 }
 
 myFunc()
