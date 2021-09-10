@@ -685,6 +685,7 @@ const nameLengths = users.map(function(name) {
 });
 
 console.log(nameLengths);
+// > Array(3) [ 6, 4, 7 ]
 ```
 
 Shorter **arrow** version: <br>
@@ -697,6 +698,7 @@ const nameLengths = users.map((name) => {
 });
 
 console.log(nameLengths);
+// > Array(3) [ 6, 4, 7 ]
 ```
 
 Shortest version, **arrow without curly brackets**: <br>
@@ -707,6 +709,7 @@ const users = ['Nathan', 'John', 'William'];
 const nameLengths = users.map(name => name.length);
 
 console.log(nameLengths);
+// > Array(3) [ 6, 4, 7 ]
 ```
 
 The shortest version is only a one-liner and actual cleaner than the other versions. <br>
