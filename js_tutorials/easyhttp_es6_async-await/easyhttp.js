@@ -7,19 +7,18 @@ class EasyHTTP {
   }
 
   // Make an HTTP POST Request
-  post(url, data) {
-    return new Promise((resolve, reject) => {
-      fetch(url, {
+  async post(url, data) {
+
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-type' : 'application/json'
         },
         body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(data => resolve(data))
-        .catch(err => reject(err));
-    });
+      });
+
+      const resData = await response.json();
+      return resData;
   }
 
   // Make an HTTP PUT Request
