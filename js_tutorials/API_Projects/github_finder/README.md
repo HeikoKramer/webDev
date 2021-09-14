@@ -2,3 +2,9 @@ This is a project from [Brad Traversy's course "Modern JavaScript from the Begin
 <br>
 I've exchanged the *github.js* file with the *github_EXAMPLE.js* file as the original file contains my GitHub client secret key. <br>
 So to make this work, rename the file to *github.js* and paste in your GitHub **client id** and **client secret key**. <br> 
+
+
+```js
+this.client_id = ''; // <-- insert Client Id here
+this.client_secret = ''; // <-- insert Client Secret here
+```
