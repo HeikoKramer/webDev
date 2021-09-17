@@ -2164,4 +2164,23 @@ I've excluded [my notes on the **D**ocument **O**bject **M**odel](https://github
 [Click here for my notes on **asynchronous JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/asynchronous_js.md)
 
 ## Error handling with try … catch
+A **try block** lets us execute a bit of code and **test for errors**. <br>
+The **catch block** lets us **handle errors** if there are any. <br>
+We can also **throw our own errors**. <br>
+<br>
+The example below shows that we **try** to execute a function – and **catch** an error to show it in the console. <br>
+It also shows, that our `console.log('Program continues')` at the end gets executed, although an error occurred. <br>
+Without **try** & **catch** the execution would have stopped after the error, <br>
 
+```js
+try {
+  // Produce a ReferenceError
+  myFunction();
+} catch(e) {
+  console.log(e);
+}
+
+console.log('Program continues');
+```
+
+![try-catch](/images/try-catch.png)
