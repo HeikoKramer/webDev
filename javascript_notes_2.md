@@ -2162,3 +2162,6 @@ I've excluded [my notes on the **D**ocument **O**bject **M**odel](https://github
 
 ## Asynchronous JavaScript
 [Click here for my notes on **asynchronous JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/asynchronous_js.md)
+
+## Error handling with try … catch
+
