@@ -2189,10 +2189,28 @@ You can get more specific values from the error: <br>
 
 ```js
 console.log(e.message);
-//  myFunction is not defined
+// >  myFunction is not defined
 console.log(e.name);
-// ReferenceError
+// > ReferenceError
 console.log(e instanceof ReferenceError);
-// true
+// > true
 ```
 
+### finally
+Beside the **try** and the **catch** block, there is an optional block – **finally**. <br>
+The code in the **finally** block will execute no mater what happened before it, error or not. <br> 
+
+```js
+try {
+  // Produce a ReferenceError
+  myFunction();
+} catch(e) {
+  console.log(e);
+} finally {
+  console.log('Finally runs regardless of result');
+}
+
+console.log('Program continues');
+```
+
+![finally](/images/finally.png)
