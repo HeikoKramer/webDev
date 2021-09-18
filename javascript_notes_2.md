@@ -2214,3 +2214,34 @@ console.log('Program continues');
 ```
 
 ![finally](/images/finally.png)
+
+### throw an error
+We can **throw** our own errors with `throw`. <br>
+
+```js
+const user = {email: 'testing@heikokraemer.de'};
+
+try {
+  if(!user.name) {
+    throw 'User has no name';
+  }
+} catch(e) {
+  console.log(e);
+  // >  User has no name
+} 
+```
+
+We can also specify the **type** of error **thrown**. <br>
+
+```js
+const user = {email: 'testing@heikokraemer.de'};
+
+try {
+  if(!user.name) {
+    throw new SyntaxError('User has no name');
+  }
+} catch(e) {
+  console.log(e);
+  // > SyntaxError: User has no name
+} 
+```
