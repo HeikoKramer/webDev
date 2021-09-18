@@ -2158,10 +2158,10 @@ console.log("Global Scope: ", a, b, c);
 I've excluded [my notes on the **D**ocument **O**bject **M**odel](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md) into an other file. <br>
 
 ## Object Oriented JavaScript
-[Click here for my notes on **object oriented JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/object_oriented_javascript.md) 
+[Click here for my notes on **object oriented JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/object_oriented_javascript.md)  <br>
 
 ## Asynchronous JavaScript
-[Click here for my notes on **asynchronous JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/asynchronous_js.md)
+[Click here for my notes on **asynchronous JavaScript**](https://github.com/HeikoKramer/webDev/blob/main/asynchronous_js.md) <br>
 
 ## Error handling with try … catch
 A **try block** lets us execute a bit of code and **test for errors**. <br>
@@ -2170,7 +2170,7 @@ We can also **throw our own errors**. <br>
 <br>
 The example below shows that we **try** to execute a function – and **catch** an error to show it in the console. <br>
 It also shows, that our `console.log('Program continues')` at the end gets executed, although an error occurred. <br>
-Without **try** & **catch** the execution would have stopped after the error, <br>
+Without **try** & **catch** the execution would have stopped after the error. <br>
 
 ```js
 try {
@@ -2184,3 +2184,15 @@ console.log('Program continues');
 ```
 
 ![try-catch](/images/try-catch.png)
+
+You can get more specific values from the error: <br>
+
+```js
+console.log(e.message);
+//  myFunction is not defined
+console.log(e.name);
+// ReferenceError
+console.log(e instanceof ReferenceError);
+// true
+```
+
