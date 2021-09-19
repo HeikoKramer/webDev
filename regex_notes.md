@@ -133,3 +133,72 @@ console.log(newStr);
 ```
 
 See, now that we added `g` the **global flag** to our search pattern (`/hello/ig`), all *Hello* and *hello* matches got replaced. <br>
+
+## Metacharakter Symbols
+We are using the following function to demonstrate the impact of our adde symbols: <br>
+
+```js
+function reTest(re, str) {
+  if(re.test(str)) {
+    console.log(`${str} matches ${re.source}`);
+  } else {
+    console.log(`${str} does NOT match ${re.source}`);
+  }
+}
+```
+
+so the following won't match, as we have not added the `i` flag and we are matching for a lower-case *hello*. <br> 
+
+```js
+re = /hello/;
+const str = 'Hello World';
+
+reTest(re, str);
+// > Hello World does NOT match hello
+```
+
+if we add the `i` flag, our string matches the pattern: <br>
+
+```js
+re = /hello/i;
+const str = 'Hello World';
+
+reTest(re, str);
+// > Hello World matches hello
+```
+
+So let's have a look on **metacharacter symbols**. <br>
+
+### ^
+The **caret** symbol represents **starts with**. <br>
+So in the first example, the string matches the pattern, as our string starts with *Hello*. <br> 
+
+```js
+re = /^hello/i;
+const str = 'Hello World';
+
+reTest(re, str);
+// > Hello World matches ^hello
+```
+
+Note that *Hello* matches only, because we have also added the `i` tag. <br>
+The next example does not match, as the string contains *World*, but it doesn't start with it. <br>
+
+```js
+re = /^world/i;
+const str = 'Hello World';
+
+reTest(re, str);
+// > Hello World does NOT match ^world
+```
+
+We will also receive a positive result if the pattern is part of a continuing string, as long our pattern matches the start of it. <br>
+
+```js
+re = /^hello/i;
+const str = 'Hellooooooooo World';
+
+reTest(re, str);
+// > Hellooooooooo World matches ^hello
+```
+

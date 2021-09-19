@@ -1,28 +1,21 @@
 let re;
-re = /hello/ig;
 
-// exec() – return result in an array or null
-// const result = re.exec('hello hello world');
-// console.log(result);
-// // > Array [ "hello" ]
-// console.log(result.index);
-// // > 0
-// console.log(result.input);
-// // > hello world
 
-// const noResult = re.exec('hi world');
-// console.log(noResult);
-// // > null
+re = /^hello/i;
+const str = 'Hellooooooooo World';
 
-// const result = re.test('Hello world');
-// console.log(result);
-// // > true
+reTest(re, str);
+// > Hello World does NOT match ^world
 
-// const noResult = re.test('Hello world');
-// console.log(noResult);
-// // > false
+// Log Results
+const result = re.exec(str);
+console.log(result);
 
-const str = 'Yoyoyoy Hello There hello, hello';
-const newStr = str.replace(re, 'Hi');
-console.log(newStr);
-// >  Yoyoyoy Hi There hello, hello
+function reTest(re, str) {
+  if(re.test(str)) {
+    console.log(`${str} matches ${re.source}`);
+  } else {
+    console.log(`${str} does NOT match ${re.source}`);
+  }
+}
+
