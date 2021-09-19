@@ -1,11 +1,11 @@
 let re;
 
 
-re = /world$/i;
-const str = 'Hello World';
+re = /^world$/i;
+const str = 'WorldOfworld';
 
 reTest(re, str);
-// > Hellooooooooo World matches ^hello
+// > World matches ^world$
 
 // Log Results
 const result = re.exec(str);

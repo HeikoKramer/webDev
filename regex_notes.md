@@ -214,3 +214,24 @@ reTest(re, str);
 // > Hello World matches world$
 ```
 
+You can also combine **dollar** & **caret** to check if something starts and ends with the pattern. <br>
+But note, this works only if the **same word** is at the **start** & **end** of the string. <br>
+If you place the word twice, one at the start and one at the end, it won't work: <br>
+
+```js
+re = /^world$/i;
+const str = 'Worldclass Hello World';
+
+reTest(re, str);
+// > Worldclass Hello World does NOT match ^world$
+```
+
+Handing over only *World* results in a match: <br>
+
+```js
+re = /^world$/i;
+const str = 'World';
+
+reTest(re, str);
+// > World matches ^world$
+```
