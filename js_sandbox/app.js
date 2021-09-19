@@ -1,11 +1,11 @@
 let re;
 
 
-re = /gre?a?y/i;
-const strGry = 'gry';
+re = /grey\?/i;
+const str = 'grey?';
 
-reTest(re, strGry);
-// > grey matches gre?a?y
+reTest(re, str);
+// > grey? matches grey\?
 
 
 // Log Results

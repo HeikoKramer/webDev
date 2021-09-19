@@ -299,3 +299,17 @@ const strGry = 'gry';
 reTest(re, strGry);
 // > gry matches gre?a?y
 ```
+
+### Eskaping characters
+What is we want to match the string *Gray?* including the `?` as a literal? <br>
+Our regex logic would see the **y** optional in that case, as learned above, so we would not match the *y?*. <br>
+We can solve that, by **escaping** the `?` with a **backslash** `\?`. <br>
+
+```js
+re = /grey\?/i;
+const str = 'grey?';
+
+reTest(re, str);
+// > grey? matches grey\?
+```
+
