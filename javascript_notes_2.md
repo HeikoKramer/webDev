@@ -2245,3 +2245,7 @@ try {
   // > SyntaxError: User has no name
 } 
 ```
+
+## Regular Expressions
+My notes on **regular expressions** can be found in the [regex_notes.md](https://github.com/HeikoKramer/webDev/blob/main/regex_notes.md) file. <br>
+

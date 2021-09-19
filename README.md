@@ -12,6 +12,7 @@ Quick links to my notes files: <br>
 * [javascript-practice_notes.md](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md)
 * [object-oriented-javascript.md](https://github.com/HeikoKramer/webDev/blob/main/object_oriented_javascript.md)
 * [asynchronous_js.md](https://github.com/HeikoKramer/webDev/blob/main/asynchronous_js.md)
+* [regex_notes.md](https://github.com/HeikoKramer/webDev/blob/main/regex_notes.md)
 
 ## Coding samples / tutorials
 ### Rock Paper Scissors
