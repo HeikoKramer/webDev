@@ -1,15 +1,12 @@
 let re;
 
 
-re = /h*llo/i;
-const strA = 'H12345llo';
-const strE = 'Heeeejjjkjjkkello';
+re = /gre?a?y/i;
+const strGry = 'gry';
 
-reTest(re, strA);
-// > H12345llo matches h*llo
+reTest(re, strGry);
+// > grey matches gre?a?y
 
-reTest(re, strE);
-// > H12345llo matches h*llo
 
 // Log Results
 const result = re.exec(str);

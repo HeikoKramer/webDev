@@ -252,7 +252,7 @@ reTest(re, strE);
 ```
 
 ### *
-The **asterisk** is the actual **wildcard**. <br> 
+The **asterisk** `*` is the actual **wildcard**. <br> 
 It does not only cover one character, **multiple charakters can be inbetween our pattern**. <br>
 **NOTE:** It seems like the caret `^` isn't working on pattern separated with an **asteriks**. <br>
 
@@ -266,4 +266,36 @@ reTest(re, strA);
 
 reTest(re, strE);
 // > H12345llo matches h*llo
+```
+
+### ?
+You can define **an other option** with the **questionmark** `?`. <br>
+This means, when you have a word with two possible spellings, like *grey* or *gray*, you can match both versions. <br>
+Place the first questionmark **after the first optional letter**, than the **second optional letter + an other questionmark**. <br>
+*grey* and *gray* match, *groy* doesn't: <br>
+
+```js
+re = /gre?a?y/i;
+const strGrey = 'grey';
+const strGray = 'gray';
+const strGroy = 'groy';
+
+reTest(re, strGrey);
+// > grey matches gre?a?y
+
+reTest(re, strGray);
+// > gray matches gre?a?y
+
+reTest(re, strGroy);
+// > groy does NOT match gre?a?y
+```
+
+**NOTE:** Since both characters **e** and **a** are optional, *gry* will also match our pattern: <br>
+
+```js
+re = /gre?a?y/i;
+const strGry = 'gry';
+
+reTest(re, strGry);
+// > gry matches gre?a?y
 ```
