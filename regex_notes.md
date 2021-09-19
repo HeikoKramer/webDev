@@ -45,3 +45,32 @@ console.log(noResult);
 // > null
 ```
 
+### test()
+`test()` returns **true** if there is a match and **false** if there isn't a match. <br>
+
+```js
+let re;
+re = /hello/;
+
+const result = re.test('hello world');
+console.log(result);
+// > true
+
+const noResult = re.test('Hello world');
+console.log(noResult);
+// > false
+```
+
+Note that the second result is *false*, as *Hello* is not equal to *hello* – regex are **case sensitive** by default. <br>
+<br>
+We can change that behaviour with a **flag**. Flags are put behind the search term. <br>
+The `i` **flag** stands for **ignore case**. If we use `/hello/i` as our pattern, `test('Hello')` will also return *true*. <br>  
+
+```js
+let re;
+re = /hello/i;
+
+const result = re.test('Hello world');
+console.log(result);
+// > true
+```
