@@ -104,3 +104,32 @@ const result = str.search(re);
 console.log(result);
 // > 8
 ```
+
+### replace()
+`replace()` is executed on the string and takes in the search pattern and string to replace the matches. <br>
+It will return a new string, with some or all **matches of a pattern replaced**. <br>
+
+```js
+let re;
+re = /hello/i;
+
+const str = 'Yoyoyoy Hello There hello, hello';
+const newStr = str.replace(re, 'Hi');
+console.log(newStr);
+// >  Yoyoyoy Hi There hello, hello
+```
+
+Note that only the first match has been replaced. <br>
+To replace **all matches** in our string, we can use the **global flag**, when specifying our pattern. <br>
+
+```js
+let re;
+re = /hello/ig;
+
+const str = 'Yoyoyoy Hello There hello, hello';
+const newStr = str.replace(re, 'Hi');
+console.log(newStr);
+// >  Yoyoyoy Hi There Hi, Hi
+```
+
+See, now that we added `g` the **global flag** to our search pattern (`/hello/ig`), all *Hello* and *hello* matches got replaced. <br>

@@ -1,5 +1,5 @@
 let re;
-re = /hello/i;
+re = /hello/ig;
 
 // exec() – return result in an array or null
 // const result = re.exec('hello hello world');
@@ -22,7 +22,7 @@ re = /hello/i;
 // console.log(noResult);
 // // > false
 
-const str = 'Yoyoyoy Hello There';
-const result = str.search(re);
-console.log(result);
-// > 5
+const str = 'Yoyoyoy Hello There hello, hello';
+const newStr = str.replace(re, 'Hi');
+console.log(newStr);
+// >  Yoyoyoy Hi There hello, hello
