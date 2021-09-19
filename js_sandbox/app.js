@@ -1,11 +1,11 @@
 let re;
 
 
-re = /^hello/i;
-const str = 'Hellooooooooo World';
+re = /world$/i;
+const str = 'Hello World';
 
 reTest(re, str);
-// > Hello World does NOT match ^world
+// > Hellooooooooo World matches ^hello
 
 // Log Results
 const result = re.exec(str);

@@ -202,3 +202,15 @@ reTest(re, str);
 // > Hellooooooooo World matches ^hello
 ```
 
+### $
+The **dollar** sign does the opposite of the caret, it is used to check if a text **ends with a certain pattern**. <br>
+Below we are matching, if *world* is at the end of our string. We are ignoring case, positive result: <br>
+
+```js
+re = /world$/i;
+const str = 'Hello World';
+
+reTest(re, str);
+// > Hello World matches world$
+```
+
