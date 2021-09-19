@@ -170,7 +170,7 @@ reTest(re, str);
 So let's have a look on **metacharacter symbols**. <br>
 
 ### ^
-The **caret** symbol represents **starts with**. <br>
+The **caret** symbol `^` represents **starts with**. <br>
 So in the first example, the string matches the pattern, as our string starts with *Hello*. <br> 
 
 ```js
@@ -203,7 +203,7 @@ reTest(re, str);
 ```
 
 ### $
-The **dollar** sign does the opposite of the caret, it is used to check if a text **ends with a certain pattern**. <br>
+The **dollar** sign `$` does the opposite of the caret, it is used to check if a text **ends with a certain pattern**. <br>
 Below we are matching, if *world* is at the end of our string. We are ignoring case, positive result: <br>
 
 ```js
