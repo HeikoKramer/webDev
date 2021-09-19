@@ -22,8 +22,7 @@ re = /hello/i;
 // console.log(noResult);
 // // > false
 
-const str = 'Hello There';
-const result = str.match(re);
+const str = 'Yoyoyoy Hello There';
+const result = str.search(re);
 console.log(result);
-// > Array [ "Hello" ]
-console.log(result.index);
+// > 5

@@ -90,3 +90,17 @@ console.log(result);
 console.log(result.index);
 // > 0
 ```
+
+### search()
+`search()` will return the **index of the first match** if found. <br>
+If the pattern is not found, it will return **-1**. <br>
+
+```js
+let re;
+re = /hello/i;
+
+const str = 'Yoyoyoy Hello There';
+const result = str.search(re);
+console.log(result);
+// > 8
+```
