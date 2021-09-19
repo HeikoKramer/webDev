@@ -235,3 +235,18 @@ const str = 'World';
 reTest(re, str);
 // > World matches ^world$
 ```
+
+### . 
+The **dot** `.` is used like a **wildcard**. It matches any **one charakter**. <br>
+
+```js
+re = /^h.llo$/i;
+const strA = 'Hallo';
+const strE = 'Hello';
+
+reTest(re, strA);
+// > Hallo matches ^h.llo$
+
+reTest(re, strE);
+// > Hello matches ^h.llo$
+```
