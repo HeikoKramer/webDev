@@ -1,15 +1,15 @@
 let re;
 
 
-re = /^h.llo$/i;
-const strA = 'Hallo';
-const strE = 'Hello';
+re = /h*llo/i;
+const strA = 'H12345llo';
+const strE = 'Heeeejjjkjjkkello';
 
 reTest(re, strA);
-// > Hallo matches ^h.llo$
+// > H12345llo matches h*llo
 
 reTest(re, strE);
-// > Hello matches ^h.llo$
+// > H12345llo matches h*llo
 
 // Log Results
 const result = re.exec(str);

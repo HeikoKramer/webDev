@@ -250,3 +250,20 @@ reTest(re, strA);
 reTest(re, strE);
 // > Hello matches ^h.llo$
 ```
+
+### *
+The **asterisk** is the actual **wildcard**. <br> 
+It does not only cover one character, **multiple charakters can be inbetween our pattern**. <br>
+**NOTE:** It seems like the caret `^` isn't working on pattern separated with an **asteriks**. <br>
+
+```js
+re = /h*llo/i;
+const strA = 'H12345llo';
+const strE = 'Heeeejjjkjjkkello';
+
+reTest(re, strA);
+// > H12345llo matches h*llo
+
+reTest(re, strE);
+// > H12345llo matches h*llo
+```
