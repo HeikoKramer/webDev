@@ -2,7 +2,7 @@ let re;
 re = /hello/i;
 
 // exec() – return result in an array or null
-// const result = re.exec('hello world');
+// const result = re.exec('hello hello world');
 // console.log(result);
 // // > Array [ "hello" ]
 // console.log(result.index);
@@ -14,10 +14,16 @@ re = /hello/i;
 // console.log(noResult);
 // // > null
 
-const result = re.test('hello world');
-console.log(result);
-// > true
+// const result = re.test('Hello world');
+// console.log(result);
+// // > true
 
-const noResult = re.test('Hello world');
-console.log(noResult);
-// > false
+// const noResult = re.test('Hello world');
+// console.log(noResult);
+// // > false
+
+const str = 'Hello There';
+const result = str.match(re);
+console.log(result);
+// > Array [ "Hello" ]
+console.log(result.index);

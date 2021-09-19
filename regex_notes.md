@@ -74,3 +74,19 @@ const result = re.test('Hello world');
 console.log(result);
 // > true
 ```
+
+### match()
+`match()` will return a **result array** or *null*. <br>
+It is much similar to `exec()` but is run **on the string**, not on the pattern. <br> 
+
+```js
+let re;
+re = /hello/i;
+
+const str = 'Hello There';
+const result = str.match(re);
+console.log(result);
+// > Array [ "Hello" ]
+console.log(result.index);
+// > 0
+```
