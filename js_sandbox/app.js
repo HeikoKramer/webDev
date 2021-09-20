@@ -9,6 +9,7 @@ reTest(re, str);
 
 droid = 'R2D2';
 reTest(re, droid);
+// R2D2 matches ^([A-Z][0-9]){2}$
 
 
 
