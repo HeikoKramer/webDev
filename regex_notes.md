@@ -399,3 +399,15 @@ reTest(re, strLow);
 // > hej? does NOT match [A-Z]ej
 ```
 
+More **range** examples: <br>
+
+```js
+re = /[a-z]ej/;        // will match any lowercase letter
+                       // hej, nej, rej, eej …
+
+re = /[A-Za-z]ej/;     // match any letter
+                       // Hej, hej, Nej, nej …
+
+re = /Num[0-2][0-9]/;  // matches the specified number range
+                       // Num01, Num22, Num19 …
+```

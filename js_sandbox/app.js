@@ -1,16 +1,16 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /[A-Z]ej/;
+re = /Num[0-2][0-9]/;
 
-const strCap = 'Hej?';
+const str = 'Num31';
 const strLow = 'hej?';
 
-reTest(re, strCap);
+reTest(re, str);
 // > Hej? matches [A-Z]ej
 
 reTest(re, strLow);
-// > Nej? does NOT match [^HN]ej
+// > hej? does NOT match [A-Z]ej
 
 const strSmall = 'nej?';
 reTest(re, strSmall);
