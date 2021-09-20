@@ -379,3 +379,6 @@ const strRej = 'Rej?';
 reTest(re, strRej);
 // > Rej? matches [^HN]ej
 ```
+
+If you wanted to write a regex string, that matches only if something starts with H or N, you'd have to take the **caret** out of the brackets: `/^[HN]ej/`. <br>
+
