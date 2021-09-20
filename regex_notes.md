@@ -382,3 +382,20 @@ reTest(re, strRej);
 
 If you wanted to write a regex string, that matches only if something starts with H or N, you'd have to take the **caret** out of the brackets: `/^[HN]ej/`. <br>
 
+#### Ranges
+You can define **ranges** in the brackets, by using a **dash** `-`. <br>
+The range `[A-Z]` will match all **capital letters**. <br>
+
+```js
+re = /[A-Z]ej/;
+
+const strCap = 'Hej?';
+const strLow = 'hej?';
+
+reTest(re, strCap);
+// > Hej? matches [A-Z]ej
+
+reTest(re, strLow);
+// > hej? does NOT match [A-Z]ej
+```
+
