@@ -411,3 +411,17 @@ re = /[A-Za-z]ej/;     // match any letter
 re = /Num[0-2][0-9]/;  // matches the specified number range
                        // Num01, Num22, Num19 …
 ```
+
+#### Quantifiers 
+Use curly brackets `{}` to specify a  **quantifier** for the character **before** the brackets. <br>
+In the example below we match the string *Hello* by specifying `/Hel{2}o/`. <br>
+
+```js
+re = /Hel{2}o/i;
+
+const str = 'Hello';
+
+reTest(re, str);
+// > Hello matches Hel{2}o
+```
+

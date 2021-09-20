@@ -1,24 +1,14 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /Num[0-2][0-9]/;
+re = /Hel{2}o/i;
 
-const str = 'Num31';
-const strLow = 'hej?';
+const str = 'Hello';
 
 reTest(re, str);
 // > Hej? matches [A-Z]ej
 
-reTest(re, strLow);
-// > hej? does NOT match [A-Z]ej
 
-const strSmall = 'nej?';
-reTest(re, strSmall);
-// > nej? matches [^HN]ej
-
-const strRej = 'Rej?';
-reTest(re, strRej);
-// > Rej? matches [^HN]ej
 
 
 // Log Results
