@@ -1,12 +1,12 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /Hel{2,}o/i;
+re = /^([A-Z][0-9]){2}$/i;
 
-const str = 'Helllllllo';
+const str = 'R2D2Balblablub';
 
 reTest(re, str);
-// > Helllo matches Hel{2,4}o
+// > R2D2 matches ([A-Z][0-9]){2}
 
 
 

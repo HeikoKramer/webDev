@@ -446,3 +446,23 @@ const str = 'Helllllllo';
 reTest(re, str);
 // > Helllllllo matches Hel{2,}o
 ```
+
+### Grouping
+**Grouping** is done with **parentheses** `()`. <br>
+We can for example **group** a character and number range together and match two times that pattern with `/([A-Z][0-9]){2}/`. <br>
+
+```js
+re = /([A-Z][0-9]){2}/i;
+
+const str = 'R2D2';
+
+reTest(re, str);
+// > R2D2 matches ([A-Z][0-9]){2}
+```
+
+The example above matches also *R2D2Balblablub*, if we want to restrict it to a 4-digit pattern, we have to use: <br>
+
+```js 
+re = /^([A-Z][0-9]){2}$/i;
+```
+
