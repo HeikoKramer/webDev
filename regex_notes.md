@@ -300,7 +300,7 @@ reTest(re, strGry);
 // > gry matches gre?a?y
 ```
 
-### Eskaping characters
+### Escaping characters
 What is we want to match the string *Gray?* including the `?` as a literal? <br>
 Our regex logic would see the **y** optional in that case, as learned above, so we would not match the *y?*. <br>
 We can solve that, by **escaping** the `?` with a **backslash** `\?`. <br>
@@ -313,3 +313,22 @@ reTest(re, str);
 // > grey? matches grey\?
 ```
 
+## Character Sets & Quantifiers
+### Brackets
+**Brackets** `[]` allow you to specify options for for certain characters. <br>
+This is quite similar to the topic [Wildcard / Expansion in bash](https://github.com/HeikoKramer/linux/blob/main/linux_notes.md#wildcards--expansion). <br>
+In the example below we are using the *grey* or *gray* scenario from earlier, but this time we solve it with **brackets**. <br> 
+As we allow `[ea]` in the bracket, both options, *grey* and *gray*, match: <br>
+
+```js
+re = /gr[ea]y/i;
+
+const strGrey = 'grey?';
+const strGray = 'gray?';
+
+reTest(re, strGrey);
+// > grey? matches gr[ea]y
+
+reTest(re, strGray);
+// > gray? matches gr[ea]y
+```

@@ -1,11 +1,18 @@
 let re;
 
+// Brackets [] - Character Sets
+re = /gr[ea]y/i;
 
-re = /grey\?/i;
-const str = 'grey?';
 
-reTest(re, str);
-// > grey? matches grey\?
+const strGrey = 'grey?';
+const strGray = 'gray?';
+
+reTest(re, strGrey);
+// > grey? matches gr[ea]y
+
+reTest(re, strGray);
+// > gray? matches gr[ea]y
+
 
 
 // Log Results
