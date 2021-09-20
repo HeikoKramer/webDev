@@ -460,9 +460,19 @@ reTest(re, str);
 // > R2D2 matches ([A-Z][0-9]){2}
 ```
 
-The example above matches also *R2D2Balblablub*, if we want to restrict it to a 4-digit pattern, we have to use: <br>
+The example above, also *R2D2Balblablub* would match our regex. <br>
+If we want to restrict it matching only a 4-digit pattern, we have to use the **caret** `^` and the **dollar** `$` sign. <br>
 
 ```js 
+// Brackets [] - Character Sets
 re = /^([A-Z][0-9]){2}$/i;
+
+const str = 'R2D2Balblablub';
+reTest(re, str);
+// > R2D2Balblablub does NOT match ^([A-Z][0-9]){2}$
+
+droid = 'R2D2';
+reTest(re, droid);
+// R2D2 matches ^([A-Z][0-9]){2}$
 ```
 

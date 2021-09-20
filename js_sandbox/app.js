@@ -4,10 +4,11 @@ let re;
 re = /^([A-Z][0-9]){2}$/i;
 
 const str = 'R2D2Balblablub';
-
 reTest(re, str);
-// > R2D2 matches ([A-Z][0-9]){2}
+// > R2D2Balblablub does NOT match ^([A-Z][0-9]){2}$
 
+droid = 'R2D2';
+reTest(re, droid);
 
 
 
