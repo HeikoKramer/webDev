@@ -435,3 +435,14 @@ const str = 'Helllo';
 reTest(re, str);
 // > Helllo matches Hel{2,4}o
 ```
+
+or **at least 2 l** with `/Hel{2,}o/`. <br>
+
+```js
+re = /Hel{2,}o/i;
+
+const str = 'Helllllllo';
+
+reTest(re, str);
+// > Helllllllo matches Hel{2,}o
+```

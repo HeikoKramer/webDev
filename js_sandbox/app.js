@@ -1,12 +1,12 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /Hel{2,4}o/i;
+re = /Hel{2,}o/i;
 
-const str = 'Helllo';
+const str = 'Helllllllo';
 
 reTest(re, str);
-// > Hello matches Hel{2}o
+// > Helllo matches Hel{2,4}o
 
 
 
