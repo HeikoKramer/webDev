@@ -1,24 +1,24 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /[HN]ej/;
+re = /[^HN]ej/;
 
 const strHej = 'Hej?';
 const strNej = 'Nej?';
 
 reTest(re, strHej);
-// > Hej? matches [HN]ej
+// > Hej? does NOT match [^HN]ej
 
 reTest(re, strNej);
-// > Nej? matches [HN]ej
+// > Nej? does NOT match [^HN]ej
 
 const strSmall = 'nej?';
 reTest(re, strSmall);
-// > Nej? matches [HN]ej
+// > nej? matches [^HN]ej
 
 const strRej = 'Rej?';
 reTest(re, strRej);
-// > Nej? matches [HN]ej
+// > Rej? matches [^HN]ej
 
 
 // Log Results

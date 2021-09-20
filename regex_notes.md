@@ -356,3 +356,26 @@ reTest(re, strRej);
 // > Rej? does NOT match [HN]ej
 ```
 
+The **caret** sign `^` has a different meaning within brackets as outside of it. <br>
+Here it turns the our `/[^HN]ej/` into "match every first letter **except for** H or N. <br> 
+
+```js
+re = /[^HN]ej/;
+
+const strHej = 'Hej?';
+const strNej = 'Nej?';
+
+reTest(re, strHej);
+// > Hej? does NOT match [^HN]ej
+
+reTest(re, strNej);
+// > Nej? does NOT match [^HN]ej
+
+const strSmall = 'nej?';
+reTest(re, strSmall);
+// > nej? matches [^HN]ej
+
+const strRej = 'Rej?';
+reTest(re, strRej);
+// > Rej? matches [^HN]ej
+```
