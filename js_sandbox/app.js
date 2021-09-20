@@ -1,18 +1,24 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /gr[ea]y/i;
+re = /[HN]ej/;
 
+const strHej = 'Hej?';
+const strNej = 'Nej?';
 
-const strGrey = 'grey?';
-const strGray = 'gray?';
+reTest(re, strHej);
+// > Hej? matches [HN]ej
 
-reTest(re, strGrey);
-// > grey? matches gr[ea]y
+reTest(re, strNej);
+// > Nej? matches [HN]ej
 
-reTest(re, strGray);
-// > gray? matches gr[ea]y
+const strSmall = 'nej?';
+reTest(re, strSmall);
+// > Nej? matches [HN]ej
 
+const strRej = 'Rej?';
+reTest(re, strRej);
+// > Nej? matches [HN]ej
 
 
 // Log Results

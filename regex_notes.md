@@ -332,3 +332,27 @@ reTest(re, strGrey);
 reTest(re, strGray);
 // > gray? matches gr[ea]y
 ```
+
+You can specify case sensitivity in the brackets, `/[HN]ej/`: only *Hej* or *Nej* are matching. <br>
+
+```js
+re = /[HN]ej/;
+
+const strHej = 'Hej?';
+const strNej = 'Nej?';
+
+reTest(re, strHej);
+// > Hej? matches [HN]ej
+
+reTest(re, strNej);
+// > Nej? matches [HN]ej
+
+const strSmall = 'nej?';
+reTest(re, strSmall);
+// > nej? does NOT match [HN]ej
+
+const strRej = 'Rej?';
+reTest(re, strRej);
+// > Rej? does NOT match [HN]ej
+```
+
