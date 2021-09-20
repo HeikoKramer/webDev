@@ -425,3 +425,13 @@ reTest(re, str);
 // > Hello matches Hel{2}o
 ```
 
+We can define a **range**, here to match **2-4 l** `/Hel{2,4}o/`. <br>
+
+```js
+re = /Hel{2,4}o/i;
+
+const str = 'Helllo';
+
+reTest(re, str);
+// > Helllo matches Hel{2,4}o
+```
