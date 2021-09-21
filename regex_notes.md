@@ -627,3 +627,20 @@ const strB = 'Number5 lebt';
 reTest(re, strB);
 // > Number5 lebt matches \s
 ```
+
+### The non whitespace character
+**Backslash** and **capital S** `\S` matches everything **except spaces**. <br>
+So our example from above is inverted .. *77* matches, *Numer5 lebt* doesn't. <br>
+
+```js
+// Brackets [] - Character Sets
+re = /\S/;
+
+const str = '77';
+reTest(re, str);
+// > 77 matches \S
+
+const strB = 'Number5 lebt';
+reTest(re, strB);
+// > Number5 lebt matches \S
+```
