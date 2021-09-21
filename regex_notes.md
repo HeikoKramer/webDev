@@ -633,7 +633,6 @@ reTest(re, strB);
 So our example from above is inverted .. *77* matches, *Numer5 lebt* doesn't. <br>
 
 ```js
-// Brackets [] - Character Sets
 re = /\S/;
 
 const str = '77';
