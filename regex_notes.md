@@ -476,3 +476,32 @@ reTest(re, droid);
 // R2D2 matches ^([A-Z][0-9]){2}$
 ```
 
+## Shorthand Character Classes
+### Word character
+The **word charakter** is a **backslash** plus a **w** `\w`. <br>
+It matches an **alphanumeric** character – it can be **any letter** or **any number** or an **underscoce** `_`. <br>
+<br>
+So below we can see that *?What* matches although it starts with a **symbol**. <br>
+That is because `/\w/` matches the next character after the questionmark. <br>
+
+```js
+re = /\w/;
+
+const str = '?What';
+reTest(re, str);
+// > ?What matches \w
+```
+
+If we want to match that our string starts with an **alphanumeric** character, we need to add a **caret** `^`: <br>
+
+```js
+re = /^\w/;
+
+const str = '?What';
+reTest(re, str);
+// > ?What does NOT match ^\w
+
+const strB = 'What?';
+reTest(re, strB);
+// > What? matches ^\w
+```

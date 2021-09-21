@@ -1,15 +1,15 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /^([A-Z][0-9]){2}$/i;
+re = /^\w/;
 
-const str = 'R2D2Balblablub';
+const str = '?What';
 reTest(re, str);
-// > R2D2Balblablub does NOT match ^([A-Z][0-9]){2}$
+// > ?What does NOT match ^\w
 
-droid = 'R2D2';
-reTest(re, droid);
-// R2D2 matches ^([A-Z][0-9]){2}$
+const strB = 'What?';
+reTest(re, strB);
+// > ?What does NOT match ^\w
 
 
 
