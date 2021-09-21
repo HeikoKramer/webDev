@@ -658,5 +658,25 @@ reTest(re, str);
 
 const result = re.exec(str);
 console.log(result.index);
-//  18
+// > 18
+```
+
+### Assertions
+You can specify the required successor of a pattern like this: `/x(?=y)/` match **x** but **only if followed by y**. <br>
+*Hello* matches *Hell* followed by *o* at index 0. *Hell* doesn't match. <br>
+
+```js
+re = /Hell(?=o)/;
+
+const str = 'Hello, welcome to Hell';
+reTest(re, str);
+// > Hello, welcome to Hell matches Hell(?=o)
+
+const result = re.exec(str);
+console.log(result.index);
+// > 0
+
+const strB = 'Hell yeah!';
+reTest(re, strB);
+// > Hell yeah! does NOT match Hell(?=o)
 ```

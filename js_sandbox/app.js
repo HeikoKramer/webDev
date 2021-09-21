@@ -2,16 +2,19 @@ let re;
 
 
 
-re = /Hell\b/i;
+re = /Hell(?=o)/;
 
 const str = 'Hello, welcome to Hell';
 reTest(re, str);
-// > Hello, welcome to Hell matches Hell\b
+// > Hello, welcome to Hell matches Hell(?=o)
 
 const result = re.exec(str);
 console.log(result.index);
-//  18
+// > 0
 
+const strB = 'Hell yeah!';
+reTest(re, strB);
+// > Hello, welcome to Hell matches Hell(?=o)
 
 
 
