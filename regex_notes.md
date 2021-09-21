@@ -643,3 +643,20 @@ const strB = 'Number5 lebt';
 reTest(re, strB);
 // > Number5 lebt matches \S
 ```
+
+### Word boundaries
+The **wordboundary** is matched with **backslash** plus **b** `\b`.<br>
+Without the boundary, our example below would match *Hell* from *Hello* at **index 0**. <br>
+With `\b` included it matches only the detached string *Hell* at **index 18**. <br>
+
+```js
+re = /Hell\b/i;
+
+const str = 'Hello, welcome to Hell';
+reTest(re, str);
+// > Hello, welcome to Hell matches Hell\b
+
+const result = re.exec(str);
+console.log(result.index);
+//  18
+```

@@ -1,15 +1,16 @@
 let re;
 
-// Brackets [] - Character Sets
-re = /\S/;
 
-const str = '77';
+
+re = /Hell\b/i;
+
+const str = 'Hello, welcome to Hell';
 reTest(re, str);
-// > 77 matches \S
+// > Hello, welcome to Hell matches Hell\b
 
-const strB = 'Number5 lebt';
-reTest(re, strB);
-// > Number5 lebt matches \S
+const result = re.exec(str);
+console.log(result.index);
+//  18
 
 
 
@@ -18,8 +19,8 @@ reTest(re, strB);
 
 
 // Log Results
-const result = re.exec(str);
-console.log(result);
+// const result = re.exec(str);
+// console.log(result);
 
 function reTest(re, str) {
   if(re.test(str)) {
