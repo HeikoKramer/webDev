@@ -489,7 +489,6 @@ The example above, also *R2D2Balblablub* would match our regex. <br>
 If we want to restrict it matching only a 4-digit pattern, we have to use the **caret** `^` and the **dollar** `$` sign. <br>
 
 ```js 
-// Brackets [] - Character Sets
 re = /^([A-Z][0-9]){2}$/i;
 
 const str = 'R2D2Balblablub';
@@ -602,7 +601,6 @@ reTest(re, strB);
 If we add a `\w` before our `\D`, only the string *Number5* matches, as it has a **word charakter** before the **digit**. <br>
 
 ```js
-// Brackets [] - Character Sets
 re = /\w\D/;
 
 const str = '77';
@@ -619,6 +617,8 @@ reTest(re, strB);
 *77* does not match, as there is no space in that string. *Numer5 lebt* matches. <br>
 
 ```js
+re = /\s/;
+
 const str = '77';
 reTest(re, str);
 // > 77 does NOT match \s
