@@ -1,7 +1,7 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /\d/;
+re = /\w\D/;
 
 const str = '77';
 reTest(re, str);

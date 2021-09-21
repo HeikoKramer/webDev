@@ -582,4 +582,34 @@ reTest(re, strB);
 // > Number5 matches \d
 ```
 
+### Non digit character
+**Backslash** and **capital D** `\D` builds the **non digit character**.<br>
+<br>
+Both strings *77* and *Number5* contain a **digit** and so they match our regex: <br>
 
+```js
+re = /\D/;
+
+const str = '77';
+reTest(re, str);
+// > 77 matches \d
+
+const strB = 'Number5';
+reTest(re, strB);
+// > Number5 matches \d
+```
+
+If we add a `\w` before our `\D`, only the string *Number5* matches, as it has a **word charakter** before the **digit**. <br>
+
+```js
+// Brackets [] - Character Sets
+re = /\w\D/;
+
+const str = '77';
+reTest(re, str);
+// > 77 does NOT match \w\D
+
+const strB = 'Number5';
+reTest(re, strB);
+// > Number5 matches \w\D
+```
