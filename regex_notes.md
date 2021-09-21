@@ -530,3 +530,39 @@ const strB = 'What?';
 reTest(re, strB);
 // > What? matches ^\w
 ```
+
+### Non word character
+The **backslash** plus a **capital W** `\W` is the **non word character**. <br>
+It matches **symbols** like `?`,`!` or `;`, **spaces**, **brackets** – everything except numbers, letters and the underscore. <br>
+<br>
+The example below matches *What?* and *Hello World*, as both contain a **non word character** (? and space). <br>
+
+```js
+re = /\W/;
+
+const str = 'What?';
+reTest(re, str);
+// > What? matches \W
+
+const strB = 'Hello World';
+reTest(re, strB);
+// > Hello World matches \W
+
+const strC = 'Hello';
+reTest(re, strC);
+// >  Hello does NOT match \W
+```
+
+If we only want to match strings where a non word character appears **at the end**, we can add a **dollar sign** `$`. <br>
+
+```js
+re = /\W$/;
+
+const str = 'What?';
+reTest(re, str);
+// > What? matches \W$
+
+const strB = 'Hello World';
+reTest(re, strB);
+// > Hello World does NOT match \W$
+```

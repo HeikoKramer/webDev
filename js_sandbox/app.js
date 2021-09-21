@@ -1,23 +1,21 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /H[ae]+llo/;
+re = /\W$/;
 
-const str = 'Hallo';
+const str = 'What?';
 reTest(re, str);
-// > Hallo matches H[ae]+llo
+// > What? matches \W
 
-const strB = 'Hello';
+const strB = 'Hello World';
 reTest(re, strB);
-// > Hello matches H[ae]+llo
+// > Hello World matches \W
 
-const strC = 'Hullo';
+const strC = 'Hello';
 reTest(re, strC);
-// > Hullo does NOT match H[ae]+llo
+// >  Hello does NOT match \W
 
-const strD = 'Heeeeello';
-reTest(re, strD);
-// > Heeeeello matches H[ae]+llo
+
 
 
 // Log Results
