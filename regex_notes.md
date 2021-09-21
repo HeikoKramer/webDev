@@ -300,6 +300,31 @@ reTest(re, strGry);
 // > gry matches gre?a?y
 ```
 
+### +
+The **plus** sign `+` added to a pattern means **one or more**. <br>
+In the example below we match the character **e** or **a** or **multiple of those**. <br>
+Note that *Hullo* doesn't match, but *Heeeeello* does. <br>
+
+```js
+re = /H[ae]+llo/;
+
+const str = 'Hallo';
+reTest(re, str);
+// > Hallo matches H[ae]+llo
+
+const strB = 'Hello';
+reTest(re, strB);
+// > Hello matches H[ae]+llo
+
+const strC = 'Hullo';
+reTest(re, strC);
+// > Hullo does NOT match H[ae]+llo
+
+const strD = 'Heeeeello';
+reTest(re, strD);
+// > Heeeeello matches H[ae]+llo
+```
+
 ### Escaping characters
 What is we want to match the string *Gray?* including the `?` as a literal? <br>
 Our regex logic would see the **y** optional in that case, as learned above, so we would not match the *y?*. <br>
