@@ -566,3 +566,20 @@ const strB = 'Hello World';
 reTest(re, strB);
 // > Hello World does NOT match \W$
 ```
+
+### Digits character
+The combination **backslash** + **d** `\d` will match **digits**. <br>
+
+```js
+re = /\d/;
+
+const str = '77';
+reTest(re, str);
+// > 77 matches \d
+
+const strB = 'Number5';
+reTest(re, strB);
+// > Number5 matches \d
+```
+
+

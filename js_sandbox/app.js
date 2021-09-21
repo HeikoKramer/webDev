@@ -1,19 +1,18 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /\W$/;
+re = /\d/;
 
-const str = 'What?';
+const str = '77';
 reTest(re, str);
-// > What? matches \W
+// > 77 matches \d
 
-const strB = 'Hello World';
+const strB = 'Number5';
 reTest(re, strB);
-// > Hello World matches \W
+// > Number5 matches \d
 
-const strC = 'Hello';
-reTest(re, strC);
-// >  Hello does NOT match \W
+
+
 
 
 
