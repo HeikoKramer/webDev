@@ -680,3 +680,23 @@ const strB = 'Hell yeah!';
 reTest(re, strB);
 // > Hell yeah! does NOT match Hell(?=o)
 ```
+
+We can also do the opposite and match a pattern **only if it isn't followed** by a specific letter. <br>
+Therefor we exchange the **equal** `=` with the **bang** `!`. <br>
+Now we don't match *Hello* any longer, we match *Hell* now at index 18. <br>
+
+```js
+re = /Hell(?!o)/;
+
+const str = 'Hello, welcome to Hell';
+reTest(re, str);
+// > Hello, welcome to Hell matches Hell(?!o)
+
+const result = re.exec(str);
+console.log(result.index);
+// > 18
+
+const strB = 'Hell yeah!';
+reTest(re, strB);
+// > Hell yeah! matches Hell(?!o)
+```

@@ -2,7 +2,7 @@ let re;
 
 
 
-re = /Hell(?=o)/;
+re = /Hell(?!o)/;
 
 const str = 'Hello, welcome to Hell';
 reTest(re, str);
@@ -14,7 +14,7 @@ console.log(result.index);
 
 const strB = 'Hell yeah!';
 reTest(re, strB);
-// > Hello, welcome to Hell matches Hell(?=o)
+// > Hell yeah! does NOT match Hell(?=o)
 
 
 
