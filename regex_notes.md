@@ -583,7 +583,7 @@ reTest(re, strB);
 ```
 
 ### Non digit character
-**Backslash** and **capital D** `\D` builds the **non digit character**.<br>
+**Backslash** and **capital D** `\D` matches **non digit characters**.<br>
 <br>
 Both strings *77* and *Number5* contain a **digit** and so they match our regex: <br>
 
@@ -612,4 +612,18 @@ reTest(re, str);
 const strB = 'Number5';
 reTest(re, strB);
 // > Number5 matches \w\D
+```
+
+### The whitespace character
+**Backslash** and **s** `\s` matches **whitespace** – so any **space characters** in a string. <br>
+*77* does not match, as there is no space in that string. *Numer5 lebt* matches. <br>
+
+```js
+const str = '77';
+reTest(re, str);
+// > 77 does NOT match \s
+
+const strB = 'Number5 lebt';
+reTest(re, strB);
+// > Number5 lebt matches \s
 ```

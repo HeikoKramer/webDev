@@ -1,15 +1,15 @@
 let re;
 
 // Brackets [] - Character Sets
-re = /\w\D/;
+re = /\s/;
 
 const str = '77';
 reTest(re, str);
-// > 77 matches \d
+// > 77 does NOT match \s
 
-const strB = 'Number5';
+const strB = 'Number5 lebt';
 reTest(re, strB);
-// > Number5 matches \d
+// > Number5 lebt matches \s
 
 
 
