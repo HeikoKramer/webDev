@@ -2290,3 +2290,28 @@ console.log(names.next().value);
 console.log(names.next());
 // > Object { done: true }
 ```
+
+### Generators
+**Generators** are basically functions that can return multiple values – **yield values**. <br>
+You have to put an **asterisk** after the word *function* `function*` to declare a **generator**. <br>
+The generator works like the iterator then and returns **yield values** one by one when it's called. <br>
+
+```js
+// Generator Example
+function* sayNames() {
+  yield 'Jack';
+  yield 'Jill';
+  yield 'John';
+}
+
+const name = sayNames();
+
+console.log(name.next().value);
+// > Jack
+console.log(name.next().value);
+// > Jill
+console.log(name.next().value);
+// > John
+console.log(name.next().value);
+// > undefined
+```
