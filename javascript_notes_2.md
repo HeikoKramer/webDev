@@ -2315,3 +2315,25 @@ console.log(name.next().value);
 console.log(name.next().value);
 // > undefined
 ```
+
+Here an example for a basic Id **generator** that returns an increased value every time it is called. <br>
+
+```js
+// ID Creator
+function* createIds() {
+  let index = 0;
+
+  while(true) {
+    yield index++;
+  }
+}
+
+const gen = createIds();
+
+console.log(gen.next().value);
+// > 0
+console.log(gen.next().value);
+// > 1
+console.log(gen.next().value);
+// > 2
+```
