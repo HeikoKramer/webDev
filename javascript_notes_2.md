@@ -2626,7 +2626,7 @@ for(let value of map1.values()) {
 ![values](/images/values.png)
 
 ### Convert maps to arrays
-We can use `form()` to convert the **key value pair** into an array of objects with its key and value as properties. <br>
+We can use `from()` to convert the **key value pair** into an array of objects with its key and value as properties. <br>
 
 ```js
 const map1 = new Map();
@@ -2645,3 +2645,25 @@ map1.set(key3, 'Value of key3');
 const keyValArr = Array.from(map1);
 console.log(keyValArr);
 ```
+
+![map-to-array](/images/map-to-array.png)
+
+If you want to create an array **just from values**, use `from()` and `values()`: <br>
+
+```js
+// Create an array just from values
+const valArr = Array.from(map1.values());
+console.log(valArr);
+```
+
+![just-values](/images/just-values.png)
+
+If you want to create an array **just from key**, use `from()` and `keys()`: <br>
+
+```js
+// Create an array just from keys
+const keyArr = Array.from(map1.keys());
+console.log(keyArr);
+```
+
+![just-keys](/images/just-keys.png)
