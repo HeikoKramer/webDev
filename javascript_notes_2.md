@@ -2624,3 +2624,24 @@ for(let value of map1.values()) {
 ```
 
 ![values](/images/values.png)
+
+### Convert maps to arrays
+We can use `form()` to convert the **key value pair** into an array of objects with its key and value as properties. <br>
+
+```js
+const map1 = new Map();
+
+// Set Keys
+const key1 = 'some string',
+      key2 = {},
+      key3 = function() {};
+
+// Set map values by key
+map1.set(key1, 'Value of key1');
+map1.set(key2, 'Value of key2');
+map1.set(key3, 'Value of key3');
+
+// Create an array of the key value pairs
+const keyValArr = Array.from(map1);
+console.log(keyValArr);
+```

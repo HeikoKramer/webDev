@@ -13,7 +13,6 @@ map1.set(key1, 'Value of key1');
 map1.set(key2, 'Value of key2');
 map1.set(key3, 'Value of key3');
 
-// Loop with forEach
-map1.forEach(function(value, key) {
-  console.log(`${key} = ${value}`);
-});
+// Create an array of the key value pairs
+const keyValArr = Array.from(map1);
+console.log(keyValArr);
