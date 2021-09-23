@@ -28,12 +28,35 @@
 // > John Beth Mike 
 
 // Parse array returned from function
-function getPeople() {
-  return ['John', 'Beth', 'Mike'];
+// function getPeople() {
+//   return ['John', 'Beth', 'Mike'];
+// }
+
+// let person1, person2, person3;
+// [person1, person2, person3] = getPeople();
+
+// console.log(person1, person2, person3);
+// > John Beth Mike 
+
+// Object Destructing
+
+const person = {
+  name: 'John Doe',
+  age: 32,
+  city: 'Miami',
+  gender: 'Male'
 }
 
-let person1, person2, person3;
-[person1, person2, person3] = getPeople();
+// // Old ES5 way
+// const name = person.name,
+//       age  = person.age,
+//       city = person.city;
 
-console.log(person1, person2, person3);
-// > John Beth Mike 
+// console.log(name);
+// >  John Doe
+
+// New ES6 Destructuring
+const { name, age, city } = person;
+
+console.log(name);
+// >  John Doe

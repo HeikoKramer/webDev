@@ -2504,3 +2504,40 @@ let person1, person2, person3;
 console.log(person1, person2, person3);
 // > John Beth Mike 
 ```
+
+### Object Destructing
+Let's destruct a person object into multiple variables the ES5 and the ES6 way. <br>
+<br>
+Here our person: <br>
+
+```js
+const person = {
+  name: 'John Doe',
+  age: 32,
+  city: 'Miami',
+  gender: 'Male'
+}
+```
+
+The old ES5 way: <br>
+
+```js
+// Old ES5 way
+const name = person.name,
+      age  = person.age,
+      city = person.city;
+
+console.log(name);
+// >  John Doe
+```
+
+The new ES6 way: <br>
+
+```js
+// New ES6 Destructuring
+const { name, age, city } = person;
+
+console.log(name);
+// >  John Doe
+```
+
