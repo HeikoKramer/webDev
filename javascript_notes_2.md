@@ -2463,3 +2463,15 @@ console.log(b);
 console.log(rest);
 // > Array(3) [ 300, 400, 500 ]
 ```
+
+### Destructuring assignment and rest pattern with objects
+The **destructuring assignment** and the **rest pattern** work as well with **objects**: <br>
+
+```js
+({ a,b, ...rest } = { a: 100, b: 200, c: 300, d: 400, e: 500});
+
+console.log(a,b);
+// > 100 200
+console.log(rest);
+// > Object { c: 300, d: 400, e: 500 }
+```
