@@ -2431,11 +2431,11 @@ console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // <-- symbol
 
 ## Destructuring
 **Destructuring** was introduced with ES6 and it gives us an easy way to **assign and extract variables** from **arrays and objects**. <br>
-### Destructuring Assignment
+### Destructuring assignment
 Destructuring assignment provides an efficient way to assign values to variables: <br>
 
 ```js
-// Destructuring Assignment
+// Destructuring assignment
 
 let a, b;
 [a, b] = [100, 200];
@@ -2446,3 +2446,20 @@ console.log(b);
 // > 200
 ```
 
+### Rest pattern
+The **rest pattern** provides a way to store the remaining values from an array, which where not assigned, to the **rest** variable. <br>
+The pattern to assign those remainers to rest is **three dots, followed by the word rest** – `...rest`. <br>
+
+```js
+let a, b;
+
+// Rest pattern
+[a, b, ...rest] = [100, 200, 300, 400, 500];
+
+console.log(a);
+// > 100
+console.log(b);
+// > 200
+console.log(rest);
+// > Array(3) [ 300, 400, 500 ]
+```
