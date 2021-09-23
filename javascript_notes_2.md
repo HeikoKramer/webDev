@@ -2363,3 +2363,12 @@ The **typof** our variables is now **symbol**. <br>
 console.log(typeof sym1);
 // > symbol 
 ```
+
+Symbols are **unique**, no two symbols can be the same, even if you give them the same identifier: <br>
+
+```js
+console.log(Symbol() === Symbol());
+// > false
+console.log(Symbol('42') === Symbol('42'));
+// > false
+```
