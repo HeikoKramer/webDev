@@ -13,7 +13,7 @@ map1.set(key1, 'Value of key1');
 map1.set(key2, 'Value of key2');
 map1.set(key3, 'Value of key3');
 
-// Iterate key only
-for(let key of map1.keys()) {
-  console.log(`${key}`)
+// Iterate values only
+for(let value of map1.values()) {
+  console.log(`${value}`)
 }

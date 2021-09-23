@@ -2604,3 +2604,13 @@ for(let key of map1.keys()) {
 ```
 
 ![keys](/images/keys.png)
+
+It works the same way for **only values** with `values()`. <br>
+
+```js
+// Iterate values only
+for(let value of map1.values()) {
+  console.log(`${value}`)
+}
+```
+
