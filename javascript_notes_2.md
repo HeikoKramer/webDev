@@ -2430,4 +2430,19 @@ console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // <-- symbol
 ```
 
 ## Destructuring
+**Destructuring** was introduced with ES6 and it gives us an easy way to **assign and extract variables** from **arrays and objects**. <br>
+### Destructuring Assignment
+Destructuring assignment provides an efficient way to assign values to variables: <br>
+
+```js
+// Destructuring Assignment
+
+let a, b;
+[a, b] = [100, 200];
+
+console.log(a);
+// > 100
+console.log(b);
+// > 200
+```
 
