@@ -2428,3 +2428,6 @@ console.log(JSON.stringify({key: 'prop'}));              // <-- property
 console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // <-- symbol
 // > {}
 ```
+
+## Destructuring
+
