@@ -2372,3 +2372,59 @@ console.log(Symbol() === Symbol());
 console.log(Symbol('42') === Symbol('42'));
 // > false
 ```
+
+### Unique object keys
+**Unique object keys** are the main reason for symbols. <br>
+Symbols can't be assigned or addressed via dot notation – they have to be assigned with brackets `[]`. <br>
+If you try to assigned a symbol to an object with dot notation, it will be added as a regular **property**. <br>
+
+```js
+const KEY1 = Symbol();
+const KEY2 = Symbol();
+const key3 = Symbol();
+const key4 = Symbol();
+
+const myObj = {};
+
+myObj[KEY1] = 'Prop1'; // <-- Symbol
+myObj[KEY2] = 'Prop2'; // <-- Symbol
+myObj.key3  = 'Prop3'; // <-- no symbol, only a simple property
+myObj.key4  = 'Prop4'; // <-- no symbol, only a simple property
+
+// Symbols
+console.log(myObj[KEY1]);
+// > Prop1
+console.log(myObj[KEY2]);
+// > Prop2
+
+// Cant address a symbol with dot notation
+console.log(myObj.KEY1);
+// > undefined
+
+// Properties
+console.log(myObj.key3);
+// > Prop3
+console.log(myObj.key4);
+// > Prop4
+```
+
+**Symbols** are not enumerable in loops. <br>
+
+```js
+for(let i in myObj) {
+  console.log(`${i}: ${myObj[i]}`);
+}
+
+// > key3: Prop3
+// > key4: Prop4
+```
+
+**Symbols** are ignored by JSON.stringify. <br>
+The symbol doesn't parse, we end up with an empty object: <br>
+
+```js
+console.log(JSON.stringify({key: 'prop'}));              // <-- property
+// >  {"key":"prop"}
+console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // <-- symbol
+// > {}
+```
