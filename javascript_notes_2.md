@@ -2593,3 +2593,14 @@ for(let [key, value] of map1) {
 ```
 
 ![map-key-value](/images/map-key-value.png)
+
+If we want to get **keys only**, we can use `keys()`. <br>
+
+```js
+// Iterate key only
+for(let key of map1.keys()) {
+  console.log(`${key}`)
+}
+```
+
+![keys](/images/keys.png)
