@@ -2614,3 +2614,4 @@ for(let value of map1.values()) {
 }
 ```
 
+![values](/images/values.png)
