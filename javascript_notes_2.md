@@ -2592,6 +2592,15 @@ for(let [key, value] of map1) {
 }
 ```
 
+Same result, but archived with **forEach**: <br>
+
+```js
+// Loop with forEach
+map1.forEach(function(value, key) {
+  console.log(`${key} = ${value}`);
+})
+```
+
 ![map-key-value](/images/map-key-value.png)
 
 If we want to get **keys only**, we can use `keys()`. <br>
