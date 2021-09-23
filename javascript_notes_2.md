@@ -2488,3 +2488,19 @@ const [person1, person2, person3] = people;
 console.log(person1, person2, person3);
 // > John Beth Mike 
 ```
+
+### Parse array returned from function
+Same principle here with an array returned by a function. <br> 
+
+```js
+// Parse array returned from function
+function getPeople() {
+  return ['John', 'Beth', 'Mike'];
+}
+
+let person1, person2, person3;
+[person1, person2, person3] = getPeople();
+
+console.log(person1, person2, person3);
+// > John Beth Mike 
+```
