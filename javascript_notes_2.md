@@ -2475,3 +2475,16 @@ console.log(a,b);
 console.log(rest);
 // > Object { c: 300, d: 400, e: 500 }
 ```
+
+### Array Destructuring
+Here an example for **array destructuring**, we're creating three variables and assign each its index peer from the array. <br> 
+
+```js
+// Array Destructuring
+
+const people = ['John', 'Beth', 'Mike'];
+const [person1, person2, person3] = people;
+
+console.log(person1, person2, person3);
+// > John Beth Mike 
+```
