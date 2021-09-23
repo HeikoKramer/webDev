@@ -2337,3 +2337,29 @@ console.log(gen.next().value);
 console.log(gen.next().value);
 // > 2
 ```
+
+## Symbols
+**symbols** are a **primitive datatype** and they are part of the **ES6** standard. <br>
+Each symbol is completely **unique** – that makes them very valuable for things like object property identifiers. <br>
+The main purpose of symbols is their uniqueness. <br>
+To **create a symbol** just set a variable equal to `Symbol()`. <br>
+You can give the symbol an **identifier** `Symbol('identifier')`. <br>
+
+```js
+// Create a symbol
+const sym1 = Symbol();
+const sym2 = Symbol('sym2');
+
+console.log(sym1);
+// > Symbol()
+
+console.log(sym2);
+// > Symbol("sym2")
+```
+
+The **typof** our variables is now **symbol**. <br>
+
+```js
+console.log(typeof sym1);
+// > symbol 
+```
