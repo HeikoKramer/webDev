@@ -2667,3 +2667,24 @@ console.log(keyArr);
 ```
 
 ![just-keys](/images/just-keys.png)
+
+## ES6 Sets
+A **sets** is a collection of values, **like an array**, but in a set, **each value is unique**, you **can't store a value twice** in a set. <br>
+You can **add values** to a set with `add()`. <br>
+We can add different value types to the same set, in the example below we add a number, a string, an object and a boolean. <br>
+
+```js
+// SET - Store unique values of any type
+
+const set1 = new Set();
+
+// Add values to set
+set1.add(100);
+set1.add('a string');
+set1.add({name: 'John'});
+set1.add(true);
+
+console.log(set1);
+```
+
+![set](/images/set.png)
