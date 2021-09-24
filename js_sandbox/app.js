@@ -9,11 +9,8 @@ set1.add({name: 'John'});
 set1.add(true);
 
 // Check for values
-console.log(set1.has(100));
-// > true
-console.log(set1.has(50 + 50)); // <-- expression that equals 100
-// > true
-console.log(set1.has(200));
+console.log(set1.has({name: 'John'}));
 // > false
 
-console.log(set1.has({name: 'John'}));
+console.log('John' === 'John');
+// > false

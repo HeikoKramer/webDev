@@ -2762,3 +2762,35 @@ console.log(set1.has(50 + 50)); // <-- expression that equals 100
 console.log(set1.has(200));
 // > false
 ```
+
+Let's have a look at the **object** in the set: <br>
+
+```js
+const set1 = new Set();
+
+// Add values to set
+set1.add(100);
+set1.add('a string');
+set1.add({name: 'John'});
+set1.add(true);
+
+// Check for values
+console.log(set1.has({name: 'John'}));
+// > false
+```
+
+The `.has` check for the **object** returns **false** although the object with the exact same properties is in our set. <br>
+But objects are **reference objects** no **primitive values**, they are not stored in the stack, they live in heap. <br>
+Even if we make a check for two identical objects in the same line, it's going to return **false**: <br>
+
+```js
+console.log({name: 'John'} === {name: 'John'});
+// > false
+```
+
+If we compare only the two name strings, we get back **true**, because a string is a **primitive value**: <br>
+
+```js
+console.log('John' === 'John');
+// > true
+```
