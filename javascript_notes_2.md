@@ -2670,7 +2670,7 @@ console.log(keyArr);
 
 ## ES6 Sets
 A **sets** is a collection of values, **like an array**, but in a set, **each value is unique**, you **can't store a value twice** in a set. <br>
-You can **add values** to a set with `add()`. <br>
+You have to declare your set with `new Set()`. **Add values** to a set with `add()`. <br>
 We can add different value types to the same set, in the example below we add a number, a string, an object and a boolean. <br>
 
 ```js
@@ -2688,3 +2688,28 @@ console.log(set1);
 ```
 
 ![set](/images/set.png)
+
+If we try to add 100 again – a value that already exists – it will have no effect, **each value can only exist once** in the set. <br>
+New values get added, already existing values are ignored. <br>
+
+```js
+const set1 = new Set();
+
+// Add values to set
+set1.add(100);
+set1.add('a string');
+set1.add({name: 'John'});
+set1.add(true);
+
+console.log(set1);
+// > Set(4) [ 100, "a string", {…}, true ]
+
+set1.add(100); // <-- already exists in out set
+
+set1.add(200);
+set1.add(300);
+set1.add(400);
+
+console.log(set1);
+// > [ 100, "a string", {…}, true, 200, 300, 400 ]
+```
