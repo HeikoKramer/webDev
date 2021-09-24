@@ -2713,3 +2713,11 @@ set1.add(400);
 console.log(set1);
 // > [ 100, "a string", {…}, true, 200, 300, 400 ]
 ```
+
+You can also initiating a **new set** by **passing values in square brackets**: <br>
+
+```js
+const set2 = new Set([1, true, 'string']);
+console.log(set2);
+// > Set(3) [ 1, true, "string" ]
+```

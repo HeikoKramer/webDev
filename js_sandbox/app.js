@@ -19,3 +19,6 @@ set1.add(400);
 
 console.log(set1);
 // > [ 100, "a string", {…}, true, 200, 300, 400 ]
+
+const set2 = new Set([1, true, 'string']);
+console.log(set2);
