@@ -2851,3 +2851,5 @@ console.log(arrSet);
 // > Set(4) [ 100, "a string", {…}, true ]
 ```
 
+## JavaScript Patterns
+I have carved out my [notes on JavaScript **patterns**](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md). <br>
