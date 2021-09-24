@@ -8,14 +8,7 @@ set1.add('a string');
 set1.add({name: 'John'});
 set1.add(true);
 
-// Iterating through sets
-
-// For..of
-for(let item of set1) {
-  console.log(item);
-}
-
-// ForEach Loop
-set1.forEach((value) => {
-  console.log(value);
-})
+// Convert set to array
+const setArr = Array.from(set1);
+console.log(setArr);
+// > Array(4) [ 100, "a string", {…}, true ]
