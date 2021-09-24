@@ -2741,3 +2741,24 @@ console.log(set1.size);
 // > 4
 ```
 
+You can check if a set contains a certain value with `.has`. <br>
+This query will provide **true** or **false** if the value is stored in the set or nor. <br>
+Note that also **expressions that equal a value in the set** will return **true**. <br>
+
+```js
+const set1 = new Set();
+
+// Add values to set
+set1.add(100);
+set1.add('a string');
+set1.add({name: 'John'});
+set1.add(true);
+
+// Check for values
+console.log(set1.has(100));
+// > true
+console.log(set1.has(50 + 50)); // <-- expression that equals 100
+// > true
+console.log(set1.has(200));
+// > false
+```

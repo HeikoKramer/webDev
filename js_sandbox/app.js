@@ -8,8 +8,12 @@ set1.add('a string');
 set1.add({name: 'John'});
 set1.add(true);
 
-console.log(set1);
-// > Set(4) [ 100, "a string", {…}, true ]
+// Check for values
+console.log(set1.has(100));
+// > true
+console.log(set1.has(50 + 50)); // <-- expression that equals 100
+// > true
+console.log(set1.has(200));
+// > false
 
-// Get count
-console.log(set1.size);
+console.log(set1.has({name: 'John'}));
