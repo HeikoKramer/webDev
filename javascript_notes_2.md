@@ -2825,7 +2825,7 @@ set1.forEach((value) => {
 ![set-iteration](/images/set-iteration.png)
 
 ### Convert set to array
-YOu can **convert a set to an array** with `Array.from()`: <br>
+You can **convert a set to an array** with `Array.from()`: <br>
 
 ```js
 const set1 = new Set();
@@ -2841,3 +2841,13 @@ const setArr = Array.from(set1);
 console.log(setArr);
 // > Array(4) [ 100, "a string", {…}, true ]
 ```
+
+### Convert array to set
+The other way around is even easier, just hand over your array to `new Set()` to convert the array to a set. <br>
+
+```js
+const arrSet = new Set(setArr);
+console.log(arrSet);
+// > Set(4) [ 100, "a string", {…}, true ]
+```
+

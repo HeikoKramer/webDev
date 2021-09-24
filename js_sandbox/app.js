@@ -12,3 +12,6 @@ set1.add(true);
 const setArr = Array.from(set1);
 console.log(setArr);
 // > Array(4) [ 100, "a string", {…}, true ]
+
+const arrSet = new Set(setArr);
+console.log(arrSet);
