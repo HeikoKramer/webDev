@@ -1,28 +1,25 @@
-// Basic structure
+// Revealing Module Pattern
+const ItemCtrl = (function() {
+  let data = [];
 
-// (function() {
-//   // Declare private vars and functions
+  function add(item) {
+    data.push(item);
+    console.log('Item Added');
+  }
 
-//   return {
-//     // Declare public var and functions
-//   }
-// })();
-
-// STANDARD MODULE PATTERN
-const UICtrl = (function() {
-  let text = 'Hello World';
-
-  const changeText = function() {
-    const element = document.querySelector('h1');
-    element.textContent = text;
+  function get(id) {
+    return data.find(item => {
+      return item.id === id;
+    });
   }
 
   return {
-    callChangeText: function() {
-      changeText();
-      console.log(text);
-    } 
+    add: add,
+    get: get
   }
 })();
 
-// UICtrl.changeText();
+ItemCtrl.add({id: 1, name: 'John'});
+// >  Item Added
+
+console.log(ItemCtrl.get(1));

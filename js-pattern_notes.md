@@ -67,4 +67,37 @@ If we try to call the **inner function** *changeText()*, we get an error, that f
 
 ![inner-function](/images/inner-function.gif)
 
---> weiter bei 7:00
+### Revealing module pattern
+The **revealing module pattern** is very similar to the standard module pattern. <br>
+The main difference is that instead of returning public functions, we will basically **map an object literal** to those **private functions** that you want to **reveal**. <br>
+Below we have two **private functions** in our module, which we **map to an object**. <br>
+We **return that object** and can so access those functions via **dot notation**. <br>
+
+```js
+// Revealing Module Pattern
+const ItemCtrl = (function() {
+  let data = [];
+
+  function add(item) {
+    data.push(item);
+    console.log('Item Added');
+  }
+
+  function get(id) {
+    return data.find(item => {
+      return item.id === id;
+    });
+  }
+
+  return {
+    add: add,
+    get: get
+  }
+})();
+
+ItemCtrl.add({id: 1, name: 'John'});
+// >  Item Added
+
+console.log(ItemCtrl.get(1));
+// Object { id: 1, name: "John" }
+```
