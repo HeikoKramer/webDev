@@ -1,25 +1,27 @@
-// Revealing Module Pattern
-const ItemCtrl = (function() {
-  let data = [];
+const Singleton = (function() {
+  let instance;
 
-  function add(item) {
-    data.push(item);
-    console.log('Item Added');
-  }
-
-  function get(id) {
-    return data.find(item => {
-      return item.id === id;
-    });
+  function createInstance() {
+    const object = new Object({name:'Heiko'});
+    return object;
   }
 
   return {
-    add: add,
-    get: get
+    getInstance: function() {
+      if(!instance) {
+        instance = createInstance();
+      }
+      return instance;
+    }
   }
 })();
 
-ItemCtrl.add({id: 1, name: 'John'});
-// >  Item Added
+const instanceA = Singleton.getInstance();
+console.log(instanceA);
+// > Object { name: "Heiko" }
+const instanceB = Singleton.getInstance();
+console.log(instanceB);
+// > Object { name: "Heiko" }
 
-console.log(ItemCtrl.get(1));
+console.log(instanceA === instanceB);
+// > true
