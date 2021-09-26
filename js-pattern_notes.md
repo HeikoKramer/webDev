@@ -392,4 +392,10 @@ katrin.send('Gude Ute!', ute);
 ute.send('Na ihr Frösche, was geht ab!?');
 ```
 
-![mediator-pattern](/images/mediator-pattern.png)
+[mediator-pattern](/images/mediator-pattern.png)
+
+## The state pattern
+The **state pattern** is an other **behavioral pattern**. <br>
+We have a **state** that we can change throughout our scripts if we want to do **certain things on certain states**. <br>
+
+
