@@ -2853,3 +2853,38 @@ console.log(arrSet);
 
 ## JavaScript Patterns
 I have carved out my [notes on JavaScript **patterns**](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md). <br>
+
+## Modules
+There are different types of **modules** in JavaScript. <br>
+We have **common JS modules**, which node.js uses by default, what we can use with webpack by default. <br>
+And there are **ES2015 modules**, for which to use we have to set up **Babel**. <br>
+Both of them are used to bring in **modules**, which can be **other JavaScript files**, or **modules that you install with npm**, but their syntax is different. <br>
+
+### Common JS modules
+To bring in some JavaScript code from one JS-file to an other as a **module**, we have to use `module.exports` in the **module file**. <br>
+<br>
+Here we have created and **exported** an object in our *module1.js* file: <br>
+
+```js
+module.exports = {
+  name: 'Brad',
+  email: 'test@test.test'
+}
+```
+
+Now we can **import** that object in our *app.js* file like this: <br>
+
+```js
+const person = require('./mymodule1');
+
+console.log(person);
+// > Object { name: "Brad", email: "test@test.test" }
+```
+
+We don't have to add the **.js** on the file name, the path **./** is fine when our module is located in the same folder. <br>
+This is how you would also bring in modules that you installed with **npm**. <br>
+But those would go in the **node_modules** folder. <br>
+<br>
+**Modules** are nice for our **application structure** as the allow us to to bring in other files without adding them all via **script tags** to our *index.html*. <br>
+
+
