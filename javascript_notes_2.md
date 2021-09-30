@@ -2980,4 +2980,17 @@ console.log(greetings());
 // > Hello my friend!
 ```
 
+If you have a class like out [EasyHTTP](https://github.com/HeikoKramer/webDev/blob/main/js_tutorials/easyhttp_es6_async-await/easyhttp.js) class from an earlier tutorial, you can export it by **exporting a new instance of it**. <br>
+So if we add that class in a separate file to our project, we simple add the following at the end: <br>
+
+```js
+export const http = new EasyHTTP();
+```
+
+Now we can **import** it into our *app.js* file with: <br>
+
+```js
+import { http } from './http';
+```
+
 The problem with the **ES2015** standard is, that it is not supported by all the browsers out there and that we have to [**transpile** it down to the **ES5** standard with **Babel**](https://developers.google.com/web/shows/ttt/series-2/es2015). <br>
