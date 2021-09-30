@@ -2,5 +2,6 @@ node_modules
 package-lock.json
 js_tutorials/API_Projects/github_finder/github.js
 postman_course/
-js_tutorials/microposts
+js_tutorials/microposts/node_modules
+js_tutorials/microposts/build
 js_tutorials/API_Projects/weatherjs/weather.js
