@@ -2875,6 +2875,7 @@ module.exports = {
 Now we can **import** that object in our *app.js* file like this: <br>
 
 ```js
+//  CommonJS Module Syntax
 const person = require('./mymodule1');
 
 console.log(person);
@@ -2887,4 +2888,96 @@ But those would go in the **node_modules** folder. <br>
 <br>
 **Modules** are nice for our **application structure** as the allow us to to bring in other files without adding them all via **script tags** to our *index.html*. <br>
 
+### ES2015 modules
+The syntax for **ES2015 modules** is a little different, let's test it out in a file called *mymodule2.js*. <br>
 
+```js
+export const person = {
+  name: 'John',
+  age: 30
+}
+```
+
+Now we don't say `module.exports` as before, we simply use `export`. <br>
+We can **export** as many things as we want. <br>
+<br>
+To **import** the **module** into our *app.js* file, we now have to use an other syntax: <br>
+
+```js
+// ES2015 Module
+import { person } from './mymodule2';
+
+console.log(person.name);
+// > John
+```
+
+We can even **access non-exported** elements from our **module** as long as they are accessible for the **exported function** for example. <br>
+
+```js
+export const person = {
+  name: 'John',
+  age: 30
+}
+
+const fruit = {
+  name: 'Banana',
+  color: 'yellow'
+}
+
+export function eatFresh() {
+  console.log(`I love a nice and ${fruit.color} ${fruit.name}!`);
+}
+```
+
+We have not exported the *fruit* constant, but the *eatFresh()* function. <br>
+We are importing multiple things from our **module** using **destructuring**: <br>
+
+```js
+// ES2015 Module
+import { person, eatFresh } from './mymodule2';
+
+console.log(person.name);
+// > John
+
+console.log(eatFresh());
+//  I love a nice and yellow Banana!
+```
+
+We can also **import everything** what we have **exported in a module**, with the **asterisk**. <br>
+But than we have to **group those imports** under a **name**. <br>
+Now we are importing **everything (\*)** from *mymodule2.js* under the name *mod* (`as mod`). <br>
+To access those things, we have to use the name and dot notation – `mod.person.name` for example. <br>
+We still can't access our *fruit* constant directly – as we have not exported it. <br>
+But it is accessible via the `eatFresh()` function that has access to it in the **module**. <br>
+
+```js
+// ES2015 Module
+import * as mod from './mymodule2';
+
+console.log(mod.person.name);
+// > John
+
+console.log(mod.eatFresh());
+//  I love a nice and yellow Banana!
+```
+
+There is an other way to **import** something, without using **curley brackets** `{}`. <br>
+If we export that things with the keyword **default**, we can import it without using brackets: <br>
+
+```js
+export default function greetings() {
+  console.log('Hello my friend!');
+}
+```
+
+`export default` used in the *mymodule2.js* file, let's us **import** our function a bit easier into *app.js*: <br>
+
+```js
+// ES2015 Module
+import greetings from './mymodule2';
+
+console.log(greetings());
+//  I love a nice and yellow Banana!
+```
+
+The problem with the **ES2015** standard is, that it is not supported by all the browsers out there and that we have to [**transpile** it down to the **ES5** standard with **Babel**](https://developers.google.com/web/shows/ttt/series-2/es2015). <br>
