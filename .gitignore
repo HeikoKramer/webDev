@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 js_tutorials/API_Projects/github_finder/github.js
 postman_course/
+js_tutorials/microposts
+
