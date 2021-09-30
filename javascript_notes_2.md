@@ -2940,7 +2940,7 @@ console.log(person.name);
 // > John
 
 console.log(eatFresh());
-//  I love a nice and yellow Banana!
+// > I love a nice and yellow Banana!
 ```
 
 We can also **import everything** what we have **exported in a module**, with the **asterisk**. <br>
@@ -2958,7 +2958,7 @@ console.log(mod.person.name);
 // > John
 
 console.log(mod.eatFresh());
-//  I love a nice and yellow Banana!
+// > I love a nice and yellow Banana!
 ```
 
 There is an other way to **import** something, without using **curley brackets** `{}`. <br>
@@ -2977,7 +2977,7 @@ export default function greetings() {
 import greetings from './mymodule2';
 
 console.log(greetings());
-//  I love a nice and yellow Banana!
+// > Hello my friend!
 ```
 
 The problem with the **ES2015** standard is, that it is not supported by all the browsers out there and that we have to [**transpile** it down to the **ES5** standard with **Babel**](https://developers.google.com/web/shows/ttt/series-2/es2015). <br>
