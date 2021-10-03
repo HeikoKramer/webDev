@@ -4,6 +4,14 @@
 
 *Here I'm noting down the my insigths while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com.* <br>
 
+## Table of content
+* [UI Variables](#ui-variables)
+* [Load event listeners](#load-event-listeners)
+* [Check for valid input](#check-for-valid-input)
+* [Filter for a specific value](#filter-for-a-specific-value)
+* [Load something from local storage](#load-something-from-local-storage)
+* [Remove something from / clear local storage](#remove-something-from--clear-local-storage)
+
 ## UI Variables
 It makes sense to **define UI variables** somewhere central in your code, for an easier accessibility an better readability. <br> 
 
@@ -158,7 +166,7 @@ function getTasks(){
 }
 ```
 
-### Remove something from / clear local storage
+## Remove something from / clear local storage
 In our example we have as well logic to **delete** single tasks and to **clear** the complete tasks list with a single click. <br>
 As we have stored our tasks in **local storage** so that the browser "remembers" added task when re-loading … we must not forget to **delete them from local storage when delting them in the UI**. <br>
 Otherwise they will **re-appear in UI when reloading the page**. <br>
