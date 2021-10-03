@@ -4,14 +4,14 @@
 I'm writing these notes while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com* 
 
 ## Table of contents
-  * [What are patterns?](#what-are-patterns)
-  * [The module pattern](#the-module-pattern)
-  * [Revealing module pattern](#revealing-module-pattern)
-  * [The singleton pattern](#the-singleton-pattern)
-  * [Factory pattern](#factory-pattern)
-  * [The observer pattern](#the-observer-pattern)
-  * [The mediator pattern](#the-mediator-pattern)
-  * [The state pattern](#the-state-pattern)
+* [What are patterns?](#what-are-patterns)
+* [The module pattern](#the-module-pattern)
+* [Revealing module pattern](#revealing-module-pattern)
+* [The singleton pattern](#the-singleton-pattern)
+* [Factory pattern](#factory-pattern)
+* [The observer pattern](#the-observer-pattern)
+* [The mediator pattern](#the-mediator-pattern)
+* [The state pattern](#the-state-pattern)
 
 ## What are patterns?
 **Patterns** are re-usable solutions to re-occurring problems, they are **programming templates**, a specific way to write code. <br>
