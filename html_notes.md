@@ -1,16 +1,16 @@
 # HTML Notes
 Those notes were taken wile watching Brad Traversy's [Modern HTML and CSS from the Beginning](https://subscription.packtpub.com/video/web-development/9781838822828/113179/113180/welcome-to-the-course) on packthub.com – a course that I can highly recommend, it's comprehensive, beginner friendly and hands-on focused, with a lot of really cool practice examples. <br>
-<br>
-Table of contents: <br>
+
+## Table of contents:
 
 - [HTML Notes](#html-notes)
   * [Tag Syntax](#tag-syntax)
-  * [Doctype & Basic Layout](#doctype---basic-layout)
-    + [\<head\>](#--head--)
-    + [\<body\>](#--body--)
+  * [Doctype & Basic Layout](#doctype-basic-layout)
+    + [\<head\>](#head)
+    + [\<body\>](#body)
     + [Comments](#comments)
   * [Meta Tags](#meta-tags)
-  * [Headings, Paragraphs, Typography](#headings--paragraphs--typography)
+  * [Headings, Paragraphs, Typography](#headings-paragraphs-typography)
     + [Headings](#headings)
   * [Formating](#formating)
   * [Links and images](#links-and-images)
@@ -19,9 +19,9 @@ Table of contents: <br>
   * [List and tables](#list-and-tables)
     + [Lists](#lists)
     + [Tables](#tables)
-  * [Forms & input](#forms---input)
+  * [Forms & input](#forms--input)
     + [Forms](#forms)
-    + [Labels & input](#labels---input)
+    + [Labels & input](#labels--input)
     + [Text area](#text-area)
     + [Select](#select)
     + [Numbers](#numbers)
@@ -30,15 +30,15 @@ Table of contents: <br>
     + [Checkbox](#checkbox)
     + [Submit button](#submit-button)
     + [Reset button](#reset-button)
-  * [Inline & block level elements](#inline---block-level-elements)
-  * [Divs & spans, classes & ids](#divs---spans--classes---ids)
-    + [Divs & spans](#divs---spans)
+  * [Inline & block level elements](#inline--block-level-elements)
+  * [Divs & spans, classes & ids](#divs--spans-classes--ids)
+    + [Divs & spans](#divs--spans)
   * [Entities](#entities)
     + [Non-breaking space](#non-breaking-space)
     + [Greater than and less than](#greater-than-and-less-than)
     + [Computer code](#computer-code)
   * [Html semantic tags](#html-semantic-tags)
-    + [Header & footer](#header---footer)
+    + [Header & footer](#header--footer)
 
 ## Tag Syntax
 A tag is an element surrounded in angle brackets. <br>
