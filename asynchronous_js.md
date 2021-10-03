@@ -3,6 +3,33 @@
 *This document is an extension to my [JavaScript Notes 2](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes_2.md). <br>
 I'm writing these notes while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com* 
 
+## Table of contents
+* [What is asynchronous programming?](#what-is-asynchronous-programming)
+* [Ajax & XHR intro](#ajax--xhr-intro)
+  + [What is **Ajax**?](#what-is-ajax)
+  + [XMLHttpRequest (XHR Object)](#xmlhttprequest--xhr-object)
+  + [Libraries & other methods](#libraries--other-methods)
+* [XHR object methods & working with text](#xhr-object-methods--working-with-text)
+* [Working with Ajax & JSON](#working-with-ajax--json)
+  + [JSON](#json)
+  + [JSON array](#json-array)
+* [Data from an external API](#data-from-an-external-api)
+* [REST APIs & HTTP Requests](#rest-apis--http-requests)
+  + [What is an API?](#what-is-an-api)
+  + [What is REST?](#what-is-rest)
+  + [HTTP Requests](#http-requests)
+  + [API Endpoints](#api-endpoints)
+* [Callback Functions](#callback-functions)
+* [ES6 Promises](#es6-promises)
+* [The Fetch API](#the-fetch-api)
+* [Arrow functions](#arrow-functions)
+  + [Return object literal](#return-object-literal)
+  + [Parameters](#parameters)
+  + [Arrow functions as callbacks](#arrow-functions-as-callbacks)
+* [Async & Await](#async--await)
+  + [Async](#async)
+  + [Await](#await)
+
 ## What is asynchronous programming?
 To understand the need for **asynchronous** programming, it is essential to take a look at **synchronous** programming first. <br>
 **Synchronous** programming means that you can run into **blocking code** – a bottleneck, like the response of a called server, which delays the execution of further code within your application. <br>
