@@ -3,6 +3,31 @@
 *This document is an extension to my [JavaScript Notes 2](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes_2.md). <br>
 I'm writing these notes while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com* 
 
+## Table of content
+* [What are regular expressions](#what-are-regular-expressions)
+* [Evaluation Functions](#evaluation-functions)
+  + [exec()](#exec)
+  + [test()](#test)
+  + [match()](#match)
+  + [search()](#search)
+  + [replace()](#replace)
+* [Metacharakter Symbols](#metacharakter-symbols)
+  + [Escaping characters](#escaping-characters)
+* [Character Sets & Quantifiers](#character-sets--quantifiers)
+  + [Brackets](#brackets)
+    - [Ranges](#ranges)
+    - [Quantifiers](#quantifiers)
+  + [Grouping](#grouping)
+* [Shorthand Character Classes](#shorthand-character-classes)
+  + [Word character](#word-character)
+  + [Non word character](#non-word-character)
+  + [Digits character](#digits-character)
+  + [Non digit character](#non-digit-character)
+  + [The whitespace character](#the-whitespace-character)
+  + [The non whitespace character](#the-non-whitespace-character)
+  + [Word boundaries](#word-boundaries)
+  + [Assertions](#assertions)
+
 ## What are regular expressions
 A **regular expression** is used to describe a **pattern of charakters**. <br>
 It's used for **pattern matching** or **pattern searching**, for **validation** or for **pulling a string out of a body of text**. <br>
