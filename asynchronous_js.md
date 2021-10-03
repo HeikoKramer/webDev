@@ -7,7 +7,7 @@ I'm writing these notes while taking Brad Traversy's [Modern JavaScript From The
 * [What is asynchronous programming?](#what-is-asynchronous-programming)
 * [Ajax & XHR intro](#ajax--xhr-intro)
   + [What is **Ajax**?](#what-is-ajax)
-  + [XMLHttpRequest (XHR Object)](#xmlhttprequest--xhr-object)
+  + [XMLHttpRequest (XHR Object)](#xmlhttprequest-xhr-object)
   + [Libraries & other methods](#libraries--other-methods)
 * [XHR object methods & working with text](#xhr-object-methods--working-with-text)
 * [Working with Ajax & JSON](#working-with-ajax--json)
