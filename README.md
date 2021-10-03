@@ -135,13 +135,20 @@ Quick links to my notes files: <br>
   * [Destructuring](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#destructuring)
   * [ES6 Maps](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#es6-maps)
   * [ES6 Sets](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#es6-sets)
-  * [JavaScript Patterns](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#javascript-patterns)
+  * JavaScript Patterns *(outsourced into => [js-pattern_notes.md](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md)*) 
+    * [What are patterns?](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#what-are-patterns)
+    * [The module pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-module-pattern)
+    * [Revealing module pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#revealing-module-pattern)
+    * [The singleton pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-singleton-pattern)
+    * [Factory pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#factory-pattern)
+    * [The observer pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-observer-pattern)
+    * [The mediator pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-mediator-pattern)
+    * [The state pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-state-pattern)
   * [Modules](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#modules)
-* [js-pattern_notes.md](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md)
-* [nodeJS_notes.md](https://github.com/HeikoKramer/webDev/blob/main/nodeJS_notes.md)
 * [javascript-practice_notes.md](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md)
 * [js_extra_notes.md](https://github.com/HeikoKramer/webDev/blob/main/js_extra_notes.md)
 * [VS-Code_notes.md](https://github.com/HeikoKramer/webDev/blob/main/VS-Code_notes.md)
+* [nodeJS_notes.md](https://github.com/HeikoKramer/webDev/blob/main/nodeJS_notes.md)
 
 ## Coding samples / tutorials
 ### Rock Paper Scissors
