@@ -137,9 +137,9 @@ Quick links to my notes files: <br>
   * [ES6 Sets](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#es6-sets)
   * [JavaScript Patterns](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#javascript-patterns)
   * [Modules](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#modules)
-* [javascript-practice_notes.md](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md)
 * [js-pattern_notes.md](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md)
 * [nodeJS_notes.md](https://github.com/HeikoKramer/webDev/blob/main/nodeJS_notes.md)
+* [javascript-practice_notes.md](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md)
 * [js_extra_notes.md](https://github.com/HeikoKramer/webDev/blob/main/js_extra_notes.md)
 * [VS-Code_notes.md](https://github.com/HeikoKramer/webDev/blob/main/VS-Code_notes.md)
 
