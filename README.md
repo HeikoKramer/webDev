@@ -90,7 +90,7 @@ Quick links to my notes files: <br>
   * [General loops](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#general-loops)
   * [The window object](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#the-window-object)
   * [Scope](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#scope)
-  * The DOM *outsourced into =>* [dom_notes.md](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md) 
+  * The DOM *(outsourced into =>* [dom_notes.md](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md)) 
     * [What it is](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md#what-it-is)
     * [document](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md#document)
     * [DOM selectors for single elements](https://github.com/HeikoKramer/webDev/blob/main/dom_notes.md#dom-selectors-for-single-elements)
