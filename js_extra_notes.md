@@ -1,9 +1,9 @@
-# JavaScript
-This document is used to document my JS learning progress. <br>
+# JavaScript extra notes
+This was my initial JavaScript notes file, but then I've taken a full course and started a [new note file](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md) which is much more complete. <br>
+So I'll keep these notes here, but put it to the end of my other notes, as an **extra** file. <br> 
 
 ## Resources and how I progress
 [freeCodeCamp.org JavaScript Beginner course on YouTube](https://youtu.be/PkZNo7MFNFg) <br>
-[Eloquent JavaScript book (free under MIT license)](https://eloquentjavascript.net/) <br>
 [Kirupa JS learning tutorials](https://www.kirupa.com/) <br>
 
 The initial version of these notes will be a transcript of the **freeCodeCamp.org** video. <br>
