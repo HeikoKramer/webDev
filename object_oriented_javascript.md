@@ -3,6 +3,24 @@
 *This document is an extension to my [JavaScript Notes 2](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes_2.md). <br>
 I'm writing these notes while taking Brad Traversy's [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) course on packthub.com* 
 
+## Table of contents
+* [Constructors & the "this" keyword](#constructors--the-this-keyword)
+  + [Adding a method](#adding-a-method)
+* [Built in constructors](#built-in-constructors)
+  + [String](#string)
+  + [Number](#number)
+  + [Boolean](#boolean)
+  + [Function](#function)
+  + [Object](#object)
+  + [Array](#array)
+  + [Regular Expressions](#regular-expressions)
+* [Prototypes](#prototypes)
+* [Prototypal inheritance](#prototypal-inheritance)
+* [Object.create()](#objectcreate)
+* [ES6 classes](#es6-classes)
+  + [Static methods](#static-methods)
+* [Sub classes](#sub-classes)
+
 ## Constructors & the "this" keyword
 An **object literal** like the one below is fine when you want to create only a single object. <br>
 
