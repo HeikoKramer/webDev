@@ -157,6 +157,12 @@ Quick links to my notes files: <br>
 * [nodeJS_notes.md](https://github.com/HeikoKramer/webDev/blob/main/nodeJS_notes.md)
 
 ## Coding samples / tutorials
+### Task List
+Project source: [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1)
+Description: Website to manage tasks. You can **add**, **remove** and **clear all** tasks. The site has a **filte** option, to show only tasks that match a certain string. Tasks are **stored in and loaded from local storage**. <br> 
+
+![task-list](/images/task-list.png)
+
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
 Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br>
