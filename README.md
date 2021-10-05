@@ -158,11 +158,19 @@ Quick links to my notes files: <br>
 
 ## Coding samples / tutorials
 ### Task List
-Project source: [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
-Project folder: [taskList](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/DOM_Projects/taskList) <br>
-Description: Website to manage tasks. You can **add**, **remove** and **clear all** tasks. The site has a **filte** option, to show only tasks that match a certain string. Tasks are **stored in and loaded from local storage**. <br> 
+**Project source**: [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder**: [taskList](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/DOM_Projects/taskList) <br>
+**Description**: Website to manage tasks. You can **add**, **remove** and **clear all** tasks. The site has a **filte** option, to show only tasks that match a certain string. Tasks are **stored in and loaded from local storage**. <br> 
 
 ![task-list](/images/task-list.png)
+
+### Loan Calculator
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [loancalculator](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/DOM_Projects/loancalculater) <br>
+**Description:** Little math app to calculate the **monthly** and **total payment** plus the **total interest** of a loan when provided with the **loan amount** the **interest rate** and the **years to repay**. A little extra feature is a **spinner** shown to the user after submitting the details, which simulates fake calculation time (UX feature). <br>
+
+![loancalculator](/images/loancalculator.png)
+
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
