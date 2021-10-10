@@ -178,6 +178,14 @@ Quick links to my notes files: <br>
 
 ![numberguesser](/images/numberguesser.png)
 
+### Book List
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [booklist](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/OOP_Project/booklist) <br>
+**Description:** Basic application that allows the user to enter books with the three values **title**, **author**, and **ISBN**. The entered books are stored in local storage and loaded from there when entering the page. There are **two versions** of the app in the folder – an **ES5** version, using **constructors** and **prototypes** and an **ES6** version, using **classes**. <br>
+
+![booklist](/images/booklist.png)
+
+
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
 Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br>
