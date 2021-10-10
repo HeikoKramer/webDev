@@ -171,6 +171,12 @@ Quick links to my notes files: <br>
 
 ![loancalculator](/images/loancalculator.png)
 
+### Number Guesser 
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [numberguesser](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/DOM_Projects/numberguesser) <br>
+**Description:** The Number Guesser is a small game that lets you enter a number between 1 and 10. You have three attempts to guess the correct number (random number which is set when loading the page). The game notifies the player when won, lots, or when the guess was not correct, but further attempts are remaining. <br>
+
+![numberguesser](/images/numberguesser.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
