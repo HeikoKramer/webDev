@@ -253,6 +253,13 @@ Quick links to my notes files: <br>
 **Description:** One of the larger projects from the course, using the **JavaScrip Module Pattern**. The app adds up meals and their calories, calculates the total calories and stores the added meals in local storage. You can edit or delete meals and also clear them all. <br>
 
 ![tracalories](/images/tracalories.png)
+  
+### Microposts
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [microposts](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/microposts) <br>
+**Description:** Nice little **CRUD** application, using ES2015 modules, JSON server and a Babel/Webpack compiler setup. You can post, edit and delete posts. The project covers the concept of **state**. <br>
+
+![microposts](/images/microposts.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
