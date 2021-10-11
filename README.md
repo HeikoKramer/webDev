@@ -185,6 +185,21 @@ Quick links to my notes files: <br>
 
 ![booklist](/images/booklist.png)
 
+### Easy HTTP
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Description:** Custom HTTP library to make all kind of requests. There are **three versions** of this project to cover all the different concepts around this: <br>
+
+#### Custom HTTP Library (Ajax with Callbacks)
+**Project folder:** [easyhttp](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/easyhttp) <br>
+![easyhttp](/images/easyhttp.png)
+
+#### Custom HTTP Library (Fetch with Promises)
+**Project folder:** [easyhttp](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/easyhttp_es6) <br>
+![easyhttp_es6](/images/easyhttp_es6.png)
+
+#### Custom HTTP Library (Fetch with Async Await)
+**Project folder:** [easyhttp_es6_async-await](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/easyhttp_es6_async-await) <br>
+![easyhttp_es6_async-await](/images/easyhttp_es6_async-await.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
