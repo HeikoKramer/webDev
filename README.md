@@ -246,6 +246,13 @@ Quick links to my notes files: <br>
 **Description:** Tinder-style app using an ES6 iterator with and *Bootstrap* for the styling. The users come from *randomuser.me*. <br>
 
 ![profilescroller](/images/profilescroller.png)
+  
+### Tracalorie
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [tracalorie](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/tracalorie) <br>
+**Description:** One of the larger projects from the course, using the **JavaScrip Module Pattern**. The app adds up meals and their calories, calculates the total calories and stores the added meals in local storage. You can edit or delete meals and also clear them all. <br>
+
+![tracalories](/images/tracalories.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
