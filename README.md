@@ -239,6 +239,13 @@ Quick links to my notes files: <br>
 **Description:** Basic input validation with **regular expressions**. <br>
 
 ![userform](/images/userform.png)
+  
+### Profile Scroller
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [profilescroller](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/profilescroller) <br>
+**Description:** Tinder-style app using an ES6 iterator with and *Bootstrap* for the styling. The users come from *randomuser.me*. <br>
+
+![profilescroller](/images/profilescroller.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
