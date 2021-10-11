@@ -185,6 +185,13 @@ Quick links to my notes files: <br>
 
 ![booklist](/images/booklist.png)
 
+### Chuck Norris Joke Generator 
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [chuck_norris](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/chuck_norris) <br>
+**Description:** The generator fetches a specified amount of Chuck Norris jokes from an external database, using **Ajax**. <br>
+
+![chuck_norris](/images/chuck_norris.png)
+
 ### Easy HTTP
 **Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
 **Description:** Custom HTTP library to make all kind of requests. There are **three versions** of this project to cover all the different concepts around this: <br>
