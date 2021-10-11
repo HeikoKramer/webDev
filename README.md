@@ -185,6 +185,14 @@ Quick links to my notes files: <br>
 
 ![booklist](/images/booklist.png)
 
+### Fetch data from three sources
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Description:** Example project, showing how to fetch data from three different sources: A **textfile** a **JSON file** and an **external API**. There are **two versions** of this project, one with **regular functions** and one using **arrow functions**. <br>
+**Project folder:** [fetch_data_from_three_sources](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/fetch_data_from_three_sources) <br>
+**Project folder:** [fetch_data_from_three_sources_ARROW](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/fetch_data_from_three_sources_ARROW) <br>
+
+![fetch-three-sources](/images/fetch-three-sources.png)
+
 ### Chuck Norris Joke Generator 
 **Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
 **Project folder:** [chuck_norris](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/chuck_norris) <br>
