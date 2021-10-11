@@ -218,6 +218,13 @@ Quick links to my notes files: <br>
 **Project folder:** [easyhttp_es6_async-await](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/easyhttp_es6_async-await) <br>
 
 ![easyhttp_es6_async-await](/images/easyhttp_es6_async-await.png)
+  
+### GitHub Finder
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [github_finder](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/API_Projects/github_finder) <br>
+**Description:** Very cool little project, using *bootswatch.com* for the UI styling and the fetch API (async/await) to get user information from GitHub. The app has a nice search functionality which fires API requests to GitHub on each **keyup event** – so the results are changing with every letter you type in. <br>
+
+![githubfinder](/images/githubfinder.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
