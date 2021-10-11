@@ -1,69 +1,49 @@
-// Iterator Example
-// function nameIterator(names) {
-//   let nextIndex = 0;
+// Form Blur Event Listeners
+document.getElementById('name').addEventListener('blur', validateName);
+document.getElementById('zip').addEventListener('blur', validateZip);
+document.getElementById('email').addEventListener('blur', validateEmail);
+document.getElementById('phone').addEventListener('blur', validatePhone);
 
-//   return {
-//     next: function() {
-//       return nextIndex < names.length ?
-//       { value: names[nextIndex++], done: false } :
-//       { done: true }
-//     }
-//   }
-// }
+function validateName() {
+  const name = document.getElementById('name');
+  const re = /^[a-zA-Z]{2,10}$/;
 
-// //  Create an array of names
-// const namesArr = ['Jack', 'Jill', 'John'];
-// // Init iterator and pass in the names array
-// const names = nameIterator(namesArr);
-
-// // 1st time, Index 0
-// console.log(names.next().value);
-// // > Jack
-
-// // 2nd time, Index 1
-// console.log(names.next().value);
-// // > Jill
-
-// // 3rd time, Index 2
-// console.log(names.next().value);
-// // > John
-
-// // 4th time, Index = names.length, else, done = true
-// console.log(names.next());
-// // > Object { done: true }
-
-// Generator Example
-// function* sayNames() {
-//   yield 'Jack';
-//   yield 'Jill';
-//   yield 'John';
-// }
-
-// const name = sayNames();
-
-// console.log(name.next().value);
-// // > Jack
-// console.log(name.next().value);
-// // > Jill
-// console.log(name.next().value);
-// // > John
-// console.log(name.next().value);
-// // > undefined
-
-// ID Creator
-function* createIds() {
-  let index = 0;
-
-  while(true) {
-    yield index++;
+  if(!re.test(name.value)) {
+    name.classList.add('is-invalid');
+  } else {
+    name.classList.remove('is-invalid');
   }
 }
 
-const gen = createIds();
+function validateZip() {
+  const zip = document.getElementById('zip');
+  const re = /^[0-9]{5}(-[0-9]{4})?$/;
 
-console.log(gen.next().value);
-// > 0
-console.log(gen.next().value);
-// > 1
-console.log(gen.next().value);
-// > 2
+  if(!re.test(zip.value)) {
+    zip.classList.add('is-invalid');
+  } else {
+    zip.classList.remove('is-invalid');
+  }
+}
+
+function validateEmail() {
+  const email = document.getElementById('email');
+  const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]+)$/;
+
+  if(!re.test(email.value)) {
+    email.classList.add('is-invalid');
+  } else {
+    email.classList.remove('is-invalid');
+  }
+}
+
+function validatePhone() {
+  const phone = document.getElementById('phone');
+  const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+
+  if(!re.test(phone.value)) {
+    phone.classList.add('is-invalid');
+  } else {
+    phone.classList.remove('is-invalid');
+  }
+}
