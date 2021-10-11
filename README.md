@@ -232,6 +232,13 @@ Quick links to my notes files: <br>
 **Description:** Small weather application, using *bootswatch.com* for styling and the *openweathermap.org* API to receive weather data. I have exchanged the original API with the open weather map as the one from the tutorial wasn't public any longer. You can change the location of the weather shown, the last location will be stored in local storage. <br>
 
 ![weatherjs](/images/weatherjs.png)
+  
+### User Form
+**Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
+**Project folder:** [userform](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/userform) <br>
+**Description:** Basic input validation with **regular expressions**. <br>
+
+![userform](/images/userform.png)
 
 ### Rock Paper Scissors
 Good looking basic version of this classic game. <br>
