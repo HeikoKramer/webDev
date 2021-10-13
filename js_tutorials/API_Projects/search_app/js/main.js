@@ -1,11 +1,11 @@
-import { setSearchFocus } from "./searchBar.js";
-import { buildSearchResults,
+import { setSearchFocus,
+         showClearTextButton } from "./searchBar.js";
+import { deleteSearchResults,
+         buildSearchResults,
          clearStatsLine,
          setStatsLine } from "./searchResults.js";
 import { getSearchTerm,
          retrieveSearchResults } from "./dataFunctions.js";
-
-
 
 document.addEventListener("readystatechange", (event) => {
   if (event.target.readyState === "complete") {
@@ -25,7 +25,7 @@ const initApp = () => {
 // Procedural "workflow" function
 const submitTheSearch = (event) => {
   event.preventDefault();
-  // delete search results
+  deleteSearchResults();
   processTheSearch();
   setSearchFocus();
 };
