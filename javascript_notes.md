@@ -150,6 +150,7 @@ This notes were taken while following Brad Traversy's [Modern JavaScript From Th
   + [Common JS modules](#common-js-modules)
   + [ES2015 modules](#es2015-modules)
 * [Misc](#misc)
+  + [encodeURI()](#encodeuri)
 
 ## Add JavaScript to your HTML file
 There are two ways to JavaScript to a HTML file: <br>

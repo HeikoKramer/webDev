@@ -145,6 +145,7 @@ Quick links to my notes files: <br>
     * [The mediator pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-mediator-pattern)
     * [The state pattern](https://github.com/HeikoKramer/webDev/blob/main/js-pattern_notes.md#the-state-pattern)
   * [Modules](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#modules)
+  * [Misc](https://github.com/HeikoKramer/webDev/blob/main/javascript_notes.md#misc)
 * [javascript-practice_notes.md](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md)
   * [UI Variables](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md#ui-variables)
   * [Load event listeners](https://github.com/HeikoKramer/webDev/blob/main/javascript-practice_notes.md#load-event-listeners)
@@ -257,11 +258,4 @@ Quick links to my notes files: <br>
 ### Microposts
 **Project source:** [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
 **Project folder:** [microposts](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/microposts) <br>
-**Description:** Nice little **CRUD** application, using ES2015 modules, JSON server and a Babel/Webpack compiler setup. You can post, edit and delete posts. The project covers the concept of **state**. <br>
-
-![microposts](/images/microposts.png)
-
-### Rock Paper Scissors
-Good looking basic version of this classic game. <br>
-Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br>
-The sample code following this tutorial is stored in the [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) folder. <br>
+**Description:** Nice little **CRUD** application, using ES2015 modules, JSON server and a Babel/Webpack compiler setup. You can post, edit and delete posts. The project covers the concept of **state**. <br> ![microposts](/images/microposts.png) ### Rock Paper Scissors Good looking basic version of this classic game. <br> Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br> The sample code following this tutorial is stored in the [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) folder. <br>
