@@ -13,7 +13,7 @@ export const buildSearchResults = (resultArray) => {
     const searchResults = document.getElementById("searchResults");
     searchResults.append(resultItem);
   });
-}
+};
 
 const createResultItem = (result) => {
   const resultItem = document.createElement("div");
@@ -27,17 +27,18 @@ const createResultItem = (result) => {
   resultTitle.append(link);
   resultItem.append(resultTitle);
   return resultItem;
-}
+};
 
 const createResultImage = (result) => {
   const resultImage = document.createElement("div");
   resultImage.classList.add("resultImage");
   const img = document.createElement("img");
-  img.scr = result.img;
+  img.src = result.img;
+  console.log(result.img);
   img.alt = result.title;
   resultImage.append(img);
   return resultImage;
-}
+};
 
 const createResultText = (result) => {
   const resultText = document.createElement("div");
@@ -47,4 +48,17 @@ const createResultText = (result) => {
   resultDescription.textContent = result.text;
   resultText.append(resultDescription);
   return resultText;
+};
+
+export const clearStatsLine = () => {
+  document.getElementById("stats").textContent = "";
 }
+
+export const setStatsLine = (numberOfResults) => {
+  const statLine = document.getElementById("stats");
+  if (numberOfResults) {
+    statLine.textContent = `Displaying ${numberOfResults} results.`;
+  } else {
+    statLine.textContent = "Sorry, no results.";
+  }
+};
