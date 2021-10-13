@@ -1,4 +1,5 @@
 import { setSearchFocus } from "./searchBar.js";
+import { buildSearchResults } from "./searchResults.js";
 import { getSearchTerm } from "./dataFunctions.js";
 import { retrieveSearchResults } from "./dataFunctions.js";
 
@@ -31,7 +32,7 @@ const processTheSearch = async () => {
   const searchTerm = getSearchTerm();
   if (searchTerm === "") return;
   const resultArray = await retrieveSearchResults(searchTerm);
-  if(resultArray.length) // build search results
+  if(resultArray.length) buildSearchResults(resultArray);
   // set stats line
   console.log(resultArray);
 };
