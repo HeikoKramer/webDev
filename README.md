@@ -262,4 +262,5 @@ Quick links to my notes files: <br>
 
 ![microposts](/images/microposts.png) 
 
-### Rock Paper Scissors Good looking basic version of this classic game. <br> Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br> The sample code following this tutorial is stored in the [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) folder. <br>
+### Rock Paper Scissors 
+Good looking basic version of this classic game. <br> Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br> The sample code following this tutorial is stored in the [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) folder. <br>
