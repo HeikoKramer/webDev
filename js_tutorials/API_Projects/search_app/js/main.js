@@ -15,8 +15,9 @@ document.addEventListener("readystatechange", (event) => {
 
 const initApp = () => {
   setSearchFocus();
-
   // 3 listeners clear text
+  const search = document.getElementById("search");
+  search.addEventListener("input", showClearTextButton);
 
   const form = document.getElementById("searchBar");
   form.addEventListener("submit", submitTheSearch);
