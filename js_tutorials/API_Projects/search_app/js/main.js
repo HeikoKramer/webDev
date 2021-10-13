@@ -17,10 +17,11 @@ document.addEventListener("readystatechange", (event) => {
 
 const initApp = () => {
   setSearchFocus();
-  // 3 listeners clear text
   const search = document.getElementById("search");
   search.addEventListener("input", showClearTextButton);
-
+  const clear = document.getElementById("clear");
+  clear.addEventListener("click", clearSearchText);
+  clear.addEventListener("keydown", clearPushListener);
   const form = document.getElementById("searchBar");
   form.addEventListener("submit", submitTheSearch);
 };
