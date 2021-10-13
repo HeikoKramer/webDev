@@ -1,6 +1,7 @@
 import { setSearchFocus,
          showClearTextButton,
-         clearSearchText } from "./searchBar.js";
+         clearSearchText,
+         clearPushListener } from "./searchBar.js";
 import { deleteSearchResults,
          buildSearchResults,
          clearStatsLine,

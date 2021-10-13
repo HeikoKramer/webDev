@@ -21,4 +21,11 @@ export const clearSearchText = (event) => {
   clear.classList.add("none");
   clear.classList.remove("flex");
   setSearchFocus();
+};
+
+export const clearPushListener = (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    document.getElementById("clear").click();
+  }
 }
