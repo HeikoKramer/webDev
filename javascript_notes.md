@@ -149,6 +149,7 @@ This notes were taken while following Brad Traversy's [Modern JavaScript From Th
 * [Modules](#modules)
   + [Common JS modules](#common-js-modules)
   + [ES2015 modules](#es2015-modules)
+* [Misc](#misc)
 
 ## Add JavaScript to your HTML file
 There are two ways to JavaScript to a HTML file: <br>
@@ -3142,3 +3143,16 @@ import { http } from './http';
 ```
 
 The problem with the **ES2015** standard is, that it is not supported by all the browsers out there and that we have to [**transpile** it down to the **ES5** standard with **Babel**](https://developers.google.com/web/shows/ttt/series-2/es2015). <br>
+
+## Misc
+### encodeURI()
+The `encodeURI()` function encodes replaces certain characters with their **UTF-8 representatives**. <br>
+
+```js
+const url = "Hello World";
+const encodedUrl = encodeURI(url);
+
+console.log(encodedUrl);
+// > Hello%20World
+```
+
