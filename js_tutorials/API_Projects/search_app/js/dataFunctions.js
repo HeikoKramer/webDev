@@ -59,4 +59,4 @@ const processWikiResults = (results) => {
     resultArray.push(item);
   });
   return resultArray;
-};
+}

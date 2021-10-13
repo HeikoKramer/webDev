@@ -61,7 +61,7 @@ const createResultText = (result) => {
 
 export const clearStatsLine = () => {
   document.getElementById("stats").textContent = "";
-}
+};
 
 export const setStatsLine = (numberOfResults) => {
   const statLine = document.getElementById("stats");
@@ -70,4 +70,4 @@ export const setStatsLine = (numberOfResults) => {
   } else {
     statLine.textContent = "Sorry, no results.";
   }
-};
+}

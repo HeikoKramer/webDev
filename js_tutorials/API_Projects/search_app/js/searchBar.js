@@ -12,4 +12,4 @@ export const showClearTextButton = () => {
     clear.classList.add("none");
     clear.classList.remove("flex");
   }
-};
+}

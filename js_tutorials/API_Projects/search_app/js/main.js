@@ -39,4 +39,4 @@ const processTheSearch = async () => {
   if(resultArray.length) buildSearchResults(resultArray);
   setStatsLine(resultArray.length);
   console.log(resultArray);
-};
+}
