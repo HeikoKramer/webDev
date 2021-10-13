@@ -261,6 +261,13 @@ Quick links to my notes files: <br>
 **Description:** Nice little **CRUD** application, using ES2015 modules, JSON server and a Babel/Webpack compiler setup. You can post, edit and delete posts. The project covers the concept of **state**. <br> 
 
 ![microposts](/images/microposts.png) 
+  
+### SearchMe!
+**Project source:** [Traversy Media YouTube Channel](https://youtu.be/Dk6Wopar10k) <br>
+**Project folder:** [search_app](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/API_Projects/search_app) <br>
+**Description:** Nice little search App, using the **Wikipedia API**. The app has some focus on **accessebility features** and is using the **module pattern**. **Sass** is used for the styling, the app is **responsive to screen size**. Neat app without much functionality, but complete in its scope. <br>
+
+![search-me](/images/search-me.png)
 
 ### Rock Paper Scissors 
 Good looking basic version of this classic game. <br> Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br> The sample code following this tutorial is stored in the [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) folder. <br>
