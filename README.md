@@ -265,7 +265,7 @@ Quick links to my notes files: <br>
 ### SearchMe!
 **Project source:** [Traversy Media YouTube Channel](https://youtu.be/Dk6Wopar10k) <br>
 **Project folder:** [search_app](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/API_Projects/search_app) <br>
-**Description:** Nice little search App, using the **Wikipedia API**. The app has some focus on **accessebility features** and is using the **module pattern**. **Sass** is used for the styling, the app is **responsive to screen size**. Neat app without much functionality, but complete in its scope. <br>
+**Description:** Nice little search App, using the **Wikipedia API**. The app has some focus on **accessebility features** and is using the **JavaScript modules** and the **ES6 module syntax (export/import)**. **Sass** is used for the styling, the app is **responsive to screen size**. Neat app without much functionality, but complete in its scope. <br>
 
 ![search-me](/images/search-me.png)
 
