@@ -268,6 +268,10 @@ Quick links to my notes files: <br>
 **Description:** Nice little search App, using the **Wikipedia API**. The app has some focus on **accessebility features** and is using the **JavaScript modules** and the **ES6 module syntax (export/import)**. **Sass** is used for the styling, the app is **responsive to screen size**. Neat app without much functionality, but complete in its scope. <br>
 
 ![search-me](/images/search-me.png)
-
+  
 ### Rock Paper Scissors 
-Good looking basic version of this classic game. <br> Tutorial by [freeCodeCamp.org](https://youtu.be/jaVNP3nIAv0) <br> The sample code following this tutorial is stored in the [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) folder. <br>
+**Project source:** [freeCodeCamp.org on YouTube](https://youtu.be/jaVNP3nIAv0)
+**Project folder:** [rock-paper-scissors](https://github.com/HeikoKramer/webDev/tree/main/tutorials/rock-paper-scissors) <br>
+**Description:** Good looking basic version of this classic game. It generates **computer choices** with the help of `Math.random`, has some logic who won the game and two counters to display the current score. I've replaced the graphics from the tutorial with **open source emojis** from [openmoji.org](https://openmoji.org/). The code-base in my folder is under construction .. played with it, added some extra logic, without really completing it. <br>
+
+![rock-paper-scissors](/images/rock-paper-scissors.png)
