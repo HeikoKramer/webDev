@@ -3157,3 +3157,20 @@ console.log(encodedUrl);
 // > Hello%20World
 ```
 
+### The spread operator
+The spread operator `...` (three dots) is a simple way to **copy arrays**. <br>
+
+```js
+const arr1 = [1,2,3];
+const arr2 = [4,5];
+
+// Taking an existing array and adding manually to it
+const arr3 = [...arr1,'4','5'];
+console.log("arr3: " + arr3);
+// > arr3: 1,2,3,4,5 
+
+// spread operator doing the concat job
+const conArr = [...arr1,...arr2];
+console.log("conArr: " + conArr); 
+// > conArr: 1,2,3,4,5
+```
