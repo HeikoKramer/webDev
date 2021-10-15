@@ -50,6 +50,26 @@ function createList() {
     addEventListeners();
 }
 
+function dragStart() {
+  console.log('Event: ', 'dragStart');
+}
+
+function dragEnter() {
+  console.log('Event: ', 'dragEnter');
+}
+
+function dragLeave() {
+  console.log('Event: ', 'dragLeave');
+}
+
+function dragOver() {
+  console.log('Event: ', 'dragOver');
+}
+
+function dragDrop() {
+  console.log('Event: ', 'dragDrop');
+}
+
 function addEventListeners() {
   const draggables = document.querySelectorAll('.draggable');
   const dragListItems = document.querySelectorAll('.draggable-list li');
