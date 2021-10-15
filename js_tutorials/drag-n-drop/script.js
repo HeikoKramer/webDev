@@ -55,11 +55,13 @@ function dragStart() {
 }
 
 function dragEnter() {
-  console.log('Event: ', 'dragEnter');
+  // console.log('Event: ', 'dragEnter');
+  this.classList.add('over');
 }
 
 function dragLeave() {
   console.log('Event: ', 'dragLeave');
+  this.classList.remove('over');
 }
 
 function dragOver() {
