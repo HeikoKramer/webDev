@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --border-color: rgb(107, 92, 7);
+  --background-color-dark: #1F0629;
+  --background-color-light: rgb(42, 14, 54);
+  --background-color-over: rgb(37, 17, 44);
+  --name-color-right: rgb(51, 158, 43);
+  --name-color-wrong: rgb(214, 55, 55);
+  --text-color: rgb(184, 135, 11);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.draggable-list {
+  border: 2px solid var(--border-color);
+  padding: 0;
+  list-style: none;
+}
+
+.draggable-list li {
+  background-color: var(--background-color-light);
+  display: flex;
+  flex: 1;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 2px solid var(--border-color);
+}
+
+.draggable-list .number {
+  background-color: var(--background-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  height: 75px;
+  width: 75px;
+}
+
+.draggable-list li.over .draggable {
+  background-color: var(--background-color-over);
+}
+
+.draggable-list .person-name {
+  margin: 0 20px 0 0;
+}
+
+.draggable-list li.right .person-name {
+  color: var(--name-color-right);
+}
+
+.draggable-list li.wrong .person-name {
+  color: var(--name-color-wrong);
+}
+
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
+}
+
+.check-btn {
+  background-color: var(--background-color-dark);
+  color: var(--text-color);
+  border: none;
+  font-size: 18px;
+  font-family: 'Press Start 2P', cursive;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
