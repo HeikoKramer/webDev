@@ -28,7 +28,6 @@ function createList() {
     .sort((a, b) => a.sort - b.sort)
     .map(a => a.value)
     .forEach((person, index) => {
-      console.log(person);
 
       const listItem = document.createElement('li');
 
@@ -59,7 +58,7 @@ function dragEnter() {
 }
 
 function dragLeave() {
-  this.classList.remove('over');
+  setTimeout(() => { this.classList.remove('over'); }, 1 * 150);
 }
 
 function dragOver(e) {
@@ -74,7 +73,6 @@ function dragDrop() {
 }
 
 function swapItems(fromIndex, toIndex) {
-  console.log('START: ' + fromIndex + ', END: ' + toIndex);
   const itemOne = listItems[fromIndex].querySelector('.draggable');
   const itemTwo = listItems[toIndex].querySelector('.draggable');
   
@@ -88,9 +86,11 @@ function checkOrder() {
 
     if(personName !== richestPeople[index]) {
       listItem.classList.add('wrong');
+      setTimeout(() => { listItem.classList.remove('wrong'); }, 3 * 500);
     } else {
       listItem.classList.remove('wrong');
       listItem.classList.add('right');
+      setTimeout(() => { listItem.classList.remove('right'); }, 3 * 500);
     }
   });
 }
