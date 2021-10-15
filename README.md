@@ -275,3 +275,10 @@ Quick links to my notes files: <br>
 **Description:** Good looking basic version of this classic game. It generates **computer choices** with the help of `Math.random`, has some logic who won the game and two counters to display the current score. I've replaced the graphics from the tutorial with **open source emojis** from [openmoji.org](https://openmoji.org/). The code-base in my folder is under construction .. played with it, added some extra logic, without really completing it. <br>
 
 ![rock-paper-scissors](/images/rock-paper-scissors.png)
+
+### Drag 'n' Drop  
+**Project source:** [Traversy Media YouTube Channel](https://youtu.be/wv7pvH1O5Ho) <br>
+**Project folder:** [drag-n-drop](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/drag-n-drop) <br>
+**Description:** Small project with focus on the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). The outcome is a game, where you have to bring the top ten richest people in order via drag 'n' drop. You can check if your order is right or wrong by clicking a button. There is a lot of **DOM manipulation** involved, a lot of **class** changing to assign different colors, pre-configured in the **CSS**. <br>
+
+![drag-n-drop](/images/drag-n-drop.gif)
