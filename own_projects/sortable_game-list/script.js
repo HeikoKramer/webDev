@@ -92,7 +92,8 @@ function displayPublishingYear() {
   listItems.forEach((listItem, index) => {
     listItem.querySelector('.number').innerHTML = adventurePublishingYears[index];
   });
-  document.getElementById('check').style.visibility = 'hidden';
+  document.getElementById('check').remove();
+  document.getElementById('victory').classList.remove('hidden');
   removeEventListeners();
 }
 

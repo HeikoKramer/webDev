@@ -99,3 +99,11 @@ body {
 .check-btn:focus {
   outline: none;
 }
+
+.hidden {
+  display: none;
+}
+
+.victory {
+  font-size: 22px;
+}
