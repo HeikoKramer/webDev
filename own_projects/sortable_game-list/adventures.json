@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Labyrinth",
+    "year": "1986",
+    "platform": "Amiga, Apple II, Atari ST, C64, MS-DOS, NES"
+  },
+  {
+    "name": "Maniac Mansion",
+    "year": "1987",
+    "platform": ""
+  },
+  {
+    "name": "Zak McKracken and the Alien Mindbenders",
+    "year": "1988",
+    "platform": "Amiga, Apple II, Atari ST, C64, FM Towns, MS-DOS"
+  },
+  {
+    "name": "Indiana Jones and the Last Crusade",
+    "year": "1989",
+    "platform": "Amiga, Atari ST, CDTV, FM Towns, Mac, MS-DOS"
+  },
+  {
+    "name": "Loom",
+    "year": "1990",
+    "platform": "Amiga, Atari ST, CDTV, FM Towns, Mac, MS-DOS, PC Engine"
+  },
+  {
+    "name": "The Secret of Monkey Island",
+    "year": "1990",
+    "platform": "Amiga, Atari ST, FM Towns, Sega Mega-CD, Mac, MS-DOS"
+  },
+  {
+    "name": "Monkey Island 2: LeChuck’s Revenge",
+    "year": "1991",
+    "platform": "Amiga, PC, Mac"
+  },
+  {
+    "name": "Indiana Jones and the Fate of Atlantis",
+    "year": "1992",
+    "platform": "Amiga, PC, Mac"
+  },
+  {
+    "name": "Day of the Tentacle",
+    "year": "1993",
+    "platform": "PC, Mac"
+  },
+  {
+    "name": "Sam & Max Hit the Road",
+    "year": "1994",
+    "platform": "PC, Mac"
+  },
+  {
+    "name": "Full Throttle",
+    "year": "1995",
+    "platform": "PC, Mac"
+  },
+  {
+    "name": "The Curse of Monkey Island",
+    "year": "1997",
+    "platform": "PC"
+  },
+  {
+    "name": "Grim Fandango",
+    "year": "1998",
+    "platform": "PC"
+  }
+]

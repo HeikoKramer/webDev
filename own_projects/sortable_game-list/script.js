@@ -1,17 +1,19 @@
 const draggableList = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
-const richestPeople = [
-  'Jeff Bezos',
-  'Elon Musk',
-  'Bernard Arnault',
-  'Bill Gates',
-  'Mark Zuckerberg',
-  'Warren Buffett',
-  'Larry Ellison',
-  'Larry Page',
-  'Sergey Brin',
-  'Mukesh Ambani',
+const adventureGames = [
+  'Labyrinth',
+  'Maniac Mansion',
+  'Zak McKracken and the Alien Mindbenders',
+  'Indiana Jones and the Last Crusade',
+  'Loom',
+  'The Secret of Monkey Island',
+  'Monkey Island 2: LeChuck’s Revenge',
+  'Indiana Jones and the Fate of Atlantis',
+  'Day of the Tentacle',
+  'Sam & Max Hit the Road',
+  'Full Throttle',
+  'Grim Fandango'
 ];
 
 // Store listitems
@@ -23,11 +25,11 @@ createList();
 
 // Insert list items into DOM
 function createList() {
-  [...richestPeople]
+  [...adventureGames]
     .map(a => ({ value: a, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(a => a.value)
-    .forEach((person, index) => {
+    .forEach((adventure, index) => {
 
       const listItem = document.createElement('li');
 
@@ -36,8 +38,8 @@ function createList() {
       listItem.innerHTML = `
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
-          <p class="person-name">${person}</p>
-          <i class="fas fa-grip-lines"></i>
+          <p class="adventure-name">${adventure}</p>
+          <p class="grip">Ξ</p>
         </div>
       `;
 
@@ -80,17 +82,27 @@ function swapItems(fromIndex, toIndex) {
   listItems[toIndex].appendChild(itemOne);
 }
 
-function checkOrder() {
-  listItems.forEach((listItem, index) => {
-    const personName = listItem.querySelector('.draggable').innerText.trim();
+function displayPublishingYear() {
+  console.log('Ei guuuuudeeee!');
+}
 
-    if(personName !== richestPeople[index]) {
+function checkOrder() {
+  let rightCount = 0;
+  listItems.forEach((listItem, index) => {
+    const adventureName = listItem.querySelector('.adventure-name').innerText.trim();
+
+    if(adventureName !== adventureGames[index]) {
       listItem.classList.add('wrong');
+      console.log('adventureName: ' + adventureName);
       setTimeout(() => { listItem.classList.remove('wrong'); }, 3 * 500);
     } else {
       listItem.classList.remove('wrong');
       listItem.classList.add('right');
+      rightCount++;
       setTimeout(() => { listItem.classList.remove('right'); }, 3 * 500);
+    }
+    if(rightCount === adventureGames.length) {
+      displayPublishingYear();
     }
   });
 }

@@ -8,6 +8,7 @@
   --name-color-right: rgb(51, 158, 43);
   --name-color-wrong: rgb(214, 55, 55);
   --text-color: rgb(184, 135, 11);
+  --grip-color: rgb(134, 99, 9);
 }
 
 * {
@@ -56,15 +57,19 @@ body {
   background-color: var(--background-color-over);
 }
 
-.draggable-list .person-name {
+.draggable-list .adventure-name {
   margin: 0 20px 0 0;
 }
 
-.draggable-list li.right .person-name {
+.draggable-list .grip {
+  color: var(--grip-color);
+}
+
+.draggable-list li.right .adventure-name {
   color: var(--name-color-right);
 }
 
-.draggable-list li.wrong .person-name {
+.draggable-list li.wrong .adventure-name {
   color: var(--name-color-wrong);
 }
 
