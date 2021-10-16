@@ -1,35 +1,30 @@
 const draggableList = document.getElementById('draggable-list');
-const check = document.getElementById('check');
-
-
-// Get local JSON data
-  const adventureGameNames = [];
-  const adventurePublishingYears = [];
-  const adventurePlatforms = [];
-
-  fetch('adventures.json')
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      data.forEach(function(adventure){
-        adventureGameNames.push(adventure.name);
-        adventurePublishingYears.push(adventure.year);
-        adventurePlatforms.push(adventure.platform);
-      });
-      console.log('adventureGameNames: ' + adventureGameNames);
-      console.log('adventurePublishingYears: ' + adventurePublishingYears);
-      console.log('adventurePlatforms: ' + adventurePlatforms);
-      createList();
-    })
-    .catch(err => console.log(err));
-
-
-// Store listitems
-const listItems = [];
-
+const check         = document.getElementById('check');
+const listItems     = [];
 let dragStartIndex;
 
-// Insert list items into DOM
+
+// GET ADVANTURES DATA FROM JSON FILE ################################
+const adventureGameNames       = [];
+const adventurePublishingYears = [];
+const adventurePlatforms       = [];
+
+fetch('adventures.json')
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    data.forEach(function(adventure){
+      adventureGameNames.push(adventure.name);
+      adventurePublishingYears.push(adventure.year);
+      adventurePlatforms.push(adventure.platform);
+    });
+    createList();
+  })
+  .catch(err => console.log(err));
+// ###################################################################
+
+
+// INSERT LIST ITEMS INTO DOM ########################################
 function createList() {
   [...adventureGameNames]
     .map(a => ({ value: a, sort: Math.random() }))
@@ -56,7 +51,10 @@ function createList() {
 
     addEventListeners();
 }
+// ###################################################################
 
+
+// DRAG 'n' DROP FUNCTIONS ###########################################
 function dragStart() {
   dragStartIndex = +this.closest('li').getAttribute('data-index');
 }
@@ -87,7 +85,11 @@ function swapItems(fromIndex, toIndex) {
   listItems[fromIndex].appendChild(itemTwo);
   listItems[toIndex].appendChild(itemOne);
 }
+// ###################################################################
 
+
+// ADD PUBLISHING YEAR – IF order is correct #########################
+// Ends the game, makes the check btn disappear, disables drag & drop
 function displayPublishingYear() {
   listItems.forEach((listItem, index) => {
     listItem.querySelector('.number').innerHTML = adventurePublishingYears[index];
@@ -96,7 +98,10 @@ function displayPublishingYear() {
   document.getElementById('victory').classList.remove('hidden');
   removeEventListeners();
 }
+// ###################################################################
 
+
+// CHECK IF ORDER IS CORRECT #########################################
 function checkOrder() {
   let rightCount = 0;
   listItems.forEach((listItem, index) => {
@@ -117,7 +122,10 @@ function checkOrder() {
     }
   });
 }
+// ###################################################################
 
+
+// ADD & REMOVE EVENT LISTENERS ######################################
 function addEventListeners() {
   const draggables = document.querySelectorAll('.draggable');
   const dragListItems = document.querySelectorAll('.draggable-list li');
@@ -127,8 +135,8 @@ function addEventListeners() {
   });
 
   dragListItems.forEach(item => {
-    item.addEventListener('dragover', dragOver);
-    item.addEventListener('drop', dragDrop);
+    item.addEventListener('dragover',  dragOver);
+    item.addEventListener('drop',      dragDrop);
     item.addEventListener('dragenter', dragEnter);
     item.addEventListener('dragleave', dragLeave);
   });
@@ -143,11 +151,12 @@ function removeEventListeners() {
   });
 
   dragListItems.forEach(item => {
-    item.removeEventListener('dragover', dragOver);
-    item.removeEventListener('drop', dragDrop);
+    item.removeEventListener('dragover',  dragOver);
+    item.removeEventListener('drop',      dragDrop);
     item.removeEventListener('dragenter', dragEnter);
     item.removeEventListener('dragleave', dragLeave);
   });
 }
 
 check.addEventListener('click', checkOrder);
+// ###################################################################
