@@ -1,31 +1,37 @@
 const draggableList = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
-const adventureGames = [
-  'Labyrinth',
-  'Maniac Mansion',
-  'Zak McKracken and the Alien Mindbenders',
-  'Indiana Jones and the Last Crusade',
-  'Loom',
-  'The Secret of Monkey Island',
-  'Monkey Island 2: LeChuck’s Revenge',
-  'Indiana Jones and the Fate of Atlantis',
-  'Day of the Tentacle',
-  'Sam & Max Hit the Road',
-  'Full Throttle',
-  'Grim Fandango'
-];
+
+// Get local JSON data
+  const adventureGameNames = [];
+  const adventurePublishingYears = [];
+  const adventurePlatforms = [];
+
+  fetch('adventures.json')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      data.forEach(function(adventure){
+        adventureGameNames.push(adventure.name);
+        adventurePublishingYears.push(adventure.year);
+        adventurePlatforms.push(adventure.platform);
+      });
+      console.log('adventureGameNames: ' + adventureGameNames);
+      console.log('adventurePublishingYears: ' + adventurePublishingYears);
+      console.log('adventurePlatforms: ' + adventurePlatforms);
+      createList();
+    })
+    .catch(err => console.log(err));
+
 
 // Store listitems
 const listItems = [];
 
 let dragStartIndex;
 
-createList();
-
 // Insert list items into DOM
 function createList() {
-  [...adventureGames]
+  [...adventureGameNames]
     .map(a => ({ value: a, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(a => a.value)
@@ -39,7 +45,7 @@ function createList() {
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
           <p class="adventure-name">${adventure}</p>
-          <p class="grip">Ξ</p>
+          <p id="grip" class="grip">Ξ</p>
         </div>
       `;
 
@@ -83,7 +89,11 @@ function swapItems(fromIndex, toIndex) {
 }
 
 function displayPublishingYear() {
-  console.log('Ei guuuuudeeee!');
+  listItems.forEach((listItem, index) => {
+    listItem.querySelector('.number').innerHTML = adventurePublishingYears[index];
+  });
+  document.getElementById('check').style.visibility = 'hidden';
+  removeEventListeners();
 }
 
 function checkOrder() {
@@ -91,7 +101,7 @@ function checkOrder() {
   listItems.forEach((listItem, index) => {
     const adventureName = listItem.querySelector('.adventure-name').innerText.trim();
 
-    if(adventureName !== adventureGames[index]) {
+    if(adventureName !== adventureGameNames[index]) {
       listItem.classList.add('wrong');
       console.log('adventureName: ' + adventureName);
       setTimeout(() => { listItem.classList.remove('wrong'); }, 3 * 500);
@@ -101,7 +111,7 @@ function checkOrder() {
       rightCount++;
       setTimeout(() => { listItem.classList.remove('right'); }, 3 * 500);
     }
-    if(rightCount === adventureGames.length) {
+    if(rightCount === adventureGameNames.length) {
       displayPublishingYear();
     }
   });
@@ -120,6 +130,22 @@ function addEventListeners() {
     item.addEventListener('drop', dragDrop);
     item.addEventListener('dragenter', dragEnter);
     item.addEventListener('dragleave', dragLeave);
+  });
+}
+
+function removeEventListeners() {
+  const draggables = document.querySelectorAll('.draggable');
+  const dragListItems = document.querySelectorAll('.draggable-list li');
+
+  draggables.forEach(draggable => {
+    draggable.removeEventListener('dragstart', dragStart);
+  });
+
+  dragListItems.forEach(item => {
+    item.removeEventListener('dragover', dragOver);
+    item.removeEventListener('drop', dragDrop);
+    item.removeEventListener('dragenter', dragEnter);
+    item.removeEventListener('dragleave', dragLeave);
   });
 }
 
