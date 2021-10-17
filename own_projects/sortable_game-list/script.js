@@ -97,6 +97,24 @@ function displayPublishingYear() {
   document.getElementById('check').remove();
   document.getElementById('victory').classList.remove('hidden');
   removeEventListeners();
+  buildAndInsertTicker();
+}
+// ###################################################################
+
+
+// BUILD AND INSERT TICKER, REMOVE PARAGRAPH##########################
+function buildAndInsertTicker() {
+  let allGames = "";
+  listItems.forEach((listItem, index) => {
+    allGames += "<span class=\"year\">" + adventurePublishingYears[index] + "</span> ";
+    allGames += "<span class=\"name\">" + adventureGameNames[index] + "</span> ";
+    allGames += "<span class=\"platform\">" + adventurePlatforms[index] + "</span> ";
+    allGames += "· ";
+    
+  });
+  const allGamesTicker = `<marquee>${allGames}</marquee>`;
+  document.getElementById('intro').remove();
+  document.getElementById('top').innerHTML = allGamesTicker;
 }
 // ###################################################################
 

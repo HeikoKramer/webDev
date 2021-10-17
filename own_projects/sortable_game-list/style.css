@@ -102,10 +102,26 @@ body {
   outline: none;
 }
 
+.check-btn:hover {
+  outline: 2px solid var(--border-bright);
+}
+
 .hidden {
   display: none;
 }
 
 .victory {
   font-size: 22px;
+}
+
+.year {
+  color: var(--border-bright);
+}
+
+.platform {
+  color: #9975a7;
+}
+
+#top {
+  margin: 10px;
 }
