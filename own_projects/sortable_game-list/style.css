@@ -125,3 +125,7 @@ body {
 #top {
   margin: 10px;
 }
+
+.ticker {
+  max-width: 800px;
+}

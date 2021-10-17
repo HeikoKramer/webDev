@@ -112,7 +112,7 @@ function buildAndInsertTicker() {
     allGames += "· ";
     
   });
-  const allGamesTicker = `<marquee>${allGames}</marquee>`;
+  const allGamesTicker = `<marquee class="ticker">${allGames}</marquee>`;
   document.getElementById('intro').remove();
   document.getElementById('top').innerHTML = allGamesTicker;
 }
