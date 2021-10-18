@@ -5,6 +5,10 @@ const answer   = document.createElement('input');
 
 output.textContent = "Click the button to start the game";
 output.classList.add('output');
+answer.classList.add('boxAnswer');
+answer.setAttribute('type', 'number');
+answer.setAttribute('max', 999);
+answer.setAttribute('min', 0);
 btn.textContent    = "Start Game";
 gameArea.append(output);
 gameArea.append(btn);
@@ -47,9 +51,30 @@ function buildQuestion() {
       hiddenVal = Math.floor(Math.random()*3);
     }
     console.log('hiddenVal: ' + hiddenVal);
+    answer.value = '';
+    for(let i=0; i<3;i++){
+      if(hiddenVal === i) {
+        output.append(answer);
+      } else {
+        maker(vals[i], 'box');
+      }
+        if(i===0) {
+          maker(vals[3], 'boxSign');
+        }
+        if(i===1) {
+          maker('=', 'boxSign');
+        }
+    }
 
     vals[hiddenVal] = '––';
-    output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]}`;
+    // output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]}`;
   }
   
+}
+
+function maker(v, cla) {
+  const temp = document.createElement('div');
+  temp.classList.add(cla);
+  temp.textContent = v;
+  output.append(temp);
 }
