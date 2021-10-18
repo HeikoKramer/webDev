@@ -14,14 +14,36 @@ gameArea.append(output);
 gameArea.append(btn);
 
 const opts = ['*','/','+','-'];
-const game = {maxValue:10,questions:10,oVals:[0,2,3],curQue:0,hiddenVal:3};
+const game = {maxValue:10,questions:10,oVals:[0,2,3],curQue:0,hiddenVal:3,inplay:false};
 
-btn.addEventListener('click', startGame);
+btn.addEventListener('click', btnCheck);
 
-function startGame() {
-  // btn.style.display = 'none';
-  game.curQue = 0;
-  buildQuestion();
+answer.addEventListener('keyup', (e) => {
+  console.log(e.code);
+  console.log(answer.value.length);
+  if(answer.value.length > 0) {
+    btn.style.display = 'block';
+    btn.textContent = 'check';
+    game.inplay = true;
+  };
+  if(answer.value.length <= 0 && btn.style.display === 'block') {
+    btn.style.display = 'none';
+  };
+  if(e.code === 'Enter' && answer.value.length > 0) {
+    game.inplay = true;
+    btnCheck();
+  }
+});
+
+function btnCheck() {
+  if(game.inplay) {
+    console.log('check')
+    answer.disabled = true;
+  } else {
+    btn.style.display = 'none';
+    game.curQue = 0;
+    buildQuestion();
+  }
 }
 
 function buildQuestion() {
@@ -33,25 +55,23 @@ function buildQuestion() {
     vals[1] = Math.floor(Math.random()*(game.maxValue+1));
     game.oVals.sort(()=>{return 0.5 - Math.random()});
     if(game.oVals[0] === '1') {
+      if(vals[0] === 0) { vals[0] = 1;}
       let temp = vals[0] * vals[1];
       vals.unshift(temp);
-      console.log('temp: ' + temp);
     } else {
       
       vals[2] = eval(vals[0] + opts[game.oVals[0]] + vals[1]);
     }
     vals[3] = opts[game.oVals[0]];
-    console.log(vals);
     
-    // console.log(game.oVals);
     let hiddenVal;
     if(game.hiddenVal != 3) {
       hiddenVal = game.hiddenVal;
     } else {
       hiddenVal = Math.floor(Math.random()*3);
     }
-    console.log('hiddenVal: ' + hiddenVal);
     answer.value = '';
+    
     for(let i=0; i<3;i++){
       if(hiddenVal === i) {
         output.append(answer);
@@ -65,8 +85,8 @@ function buildQuestion() {
           maker('=', 'boxSign');
         }
     }
-
-    vals[hiddenVal] = '––';
+    answer.focus();
+    // vals[hiddenVal] = '––';
     // output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]}`;
   }
   
