@@ -27,11 +27,20 @@ function buildQuestion() {
     vals[0] = Math.floor(Math.random()*(game.maxValue+1));
     vals[1] = Math.floor(Math.random()*(game.maxValue+1));
     game.oVals.sort(()=>{return 0.5 - Math.random()});
+    if(game.oVals[0] === '1') {
+      let temp = vals[0] * vals[1];
+      vals.unshift(temp);
+      console.log('temp: ' + temp);
+    } else {
+      
+      vals[2] = eval(vals[0] + opts[game.oVals[0]] + vals[1]);
+    }
     vals[3] = opts[game.oVals[0]];
-    console.log(game.oVals);
-    vals[2] = eval(vals[0] + vals[3] + vals[1]);
+    console.log(vals);
+    
+    // console.log(game.oVals);
     let hiddenVal = Math.floor(Math.random()*3);
-    console.log('hiddenVal: ' + hiddenVal);
+    // console.log('hiddenVal: ' + hiddenVal);
     vals[hiddenVal] = '––';
     output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]}`;
   }
