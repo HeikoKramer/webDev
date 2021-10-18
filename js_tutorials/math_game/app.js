@@ -4,6 +4,7 @@ const output   = document.createElement('div');
 const answer   = document.createElement('input');
 
 output.textContent = "Click the button to start the game";
+output.classList.add('output');
 btn.textContent    = "Start Game";
 gameArea.append(output);
 gameArea.append(btn);
