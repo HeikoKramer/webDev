@@ -9,7 +9,7 @@ gameArea.append(output);
 gameArea.append(btn);
 
 const opts = ['*','/','+','-'];
-const game = {maxValue:10,questions:10,oVals:[0,2,3],curQue:0};
+const game = {maxValue:10,questions:10,oVals:[0,2,3],curQue:0,hiddenVal:3};
 
 btn.addEventListener('click', startGame);
 
@@ -39,8 +39,14 @@ function buildQuestion() {
     console.log(vals);
     
     // console.log(game.oVals);
-    let hiddenVal = Math.floor(Math.random()*3);
-    // console.log('hiddenVal: ' + hiddenVal);
+    let hiddenVal;
+    if(game.hiddenVal != 3) {
+      hiddenVal = game.hiddenVal;
+    } else {
+      hiddenVal = Math.floor(Math.random()*3);
+    }
+    console.log('hiddenVal: ' + hiddenVal);
+
     vals[hiddenVal] = '––';
     output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]}`;
   }
