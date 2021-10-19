@@ -2,6 +2,7 @@ const gameArea = document.querySelector('.game');
 const btn      = document.createElement('button');
 const output   = document.createElement('div');
 const answer   = document.createElement('input');
+const message  = document.createElement('div');
 
 output.textContent = "Click the button to start the game";
 output.classList.add('output');
@@ -10,11 +11,13 @@ answer.setAttribute('type', 'number');
 answer.setAttribute('max', 999);
 answer.setAttribute('min', 0);
 btn.textContent    = "Start Game";
+gameArea.append(message);
 gameArea.append(output);
 gameArea.append(btn);
 
 const opts = ['*','/','+','-'];
 const game = {correct:'',maxValue:10,questions:10,oVals:[0,1,2,3],curQue:0,hiddenVal:3,inplay:false};
+const player = {correct:0,incorrect:0};
 
 btn.addEventListener('click', btnCheck);
 
@@ -39,19 +42,26 @@ function btnCheck() {
   if(game.inplay) {
     console.log('check')
     console.log('game.correct: ' + game.correct);
-    answer.disabled = true;
+    
     if(answer.value == game.correct) {
       console.log('CORRECT ●‿●');
-      buildQuestion();
+      
     } else {
       console.log('FALSE ⋋_⋌');
-      buildQuestion();
+
     }
+    answer.disabled = true;
+    buildQuestion();
   } else {
     btn.style.display = 'none';
     game.curQue = 0;
     buildQuestion();
   }
+}
+
+function log() {
+  message.innerHTML = `${game.curQue} of ${game.questions} <br>`;
+  message.innerHTML += ``;
 }
 
 function buildQuestion() {
