@@ -1,5 +1,6 @@
 const gameArea = document.querySelector('.game');
 const btn      = document.createElement('button');
+const btn1      = document.createElement('button');
 const output   = document.createElement('div');
 const answer   = document.createElement('input');
 const message  = document.createElement('div');
@@ -11,15 +12,19 @@ answer.setAttribute('type', 'number');
 answer.setAttribute('max', 999);
 answer.setAttribute('min', 0);
 btn.textContent    = "Start Game";
+btn1.textContent   = "Next Question";
 gameArea.append(message);
 gameArea.append(output);
 gameArea.append(btn);
+gameArea.append(btn1);
+btn1.style.display = 'none';
 
 const opts = ['*','/','+','-'];
 const game = {correct:'',maxValue:10,questions:10,oVals:[0,1,2,3],curQue:0,hiddenVal:3,inplay:false};
 const player = {correct:0,incorrect:0};
 
 btn.addEventListener('click', btnCheck);
+btn1.addEventListener('click', buildQuestion);
 
 answer.addEventListener('keyup', (e) => {
   console.log(e.code);
@@ -40,25 +45,24 @@ answer.addEventListener('keyup', (e) => {
 
 function btnCheck() {
   if(game.inplay) {
-    console.log('check')
-    console.log('game.correct: ' + game.correct);
-    
     if(answer.value == game.correct) {
-      console.log('CORRECT ●‿●');
+      message.innerHTML = 'CORRECT ●‿●<br>Answer is ' + game.correct;
       player.correct++;
     } else {
-      console.log('FALSE ⋋_⋌ – the right answer was ' + game.correct);
+      message.innerHTML = 'FALSE ⋋_⋌<br>Answer is ' + game.correct;
       player.incorrect++;
     }
-    console.log("Player Score – Correct: " + player.correct + ", Incorrect: " + player.incorrect);
-    scoreBoard();
     answer.disabled = true;
-    buildQuestion();
+    nextQuestion();
   } else {
     btn.style.display = 'none';
     game.curQue = 0;
     buildQuestion();
   }
+}
+
+function nextQuestion() {
+  btn1.style.display = 'block';
 }
 
 function scoreBoard() {
