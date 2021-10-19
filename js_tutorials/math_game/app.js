@@ -45,11 +45,13 @@ function btnCheck() {
     
     if(answer.value == game.correct) {
       console.log('CORRECT ●‿●');
-      
+      player.correct++;
     } else {
-      console.log('FALSE ⋋_⋌');
-
+      console.log('FALSE ⋋_⋌ – the right answer was ' + game.correct);
+      player.incorrect++;
     }
+    console.log("Player Score – Correct: " + player.correct + ", Incorrect: " + player.incorrect);
+    scoreBoard();
     answer.disabled = true;
     buildQuestion();
   } else {
@@ -59,9 +61,9 @@ function btnCheck() {
   }
 }
 
-function log() {
+function scoreBoard() {
   message.innerHTML = `${game.curQue} of ${game.questions} <br>`;
-  message.innerHTML += ``;
+  message.innerHTML += `Correct: ${player.correct}, Incorrect: ${player.incorrect}`;
 }
 
 function buildQuestion() {
@@ -74,6 +76,7 @@ function buildQuestion() {
     let tempMax = game.maxValue+1;
     if(game.oVals[0] == 3) { // this prevents negative valus when substracting
       tempMax = vals[0];
+      console.log("Substraction!");
     }
     vals[1] = Math.floor(Math.random()*tempMax);
     game.oVals.sort(()=>{return 0.5 - Math.random()});
@@ -113,7 +116,7 @@ function buildQuestion() {
     // vals[hiddenVal] = '––';
     // output.innerHTML = `${vals[0]} ${vals[3]} ${vals[1]} = ${vals[2]}`;
   }
-  
+  scoreBoard();
 }
 
 function maker(v, cla) {
@@ -122,3 +125,5 @@ function maker(v, cla) {
   temp.textContent = v;
   output.append(temp);
 }
+
+// weiter bei 2:05
