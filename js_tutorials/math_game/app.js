@@ -44,6 +44,7 @@ answer.addEventListener('keyup', (e) => {
 });
 
 function btnCheck() {
+  btn.style.display = 'none';
   if(game.inplay) {
     if(answer.value == game.correct) {
       message.innerHTML = 'CORRECT ●‿●<br>Answer is ' + game.correct;
@@ -71,6 +72,7 @@ function scoreBoard() {
 }
 
 function buildQuestion() {
+  btn1.style.display = 'none';
   console.log(game.curQue + ' of ' + game.questions);
   if(game.curQue < game.questions) {
     game.curQue++;
@@ -78,13 +80,18 @@ function buildQuestion() {
     let vals = [];
     vals[0] = Math.ceil(Math.random()*(game.maxValue));
     let tempMax = game.maxValue+1;
+    game.oVals.sort(()=>{return 0.5 - Math.random()});
     if(game.oVals[0] == 3) { // this prevents negative valus when substracting
       tempMax = vals[0];
       console.log("Substraction!");
     }
     vals[1] = Math.floor(Math.random()*tempMax);
-    game.oVals.sort(()=>{return 0.5 - Math.random()});
-    if(game.oVals[0] == '1') {
+    
+    if(game.oVals[0] == 0) {
+      if(vals[1] == 0) { vals[1] = 1;}
+      if(vals[0] == 0) { vals[0] = 1;}
+    }
+    if(game.oVals[0] == 1) {
       if(vals[0] == 0) { vals[0] = 1;}
       let temp = vals[0] * vals[1];
       vals.unshift(temp);
@@ -130,5 +137,3 @@ function maker(v, cla) {
   temp.innerHTML = v;
   output.append(temp);
 }
-
-// weiter bei 2:05
