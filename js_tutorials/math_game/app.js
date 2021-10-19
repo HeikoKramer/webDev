@@ -55,12 +55,17 @@ function btnCheck() {
 }
 
 function buildQuestion() {
+  console.log(game.curQue + ' of ' + game.questions);
   if(game.curQue < game.questions) {
     game.curQue++;
     output.innerHTML = '';
     let vals = [];
     vals[0] = Math.floor(Math.random()*(game.maxValue+1));
-    vals[1] = Math.floor(Math.random()*(game.maxValue+1));
+    let tempMax = game.maxValue+1;
+    if(game.oVals[0] == 3) { // this prevents negative valus when substracting
+      tempMax = vals[0];
+    }
+    vals[1] = Math.floor(Math.random()*tempMax);
     game.oVals.sort(()=>{return 0.5 - Math.random()});
     if(game.oVals[0] === '1') {
       if(vals[0] === 0) { vals[0] = 1;}
