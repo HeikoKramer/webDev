@@ -1,9 +1,10 @@
-const gameArea = document.querySelector('.game');
-const btn      = document.createElement('button');
-const btn1      = document.createElement('button');
-const output   = document.createElement('div');
-const answer   = document.createElement('input');
-const message  = document.createElement('div');
+const gameArea    = document.querySelector('.game');
+const gameOptions = document.querySelector('.gameOptions');
+const btn         = document.createElement('button');
+const btn1        = document.createElement('button');
+const output      = document.createElement('div');
+const answer      = document.createElement('input');
+const message     = document.createElement('div');
 
 output.textContent = "Click the button to start the game";
 output.classList.add('output');
@@ -56,6 +57,8 @@ function btnCheck() {
     answer.disabled = true;
     nextQuestion();
   } else {
+    // start game
+    gameOptions.style.display = 'none';
     btn.style.display = 'none';
     game.curQue = 0;
     buildQuestion();
@@ -69,6 +72,21 @@ function nextQuestion() {
 function scoreBoard() {
   message.innerHTML = `${game.curQue} of ${game.questions} <br>`;
   message.innerHTML += `Correct: ${player.correct}, Incorrect: ${player.incorrect}`;
+}
+
+getValues();
+function getValues() {
+  game.maxValue = Number(document.querySelector('#maxVal').value);
+  game.questions = document.querySelector('#numQuestions').value;
+  let temp = document.querySelector('#selOpt');
+  let tempArr = [];
+  for(let i=0;i<temp.options.length;i++) {
+    if(temp.options[i].selected) {
+      tempArr.push(i);
+    }; 
+  }
+  game.oVals = tempArr;
+  console.log(game);
 }
 
 function buildQuestion() {
