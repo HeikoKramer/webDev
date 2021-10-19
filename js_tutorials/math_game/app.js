@@ -29,10 +29,10 @@ answer.addEventListener('keyup', (e) => {
     btn.textContent = 'check';
     game.inplay = true;
   };
-  if(answer.value.length <= 0 && btn.style.display === 'block') {
+  if(answer.value.length <= 0 && btn.style.display == 'block') {
     btn.style.display = 'none';
   };
-  if(e.code === 'Enter' && answer.value.length > 0) {
+  if(e.code == 'Enter' && answer.value.length > 0) {
     game.inplay = true;
     btnCheck();
   }
@@ -72,7 +72,7 @@ function buildQuestion() {
     game.curQue++;
     output.innerHTML = '';
     let vals = [];
-    vals[0] = Math.floor(Math.random()*(game.maxValue+1));
+    vals[0] = Math.ceil(Math.random()*(game.maxValue));
     let tempMax = game.maxValue+1;
     if(game.oVals[0] == 3) { // this prevents negative valus when substracting
       tempMax = vals[0];
@@ -80,8 +80,8 @@ function buildQuestion() {
     }
     vals[1] = Math.floor(Math.random()*tempMax);
     game.oVals.sort(()=>{return 0.5 - Math.random()});
-    if(game.oVals[0] === '1') {
-      if(vals[0] === 0) { vals[0] = 1;}
+    if(game.oVals[0] == '1') {
+      if(vals[0] == 0) { vals[0] = 1;}
       let temp = vals[0] * vals[1];
       vals.unshift(temp);
     } else {
@@ -99,16 +99,17 @@ function buildQuestion() {
     answer.value = '';
     answer.disabled = false;
     for(let i=0; i<3;i++){
-      if(hiddenVal === i) {
+      if(hiddenVal == i) {
         game.correct = vals[i];
         output.append(answer);
       } else {
         maker(vals[i], 'box');
       }
-        if(i===0) {
-          maker(vals[3], 'boxSign');
+        if(i==0) {
+          let tempSign = vals[3] == '*' ? '&times;' : vals[3];
+          maker(tempSign, 'boxSign');
         }
-        if(i===1) {
+        if(i==1) {
           maker('=', 'boxSign');
         }
     }
@@ -122,7 +123,7 @@ function buildQuestion() {
 function maker(v, cla) {
   const temp = document.createElement('div');
   temp.classList.add(cla);
-  temp.textContent = v;
+  temp.innerHTML = v;
   output.append(temp);
 }
 
