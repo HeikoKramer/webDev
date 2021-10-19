@@ -24,18 +24,20 @@ body h1 {
   background-color: #fff;
   border: 1px solid #ccc;
   font-size: 1.2em;
+  height: 55px;
 }
 
 .boxSign {
   display: inline-block;
   padding: 10px;
+  font-size: 1.2em;
 }
 
 .box {
   padding: 5px;
   text-align: center;
   width: 50px;
-  line-height: 45px;
+  line-height: 55px;
   background-color: #ddd;
   border: 1px solid #ccc;
   display: inline-block;
