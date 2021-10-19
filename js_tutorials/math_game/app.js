@@ -14,7 +14,7 @@ gameArea.append(output);
 gameArea.append(btn);
 
 const opts = ['*','/','+','-'];
-const game = {maxValue:10,questions:10,oVals:[0,2,3],curQue:0,hiddenVal:3,inplay:false};
+const game = {correct:'',maxValue:10,questions:10,oVals:[0,1,2,3],curQue:0,hiddenVal:3,inplay:false};
 
 btn.addEventListener('click', btnCheck);
 
@@ -38,7 +38,15 @@ answer.addEventListener('keyup', (e) => {
 function btnCheck() {
   if(game.inplay) {
     console.log('check')
+    console.log('game.correct: ' + game.correct);
     answer.disabled = true;
+    if(answer.value == game.correct) {
+      console.log('CORRECT ●‿●');
+      buildQuestion();
+    } else {
+      console.log('FALSE ⋋_⋌');
+      buildQuestion();
+    }
   } else {
     btn.style.display = 'none';
     game.curQue = 0;
@@ -71,9 +79,10 @@ function buildQuestion() {
       hiddenVal = Math.floor(Math.random()*3);
     }
     answer.value = '';
-    
+    answer.disabled = false;
     for(let i=0; i<3;i++){
       if(hiddenVal === i) {
+        game.correct = vals[i];
         output.append(answer);
       } else {
         maker(vals[i], 'box');
