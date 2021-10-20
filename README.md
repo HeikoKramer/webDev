@@ -157,7 +157,7 @@ Quick links to my notes files: <br>
 * [VS-Code_notes.md](https://github.com/HeikoKramer/webDev/blob/main/VS-Code_notes.md)
 * [nodeJS_notes.md](https://github.com/HeikoKramer/webDev/blob/main/nodeJS_notes.md)
 
-## Coding samples / tutorials
+## Tutorials
 ### Task List
 **Project source**: [Modern JavaScript From The Beginning](https://subscription.packtpub.com/video/web-development/9781789539509/p1) <br>
 **Project folder**: [taskList](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/DOM_Projects/taskList) <br>
@@ -290,3 +290,10 @@ Quick links to my notes files: <br>
 
 ![math-game](/images/math-game.png)
 ![math-game](/images/math-game.gif)
+
+## Own projects
+### heikokraemer.de  
+**Project folder:** [neofetch_style_website](https://github.com/HeikoKramer/webDev/tree/main/own_projects/neofetch_style_website) <br>
+**Description:** My own website – it's basically a static website in the optical style of the [neofetch](https://github.com/dylanaraps/neofetch) command line application. The website offers a color-scheme choice and has some JS pop-up windows from the [WinBox.js](https://nextapps-de.github.io/winbox/) library integrated, which I did not touch except for the styling. The inspiration for that project came from the [Terminal Style Landing Page](https://youtu.be/jQCk2yo10YY) video on the Traversy Media YouTube channel. <br>
+
+![heiko-kraemer_de](/images/heiko-kraemer_de.gif)
