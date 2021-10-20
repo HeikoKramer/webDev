@@ -297,3 +297,9 @@ Quick links to my notes files: <br>
 **Description:** My own website – it's basically a static website in the optical style of the [neofetch](https://github.com/dylanaraps/neofetch) command line application. The website offers a color-scheme choice (saved in local storage), is somewhat responsive and has some JS pop-up windows from the [WinBox.js](https://nextapps-de.github.io/winbox/) library integrated, which I did not touch except for the styling. The inspiration for that project came from the [Terminal Style Landing Page](https://youtu.be/jQCk2yo10YY) video on the Traversy Media YouTube channel. <br>
 
 ![heiko-kraemer_de](/images/heiko-kraemer_de.gif)
+  
+### Advanture Games (Sort Game)
+**Project folder:** [sortable_game-list](https://github.com/HeikoKramer/webDev/tree/main/own_projects/sortable_game-list) <br>
+**Description:** Little fun application I did after completing the [drag 'n' drop tutorial](#drag-n-drop) to practice some stuff. The game fetches Lucas Arts adventures from a JSON file and asks the user to order those titles after their publishing date. The user can check the order and see which titles are ordered correctly and which not. The publishing years are shown, when the order is finally correct – also drag 'n' drop gets disabled and a ticker appears, which shows additional platform information for each game.  <br>
+
+![adventure-games](/images/adventure-games.gif)
