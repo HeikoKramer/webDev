@@ -282,3 +282,11 @@ Quick links to my notes files: <br>
 **Description:** Small project with focus on the [HTML Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API). The outcome is a game, where you have to bring the top ten richest people in order via drag 'n' drop. You can check if your order is right or wrong by clicking a button. There is a lot of **DOM manipulation** involved, a lot of **class** changing to assign different colors, pre-configured in the **CSS**. <br>
 
 ![drag-n-drop](/images/drag-n-drop.gif)
+
+### JS Math Game  
+**Project source:** [JavaScript Math Games Projec on Packt](https://subscription.packtpub.com/video/programming/9781801071994/p1/video1_1/introduction) <br>
+**Project folder:** [math_game](https://github.com/HeikoKramer/webDev/tree/main/js_tutorials/math_game) <br>
+**Description:** The outcome of this project is a little math game, which generates a specified amount of questions, containing selected math operator and number ranges. The logic behind the project is very cool, I'll partial re-use it in an own project, the tutorial though was rather jumpy and not that easy to follow. Readability and structure of the code could be better, but I'll leave it as it is in the folder and change that in my own project. <br>
+
+![math-game](/images/math-game.png)
+![math-game](/images/math-game.gif)
