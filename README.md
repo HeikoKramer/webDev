@@ -294,6 +294,6 @@ Quick links to my notes files: <br>
 ## Own projects
 ### heikokraemer.de  
 **Project folder:** [neofetch_style_website](https://github.com/HeikoKramer/webDev/tree/main/own_projects/neofetch_style_website) <br>
-**Description:** My own website – it's basically a static website in the optical style of the [neofetch](https://github.com/dylanaraps/neofetch) command line application. The website offers a color-scheme choice, is somewhat responsive and has some JS pop-up windows from the [WinBox.js](https://nextapps-de.github.io/winbox/) library integrated, which I did not touch except for the styling. The inspiration for that project came from the [Terminal Style Landing Page](https://youtu.be/jQCk2yo10YY) video on the Traversy Media YouTube channel. <br>
+**Description:** My own website – it's basically a static website in the optical style of the [neofetch](https://github.com/dylanaraps/neofetch) command line application. The website offers a color-scheme choice (saved in local storage), is somewhat responsive and has some JS pop-up windows from the [WinBox.js](https://nextapps-de.github.io/winbox/) library integrated, which I did not touch except for the styling. The inspiration for that project came from the [Terminal Style Landing Page](https://youtu.be/jQCk2yo10YY) video on the Traversy Media YouTube channel. <br>
 
 ![heiko-kraemer_de](/images/heiko-kraemer_de.gif)
