@@ -108,6 +108,11 @@ body {
   width: 49.9999999998%;
 }
 
+/* CUSTOM 1/5 */
+.xs-one-fifth[class*='column'] {
+  width: 19.9999999995%;
+}
+
 .xs-seven[class*='column'] {
   width: 58.3333333331%;
 }
@@ -162,6 +167,12 @@ body {
   .one-half[class*='column'] {
     width: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .seven[class*='column'] {
     width: 58.3333333331%;
   }
@@ -202,6 +213,12 @@ body {
   .offset-by-one-half[class*='column'] {
     margin-left: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .offset-by-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .offset-by-seven[class*='column'] {
     margin-left: 58.3333333331%;
   }
@@ -239,6 +256,12 @@ body {
   .sm-one-half[class*='column'] {
     width: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .sm-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .sm-seven[class*='column'] {
     width: 58.3333333331%;
   }
@@ -282,6 +305,12 @@ body {
   .sm-offset-by-one-half[class*='column'] {
     margin-left: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .sm-offset-by-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .sm-offset-by-seven[class*='column'] {
     margin-left: 58.3333333331%;
   }
@@ -322,6 +351,12 @@ body {
   .md-one-half[class*='column'] {
     width: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .md-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .md-seven[class*='column'] {
     width: 58.3333333331%;
   }
@@ -365,6 +400,12 @@ body {
   .md-offset-by-one-half[class*='column'] {
     margin-left: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .md-offset-by-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .md-offset-by-seven[class*='column'] {
     margin-left: 58.3333333331%;
   }
@@ -405,6 +446,12 @@ body {
   .lg-one-half[class*='column'] {
     width: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .lg-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .lg-seven[class*='column'] {
     width: 58.3333333331%;
   }
@@ -448,6 +495,12 @@ body {
   .lg-offset-by-one-half[class*='column'] {
     margin-left: 49.9999999998%;
   }
+
+  /* CUSTOM 1/5 */
+  .lg-offset-by-one-fifth[class*='column'] {
+    width: 19.9999999995%;
+  }
+
   .lg-offset-by-seven[class*='column'] {
     margin-left: 58.3333333331%;
   }
