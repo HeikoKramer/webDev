@@ -1,9 +1,35 @@
 .question {
-  margin: 5rem ; 
+  margin: 30px auto ;
+  font-size: 3rem;
+  text-align: center;
+  width: 600px;
+  line-height: normal;
 }
 
 .columns, .column {
   background: #d2acdb;
   border: 1px rgb(143, 77, 143) solid;
-  padding: 10px;
+  /* padding: 20px; */
 }
+
+.randomInput {
+  font-size: 2.6rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.randomInput, input[type="text"], textarea, select {
+  background: #f2def7;
+  border: none;
+}
+
+.randomInput, input[type="text"]:focus {
+  background: #f2def7;
+  border: none;
+}
+
+.inputCell {
+  background: #f2def7;
+}
+
