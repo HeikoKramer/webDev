@@ -4,6 +4,7 @@
   text-align: center;
   width: 600px;
   line-height: normal;
+  color: rgb(59, 4, 82);
 }
 
 .columns, .column {
@@ -22,11 +23,14 @@
 .randomInput, input[type="text"], textarea, select {
   background: #f2def7;
   border: none;
+  cursor: pointer;
+  color: rgb(123, 17, 133);
 }
 
 .randomInput, input[type="text"]:focus {
   background: #f2def7;
   border: none;
+  cursor: text;
 }
 
 .inputCell {
