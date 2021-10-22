@@ -39,6 +39,11 @@
   background: var(--inputBackgroundColor);
 }
 
+.selectable:hover {
+  background: var(--inputBackgroundColor);
+  cursor: pointer;
+}
+
 
 /* just for the template site */
 .centerText {
