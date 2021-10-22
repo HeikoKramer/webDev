@@ -1,15 +1,17 @@
+@import url(./color_schemes.css);
+
 .question {
   margin: 30px auto ;
   font-size: 3rem;
   text-align: center;
   width: 600px;
   line-height: normal;
-  color: rgb(59, 4, 82);
+  color: var(--innerBlockTextColor);
 }
 
 .columns, .column {
   background: #d2acdb;
-  border: 1px rgb(143, 77, 143) solid;
+  border: 1px var(--blockBorderColor) solid;
   /* padding: 20px; */
 }
 
@@ -21,20 +23,20 @@
 }
 
 .randomInput, input[type="text"], textarea, select {
-  background: #f2def7;
+  background: var(--inputBackgroundColor);
   border: none;
   cursor: pointer;
-  color: rgb(123, 17, 133);
+  color: var(--inputTextColor);
 }
 
 .randomInput, input[type="text"]:focus {
-  background: #f2def7;
+  background: --inputBackgroundColor;
   border: none;
   cursor: text;
 }
 
 .inputCell {
-  background: #f2def7;
+  background: var(--inputBackgroundColor);
 }
 
 
