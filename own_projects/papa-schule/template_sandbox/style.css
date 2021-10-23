@@ -53,10 +53,7 @@
 
 
 /* SELECTIONS */
-.selectable:hover {
-  background: var(--inputBackgroundColor);
-  color: var(--inputTextColor);
-}
+
 
 .selections {
   margin: 30px auto ;
@@ -100,15 +97,25 @@
   margin: 0.5rem 0 0.5rem 0;
 }
 
-.selectable:hover .modus-header {
-  color: var(--inputBackgroundColor);
-  background: var(--inputTextColor);
-}
-
 .modus-description {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+  /* --> when hovered over OR selected */
+  /* Add "selected" class to "operator-selector" and "modus-selector" div */
+.selectable:hover .modus-header,
+.selected .modus-header  {
+  color: var(--inputBackgroundColor);
+  background: var(--inputTextColor);
+}
+
+.selectable:hover,
+.selected {
+  background: var(--inputBackgroundColor);
+  color: var(--inputTextColor);
+}
+
 
 
 /* just for the template site */
