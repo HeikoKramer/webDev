@@ -53,24 +53,23 @@
 
 
 /* SELECTIONS */
+.selectable:hover {
+  background: var(--inputBackgroundColor);
+  color: var(--inputTextColor);
+}
+
 .selections {
-  
   margin: 30px auto ;
-  font-size: 2rem;
   text-align: center;
   line-height: normal;
   color: var(--innerBlockTextColor);
   max-width: 1200px;
-  
-
-  
 }
 
+  /* --> Operators */
 .operator-selections {
-  /* max-width: 400px; */
   padding-bottom: 1rem;
   font-size: 5rem;
-
   display: flex;
   justify-content: center;
 }
@@ -78,25 +77,38 @@
 .operator-selector { 
   max-width: 100px;
   justify-self: center;
-  
 }
 
+  /* --> Modus */
 .modus-selections {
-  /* max-width: 1000px; */
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 
 .modus-selector {
   max-width: 380px;
+ 
 }
 
-.selectable:hover {
-  background: var(--inputBackgroundColor);
-  color: var(--inputTextColor);
+.modus-header {
+  background: var(--innerBlockTextColor);
+  color: var(--innerBlockBackgroundColor);
+  border-radius: 22px;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
+.selectable:hover .modus-header {
+  color: var(--inputBackgroundColor);
+  background: var(--inputTextColor);
+}
 
+.modus-description {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
 
 
 /* just for the template site */
