@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
 :root {
   /* BLOCK COLORS (Used in: Questions) */
   --innerBlockTextColor: rgb(59, 4, 82);
@@ -9,6 +11,7 @@
   --inputBackgroundColor: #f2def7;
 
 }
+
 
 .block {
   background: var(--innerBlockBackgroundColor);
@@ -73,7 +76,7 @@
 
 .operator-selector { 
   max-width: 100px;
-  justify-self: center;
+  cursor: pointer;
 }
 
   /* --> Modus */
@@ -81,11 +84,12 @@
   display: flex;
   justify-content: center;
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 .modus-selector {
   max-width: 380px;
- 
+  cursor: pointer;
 }
 
 .modus-header {
@@ -101,6 +105,38 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+/* BUTTON SECTION */
+
+.controlls {
+  display: flex;
+  justify-content: center;
+}
+
+.button-section {
+  max-width: 340px;
+}
+
+.start-game {
+  padding: 10px;
+  color: var(--innerBlockBackgroundColor);
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background-color: var(--innerBlockTextColor);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.start-game:hover {
+  outline: 3px solid var(--innerBlockBackgroundColor);
+}
+
+.start-game:active {
+  transform: scale(0.98);
+}
+
 
   /* --> when hovered over OR selected */
   /* Add "selected" class to "operator-selector" and "modus-selector" div */
