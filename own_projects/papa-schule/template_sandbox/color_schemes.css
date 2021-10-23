@@ -2,7 +2,7 @@
 :root {
   /* BLOCK COLORS (Used in: Questions) */
   --innerBlockTextColor: rgb(59, 4, 82);
-  --blockBorderColor: rgb(143, 77, 143);
+  --innerBlockBackgroundColor: rgb(143, 77, 143);
 
   /* INPUT COLORS (Used in: Random Input (Question)) */
   --inputTextColor: rgb(123, 17, 133);

@@ -1,5 +1,22 @@
-@import url(./color_schemes.css);
+:root {
+  /* BLOCK COLORS (Used in: Questions) */
+  --innerBlockTextColor: rgb(59, 4, 82);
+  --innerBlockBackgroundColor: #d2acdb;
+  --blockBorderColor: rgb(143, 77, 143);
 
+  /* INPUT COLORS (Used in: Random Input (Question)) */
+  --inputTextColor: rgb(123, 17, 133);
+  --inputBackgroundColor: #f2def7;
+
+}
+
+.block {
+  background: var(--innerBlockBackgroundColor);
+  border: 1px var(--blockBorderColor) solid;
+  /* padding: 20px; */
+}
+
+/* QUESTIONS */
 .question {
   margin: 30px auto ;
   font-size: 3rem;
@@ -7,12 +24,6 @@
   width: 600px;
   line-height: normal;
   color: var(--innerBlockTextColor);
-}
-
-.columns, .column {
-  background: #d2acdb;
-  border: 1px var(--blockBorderColor) solid;
-  /* padding: 20px; */
 }
 
 .randomInput {
@@ -39,10 +50,53 @@
   background: var(--inputBackgroundColor);
 }
 
+
+
+/* SELECTIONS */
+.selections {
+  
+  margin: 30px auto ;
+  font-size: 2rem;
+  text-align: center;
+  line-height: normal;
+  color: var(--innerBlockTextColor);
+  max-width: 1200px;
+  
+
+  
+}
+
+.operator-selections {
+  /* max-width: 400px; */
+  padding-bottom: 1rem;
+  font-size: 5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.operator-selector { 
+  max-width: 100px;
+  justify-self: center;
+  
+}
+
+.modus-selections {
+  /* max-width: 1000px; */
+  display: flex;
+  justify-content: center;
+}
+
+.modus-selector {
+  max-width: 380px;
+}
+
 .selectable:hover {
   background: var(--inputBackgroundColor);
-  cursor: pointer;
+  color: var(--inputTextColor);
 }
+
+
 
 
 /* just for the template site */
