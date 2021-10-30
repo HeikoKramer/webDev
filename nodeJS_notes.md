@@ -71,4 +71,16 @@ That way you'll use the updated version – if a security update for *fermium* h
 <br>
 The running node version can as well be inspected using the standard node command `node --version` or the short form `node -v`. <br>
 
---> weiter bei 20:38
+## node interactive mode
+The Node.js interactive mode is an easy way to test JavaScript code. <br>
+You can start node's **interactive mode** by simply typing `node` into the console. <br>
+Node will then start and show you a prompt `> ` where you can type or paste JS code. <br>
+`> 42/12` will output `3.5`. But you can also more complex scenarios, storing functions and calling them later: <br>
+
+```js
+> add = function(val1, val2) { return val1 + val2; };
+[Function: add]
+> add(15,25)
+40
+```
+
