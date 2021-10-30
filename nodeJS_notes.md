@@ -71,7 +71,9 @@ That way you'll use the updated version – if a security update for *fermium* h
 <br>
 The running node version can as well be inspected using the standard node command `node --version` or the short form `node -v`. <br>
 
-## node interactive mode
+## Running Node.js
+There are two ways of running Node.js – **interactive in the terminal** or by **loading a Javascript file into node**. <br>
+### Node.js interactive mode
 The Node.js interactive mode is an easy way to test JavaScript code. <br>
 You can start node's **interactive mode** by simply typing `node` into the console. <br>
 Node will then start and show you a prompt `> ` where you can type or paste JS code. <br>
@@ -83,4 +85,10 @@ Node will then start and show you a prompt `> ` where you can type or paste JS c
 > add(15,25)
 40
 ```
+
+Everything you did, all the variables, functions, etc. you've stored in node's interactive mode will be vanished when you leave node. <br>
+For that reason node forces you to confirm you intention to leave the program by pressing <kbd>CTRL</kbd> <kbd>c</kbd> twice before it closes.
+### Run JavaScript file in Node.Js
+To run a pre-scripted JavaScript file in node is as simple as typing `node fileName.js`. <br>
+The file name does not even require the **.js** extension. As long as it contains valid JS code, it will execute. <br>
 
