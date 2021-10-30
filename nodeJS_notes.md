@@ -71,7 +71,7 @@ That way you'll use the updated version – if a security update for *fermium* h
 <br>
 The running node version can as well be inspected using the standard node command `node --version` or the short form `node -v`. <br>
 
-## Running Node.js
+## [Running Node.js](https://youtu.be/g3Tt8ZozKWU?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1251)
 There are two ways of running Node.js – **interactive in the terminal** or by **loading a Javascript file into node**. <br>
 ### Node.js interactive mode
 The Node.js interactive mode is an easy way to test JavaScript code. <br>
