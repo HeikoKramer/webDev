@@ -91,4 +91,4 @@ For that reason node forces you to confirm you intention to leave the program by
 ### Run JavaScript file in Node.Js
 To run a pre-scripted JavaScript file in node is as simple as typing `node fileName.js`. <br>
 The file name does not even require the **.js** extension. As long as it contains valid JS code, it will execute. <br>
-
+The most common filename for an initial JavaScript code file is **app.js**. <br>
