@@ -298,8 +298,12 @@ Quick links to my notes files: <br>
 
 ![heiko-kraemer_de](/images/heiko-kraemer_de.gif)
   
-### Advanture Games (Sort Game)
+### Adventure Games (Sort Game)
 **Project folder:** [sortable_game-list](https://github.com/HeikoKramer/webDev/tree/main/own_projects/sortable_game-list) <br>
 **Description:** Little fun application I did after completing the [drag 'n' drop tutorial](#drag-n-drop) to practice some stuff. The game fetches Lucas Arts adventures from a JSON file and asks the user to order those titles after their publishing date. The user can check the order and see which titles are ordered correctly and which not. The publishing years are shown, when the order is finally correct – also drag 'n' drop gets disabled and a ticker appears, which shows additional platform information for each game.  <br>
 
 ![adventure-games](/images/adventure-games.gif)
+
+## Useful links
+* [Letter Symbols](https://www.htmlsymbol.com/letter-symbols/)
+  * good and thematic grouped collection of symbols with their appropriate **HTML codes**
