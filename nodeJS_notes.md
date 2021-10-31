@@ -128,3 +128,19 @@ setTimeout(function () {
 console.log("Ei ");
 ```
 
+### [Synchronous code blocking the program](https://youtu.be/APwRg37ShSY)
+We still can **block** our program. If we run for example this loop, which does nothing, but that quite often, then our one second timer is delayed and the **"Ei gude!""** string appears much later than after one second (at least at my CPU's speed). <br>
+
+```js
+setTimeout(function () {
+  console.log("Ei gude!");
+}, 1 * 1000);
+
+for (let i = 0; i < 10000000000; i++) {
+  // ...
+}
+```
+
+This is something we should keep in mind: <br>
+**Everything what can not be executed instantaneously should be set up asynchronously.** <br>
+**Note.js favors asynchronous code.** <br>
