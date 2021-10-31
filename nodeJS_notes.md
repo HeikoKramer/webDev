@@ -115,7 +115,7 @@ setTimeout(function () {
   console.log("Ei gude!");
 }, 2 * 1000);
 ```
-<br>
+
 `setTimeout` doesn't block our threat, other actions can be performed parallel. <br>
 This can be demonstrated with the example below – although the **"Ei "** string is logged to the console after the timeout, it appears straight after running the program in the log .. two seconds later, the **"gude!"** appears. <br>
 If the timeout would block the code, we would see a two second delay at the start and an execution in reverse order. <br>
