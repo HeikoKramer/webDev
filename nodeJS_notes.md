@@ -92,3 +92,39 @@ For that reason node forces you to confirm you intention to leave the program by
 To run a pre-scripted JavaScript file in node is as simple as typing `node fileName.js`. <br>
 The file name does not even require the **.js** extension. As long as it contains valid JS code, it will execute. <br>
 The most common filename for an initial JavaScript code file is **app.js**. <br>
+
+## Asynchronous vs parallel
+### Callbacks
+External code runs **single threaded** in Node.js. <br>
+**Callbacks** are used to **wait** for a certain event, or to act in a certain time frame or interval. <br>
+Examples for **callback methods** are `setTimeout` or `setInterval`. <br>
+<br>
+The following example shows the `setTimeout` method, which calls – after two seconds – a function that contains a console log: <br>
+
+```js
+setTimeout(function () {
+  console.log("Ei gude!");
+}, 2 * 1000);
+```
+
+The same example, but using the `setInterval`, will repeat the console log and display our message repetitive every two seconds. <br>
+We can interrupt that process by pressing <kbd>CTRL</kbd> <kbd>c</kbd>. <br>
+
+```js
+setTimeout(function () {
+  console.log("Ei gude!");
+}, 2 * 1000);
+```
+<br>
+`setTimeout` doesn't block our threat, other actions can be performed parallel. <br>
+This can be demonstrated with the example below – although the **"Ei "** string is logged to the console after the timeout, it appears straight after running the program in the log .. two seconds later, the **"gude!"** appears. <br>
+If the timeout would block the code, we would see a two second delay at the start and an execution in reverse order. <br>
+
+```js
+setTimeout(function () {
+  console.log("gude!");
+}, 2 * 1000);
+
+console.log("Ei ");
+```
+
