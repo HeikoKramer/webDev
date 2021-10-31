@@ -93,7 +93,7 @@ To run a pre-scripted JavaScript file in node is as simple as typing `node fileN
 The file name does not even require the **.js** extension. As long as it contains valid JS code, it will execute. <br>
 The most common filename for an initial JavaScript code file is **app.js**. <br>
 
-## Asynchronous vs parallel
+## [Asynchronous vs parallel](https://youtu.be/APwRg37ShSY)
 ### Callbacks
 External code runs **single threaded** in Node.js. <br>
 **Callbacks** are used to **wait** for a certain event, or to act in a certain time frame or interval. <br>
