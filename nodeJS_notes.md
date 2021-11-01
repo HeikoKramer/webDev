@@ -191,3 +191,30 @@ The server provides feedback when started: <br>
 And our response is displayed when we access *localhost:3000* and therewith trigger our request: <br>
 
 ![node-server](/images/node-server.png)
+
+### [writeHead()](https://youtu.be/APwRg37ShSY?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1157)
+Our output text *Hello HTTP!* from the example above was only plain text, as visible in the last image. <br>
+We have not specified any output parameters – that is done in the **HTTP header**. <br>
+To set the appropriate parameters in the header, we can use `writeHead()`. <br>
+`writeHead()` takes in two parameters, the **HTTP status code** and **an header object**, which contains the [HTTP properties](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields) that we would like to set. <br>
+<br>
+Now that we have set a header with a specified **content-type** of **text/html**, we get an HTML page back as response: <br>
+
+```js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {
+    'content-type': 'text/html'
+  });
+  res.write('Hallo HTTP!');
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log('Server listening on port 3000.');
+});
+```
+
+![node-server_html](/images/node-server_html.png)
+
