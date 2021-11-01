@@ -307,3 +307,5 @@ Quick links to my notes files: <br>
 ## Useful links
 * [Letter Symbols](https://www.htmlsymbol.com/letter-symbols/)
   * good and thematic grouped collection of symbols with their appropriate **HTML codes**
+* [Node.js API reference](https://nodejs.org/docs/latest-v15.x/api/)
+  * documentation for all integrated node modules
