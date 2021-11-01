@@ -161,7 +161,8 @@ const http = require('http');
 To **create a server in Node.js** is fairly easy, therefor we use the `createServer()` method. <br>
 The method takes in a **callback function** with a **request** and a **response** parameter. <br>
 We can send data to the client by using `write()`. <br>
-A response can include multiple parts, so it is important to `end()` it. <br>
+<br>
+**NOTE:** A response can include multiple parts, so it is important to `end()` it. <br>
 Without ending the response node will keep waiting for further parts of the response. <br>
 <br>
 In order to be able to receive requests, we have to **open a port on our host**. <br>
