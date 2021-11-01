@@ -258,3 +258,23 @@ The full list of **integrated modules** can be viewed in the [Node.js API refere
 ### External modules
 All functionalities not included in the integrated modules are created and maintained by the Node.js community. <br>
 
+## [TCP / IP](https://youtu.be/APwRg37ShSY?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1556)
+The Node.js **net module** has similarities with the http/https modules, but directly supports the **TCP/IP** protocols. <br>
+A server created with net also requires a callback function, but here we only require a **socket** instead of the request and response parameters from the http example. <br>
+
+```js
+const net = require('net');
+
+const server = net.createServer(socket => {
+  socket.write('Hallo TCP/IP!');
+  socket.end();
+});
+
+server.listen(3000);
+```
+
+We have created a basic **tcp/ip server** in a file called *tcpip.js*, to run the server we simply type `node tcpip.s`. <br>
+We can now access our server from an other terminal window, either via **telnet** or via **netcat**: <br>
+
+![node-server_tcpip](/images/node-server_tcpip.png)
+
