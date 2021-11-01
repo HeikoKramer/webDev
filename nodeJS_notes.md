@@ -238,4 +238,23 @@ Node.js contains also the **HTTPS module**, which implements the **HTTPS protoco
 Except from the **secure** protocol, everything works exactly the same as with the HTTP module. <br>
 
 ## [Modules](https://youtu.be/APwRg37ShSY?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1362)
---> weiter bei 23:00
+Node.js has been build very lean on its core functionality by purpose. <br>
+It is therefore easily extendible via external modules. <br>
+### Integrated modules
+There are a few **essential modules** integrated in node, like the **http** and **https** modules we have covered above. <br>
+Further node core modules are for example: <br>
+* fs
+  * provides functionality to access and interact with the **file system**
+* net
+  * this module provides an asynchronous **network wrapper**
+* os
+  * provides functions that can be use to retrieve information from the underlying **operating system**
+* path
+  * provides functionality to access and interact with the **file system**
+* url
+  * the URL module **splits up a web address into readable parts**
+
+The full list of **integrated modules** can be viewed in the [Node.js API reference](https://nodejs.org/docs/latest-v15.x/api/). <br>
+### External modules
+All functionalities not included in the integrated modules are created and maintained by the Node.js community. <br>
+
