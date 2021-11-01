@@ -157,4 +157,36 @@ Require provides us a **return value** for the module, which has to be **stored 
 const http = require('http');
 ```
 
+### createServer()
+To **create a server in Node.js** is fairly easy, therefor we use the `createServer()` method. <br>
+The method takes in a **callback function** with a **request** and a **response** parameter. <br>
+We can send data to the client by using `write()`. <br>
+A response can include multiple parts, so it is important to `end()` it. <br>
+Without ending the response node will keep waiting for further parts of the response. <br>
+<br>
+In order to be able to receive requests, we have to **open a port on our host**. <br>
+We do that with the `listen()` method. Port **3000** is a often used port for node servers. <br>
+The listen method can take in a callback function to provide feedback, for the successful start of the server. <br>
+<br>
+So at this point we have a functional, but very basic web-server: <br>
 
+```js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.write('Hallo HTTP!');
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log('Server listening on port 3000.');
+});
+```
+
+The server provides feedback when started: <br>
+
+![node-server](/images/node-server.gif)
+
+And our response is displayed when we access *localhost:3000* and therewith trigger our request: <br>
+
+![node-server](/images/node-server.png)
