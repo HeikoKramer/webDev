@@ -144,3 +144,17 @@ for (let i = 0; i < 10000000000; i++) {
 This is something we should keep in mind: <br>
 **Everything what can not be executed instantaneously should be set up asynchronously.** <br>
 **Note.js favors asynchronous code.** <br>
+
+## [The Node.js HTTP module](https://youtu.be/APwRg37ShSY)
+Node.js includes a module to support the **HTTP protocol**. The module allows it to write either HTTP **clients** or **server**. <br>
+### require()
+Every module has to be **loaded** into the application, in order to use it. <br>
+We can use the `require()` function to load modules into our program. <br>
+The `require()` function takes in the module's path & name as parameters. <br>
+Require provides us a **return value** for the module, which has to be **stored in a variable**. <br>
+
+```js
+const http = require('http');
+```
+
+
