@@ -232,3 +232,8 @@ res.end();
 We have entered the page *test.html* on the local host and get the appropriate feedback in the console: <br>
 
 ![node-server_method_url](/images/node-server_method_url.png)
+
+### HTTPS module
+Node.js contains also the **HTTPS module**, which implements the **HTTPS protocol**. <br>
+Except from the **secure** protocol, everything works exactly the same as with the HTTP module. <br>
+
