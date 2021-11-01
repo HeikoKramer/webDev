@@ -218,3 +218,17 @@ server.listen(3000, () => {
 
 ![node-server_html](/images/node-server_html.png)
 
+We can get the **request method** and the **request url** and could so theoretically build whole websites containing multiple pages. <br>
+
+```js
+res.write('Hallo HTTP!');
+console.log(req.method);
+console.log(req.url);
+res.end();
+```
+
+![node-server_test-html](/images/node-server_test-html.png) <br>
+
+We have entered the page *test.html* on the local host and get the appropriate feedback in the console: <br>
+
+![node-server_method_url](/images/node-server_method_url.png)
