@@ -273,7 +273,7 @@ const server = net.createServer(socket => {
 server.listen(3000);
 ```
 
-We have created a basic **tcp/ip server** in a file called *tcpip.js*, to run the server we simply type `node tcpip.s`. <br>
+We have created a basic **tcp/ip server** in a file called *tcpip.js*, to run the server we simply type `node tcpip.js`. <br>
 We can now access our server from an other terminal window, either via **telnet** or via **netcat**: <br>
 
 ![node-server_tcpip](/images/node-server_tcpip.png)
