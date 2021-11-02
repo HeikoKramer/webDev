@@ -306,6 +306,43 @@ server.listen(3000, () => {
 
 Such an **outsourcing** or a **separation** of code happens while you store those parts of the code in separate files. <br>
 <br>
-Let's take our http server example and re-build it modular
+Let's take our http server example and re-build it modular. <br>
+Therefor we create two files – *app.js* and *handle.js* <br>
+<br>
+**app.js**
 
+```js
+const http   = require('http');
+const handle = require('./handle');
 
+const server = http.createServer(handle);
+
+server.listen(3000, () => {
+  console.log('Server listening on port 3000.');
+});
+```
+
+**handle.js**
+
+```js
+const handle = function (req, res) {
+  res.writeHead(200, {
+    'content-type': 'text/html'
+  });
+  res.write('Hallo HTTP!');
+  console.log(req.method);
+  console.log(req.url);
+  res.end();
+};
+```
+
+Now we have modularized our code. <br>
+*app.js* contains the initialization of our server – we start the server with `node app.js`. <br>
+The complete request and response logic has been outsourced into the *handle-js* file. <br>
+We load the external functionality into our main file the same way as we did with the integrated **http module**. <br>
+`const handle = require('./handle')` <br>
+* we assign it to a variable
+* we use `require()`
+* but this time we have to specify the path (**./** as the file is in the same directory)
+
+**NOTE:** The file extension **.js is NOT required**. Some Node.js versions even have trouble loading the file when you add the **.js**, so it is recommended to exclude the extension when importing a file with the require function. <br>
