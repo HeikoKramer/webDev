@@ -305,7 +305,8 @@ server.listen(3000, () => {
 ```
 
 Such an **outsourcing** or a **separation** of code happens while you store those parts of the code in separate files. <br>
-<br>
+
+#### Loading a separate code file
 Let's take our http server example and re-build it modular. <br>
 Therefor we create two files – *app.js* and *handle.js* <br>
 <br>
@@ -334,11 +335,16 @@ const handle = function (req, res) {
   console.log(req.url);
   res.end();
 };
+
+module.exports = handle;
 ```
 
 Now we have modularized our code. <br>
 *app.js* contains the initialization of our server – we start the server with `node app.js`. <br>
-The complete request and response logic has been outsourced into the *handle-js* file. <br>
+The complete request and response logic has been outsourced into the *handle.js* file. <br>
+**NOTE:** The **handle function** from *handle.js* has to be **exported** in order to make it globally available. <br>
+Without the export (`module.exports = handle`) the function would remain private in its own scope and couldn't be used in the *app.js* file. <br>
+<br>
 We load the external functionality into our main file the same way as we did with the integrated **http module**. <br>
 `const handle = require('./handle')` <br>
 * we assign it to a variable

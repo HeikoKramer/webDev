@@ -7,3 +7,5 @@ const handle = function (req, res) {
   console.log(req.url);
   res.end();
 };
+
+module.exports = handle;
