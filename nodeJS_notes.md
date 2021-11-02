@@ -290,13 +290,13 @@ Not much, but still individual code, which could be **outsourced** from the main
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, {
-    'content-type': 'text/html'
-  });
-  res.write('Hallo HTTP!'); // <- individual code
-  console.log(req.method);  // <- individual code
-  console.log(req.url);     // <- individual code
-  res.end();
+  res.writeHead(200, {          // <- individual code
+    'content-type': 'text/html' // <- individual code
+  });                           // <- individual code
+  res.write('Hallo HTTP!');     // <- individual code
+  console.log(req.method);      // <- individual code
+  console.log(req.url);         // <- individual code
+  res.end();                    // <- individual code
 });
 
 server.listen(3000, () => {
@@ -305,6 +305,7 @@ server.listen(3000, () => {
 ```
 
 Such an **outsourcing** or a **separation** of code happens while you store those parts of the code in separate files. <br>
-
+<br>
+Let's take our http server example and re-build it modular
 
 
