@@ -1,4 +1,4 @@
-const handle = function (req, res) {
+module.exports = function (req, res) {
   res.writeHead(200, {
     'content-type': 'text/html'
   });
@@ -7,5 +7,3 @@ const handle = function (req, res) {
   console.log(req.url);
   res.end();
 };
-
-module.exports = handle;

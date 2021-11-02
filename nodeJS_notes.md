@@ -344,7 +344,20 @@ Now we have modularized our code. <br>
 The complete request and response logic has been outsourced into the *handle.js* file. <br>
 **NOTE:** The **handle function** from *handle.js* has to be **exported** in order to make it globally available. <br>
 Without the export (`module.exports = handle`) the function would remain private in its own scope and couldn't be used in the *app.js* file. <br>
-<br>
+Instead of exporting the function subsequent, we could initiate it as an exported function like this: <br> 
+
+```js
+module.exports = function (req, res) {
+  res.writeHead(200, {
+    'content-type': 'text/html'
+  });
+  res.write('Hallo HTTP!');
+  console.log(req.method);
+  console.log(req.url);
+  res.end();
+};
+```
+
 We load the external functionality into our main file the same way as we did with the integrated **http module**. <br>
 `const handle = require('./handle')` <br>
 * we assign it to a variable
@@ -352,3 +365,4 @@ We load the external functionality into our main file the same way as we did wit
 * but this time we have to specify the path (**./** as the file is in the same directory)
 
 **NOTE:** The file extension **.js is NOT required**. Some Node.js versions even have trouble loading the file when you add the **.js**, so it is recommended to exclude the extension when importing a file with the require function. <br>
+
