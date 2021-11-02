@@ -278,3 +278,33 @@ We can now access our server from an other terminal window, either via **telnet*
 
 ![node-server_tcpip](/images/node-server_tcpip.png)
 
+## npm modules in Node.js
+### [How to structure code in Node.js](https://youtu.be/3iFumk3g9S4)
+#### Separation of concerns
+The separation of concerns is a concept to separate code responsibilities and concerns whenever possible. <br>
+In our http example, we saw a server, which is implemented generic – every Node.js serves is implemented after such a schema. <br>
+Then we have our individual logic, the "Hallo HTTP!" and those console logs. <br>
+Not much, but still individual code, which could be **outsourced** from the main JS-file. <br>
+
+```js
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {
+    'content-type': 'text/html'
+  });
+  res.write('Hallo HTTP!'); // <- individual code
+  console.log(req.method);  // <- individual code
+  console.log(req.url);     // <- individual code
+  res.end();
+});
+
+server.listen(3000, () => {
+  console.log('Server listening on port 3000.');
+});
+```
+
+Such an **outsourcing** or a **separation** of code happens while you store those parts of the code in separate files. <br>
+
+
+
