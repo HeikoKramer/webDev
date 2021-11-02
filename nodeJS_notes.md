@@ -280,8 +280,7 @@ We can now access our server from an other terminal window, either via **telnet*
 
 ## npm modules in Node.js
 ### [How to structure code in Node.js](https://youtu.be/3iFumk3g9S4)
-#### Separation of concerns
-The separation of concerns is a concept to separate code responsibilities and concerns whenever possible. <br>
+Node.js code should be structured after the "separation of concerns" – a concept to separate code responsibilities and concerns whenever possible. <br>
 In our http example, we saw a server, which is implemented generic – every Node.js serves is implemented after such a schema. <br>
 Then we have our individual logic, the "Hallo HTTP!" and those console logs. <br>
 Not much, but still individual code, which could be **outsourced** from the main JS-file. <br>
@@ -306,7 +305,7 @@ server.listen(3000, () => {
 
 Such an **outsourcing** or a **separation** of code happens while you store those parts of the code in separate files. <br>
 
-#### Loading a separate code file
+### Loading a separate code file
 Let's take our http server example and re-build it modular. <br>
 Therefor we create two files – *app.js* and *handle.js* <br>
 <br>
@@ -365,4 +364,6 @@ We load the external functionality into our main file the same way as we did wit
 * but this time we have to specify the path (**./** as the file is in the same directory)
 
 **NOTE:** The file extension **.js is NOT required**. Some Node.js versions even have trouble loading the file when you add the **.js**, so it is recommended to exclude the extension when importing a file with the require function. <br>
+
+### [Loading 3rd-party modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1020)
 
