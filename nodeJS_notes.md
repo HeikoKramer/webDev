@@ -365,7 +365,15 @@ We load the external functionality into our main file the same way as we did wit
 
 **NOTE:** The file extension **.js is NOT required**. Some Node.js versions even have trouble loading the file when you add the **.js**, so it is recommended to exclude the extension when importing a file with the require function. <br>
 
-### [Loading 3rd-party modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1020)
-There are many 3rdparty libraries available for Node.js, which are build and maintained by the community. <br>
-The installation of such 3rd modules happens via **npm** – the **Node.js Package Manager**allg <br>
+### [3rd-party modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1020)
+There are many 3rd-party libraries available for Node.js, which are build and maintained by the community. <br>
+The installation of such 3rd modules happens via **npm** – the **Node.js Package Manager** <br>
+#### [npm package installation](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1190)
+To install a package via **npm** (we are using the package *express* in our example), <br>
+* change into your project's directory
+* enter the command `node install express` into your terminal
+
+The package is now installed, a folder *node_modules* has been added to our project, as well as two files *package.json* and *package-lock.json*. <br>
+#### [Load 3rd-party module](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1248)
+
 
