@@ -374,6 +374,35 @@ To install a package via **npm** (we are using the package *express* in our exam
 * enter the command `node install express` into your terminal
 
 The package is now installed, a folder *node_modules* has been added to our project, as well as two files *package.json* and *package-lock.json*. <br>
-#### [Load 3rd-party module](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1248)
+#### [Loading 3rd-party modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1248)
+Again we use `require()` to load our installed module into the main JavaScript file. <br>
+Instead of providing the full path to the module's file, we can simply use the package name: <br>
 
+```js
+const http    = require('http');
 
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req,res) => {
+  res.send('Hallo Node.js!');
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server listening on port 3000.');
+});
+```
+
+Again we are using our http example, now we have replaced the prior *handler.js* with *express* – which is a commonly used library for building web applications. <br>
+*express* now handles all the stuff like writing the http head and response codes for us. <br> 
+If we start our server with `node app.js` now and enter port 3000 on the localhost, we get our message displayed as html: <br>
+
+![node-server_express](/images/node-server_express.png)
+
+This time we have specified the main directory in the `app.get('/', (req,res)` function. <br>
+If we try to access any other path, we receive an error, as they are not handled by our function: <br>  
+
+![get-error](/images/get-error.png)
