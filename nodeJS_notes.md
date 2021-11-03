@@ -368,12 +368,15 @@ We load the external functionality into our main file the same way as we did wit
 ### [3rd-party modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1020)
 There are many 3rd-party libraries available for Node.js, which are build and maintained by the community. <br>
 The installation of such 3rd modules happens via **npm** – the **Node.js Package Manager** <br>
+
 #### [npm package installation](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1190)
 To install a package via **npm** (we are using the package *express* in our example), <br>
 * change into your project's directory
 * enter the command `node install express` into your terminal
 
-The package is now installed, a folder *node_modules* has been added to our project, as well as two files *package.json* and *package-lock.json*. <br>
+The package is now installed, a folder **node_modules** has been added to our project, as well as two files *package.json* and *package-lock.json*. <br>
+**npm** has as well installed all the dependencies required to run *express* in the **node_modules** folder. <br> 
+
 #### [Loading 3rd-party modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1248)
 Again we use `require()` to load our installed module into the main JavaScript file. <br>
 Instead of providing the full path to the module's file, we can simply use the package name: <br>
@@ -406,3 +409,21 @@ This time we have specified the main directory in the `app.get('/', (req,res)` f
 If we try to access any other path, we receive an error, as they are not handled by our function: <br>  
 
 ![get-error](/images/get-error.png)
+
+#### [node_modules](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1456)
+Remember, the **node_modules** folder appeared after we've installed the *express* package. <br>
+**node_modules** stores all 3rd-party modules which are installed via **npm**. <br>
+The name of that folder is fix and **should not be changed**. <br>
+Every Node.js project has **its own node_modules folder**, you can't install a package like *express* system-wide. <br>
+The idea behind that is: If every application contains its own dependencies, there are no problems with versioning conflicts. <br>
+Every Node.js project should be **self-contained** and include everything required to run the appropriate application. <br>
+<br>
+The Node.js require function loads modules in a certain order: <br>
+* integrated modules
+* npm modules
+* local .js files
+
+If there would be any naming conflict – an npm installed or locally created "http" module for example – node would load the integrated http module. <br>
+So be aware that if you name your own modules like integrated or installed modules, they will not load. <br>
+
+
