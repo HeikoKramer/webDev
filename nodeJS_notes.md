@@ -475,4 +475,51 @@ Those modules also might have their own dependencies .. npm took care about that
 <br>
 The command `npm init` can be used to create a package.json file for a new project. <br>
 `npm init` guides you through some questions and places your input in the appropriate sections of package.json. <br>
+<br>
+We don't have to add the dependency entries manually when we install a new package, we can use the `--save` option. <br>
+`npm install express --save` adds the dependency for *express* in its current version to our existing package.json. <br>
+
+#### [pin a version](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=2160)
+When we're using `npm install express --save` to add the dependency to our existing package.json or when we created a new package.json, by using only `npm install express` in a project folder without an existing package.json file, we get a **version number** entry, starting with a **caret symbol**: <br> 
+
+```json
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+```
+
+This is actually a bit critical, as it means that **you are excepting minor version changes**. <br>
+So if you have your code on GitHub, clone the repo and run `npm install` you could get a later version as 4.17.1. <br>
+npm would accept all changes not corresponding with a **major release**, so <br>
+* 4.17.3
+* 4.17.8
+* 4.19.6
+
+… all those versions would be accepted, versions starting from 5.0.0 would be rejected and the last 4. version would be taken. <br>
+That could be a **breaking issue**, resulting in a situation, where the application runs well on one machine, but not on an other. <br>
+<br>
+So if you want to avoid that kind of issues, it is recommended to get rid of the **caret (^)** and use an exact version. <br>
+The appropriate command to write a fix version for the *express* module into the package.json is: <br>
+
+```sh
+npm install express --save-exact
+```
+
+There are short versions for either the **--save** or the **--save-exact** options: <br>
+
+```sh
+npm install express -S   # short for --save
+npm install express -E   # short for --save-exact
+```
+
+Or even shorter (i can be used as an alias for install): <br>
+
+```sh
+npm i express -S   # short for --save
+npm i express -E   # short for --save-exact
+```
+
+To see all the available options for the installation process, use `npm install -h`. <br>
 
