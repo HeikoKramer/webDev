@@ -425,5 +425,43 @@ The Node.js require function loads modules in a certain order: <br>
 
 If there would be any naming conflict – an npm installed or locally created "http" module for example – node would load the integrated http module. <br>
 So be aware that if you name your own modules like integrated or installed modules, they will not load. <br>
+<br>
+It is best-practice to **exclude** the node_modules folder from your version control. <br>
+
+#### [package.json](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1705)
+The package.json contains the project's **dependencies metadata**. <br>
+Every Node.js project should have such a package.json file, containing its **name** and its **version**. <br>
+For our little *hello world* app, it would look like this: <br>
+
+```json
+{
+  "name": "hello-world",
+  "version": "0.0.0"
+}
+```
+
+The **version number** always has three digits, to distinguish a **major version**, a **minor version**, or a **bug-fix**. <br>
+An other entry in the package.json is the **dependencies object** – there are all the dependencies of our project documented. <br>
+When we executed `npm install express` a package.json was automatically created, containing the express dependency: <br>
+
+```json
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+```
+
+So our complete package.json should look like this: <br>
+
+```json
+{
+  "name": "hello-world",
+  "version": "0.0.0",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
+```
 
 
