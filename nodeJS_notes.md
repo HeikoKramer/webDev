@@ -464,4 +464,15 @@ So our complete package.json should look like this: <br>
 }
 ```
 
+Now that we have a package.json which contains our dependencies .. we can delete the node_modules folder without worries. <br>
+Everyone could also clone our project form GitHub, where we excluded the node_modules with the .gitignore file. <br>
+All what has to be done now to **restore the dependencies** is to run `npm install` in the project folder, with the package.json. <br>
+**npm** checks the file for dependencies and restores everything for us, all required modules are installed in their specified versions. <br>
+<br>
+In the case of our example 51 modules have been installed –> 51 modules although we have only added *express*?
+Right – the express module also comes with a package.json, which includes a whole bunch of dependencies. <br>
+Those modules also might have their own dependencies .. npm took care about that for us and **installed the complete dependency tree**. <br>
+<br>
+The command `npm init` can be used to create a package.json file for a new project. <br>
+`npm init` guides you through some questions and places your input in the appropriate sections of package.json. <br>
 
