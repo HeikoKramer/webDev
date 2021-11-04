@@ -555,4 +555,8 @@ Some notable things: <br>
   * `npm unpublish` removes a module from the registry 
     * **modules older than 24h can not be removed**
 
+## [Express](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=88)
+Express is a Node.js module (we've used it in the examples above) and the de-facto standard for building web APIs in node. <br>
+The Express documentation can be found under [expressjs.com](http://expressjs.com/en/4x/api.html). <br>
+### [Features](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=140)
 
