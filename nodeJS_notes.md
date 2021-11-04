@@ -535,3 +535,24 @@ Solutions: <br>
 * registry can be mirrored or cached locally
 * scoped packages
   * pre-fix for your module *@heiko/mymodule*
+
+### [publish a module](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=2663)
+To upload your own module into the library is rather easy. <br>
+You can create an account / log into your account with the command `npm login`. <br>
+Then you just need a valid package.json, including at least … <br>
+* a name
+* a version
+* the dependencies (if there are some)
+
+… and then you can upload you module by executing the command `npm publish` in your project's directory. <br>
+npm then bundles all or files to a tarball and uploads it – it's globally available for `npm install` only a few seconds later. <br>
+Of course there are advanced options, like publishing it private, etc. but publishing in general is as simple as that. <br>
+<br>
+Some notable things: <br>
+* publishing a new module works only if the name is available 
+* you can not overwrite an existing version of a published module
+* npm has an **unpublish-policy**
+  * `npm unpublish` removes a module from the registry 
+    * **modules older than 24h can not be removed**
+
+
