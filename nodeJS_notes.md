@@ -523,3 +523,15 @@ npm i express -E   # short for --save-exact
 
 To see all the available options for the installation process, use `npm install -h`. <br>
 
+### [central registry](https://youtu.be/3iFumk3g9S4?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=2494)
+All modules **installed via npm** come from the **cetral registry** that can be browsed under [npmjs.com](https://www.npmjs.com/). <br>
+A central registry is accompanied with two consequences: <br>
+* single point of failure
+  * if it's down, it's down
+* one global name space for all the modules
+  * if the name "mymodule" is taken, you can's name your module the same
+
+Solutions: <br>
+* registry can be mirrored or cached locally
+* scoped packages
+  * pre-fix for your module @heiko/mymodule
