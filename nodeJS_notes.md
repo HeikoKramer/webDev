@@ -559,4 +559,11 @@ Some notable things: <br>
 Express is a Node.js module (we've used it in the examples above) and the de-facto standard for building web APIs in node. <br>
 The Express documentation can be found under [expressjs.com](http://expressjs.com/en/4x/api.html). <br>
 ### [Features](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=140)
-
+* routes
+  * to forward requests to the appropriate controller functions
+* URL-parameters
+  *  to capture values at specific positions in the URL
+* query string parsing 
+* middleware
+  * access to the request and response objects
+  * access to the next function in the application request-response life cycle
