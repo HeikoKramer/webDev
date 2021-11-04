@@ -529,9 +529,9 @@ A central registry is accompanied with two consequences: <br>
 * single point of failure
   * if it's down, it's down
 * one global name space for all the modules
-  * if the name "mymodule" is taken, you can's name your module the same
+  * if the name *mymodule* is taken, you can't name your module the same
 
 Solutions: <br>
 * registry can be mirrored or cached locally
 * scoped packages
-  * pre-fix for your module @heiko/mymodule
+  * pre-fix for your module *@heiko/mymodule*
