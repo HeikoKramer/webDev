@@ -607,15 +607,14 @@ The **express app** is a **drop-in-replacement** for the **http-handler**. <br>
 When we now start our server `node app.js` and request information from the specified localhost port `curl -i http://localhost:3000`, we receive the **express app** default response: <br>
 
 ```md
-<pre>HTTP/1.1 404 Not Found
-<font color="#F8F8F2"><b>Content-Security-Policy</b></font>: default-src &apos;none&apos;
-<font color="#F8F8F2"><b>X-Content-Type-Options</b></font>: nosniff
-<font color="#F8F8F2"><b>Content-Type</b></font>: text/html; charset=utf-8
-<font color="#F8F8F2"><b>Content-Length</b></font>: 139
-<font color="#F8F8F2"><b>Date</b></font>: Fri, 05 Nov 2021 06:41:02 GMT
-<font color="#F8F8F2"><b>Connection</b></font>: keep-alive
-<font color="#F8F8F2"><b>Keep-Alive</b></font>: timeout=5
-</pre>
+HTTP/1.1 404 Not Found
+<b>Content-Security-Policy</b>: default-src &apos;none&apos;
+<b>X-Content-Type-Options</b>: nosniff
+<b>Content-Type</b>: text/html; charset=utf-8
+<b>Content-Length</b>: 139
+<b>Date</b>: Fri, 05 Nov 2021 06:41:02 GMT
+<b>Connection</b>: keep-alive
+<b>Keep-Alive</b>: timeout=5
 ```
 
 
