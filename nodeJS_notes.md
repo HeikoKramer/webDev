@@ -627,6 +627,45 @@ app.get('/', (req, res) => {
 For not-defined routes, express gives back the http status code **404 by default**. <br>
 
 ### [sending data](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=597)
+Express has the very handy function `res.send`, which can be used to send data as <br>
+* HTML strings
+* JSON objects
+* JSON arrays
 
+Let's have a look at this example: <br>
+
+```js
+'use strict';
+
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
+`res.send` has set the header with the status code and content type for us and also ended the connection automatically: <br>
+
+![express-res-send](/images/express-res-send.png)
+
+This one-liner `res.send('Hello World')` replaced the following equivalent of code we had to write without express: <br>
+
+```js
+res.writeHead(200, {
+    'content-type': 'text/html'
+  });
+  res.write('Hello World');
+  res.end();
+```
 
 
