@@ -697,11 +697,11 @@ server.listen(3000, () => {
 
 Now we get a **JSON object** back: <br>
 
-![express-res-send_json_1](/images/s-res-send_json_1.png)
+![express-res-send_json_1](/images/express-res-send_json_1.png)
 
 Express has automatically stringified our JS-object into JSON and adjusted the content-type ind the HTTP head for us: <br>
 
-![express-res-send_json_2](/images/s-res-send_json_2.png)
+![express-res-send_json_2](/images/express-res-send_json_2.png)
 
 The same magic happens very smoothly, when we hand over an **array of objects** to `res.send`: <br>
 
