@@ -567,3 +567,37 @@ The Express documentation can be found under [expressjs.com](http://expressjs.co
 * middleware
   * access to the request and response objects
   * access to the next function in the application request-response life cycle
+
+## [Express practice](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=304)
+Now we're using express to handle http requests – as we did with the callback in the previous examples. <br>
+Of course we have to import express with `require('express')`, in order to use the module. <br>
+There is already a first difference to the **http module**: <br>
+* the **http** module returns **an object**
+* the **express** module returns **a function**  
+  * we can now **call the express function**
+    * and get back an **express app** 
+
+The **express app** is also a function, which corresponds to the **callback function** we have used before: <br>
+
+```js
+(req, res) => {}
+```
+
+So instead of placing the callback in our `http.createServer()`, we can now use our **express app** at this point: <br>
+
+```js
+'use strict';
+
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
