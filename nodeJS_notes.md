@@ -705,5 +705,38 @@ Express has automatically stringified our JS-object into JSON and adjusted the c
 
 The same magic happens very smoothly, when we hand over an **array of objects** to `res.send`: <br>
 
+```js
+'use strict';
+
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  const people = [
+    {
+      firstName: 'Jane',
+      lastName: 'Doe'
+    },
+    {
+      firstName: 'Jonnyodor',
+      lastName: 'Doewstoevski'
+    }
+  ];
+
+  res.send(people);
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
+Our array has been properly parsed and is available at localhost:3000: <br>
+
 ![express-res-send_json_array](/images/express-res-send_json_array.png)
 
