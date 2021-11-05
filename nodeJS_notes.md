@@ -602,3 +602,6 @@ server.listen(3000, () => {
 });
 ```
 
+The **express app** is a **drop-in-replacement** fort the **http-handler**. <br>
+
+
