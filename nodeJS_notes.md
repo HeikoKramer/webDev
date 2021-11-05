@@ -608,3 +608,25 @@ When we now start our server `node app.js` and request information from the spec
 
 ![express-default-response](/images/express-default-response.png)
 
+### [Routes](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=494)
+The **express application object** has appropriate functions for all http methods: <br>
+* GET
+* POST
+* PUT
+* DELETE
+
+When we define a **route** with express, we can specify to which http call that route reacts and how. <br>
+We have to specify the **route** as the 1st and the **handler** as the 2nd parameter. <br>
+
+```js
+app.get('/', (req, res) => {
+  // ...
+});
+```
+
+For not-defined routes, express gives back the http status code **404 by default**. <br>
+
+### [sending data](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=597)
+
+
+
