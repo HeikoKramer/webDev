@@ -7,7 +7,18 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World');
+  const people = [
+    {
+      firstName: 'Jane',
+      lastName: 'Doe'
+    },
+    {
+      firstName: 'Jonnyodor',
+      lastName: 'Doewstoevski'
+    }
+  ];
+
+  res.send(people);
 });
 
 const server = http.createServer(app);

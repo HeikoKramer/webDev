@@ -668,4 +668,42 @@ res.writeHead(200, {
   res.end();
 ```
 
+Now let's add a *person* **object** and send that: <br>
+
+```js
+'use strict';
+
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  const person = {
+    firstName: 'Jane',
+    lastName: 'Doe'
+  };
+
+  res.send(person);
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
+Now we get a **JSON object** back: <br>
+
+![express-res-send_json_1](/images/s-res-send_json_1a.png)
+
+Express has automatically stringified our JS-object into JSON and adjusted the content-type ind the HTTP head for us: <br>
+
+![express-res-send_json_2](/images/s-res-send_json_2a.png)
+
+The same magic happens very smoothly, when we hand over an **array of objects** to `res.send`: <br>
+
+![express-res-send_json_array](/images/express-res-send_json_array.png)
 
