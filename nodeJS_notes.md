@@ -877,3 +877,32 @@ When we add `?format=html` in the browser, `req.query.format` gets set and equal
 So our condition is true and the html heading is returned instead of the json object: <br>
 
 ![express_querystring](/images/express_querystring.gif)
+
+#### nested queries
+`req.query` also supports **nested parameters** – so we could further specify our format options for multiple things … <br>
+So we can for example extend our **format** parameter and offer a **data** and a **date** format to choose from. <br>
+Se below, that we give two different output option when html is chosen with `format[data]=html`. <br>
+The user has also the option to chose the date format of the UK, by adding `format[date]=uk`. <br>
+
+```js
+app.get('/blog/:year/:month/:day?', (req, res) => {
+  if (req.query.format.data === 'html') {
+    if (req.query.format.date === 'uk') {
+      return res.send(`<h1 style="color:blue">${req.params.day || '01'}/${req.params.month}/${req.params.year}</h1>`);
+    } else {
+      return res.send(`<h1 style="color:red">${req.params.day || '01'}.${req.params.month}.${req.params.year}</h1>`);
+    }
+  }
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day || '01'
+  });
+});
+```
+
+The **question mark (?)** which initiates the user's **query** has only to be added once. <br>
+Multiple **query conditions** get added to the URL with the **ampersand (&)** symbol. <br>
+See, we already added `?format[data]=html` and than `&format[date]=uk` to change the date format: <br>
+
+![express_querystring-nested](/images/express_querystring-nested.gif)

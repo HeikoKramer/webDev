@@ -7,8 +7,12 @@ const express = require('express');
 const app = express();
 
 app.get('/blog/:year/:month/:day?', (req, res) => {
-  if (req.query.format === 'html') {
-    return res.send(`<h1 style="color:red">${req.params.day || '01'}.${req.params.month}.${req.params.year}</h1>`);
+  if (req.query.format.data === 'html') {
+    if (req.query.format.date === 'uk') {
+      return res.send(`<h1 style="color:blue">${req.params.day || '01'}/${req.params.month}/${req.params.year}</h1>`);
+    } else {
+      return res.send(`<h1 style="color:red">${req.params.day || '01'}.${req.params.month}.${req.params.year}</h1>`);
+    }
   }
   res.send({
     year: req.params.year,
@@ -16,6 +20,7 @@ app.get('/blog/:year/:month/:day?', (req, res) => {
     day: req.params.day || '01'
   });
 });
+
 
 const server = http.createServer(app);
 
