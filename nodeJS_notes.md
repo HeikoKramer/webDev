@@ -858,6 +858,7 @@ Our url remains */blog/:year/:month/:day?*, but we can use `req.query` to specif
 In the example below we have added the condition `(req.query.format === 'html')`. <br>
 So when the user adds `?format=html` we output our date as a html heading instead of a json object. <br> 
 *format* is no reserved key-word in this case .. we could have named it anything. <br>
+We need to use `return` in our *if* to break out of the execution. Otherwise we would have to add an *else* condition. <br>
 
 ```js
 app.get('/blog/:year/:month/:day?', (req, res) => {
