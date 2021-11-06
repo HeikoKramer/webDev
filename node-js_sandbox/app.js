@@ -6,7 +6,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/blog/:year/:month/:day', (req, res) => {
+app.get('/blog/:year/:month/:day?', (req, res) => {
   res.send({
     year: req.params.year,
     month: req.params.month,

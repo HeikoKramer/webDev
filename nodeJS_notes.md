@@ -819,4 +819,21 @@ console.log(typeof(val1));
 // > string
 ```
 
+#### [optional URL parameters](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1275)
+We can make parameters **optional** by adding a **questionmark (?)** to the end of a variable in out url definition. <br>
+So if we adjust our prior example as following, we can provide a day in the url, but we don't have to: <br>
+
+```js
+app.get('/blog/:year/:month/:day?', (req, res) => {
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day
+  });
+});
+```
+
+Year and month remain mandatory: <br>
+
+![express_url-optional-parameter](/images/express_url-optional-parameter.gif)
 
