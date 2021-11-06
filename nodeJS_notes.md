@@ -906,3 +906,36 @@ Multiple **query conditions** get added to the URL with the **ampersand (&)** sy
 See, we already added `?format[data]=html` and than `&format[date]=uk` to change the date format: <br>
 
 ![express_querystring-nested](/images/express_querystring-nested.gif)
+
+### further request information
+There are a few others **request properties** which are worth mentioning: <br>
+
+* req.ip
+  * ip address of requesting client
+* req.protocol
+  * http, https, …
+* req.secure
+  * is the connection encrypted 
+* req.method
+  * GET, PU, DELETE, …
+* req.hostname
+  * hostname of the server
+* req.path
+  * requested path
+
+Lets have a look at this in action: <br>
+
+```js
+app.get('/', (req, res) => {
+  res.send(`
+    <p><b>req.ip:</b> ${req.ip}</p>
+    <p><b>req.protocol:</b> ${req.protocol}</p>
+    <p><b>req.secure:</b> ${req.secure}</p>
+    <p><b>req.method:</b> ${req.method}</p>
+    <p><b>req.hostname:</b> ${req.hostname}</p>
+    <p><b>req.path:</b> ${req.path}</p>`
+  );
+});
+```
+
+![request-properties](/images/request-properties.png)
