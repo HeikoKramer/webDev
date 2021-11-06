@@ -740,3 +740,18 @@ Our array has been properly parsed and is available at localhost:3000: <br>
 
 ![express-res-send_json_array](/images/express-res-send_json_array.png)
 
+### [setting the http status code](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=789)
+The former way to **set the http status** was also with `res.send(500)`, but using this feature is deprecated for future use. <br> 
+The new method for this is `res.status(500)` – this would only set the status without sending a message. <br>
+If we want only to send the status, we still have to end the call, so `res.status(500).end()`. <br>
+To send also a message, we can use `res.status(500).send('Internal Server Error')`, `send()` ends the call automatically. <br>
+We can chain functions together, so we could for example give a 404 status back, together with a fancy 404 status page: <br>
+
+```js
+app.get('/', (req, res) => {
+  res.status(404).send(
+    // fancy 404 page here
+  );
+});
+```
+
