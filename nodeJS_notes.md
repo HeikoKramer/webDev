@@ -850,3 +850,29 @@ app.get('/blog/:year/:month/:day?', (req, res) => {
 ```
 
 ![express_url-optional-parameter_fallback](/images/express_url-optional-parameter_fallback.gif)
+
+### [Query string](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1413)
+We can provide choices for our end-users, with the help of the **query string**. <br>
+Let's say we want to offer two output formats – JSON, as before plus additionally HTML. <br>
+Our url remains */blog/:year/:month/:day?*, but we can use `req.query` to specify further values for conditional code executione. <br>
+In the example below we have added the condition `(req.query.format === 'html')`. <br>
+So when the user adds `?format=html` we output our date as a html heading instead of a json object. <br> 
+*format* is no reserved key-word in this case .. we could have named it anything. <br>
+
+```js
+app.get('/blog/:year/:month/:day?', (req, res) => {
+  if (req.query.format === 'html') {
+    return res.send(`<h1 style="color:red">${req.params.day || '01'}.${req.params.month}.${req.params.year}</h1>`);
+  }
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day || '01'
+  });
+});
+```
+
+When we add `?format=html` in the browser, `req.query.format` gets set and equals **html**.<br>
+So our condition is true and the html heading is returned instead of the json object: <br>
+
+![express_querystring](/images/express_querystring.gif)
