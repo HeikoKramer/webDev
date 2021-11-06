@@ -917,7 +917,7 @@ There are a few others **request properties** which are worth mentioning: <br>
 * req.secure
   * is the connection encrypted 
 * req.method
-  * GET, PU, DELETE, …
+  * GET, PUT, DELETE, …
 * req.hostname
   * hostname of the server
 * req.path
