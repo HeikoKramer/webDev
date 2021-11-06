@@ -6,19 +6,12 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  const people = [
-    {
-      firstName: 'Jane',
-      lastName: 'Doe'
-    },
-    {
-      firstName: 'Jonnyodor',
-      lastName: 'Doewstoevski'
-    }
-  ];
-
-  res.send(people);
+app.get('/blog/:year/:month/:day', (req, res) => {
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day
+  });
 });
 
 const server = http.createServer(app);

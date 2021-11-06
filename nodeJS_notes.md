@@ -755,3 +755,68 @@ app.get('/', (req, res) => {
 });
 ```
 
+### [URL parameters](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=916)
+We can use **URL parameters** for repetitive structures, like for example blog-posts. <br>
+A blog might have an URL structure like */blog/2021/11/6* or in words */blog/year/month/day*. <br>
+`app.get('/blog/year/month/day')` would resolve the actual path – to build this dynamic, we need to work with variables. <br>
+URL variables are specified with a **colon (:)**, so our string has to look like this: */blog/:year/:month/:day*. <br>
+Not only can we specify a **dynamic route** like this, we can now access the **route parameters** in our code. <br>
+To do that, we use `req.params` + the `.name` of the parameter we'd like to access. <br>
+So `req.params.year` for the **year** from our */blog/:year/:month/:day*. <br>
+See here an example, where we give back an object reflecting the user's URL entry: <br>
+
+```js
+'use strict';
+
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+app.get('/blog/:year/:month/:day', (req, res) => {
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day
+  });
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
+As you can see, we have entered a blog-post from the 8th of December 1977 – wow, that is what I call an early adopter!
+
+![express_url-parameters](/images/express_url-parameters.png)
+
+If we enter try to access anything not matching our */blog/:year/:month/:day* structure, we just get the default error back as we have not specified anything for */foo* or any other route yet: <br>
+
+![express_default-error](/images/express_default-error.png)
+
+**NOTE:** URL parameters are always given back as **strings**. <br>
+So if you require a **numeric value**, to for example query an id in a database, those values might look identically, but they are not **equal (===)**. <br>
+
+**TIP:** An easy way to **convert a string into a number** is to **subtract zero from it**. <br>
+If you want to **convert a number into a string** you can simply **add an empty string to it**: <br>
+
+```js
+let val1 = '1';
+
+console.log(typeof(val1));
+// > string
+
+val1 = val1 -0;
+
+console.log(typeof(val1));
+// > number
+
+val1 = val1 + '';
+console.log(typeof(val1));
+// > string
+```
+
+
