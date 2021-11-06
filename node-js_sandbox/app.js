@@ -10,7 +10,7 @@ app.get('/blog/:year/:month/:day?', (req, res) => {
   res.send({
     year: req.params.year,
     month: req.params.month,
-    day: req.params.day
+    day: req.params.day || '01'
   });
 });
 

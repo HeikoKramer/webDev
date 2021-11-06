@@ -837,3 +837,16 @@ Year and month remain mandatory: <br>
 
 ![express_url-optional-parameter](/images/express_url-optional-parameter.gif)
 
+We set a fallback – to take always the 1st day of the month if not specified further, we can add `|| '1'` to our object: <br>
+
+```js
+app.get('/blog/:year/:month/:day?', (req, res) => {
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day || '01'
+  });
+});
+```
+
+![express_url-optional-parameter_fallback](/images/express_url-optional-parameter_fallback.gif)
