@@ -1022,3 +1022,48 @@ module.exports = logger;
 In the *app.js* file we have to **import** it `const logger = require('./logger')`. <br>
 And can now **use** it `app.use(logger)`. <br>
 Our middleware works exactly as before at this point, method and path get logged in the console per request. <br>
+
+### [Setup function](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=2265)
+This `app.use(logger)` corresponds to `app.use((req, res, next) => {});` the logger.js function with its specified parameters.<br>
+So we can't just hand over any new parameters, which are not defined in the function. <br>
+What we can do though is to use a so called **setup function**. <br>
+That setup function lives in our main file *app.js* takes in options and returns the actual middleware function. <br>
+That means, that we have to call the **setup function** with `app.use()` to hand over our additional parameters. <br>
+<br>
+*logger.js* has to be adjusted appropriate, in order to take in the new parameters. <br>
+Now we can react on the options, make them required, throw an error if they're missing … <br>
+As those parameters are part of the **sourrounding** function, of our actual middleware, we can no access them in the inner function as well. <br>
+
+
+```js
+'use strict';
+
+const logger = function (options) {
+  if (!options) {
+    throw new Error('Options are missing.');
+  }
+  if (!options.level) {
+    throw new Error('Level is missing.');
+  }
+
+  return function (req, res, next) {
+    console.log(`(${options.level}) ${req.method} ${req.path}`);
+    next();
+  };
+};
+
+module.exports = logger;
+```
+
+In our *app.js* we can now call the **logger function** with additional parameters: <br>
+
+```js
+app.use(logger({ 
+  level: 'info' 
+}));
+```
+
+Voilà, our *info* string made it into the console: <br>
+
+![setup-function](/images/setup-function.png)
+
