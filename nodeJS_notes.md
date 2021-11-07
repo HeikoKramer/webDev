@@ -953,8 +953,6 @@ Further concerns are the validation of tokens, cookie readout, etc. <br>
 Express integrates middleware with `app.use`. <br>
 A middleware is basically just a **function** which is not only called for a single route, but for **all routes**. <br>
 Middleware does something, like the call or the verification of permissions and calls than the next function. <br>
-Here would be made the decision, if the request is passed on to the actual handler for the request, or if the user gets some sort of "insufficient privileges" response instead. <br>
-A middleware takes also in a **request** and **response** parameter, but also has a **next** parameter, which specifies the **naxt function in the chain**. <br>
-This could be the handler for the http route, but also could be the next middleware function … <br>
+Here would be made the decision, if the request is passed on to the actual handler for the request, or if the user gets some sort of "insufficient privileges" response instead. A middleware takes also in a **request** and **response** parameter, but also has a **next** parameter, which specifies the **naxt function in the chain**. This could be the handler for the http route, but also could be the next middleware function … <br>
 
 
