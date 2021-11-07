@@ -4,13 +4,11 @@ const http = require('http');
 
 const express = require('express');
 
+const logger = require('./logger');
+
 const app = express();
 
-// Middleware
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.path}`);
-  next();
-});
+app.use(logger);
 
 // Request Handler
 app.get('/blog/:year/:month/:day?', (req, res) => {

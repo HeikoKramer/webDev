@@ -1002,3 +1002,23 @@ Our middleware logs the specified attributes in the console – no mater which r
 
 ![middleware-logging](/images/middleware-logging.png)
 
+### [configure middleware](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=2198)
+Our middleware should be **outsourced**, maintained as **modular components**, instead of writing the same code in multiple files. <br>
+<br>
+So let's move our middleware log function int the separate file *loger.js*. <br>
+There we transform it into a regular function and export it: <br>
+
+```js
+'use strict';
+
+const logger = function (req, res, next) {
+  console.log(`${req.method} ${req.path}`);
+  next();
+};
+
+module.exports = logger;
+```
+
+In the *app.js* file we have to **import** it `const logger = require('./logger')`. <br>
+And can now **use** it `app.use(logger)`. <br>
+Our middleware works exactly as before at this point, method and path get logged in the console per request. <br>
