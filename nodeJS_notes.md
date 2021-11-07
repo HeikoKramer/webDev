@@ -954,5 +954,51 @@ Express integrates middleware with `app.use`. <br>
 A middleware is basically just a **function** which is not only called for a single route, but for **all routes**. <br>
 Middleware does something, like the call or the verification of permissions and calls than the next function. <br>
 Here would be made the decision, if the request is passed on to the actual handler for the request, or if the user gets some sort of "insufficient privileges" response instead. A middleware takes also in a **request** and **response** parameter, but also has a **next** parameter, which specifies the **naxt function in the chain**. This could be the handler for the http route, but also could be the next middleware function … <br>
+<br>
+Here our grown application, now supplemented by a middleware function to log the *method* and the *path* of the request: <br>
 
+```js
+'use strict';
+
+const http = require('http');
+
+const express = require('express');
+
+const app = express();
+
+// Middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+});
+
+// Request Handler
+app.get('/blog/:year/:month/:day?', (req, res) => {
+  if (req.query.format.data === 'html') {
+    if (req.query.format.date === 'uk') {
+      return res.send(`<h1 style="color:blue">${req.params.day || '01'}/${req.params.month}/${req.params.year}</h1>`);
+    } else {
+      return res.send(`<h1 style="color:red">${req.params.day || '01'}.${req.params.month}.${req.params.year}</h1>`);
+    }
+  }
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day || '01'
+  });
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
+The order is import here, if would place the middleware after the handler, it would **not be executed** as the handler **ends the call** with `res.()`. <br> 
+The middleware though contains `next()` which keeps the execution running. <br>
+<br>
+Our middleware logs the specified attributes in the console – no mater which route is requested: <br>
+
+![middleware-logging](/images/middleware-logging.png)
 

@@ -6,6 +6,11 @@ const express = require('express');
 
 const app = express();
 
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path}`);
+  next();
+});
+
 app.get('/blog/:year/:month/:day?', (req, res) => {
   if (req.query.format.data === 'html') {
     if (req.query.format.date === 'uk') {
