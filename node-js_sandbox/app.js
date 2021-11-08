@@ -1,16 +1,21 @@
 'use strict';
 
-const http = require('http');
+const http = require('http'),
+      path = require('path')
 
 const express = require('express');
 
 const logger = require('./logger');
+
+const clientDirectory = path.join(__dirname, 'client');
 
 const app = express();
 
 app.use(logger({ 
   level: 'info' 
 }));
+
+app.use('/', express.static(clientDirectory));
 
 // Request Handler
 app.get('/blog/:year/:month/:day?', (req, res) => {

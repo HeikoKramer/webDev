@@ -1067,3 +1067,81 @@ Voilà, our *info* string made it into the console: <br>
 
 ![setup-function](/images/setup-function.png)
 
+## [static middleware](https://youtu.be/UT0RC40yzbg?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=2569)
+Express has a built-in middleware to deliver static files like <br>
+* HTML, CSS or JavaScript files
+* assets like pictures and videos
+
+We have to hand over the directory of the files and we can specify the rout on which the middleware is active. <br>
+**NOTE:** There is in integrated node module – **path** – to take care about server side routes. <br>
+For the demo of the static middleware we have created a new folder *client* with an *index.html* in it. <br>
+We could now define our internal route like this `express.static('./client')` but could had to adjust everything than if the path change or our application would be running on a system with a different file system (Windows for example, using backslashes). <br>
+To save us some trouble, we can use the **path** module, which joins our path together on demand: <br>
+
+```js
+const clientDirectory = path.join(__dirname, 'client');
+```
+
+The **__dirname** returns the path of the folder where the current JavaScript file resides. <br>
+For the client folder, we simply write **its name** and path takes care about everything in between for us. <br>
+We now can use the variable with the path function `express.static(clientDirectory)`. <br>
+Here the complete code: <br>
+
+```js
+'use strict';
+
+const http = require('http'),
+      path = require('path')
+
+const express = require('express');
+
+const logger = require('./logger');
+
+const clientDirectory = path.join(__dirname, 'client');
+
+const app = express();
+
+app.use(logger({ 
+  level: 'info' 
+}));
+
+app.use('/', express.static(clientDirectory));
+
+// Request Handler
+app.get('/blog/:year/:month/:day?', (req, res) => {
+  if (req.query.format.data === 'html') {
+    if (req.query.format.date === 'uk') {
+      return res.send(`<h1 style="color:blue">${req.params.day || '01'}/${req.params.month}/${req.params.year}</h1>`);
+    } else {
+      return res.send(`<h1 style="color:red">${req.params.day || '01'}.${req.params.month}.${req.params.year}</h1>`);
+    }
+  }
+  res.send({
+    year: req.params.year,
+    month: req.params.month,
+    day: req.params.day || '01'
+  });
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server is listening on port 3000')
+});
+```
+
+The *index.html* in the *client* folder just contains a little greeting: <br>
+
+```html
+<body>
+  <h1>Hallo Node.js</h1>
+</body>
+```
+
+Now when we enter the root directory of our local host, we get delivered that *index.html*: <br>
+
+![static-middleware](/images/static-middleware.png)
+
+The **static middleware** is the only integrated middleware included in Express. <br>
+
+
