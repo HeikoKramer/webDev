@@ -1204,3 +1204,22 @@ In the terminal from which we have sent the post, we receive the greeting: <br>
 And in the console, where our server is running, we receive the log: <br>
 
 ![body-parser_log](/images/body-parser_log.png)
+
+As we run `app.use(bodyParser.json())`, we can parse any **JSON structure**. <br>
+Let's add some attributes to our user object: <br>
+
+```sh
+curl -X POST -d '{"user": {"firstName": "Max", "lastName": "Mustermann"}}' -H "Content-Type: application/json" http://localhost:3000/users
+```
+
+And update our */users* post route: <br>
+
+```js
+app.post('/users', (req, res) => {
+  res.send(`Hello ${req.body.user.firstName}`);
+  console.log(`user received: ${req.body.user.firstName} ${req.body.user.lastName}`);
+});
+```
+
+Outcome: *user received: Max Mustermann* in the one, *Hello Max* in the other console. <br>
+

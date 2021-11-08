@@ -21,8 +21,8 @@ app.get('/articles', (req, res) => {
 });
 
 app.post('/users', (req, res) => {
-  res.send(`Hello ${req.body.user}`);
-  console.log(`user received: ${req.body.user} `);
+  res.send(`Hello ${req.body.user.firstName}`);
+  console.log(`user received: ${req.body.user.firstName} ${req.body.user.lastName}`);
 });
 
 const server = http.createServer(app);
