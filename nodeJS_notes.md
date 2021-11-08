@@ -1144,4 +1144,14 @@ Now when we enter the root directory of our local host, we get delivered that *i
 
 The **static middleware** is the only integrated middleware included in Express. <br>
 
+### body-parser middleware
+The [**body-parser** middleware](https://www.npmjs.com/package/body-parser) is usually used to write the backend for single page applications. <br>
+It takes for example care of extracting and parsing data out of a POST request. <br>
+The external module provides the following parsers: <br>
+
+* [JSON body parser](https://www.npmjs.com/package/body-parser#bodyparserjsonoptions)
+* [Raw body parser](https://www.npmjs.com/package/body-parser#bodyparserrawoptions)
+* [Text body parser](https://www.npmjs.com/package/body-parser#bodyparsertextoptions)
+* [URL-encoded form body parser](https://www.npmjs.com/package/body-parser#bodyparserurlencodedoptions)
+
 
