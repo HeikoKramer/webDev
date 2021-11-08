@@ -1154,4 +1154,53 @@ The external module provides the following parsers: <br>
 * [Text body parser](https://www.npmjs.com/package/body-parser#bodyparsertextoptions)
 * [URL-encoded form body parser](https://www.npmjs.com/package/body-parser#bodyparserurlencodedoptions)
 
+In the example below we set up a **post route** */users* on our server to send back a greeting to the user and log it in the console: <br>
 
+```js
+'use strict';
+
+// integrated modules
+const http = require('http'),
+      path = require('path');
+
+// modules installed from npm 
+const express    = require('express'),
+      bodyParser = require('express');
+
+const app = express();
+
+app.use(bodyParser.json());
+
+app.use('/', express.static(path.join(__dirname, 'client')));
+
+app.get('/articles', (req, res) => {
+  res.send([
+    { id: 1, title: 'foo' }
+  ]);
+});
+
+app.post('/users', (req, res) => {
+  res.send(`Hello ${req.body.user}`);
+  console.log(`user received: ${req.body.user} `);
+});
+
+const server = http.createServer(app);
+
+server.listen(3000, () => {
+  console.log('Server listening on port 3000.');
+});
+```
+
+Now we're using **curl** to post a **JSON Object** to our */users* path: <br>
+
+```sh
+curl -X POST -d '{"user":"jane.doe"}' -H "Content-Type: application/json" http://localhost:3000/users
+```
+
+In the terminal from which we have sent the post, we receive the greeting: <br>
+
+![body-parser_curl](/images/body-parser_curl.png)
+
+And in the console, where our server is running, we receive the log: <br>
+
+![body-parser_log](/images/body-parser_log.png)
