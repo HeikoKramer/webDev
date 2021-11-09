@@ -1222,4 +1222,23 @@ app.post('/users', (req, res) => {
 ```
 
 Outcome: *user received: Max Mustermann* in the one, *Hello Max* in the other console. <br>
+<br>
+**NOTE:** The body-parser is for **security reasons** restricted to a max data volume of **100KB** data volume. <br>
+If we need to adjust that size, we can do so with the **limit parameter** in the **options object**: <br>
+
+```js
+app.use(bodyParser.json({
+  limit: '250kb'
+}));
+```
+
+Also set as a default is the **strict parsing** of **objects** and **arrays**. Other data types like single strings are not parsed. <br>
+This can also be changed in the **options object**: <br>
+
+```js
+app.use(bodyParser.json({
+  strict: false
+}));
+```
+
 
