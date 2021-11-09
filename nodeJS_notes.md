@@ -1295,3 +1295,22 @@ The `clearCookie()` function is used to delete a cookie: <br>
 res.clearCookie('user');
 ```
 
+### [read cookies](https://youtu.be/daeIH0mtOO0?t=1847)
+To **read cookies**, we require the **coockie-parser middleware**. <br>
+This is the same middleware that we require, if we want to **sign a cookie** with a password (optional). <br>
+<br>
+If we want to sign a cookie, we can give it the **secret** option and can access it with other middlewares via `req.secret`. <br>
+
+```js
+app.use(cookieParser('secret'));
+
+// req.secret
+```
+
+The actual read process is rather simple. cookie-parser has two objects, one for regular and one for signed cookies: <br>
+
+```js
+const user = req.cookies.user;
+const user = req.signedCookies.user;
+```
+
