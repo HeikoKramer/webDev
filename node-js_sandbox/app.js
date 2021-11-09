@@ -15,7 +15,9 @@ app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'client')));
 
 app.get('/hello', (req,res) => {
-  res.cookie('user', 'jane.doe').send('Hallo Welt!');
+  res.cookie('user', 'jane.doe', {
+    maxAge: 14 * 60 * 60 * 1000
+  }).send('Hallo Welt!');
 });
 
 app.get('/articles', (req, res) => {
