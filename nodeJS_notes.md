@@ -1263,4 +1263,27 @@ Our cookie got written with the value we've specified. <br>
 
 ![node-cookie](/images/node-cookie.png)
 
+There are more what we can do with the `cookie()` function, we can give it an **options object** and specify cookie properties: <br>
+* maxAge
+  * set lifespan of the cookie
+* secure
+  * restrict cookie to https connections only
+  * important to when https is used to prevent an attack vector!
+* httpOnly
+  * client side cookie access restricted when http
+* signed
+  * allows to sign the cookie
+  * only parameter which doesn't come out of the box 
+  * requires cookie-parser middleware!
+
+```js
+app.get('/hello', (req,res) => {
+  res.cookie('user', 'jane.doe', {
+    maxAge: 14 * 60 * 60 * 1000,
+    secure: true,
+    httpOnly: true,
+    signed: true // cookie-parser
+  }).send('Hallo Welt!');
+});
+```
 
