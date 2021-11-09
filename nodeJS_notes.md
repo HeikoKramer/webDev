@@ -1263,6 +1263,7 @@ Our cookie got written with the value we've specified. <br>
 
 ![node-cookie](/images/node-cookie.png)
 
+#### cookie options
 There are more what we can do with the `cookie()` function, we can give it an **options object** and specify cookie properties: <br>
 * maxAge
   * set lifespan of the cookie
@@ -1287,6 +1288,7 @@ app.get('/hello', (req,res) => {
 });
 ```
 
+#### delete cookies
 The `clearCookie()` function is used to delete a cookie: <br>
 
 ```js
