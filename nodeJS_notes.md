@@ -1287,3 +1287,9 @@ app.get('/hello', (req,res) => {
 });
 ```
 
+The `clearCookie()` function is used to delete a cookie: <br>
+
+```js
+res.clearCookie('user');
+```
+
