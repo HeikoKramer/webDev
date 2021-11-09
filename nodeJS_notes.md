@@ -1241,4 +1241,26 @@ app.use(bodyParser.json({
 }));
 ```
 
+## [Cookies](https://youtu.be/daeIH0mtOO0?t=1538)
+### write cookies 
+To **write cookies** in Node.js, **no middleware** is required. <br>
+That part is taken care of by the **integrated function** `cookie()`. <br>
+So if we add the following route to our server, the cookie is written when */hello* is requested. <br>
+
+```js
+app.get('/hello', (req,res) => {
+  res.cookie('user', 'jane.doe').send('Hallo Welt!');
+});
+```
+
+We can check this via an other terminal window, with the **curl** command: <br>
+
+```sh
+curl -i http://localhost:3000/hello
+```
+
+Our cookie got written with the value we've specified. <br>
+
+![node-cookie](/images/node-cookie.png)
+
 

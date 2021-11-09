@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 
 app.use('/', express.static(path.join(__dirname, 'client')));
 
+app.get('/hello', (req,res) => {
+  res.cookie('user', 'jane.doe').send('Hallo Welt!');
+});
+
 app.get('/articles', (req, res) => {
   res.send([
     { id: 1, title: 'foo' }
