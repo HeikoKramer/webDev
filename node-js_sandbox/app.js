@@ -11,6 +11,11 @@ const express    = require('express'),
 
 const app = express();
 
+app.use(cors({
+  origin: 'https://www.heikokraemer.de',
+  optionSuccessStatus: 200
+}));
+
 app.use(bodyParser.json());
 
 app.use(session({
