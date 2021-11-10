@@ -1314,3 +1314,23 @@ const user = req.cookies.user;
 const user = req.signedCookies.user;
 ```
 
+### [Sessions](https://youtu.be/daeIH0mtOO0?t=1955)
+The **[express session](https://www.npmjs.com/package/express-session)** middleware required till version 1.5.0, the *cookie-parser* middleware to work, but can now access session data independent from it. <br>
+
+```js
+app.use(session({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 14 * 60 * 60 * 1000 }
+}));
+
+app.get('/hello', (req,res) => {
+    req.session.user = 'jane.doe';
+    console.log(req.session.user);
+    // > jane.doe 
+  });
+```
+
+Per default are sessions stored in RAM, but here a list with compatible [session stores](https://www.npmjs.com/package/express-session#compatible-session-stores). <br>
+
