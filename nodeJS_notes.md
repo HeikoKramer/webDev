@@ -1334,3 +1334,17 @@ app.get('/hello', (req,res) => {
 
 Per default are sessions stored in RAM, but here a list with compatible [session stores](https://www.npmjs.com/package/express-session#compatible-session-stores). <br>
 
+## [CORS](https://youtu.be/daeIH0mtOO0?t=2201)
+**CORS** stands for [Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) – an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. 
+The [cors middleware](https://www.npmjs.com/package/cors) for Express is a comfortable way to manage CORS in Node.js. <br>
+To use cors we have of course to install it and than call the **cors function** `app.use(cors());`, which implements the middleware. <br>
+<br>
+We can as well provide that function with a **configuration object** to restrict the access from a specific website for example or which status code should be used. <br>
+
+```js
+app.use(cors({
+  origin: 'https://www.heikokraemer.de',
+  optionSuccessStatus: 200
+}));
+```
+
