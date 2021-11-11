@@ -1348,3 +1348,17 @@ app.use(cors({
 }));
 ```
 
+## [lusca](https://youtu.be/daeIH0mtOO0?t=2447)
+[**lusca**](https://www.npmjs.com/package/lusca) is a web application security middleware which is helps to protect your project from <br>
+* [csrf](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
+  * cross-site request forgery
+* [xss](https://en.wikipedia.org/wiki/Cross-site_scripting)
+  * cross-site scripting
+
+and other malicious techniques and provides an easy way to enable <br>
+* [HSTS](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
+  * HTTP Strict Transport Security
+  * a way to pin a site to https requests only
+
+lusca requires **express-session**, **cookie-session**, their express 3.x alternatives, or other **session object management** in order function. <br>
+
