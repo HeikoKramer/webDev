@@ -1362,3 +1362,13 @@ and other malicious techniques and provides an easy way to enable <br>
 
 lusca requires **express-session**, **cookie-session**, their express 3.x alternatives, or other **session object management** in order function. <br>
 
+## [cache handling](https://youtu.be/daeIH0mtOO0?t=2543)
+If you want to prevent **client-side caching**, there is the middleware [**nocache**](https://www.npmjs.com/package/nocache) to support you. <br>
+It's very simple to use, the two lines below are the whole thing, nocache then sets the headers to disable caching. <br>
+
+```js
+const nocache = require("nocache");
+// ...
+app.use(nocache());
+```
+
