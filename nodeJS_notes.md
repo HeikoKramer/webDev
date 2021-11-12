@@ -1375,7 +1375,7 @@ app.use(nocache());
 ## Access files with Node.js
 ## [The require() function](https://youtu.be/fW0HVwqX4TM?t=67)
 ### Access JavaScript files with require()
-The **require function** can't not only load modules, but also JavaScript files. <br>
+The **require function** can't not only load modules, but also **JavaScript files**. <br>
 <br>
 *app.js:*
 
@@ -1400,4 +1400,60 @@ module.exports = showMessage;
 ```
 
 We import the file *showMessage.js:* and have therewith access to the `showMessage()` function in our *app.js* file. <br>
+
+### [Access JSON files with require()](https://youtu.be/fW0HVwqX4TM?t=157)
+`require()` can also access **JSON files**. <br>
+<br>
+*data.json:*
+
+```json
+{
+  "text": "Hi there :)"
+}
+```
+
+*app.js:*
+
+```js
+'use strict';
+
+const data = require('./data'),
+      showMessage = require('./showMessage');
+
+showMessage(data.text);
+```
+
+This version of *app.js* gives us the same result as the prior version, just that we now got the text value from *data.json*. <br>
+Common use cases for **JSON file access** in Node.js are <br>
+* **config files**
+* **package.json**
+
+To load the package.json is useful to write values like the name and the version to log-files, or to analyse dependencies. <br>
+<br>
+*package.json:*
+
+```js
+{
+    "name": "require-demo-app",
+    "version": "0.1.0"
+}
+```
+
+*app.js:*
+
+```js
+'use strict';
+
+const data        = require('./data'),
+      packageJson = require('./package'),
+      showMessage = require('./showMessage');
+
+showMessage(`${packageJson.name} ${packageJson.version}`);
+
+showMessage(data.text);
+```
+
+Now we can not only output the message value, but also the app's name and version as specified in the *package.json*. <br>
+
+![require-demo](/images/require-demo.png)
 

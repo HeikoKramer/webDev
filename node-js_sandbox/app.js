@@ -1,5 +1,9 @@
 'use strict';
 
-const showMessage = require('./showMessage');
+const data        = require('./data'),
+      packageJson = require('./package'),
+      showMessage = require('./showMessage');
 
-showMessage('Hi there :)');
+showMessage(`${packageJson.name} ${packageJson.version}`);
+
+showMessage(data.text);
