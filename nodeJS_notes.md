@@ -1372,3 +1372,32 @@ const nocache = require("nocache");
 app.use(nocache());
 ```
 
+## Access files with Node.js
+## [The require() function](https://youtu.be/fW0HVwqX4TM?t=67)
+### Access JavaScript files with require()
+The **require function** can't not only load modules, but also JavaScript files. <br>
+<br>
+*app.js:*
+
+```js
+'use strict';
+
+const showMessage = require('./showMessage');
+
+showMessage('Hi there :)');
+```
+
+*showMessage.js:*
+
+```js
+'use strict';
+
+const showMessage = function (text) {
+  console.log(text);
+};
+
+module.exports = showMessage;
+```
+
+We import the file *showMessage.js:* and have therewith access to the `showMessage()` function in our *app.js* file. <br>
+
