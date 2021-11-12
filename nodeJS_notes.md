@@ -1457,3 +1457,51 @@ Now we can not only output the message value, but also the app's name and versio
 
 ![require-demo](/images/require-demo.png)
 
+### [require() characteristics](https://youtu.be/fW0HVwqX4TM?t=400)
+* require() is synchronous
+* require() caches
+
+The require() function is an exception to the other functions in Node.js – which are performed asynchronous by default. <br>
+Require is executed synchronous and loads all dependencies **at the start of the program**. <br>
+At least that is what's expected – you should **avoid to use require somwhere in the middle** of the execution, as it could pause the program flow when loading things. <br>
+**RULE:** All **requires** always **at the top** of your application! <br> 
+<br>
+`require()` caches its results in the **RAM** and can so faster access them if they are required again. <br>
+To demonstrate this behaviour, here an example: <br>
+*cachDemo.js:*
+
+```js
+'use strict';
+
+const foo = {
+  bar: 23
+};
+
+console.log('cachDemo.js loaded');
+
+module.exports = foo;
+```
+
+We specify <br>
+* to load the *cachDemo.js* twice into the *app.js* file
+* to output both variables in the console
+* to compare both variables
+
+*app.js:*
+
+```js
+'use strict';
+
+const data1 = require('./cachDemo'),
+      data2 = require('./cachDemo');
+
+console.log(data1);
+console.log(data2);
+
+console.log(data1 === data2);
+```
+
+In fact *cachDemo.js* got loaded only once, both variables are equal to each other as they refer to the same place in memory. <br>
+
+![require-caching](/images/require-caching.png)
+

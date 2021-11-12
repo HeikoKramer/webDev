@@ -1,9 +1,9 @@
 'use strict';
 
-const data        = require('./data'),
-      packageJson = require('./package'),
-      showMessage = require('./showMessage');
+const data1 = require('./cachDemo'),
+      data2 = require('./cachDemo');
 
-showMessage(`${packageJson.name} ${packageJson.version}`);
+console.log(data1);
+console.log(data2);
 
-showMessage(data.text);
+console.log(data1 === data2);
