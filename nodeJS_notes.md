@@ -1561,5 +1561,27 @@ fs.readdir('.', (err, entries) => {
 ```
 
 The result is the same, but this time our request  to read the folder was processed asynchronously. <br>
+<br>
+Lets now have a look ar `readFile`. <br>
+**NOTE:** The "F" in `readFile` is **upper case**, while the "d" in `readdir` is **lower case**. 
+I've added a *package.json* to the directory and try to access it: <br>
 
+```js
+'use strict'
+
+const fs = require('fs');
+
+fs.readdir('.', (err, entries) => {
+  console.log(entries);
+  // > [ 'app.js', 'archive', 'package.json' ]
+});
+
+fs.readFile('package.json', (err, packageJson) => {
+  console.log(packageJson);
+  // > <Buffer 7b 0a 20 20 22 6e 61 6d 65 22 3a 20 22 66 73 2d 64 65 6d 6f 22 2c 0a 20 20 22 76 65 72 73 69 6f 6e 22 3a 20 22 30 2e 30 2e 30 22 0a 7d>
+});
+```
+
+The outcome is a bit unexpected. While `readdir` still gets us a valid array, `readFile` gives us a bunch of numbers. <br>
+This is actually correct. We received our result in **binary code**, as we have not specified the proper **encoding** for the file. <br>
 
