@@ -1703,8 +1703,8 @@ fs.readFile(path.join(__dirname, 'package.json'), 'utf8', (err, packageJson) => 
 
 No matter from where we are running that *app.js* now, we will get the same result. <br> 
 
-### path variable
-Beside **__dirname** there is an other variable we can use **__filename**. <br>
+### path variables
+Beside `__dirname` there is an other variable we can use `__filename`. <br>
 Additionally there is the function `process.cwd()` – let's see, what these three things are doing. <br>
 <br>
 My *app.js* file is in the directory *node-js_sandbox*. <br>
