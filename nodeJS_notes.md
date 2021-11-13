@@ -1653,5 +1653,27 @@ When we add an output of the error message into the `readFile()` function … <b
 … we get this a bit clearer displayed in the console: `// > ENOENT: no such file or directory, open 'package.json'`. <br>
 ENOENT = Error no file system entry <br>
 
+### [The path module](https://youtu.be/fW0HVwqX4TM?t=1700)
+We have covered the [path module](#static-middleware) before, now is a good time to recall that. <br>
+You can use **path** to determine, if you're on a windows or unix system: <br>
+
+```js
+'use strict'
+
+const fs = require('fs'),
+      path = require('path');
+
+function myPath() {
+  if (path.sep === '/') {
+    console.log('you are on the right path');
+  }
+  else {
+    console.log('you are on the wrong path');
+  }}
+
+myPath();
+// > you are on the right path
+```
+
 
 
