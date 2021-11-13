@@ -1615,3 +1615,43 @@ After the parsing we have an appropriate object and can request values from it v
 `readFile` has more option parameters, so we can provide it with an **parameter object** to specify multiple options. <br>
 This is how that would look: `fs.readFile('package.json', { encoding: 'utf8', ... }, (err, packageJson)`. <br>
 
+### [changing directories](https://youtu.be/fW0HVwqX4TM?t=1579)
+This is what our little program looks like now: <br>
+
+```js
+'use strict'
+
+const fs = require('fs');
+
+fs.readdir('.', (err, entries) => {
+  console.log(entries);
+});
+
+fs.readFile('package.json', 'utf8', (err, packageJson) => {
+  const configuration = JSON.parse(packageJson);
+
+  console.log(configuration.version);
+});
+```
+
+It works perfectly – **when executed while we are in the directory where it is located!** <br>
+But when we change our location `cd ..` go one directory back and then execute the program from there … <br>
+`node node-js_sandbox/app.js` – we will get an other result. <br>
+* the content of our working directory (`pwd`) is shown
+* we get an *undefined* for the package.json
+* our try to `JSON.parse()` throws an error
+
+Our program user `'.'` on the directory from where we were executing, not from where the *app.js* was located. <br>
+When we add an output of the error message into the `readFile()` function … <br>
+
+```js
+  if (err) {
+    return console.log(err.message);
+  }
+```
+
+… we get this a bit clearer displayed in the console: `// > ENOENT: no such file or directory, open 'package.json'`. <br>
+ENOENT = Error no file system entry <br>
+
+
+
