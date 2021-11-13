@@ -1518,3 +1518,18 @@ The [Node.js API Documentation](https://nodejs.org/api/fs.html) describes a whol
 and a lot more. It's definitely an advantage to be familiar with UNIX commands at this point. <br>
 A lot of those fs function names are corresponding to their UNIX command equivalent. <br>
 
+### read directories and files
+Most essential for getting started with the **fs module** are the functions to read **directories** and **files**: <br>
+
+* **read directories:**
+  * fs.readdir
+  * fs.readdirSync
+* **read files:**
+  * fs.readFile
+  * fs.readdFileSync
+
+There are two versions of those functions – with / without the **Sync** suffix. <br>
+The **Sync** versions `fs.readdirSync` and `fs.readdFileSync` are processed synchronous. <br>
+Those function give back a **direct return value**. So they are used to load files **at the beginning** of a program. <br>  
+Those other functions are **asynchronous** and work with **callbacks**. They're used to access files without interrupting a running program. <br> 
+
