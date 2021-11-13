@@ -1610,3 +1610,8 @@ fs.readFile('package.json', 'utf8', (err, packageJson) => {
 ```
 
 After the parsing we have an appropriate object and can request values from it via dot notation. <br>
+**Info:** `require()` does the parsing automatically for us when loading a JSON file. <br>
+<br>
+`readFile` has more option parameters, so we can provide it with an **parameter object** to specify multiple options. <br>
+This is how that would look: `fs.readFile('package.json', { encoding: 'utf8', ... }, (err, packageJson)`. <br>
+
