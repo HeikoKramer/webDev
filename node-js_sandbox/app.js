@@ -2,5 +2,10 @@
 
 const fs = require('fs');
 
-const entries = fs.readdirSync('.');
-console.log(entries);
+fs.readdir('.', (err, entries) => {
+  console.log(entries);
+});
+
+fs.readFile('package.json', (err, packageJson) => {
+  console.log(packageJson);
+});

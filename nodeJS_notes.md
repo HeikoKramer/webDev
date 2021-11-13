@@ -1546,5 +1546,20 @@ console.log(entries);
 ```
 
 For the **synchronous** version we can just specify the directory to read and get back and array with all things in it. <br>
+<br>
+For the **asynchronous** version we have to set the callback functions, with an parameter for **errors** and one for the **entiries**. <br>
+
+```js
+'use strict'
+
+const fs = require('fs');
+
+fs.readdir('.', (err, entries) => {
+  console.log(entries);
+  // > [ 'app.js', 'archive' ]
+});
+```
+
+The result is the same, but this time our request  to read the folder was processed asynchronously. <br>
 
 
