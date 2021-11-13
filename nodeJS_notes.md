@@ -1675,5 +1675,33 @@ myPath();
 // > you are on the right path
 ```
 
+Now we could puzzle an OS independent path with something like this: `const filename = directory + path.sep + 'package.json'`. <br>
+But lets instead use `const filename = path.join(directory, 'package.json')` and save us some trouble. <br>
+<br>
+Back to our little program. If we want it to show us the content of the directory where the *app.js* file is located and output a value from the *package.json*, which is located within the same folder … we can user the **__dirname** variable in combination with `path.join()`. <br>
+
+```js
+'use strict'
+
+const fs = require('fs'),
+      path = require('path');
+
+fs.readdir(__dirname, (err, entries) => {
+  console.log(entries);
+  // > [ 'app.js', 'archive', 'package.json' ]
+});
+
+fs.readFile(path.join(__dirname, 'package.json'), 'utf8', (err, packageJson) => {
+  if (err) {
+    return console.log(err.message);
+  }
+  const configuration = JSON.parse(packageJson);
+  console.log(configuration.version);
+  // > 0.0.0
+});
+```
+
+No matter from where we are running that *app.js* now, we will get the same result. <br> 
+
 
 
