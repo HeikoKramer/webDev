@@ -1590,10 +1590,10 @@ If we adjust our code and add encoding for *utf8* the result is much more readab
 ```js
 fs.readFile('package.json', 'utf8', (err, packageJson) => {
   console.log(packageJson);
-  //> {
-  //>   "name": "fs-demo",
-  //>   "version": "0.0.0"
-  //> }
+  // > {
+  // >   "name": "fs-demo",
+  // >   "version": "0.0.0"
+  // > }
 });
 ```
 
