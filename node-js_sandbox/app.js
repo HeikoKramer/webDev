@@ -7,5 +7,7 @@ fs.readdir('.', (err, entries) => {
 });
 
 fs.readFile('package.json', 'utf8', (err, packageJson) => {
-  console.log(packageJson);
+  const configuration = JSON.parse(packageJson);
+
+  console.log(configuration.version);
 });

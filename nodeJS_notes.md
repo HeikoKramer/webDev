@@ -1597,3 +1597,16 @@ fs.readFile('package.json', 'utf8', (err, packageJson) => {
 });
 ```
 
+**NOTE:** Our output is **not** a JSON object, just a string, that looks like one. <br>
+To actually get a JSON object at this point, we would have to parse it firs: <br>
+
+```js
+fs.readFile('package.json', 'utf8', (err, packageJson) => {
+  const configuration = JSON.parse(packageJson);
+
+  console.log(configuration.version);
+  // > 0.0.0
+});
+```
+
+After the parsing we have an appropriate object and can request values from it via dot notation. <br>
