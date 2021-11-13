@@ -1505,3 +1505,16 @@ In fact *cachDemo.js* got loaded only once, both variables are equal to each oth
 
 ![require-caching](/images/require-caching.png)
 
+## [The fs module](https://youtu.be/fW0HVwqX4TM?t=950)
+**fs** stands for **file system**. This integrated module grants access to **files** and **directories**. <br>
+The [Node.js API Documentation](https://nodejs.org/api/fs.html) describes a whole bunch of **fs fucntions**, like <br>
+* access
+* appendFile
+* chmod
+* close
+* mkdir
+* rmdir 
+
+and a lot more. It's definitely an advantage to be familiar with UNIX commands at this point. <br>
+A lot of those fs function names are corresponding to their UNIX command equivalent. <br>
+
