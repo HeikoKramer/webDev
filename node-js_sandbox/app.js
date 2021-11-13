@@ -6,6 +6,6 @@ fs.readdir('.', (err, entries) => {
   console.log(entries);
 });
 
-fs.readFile('package.json', (err, packageJson) => {
+fs.readFile('package.json', 'utf8', (err, packageJson) => {
   console.log(packageJson);
 });

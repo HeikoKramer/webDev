@@ -1584,4 +1584,16 @@ fs.readFile('package.json', (err, packageJson) => {
 
 The outcome is a bit unexpected. While `readdir` still gets us a valid array, `readFile` gives us a bunch of numbers. <br>
 This is actually correct. We received our result in **binary code**, as we have not specified the proper **encoding** for the file. <br>
+The `readFile` function takes in an other **parameter for the encoding**. <br>
+If we adjust our code and add encoding for *utf8* the result is much more readable: <br>
+
+```js
+fs.readFile('package.json', 'utf8', (err, packageJson) => {
+  console.log(packageJson);
+  //> {
+  //>   "name": "fs-demo",
+  //>   "version": "0.0.0"
+  //> }
+});
+```
 
