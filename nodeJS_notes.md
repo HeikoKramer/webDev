@@ -1703,5 +1703,32 @@ fs.readFile(path.join(__dirname, 'package.json'), 'utf8', (err, packageJson) => 
 
 No matter from where we are running that *app.js* now, we will get the same result. <br> 
 
+### path variable
+Beside **__dirname** there is an other variable we can use **__filename**. <br>
+Additionally there is the function `process.cwd()` – let's see, what these three things are doing. <br>
+<br>
+My *app.js* file is in the directory *node-js_sandbox*. <br>
+The full path to the file is */home/heiko/repos/github/webDev/node-js_sandbox/app.js*. <br>
+I have updated the *app.js* as following: <br>
 
+```js
+'use strict'
 
+const fs = require('fs'),
+      path = require('path');
+
+console.log(process.cwd());
+console.log(__dirname);
+console.log(__filename);
+```
+
+If I run the *app.js* from my *home* directory, I get the following result: <br>
+
+![path-variables](/images/path-variables.png)
+
+* `console.log(process.cwd())`
+  * gave us the directory **from where we were executing**
+* `console.log(__dirname)`
+  * gave us the directory **where app.js is located**
+* `console.log(__filename)`
+  * gave us the directory **where app.js is located** + **its file name**
