@@ -1532,4 +1532,19 @@ There are two versions of those functions – with / without the **Sync** suffix
 The **Sync** versions `fs.readdirSync` and `fs.readdFileSync` are processed synchronous. <br>
 Those function give back a **direct return value**. So they are used to load files **at the beginning** of a program. <br>  
 Those other functions are **asynchronous** and work with **callbacks**. They're used to access files without interrupting a running program. <br> 
+<br>
+Let's have a look at the differences of the two `fs.readdir` versions, first `fs.readdirSync`: <br>
+
+```js
+'use strict'
+
+const fs = require('fs');
+
+const entries = fs.readdirSync('.');
+console.log(entries);
+// > [ 'app.js', 'archive' ]
+```
+
+For the **synchronous** version we can just specify the directory to read and get back and array with all things in it. <br>
+
 
