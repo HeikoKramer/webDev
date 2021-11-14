@@ -1837,4 +1837,8 @@ A work-around would here be to write a temporary file first. <br>
 If the temp-file creation was successful, you can use `fs.rename()` to replace the former file with the new version. <br>
 `fs.rename()` is an atomic operation and will restore the initial state of the former file if something crashes. <br>
 To store a temporary file, we can use the **os module**, specifically the method `os.tmpdir()`. <br>
+<br>
+`fs.rename()` is comparable to the Unix `mv` command. <br>
+**NOTE:** The current and the target path must be on the **same device**, even on the **same partition**. <br>
+An other notable fact is that the `fs` module is lacking an equivalent to the Unix `cp` command to copy files. <br>
 
