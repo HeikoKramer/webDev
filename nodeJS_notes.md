@@ -1842,3 +1842,34 @@ To store a temporary file, we can use the **os module**, specifically the method
 **NOTE:** The current and the target path must be on the **same device**, even on the **same partition**. <br>
 An other notable fact is that the `fs` module is lacking an equivalent to the Unix `cp` command to copy files. <br>
 
+### [fs-extra](https://youtu.be/fW0HVwqX4TM?t=3103)
+There is an **npm module** – [**fs-extra**](https://www.npmjs.com/package/fs-extra), which can be used as an **drop-in replacement** for `fs` to keep its basic functionalities but also to extend its scope. <br>
+The module is easy to install via `npm install fs-extra` and provides extended functionalities like: <br>
+
+* copy
+* move
+  * this one works **cross-device**
+* ensureDir
+  * create specified directory + its non existing directories
+
+**Drop in replacement** means, that we can just replace our existing code and require `fs-extra` **instead** of `fs`: <br>
+
+```js
+'use strict'
+
+const fs   = require('fs-extra'),
+      path = require('path');
+
+const packageJson = require('./package');
+
+const filename = path.join(__dirname, 'version.txt');
+
+fs.writeFile(filename, packageJson.version, 'utf8', err => {
+  if (err) {
+    return console.log(err.message);
+  }
+  console.log(`${path.basename(filename)} successful created!`);
+});
+```
+
+And it is still working as it did before. <br>

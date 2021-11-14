@@ -1,6 +1,6 @@
 'use strict'
 
-const fs = require('fs'),
+const fs   = require('fs-extra'),
       path = require('path');
 
 const packageJson = require('./package');
