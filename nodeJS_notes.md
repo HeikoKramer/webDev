@@ -1873,3 +1873,18 @@ fs.writeFile(filename, packageJson.version, 'utf8', err => {
 ```
 
 And it is still working as it did before. <br>
+
+## [Understand callbacks in Node.js](https://youtu.be/PAr063Qzeg8)
+### Functions 
+Functions in JavaScript <br>
+* structure code
+* define name spaces
+* encapsulate date
+
+Functions are the **only structuring element** of JavaScript. <br>
+Key-words like *class* or *extends* are syntactic sugar. <br>
+
+JS allows nested functions. <br>
+Nested functions enable recursion. <br>
+Nesting of definitions enables local helper functions.<br>
+
