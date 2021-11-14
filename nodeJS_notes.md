@@ -1810,7 +1810,8 @@ fs.writeFile(filename, packageJson.version, 'utf8', err => {
 ```
 
 Here we are writing the version from our *package.json* in the new created file *version.txt*. <br>
-To do so, we process the following steps; <br>
+To do so, we process the following steps: <br>
+
 * get the *package.json* with `require()`
 * set the *filename* with `path.join()` and `__dirname`
   * (we want to have that file in the current directory)
@@ -1828,4 +1829,12 @@ A changed version in the *package.json* would be reflected in the new file. <br>
 <br>
 The third parameter position, where we have specified the encoding **utf8** is for the **options**. <br>
 As there are multiple options available, we could as well replace that with the **option object**: `{ encoding: 'utf8' }` <br>
+
+### Writing temporary files
+**NOTE:** Node.js writing processes are not atomic operations. <br>
+**All or nothing** does not apply here, if the operation breaks during execution while overwriting a file, that file will not be restored, you end up with some half-complete data garbage. <br>
+A work-around would here be to write a temporary file first. <br>
+If the temp-file creation was successful, you can use `fs.rename()` to replace the former file with the new version. <br>
+`fs.rename()` is an atomic operation and will restore the initial state of the former file if something crashes. <br>
+To store a temporary file, we can use the **os module**, specifically the method `os.tmpdir()`. <br>
 
