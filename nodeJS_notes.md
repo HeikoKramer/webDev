@@ -1888,3 +1888,8 @@ JS allows nested functions. <br>
 Nested functions enable recursion. <br>
 Nesting of definitions enables local helper functions.<br>
 
+### [Higher order functions](https://youtu.be/PAr063Qzeg8?t=376)
+* functions are 1st class data types
+  * function as parameter
+  * function as return value
+
