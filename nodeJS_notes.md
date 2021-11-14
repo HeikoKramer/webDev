@@ -1732,3 +1732,30 @@ If I run the *app.js* from my *home* directory, I get the following result: <br>
   * gave us the directory **where app.js is located**
 * `console.log(__filename)`
   * gave us the directory **where app.js is located** + **its file name**
+
+### [deconstructing paths](https://youtu.be/fW0HVwqX4TM?t=2345)
+#### path.basename()
+As we have learned earlier,  `__filename` provides us with the complete path of the executed file. <br>
+If we would like to have **only the file name** without the path, we could try our luck with some crazy string parsing … <br>
+… or we could just use the `path.basename()` function to do that for us: <br>
+
+```js
+'use strict'
+
+const fs = require('fs'),
+      path = require('path');
+
+console.log('Current file: ', path.basename(__filename));
+// > Current file: app.js
+```
+
+`path.basename()` has separated the filename from the path for us – and it can do even more. <br>
+If we want to exclude the extension *.js*, we can just pass that over as a second parameter: <br>
+
+```js
+console.log('Current file:', path.basename(__filename, '.js'));
+// > Current file: app
+```
+
+
+
