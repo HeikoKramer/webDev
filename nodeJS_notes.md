@@ -1782,3 +1782,50 @@ console.log('Current file extension:', path.extname(__filename));
 // > Current file extension: .js
 ```
 
+## [Writing files with Node.js](https://youtu.be/fW0HVwqX4TM?t=2508)
+As we can read files with Node.js, we can ass well **write** files. <br>
+The equivalent `fs` methods for this are: <br>
+* fs.writeFile()
+* fs.writeFileSync()
+
+`fs.writeFiles()` requires a few parameters: `fs.writeFile(file, data[, options], callback)`. <br>
+Let's see this in action and go through the code: <br>
+
+```js
+'use strict'
+
+const fs = require('fs'),
+      path = require('path');
+
+const packageJson = require('./package');
+
+const filename = path.join(__dirname, 'version.txt');
+
+fs.writeFile(filename, packageJson.version, 'utf8', err => {
+  if (err) {
+    return console.log(err.message);
+  }
+  console.log(`${path.basename(filename)} successful created!`);
+});
+```
+
+Here we are writing the version from our *package.json* in the new created file *version.txt*. <br>
+To do so, we process the following steps; <br>
+* get the *package.json* with `require()`
+* set the *filename* with `path.join()` and `__dirname`
+  * (we want to have that file in the current directory)
+* create the file with `writeFile()`, providing
+  * the name (including the whole path to it)
+  * the file's content (extracted version value)
+  * encoding option
+  * callback for error handling
+    * if an error occurs, we print it out in the console
+    * if no error -> we print out a success message
+
+The result is a new text file with our version number in it and the success message in the console. <br>
+If we run the *app.js* again, we overwrite the current *version.txt*. <br>
+A changed version in the *package.json* would be reflected in the new file. <br>
+<br>
+The third parameter position, where we have specified the encoding **utf8** is for the **options**. <br>
+As there are multiple options available, we could as well replace that with the **option object**: `{ encoding: 'utf8' }` <br>
+

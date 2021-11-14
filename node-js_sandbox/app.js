@@ -3,19 +3,13 @@
 const fs = require('fs'),
       path = require('path');
 
-console.log('Current file extension:', path.extname(__filename));
+const packageJson = require('./package');
 
+const filename = path.join(__dirname, 'version.txt');
 
-// fs.readdir(__dirname, (err, entries) => {
-//   console.log(entries);
-//   // > [ 'app.js', 'archive', 'package.json' ]
-// });
-
-// fs.readFile(path.join(__dirname, 'package.json'), 'utf8', (err, packageJson) => {
-//   if (err) {
-//     return console.log(err.message);
-//   }
-//   const configuration = JSON.parse(packageJson);
-//   console.log(configuration.version);
-//   // > 0.0.0
-// });
+fs.writeFile(filename, packageJson.version, 'utf8', err => {
+  if (err) {
+    return console.log(err.message);
+  }
+  console.log(`${path.basename(filename)} successful created!`);
+});
