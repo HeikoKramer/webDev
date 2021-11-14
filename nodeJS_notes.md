@@ -1757,5 +1757,21 @@ console.log('Current file:', path.basename(__filename, '.js'));
 // > Current file: app
 ```
 
+#### path.dirname()
+`path.dirname()` does basically the same as the `__dirname` variable. <br>
+If we provide it with the `__filename`, we get the path to it as a result. <br>
+
+```js
+console.log('Current directory:', path.dirname(__filename));
+// > Current directory: /home/heiko/repos/github/webDev/node-js_sandbox
+```
+
+If you provide `path.dirname()` with a directory name, it will cut off the last directory. <br>
+So if we want only the stand-alone name of our `__dirname`, we could do something like this: <br>
+
+```js
+console.log('Current directory name:', __dirname.replace((path.dirname(__dirname) + path.sep), ''));
+// > Current directory name: node-js_sandbox
+```
 
 

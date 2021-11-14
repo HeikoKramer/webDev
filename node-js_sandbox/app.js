@@ -3,7 +3,7 @@
 const fs = require('fs'),
       path = require('path');
 
-console.log('Current file:', path.basename(__filename, '.js'));
+console.log('Current directory name:', __dirname.replace((path.dirname(__dirname) + path.sep), ''));
 
 
 // fs.readdir(__dirname, (err, entries) => {
