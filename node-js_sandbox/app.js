@@ -3,7 +3,7 @@
 const fs = require('fs'),
       path = require('path');
 
-console.log('Current directory name:', __dirname.replace((path.dirname(__dirname) + path.sep), ''));
+console.log('Current file extension:', path.extname(__filename));
 
 
 // fs.readdir(__dirname, (err, entries) => {

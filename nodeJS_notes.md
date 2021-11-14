@@ -1774,4 +1774,11 @@ console.log('Current directory name:', __dirname.replace((path.dirname(__dirname
 // > Current directory name: node-js_sandbox
 ```
 
+#### path.extname()
+To get only the file extension of a file, for example the one behind `__filename`, we can use the `path.extname()` function: <br>
+
+```js
+console.log('Current file extension:', path.extname(__filename));
+// > Current file extension: .js
+```
 
