@@ -1931,3 +1931,33 @@ console.log('numsPlusOne:', numsPlusOne);
 // > numsPlusOne: [ 2, 3, 4, 5, 6 ]
 ```
 
+With **ES6 arrow functions** we can even get rid of those `square` and `addOne` functions and write them **in-line** as parameter. <br>
+
+```js
+'use strict';
+
+const processArray = function (items, fn) {
+  const result = [];
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+
+    result.push(fn(item));
+  }
+
+  return result;
+};
+
+const numbers = [ 1, 2, 3, 4, 5 ];
+
+const squares = processArray(numbers, n => n ** 2);
+console.log('squares:', squares);
+// > squares: [ 1, 4, 9, 16, 25 ]
+
+const numsPlusOne = processArray(numbers, n => n + 1);
+console.log('numsPlusOne:', numsPlusOne);
+// > numsPlusOne: [ 2, 3, 4, 5, 6 ]
+```
+
+Those few characters replaced the whole functions. The result is still the same. <br>
+

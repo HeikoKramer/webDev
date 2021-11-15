@@ -1,13 +1,5 @@
 'use strict';
 
-const square = function (number) {
-  return number ** 2;
-};
-
-const addOne = function (number) {
-  return number + 1;
-};
-
 const processArray = function (items, fn) {
   const result = [];
 
@@ -21,10 +13,9 @@ const processArray = function (items, fn) {
 };
 
 const numbers = [ 1, 2, 3, 4, 5 ];
-console.log('numbers:', numbers);
 
-const squares = processArray(numbers, square);
+const squares = processArray(numbers, n => n ** 2);
 console.log('squares:', squares);
 
-const numsPlusOne = processArray(numbers, addOne);
+const numsPlusOne = processArray(numbers, n => n + 1);
 console.log('numsPlusOne:', numsPlusOne);
