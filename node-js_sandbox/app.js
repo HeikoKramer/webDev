@@ -19,3 +19,11 @@ console.log('squares:', squares);
 
 const numsPlusOne = processArray(numbers, n => n + 1);
 console.log('numsPlusOne:', numsPlusOne);
+
+const words = [ 'the', 'quick', 'brown', 'fox' ];
+const wordObjects = processArray(words, w => ({ word: w, length: w.length}));
+console.log('wordObjects:', wordObjects);
+
+const wordLengths = processArray(words, w => w.length);
+console.log('wordLengths:', wordLengths);
+

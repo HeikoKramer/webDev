@@ -1960,4 +1960,24 @@ console.log('numsPlusOne:', numsPlusOne);
 ```
 
 Those few characters replaced the whole functions. The result is still the same. <br>
+<br>
+Whit that higher order function in place, we're not even bound to process numbers. <br>
+Any array we'll pass over will also be processed by the function we're passing with it. <br>
 
+```js
+const words = [ 'the', 'quick', 'brown', 'fox' ];
+const wordLengths = processArray(words, w => w.length);
+console.log('wordLengths:', wordLengths);
+// > wordLengths: [ 3, 5, 5, 3 ]
+```
+
+If we want to map those values into an JS object, we have brackets around the object. <br>
+JavaScript will otherwise interpret those curly bracket as the start of the function body. <br>
+
+```js
+const words = [ 'the', 'quick', 'brown', 'fox' ];
+const wordObjects = processArray(words, w => ({ word: w, length: w.length}));
+console.log('wordObjects:', wordObjects);
+```
+
+![wordObjects-output](/images/wordObjects-output.png)
