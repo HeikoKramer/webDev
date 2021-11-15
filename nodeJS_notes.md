@@ -2006,3 +2006,5 @@ console.log('wordLengths:', wordLengths);
 ```
 
 ![array-map](/images/array-map.png)
+
+Map is therewith a good example for a build-in higher order function. <br>
