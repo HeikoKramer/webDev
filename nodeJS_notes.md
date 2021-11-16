@@ -2099,3 +2099,32 @@ console.log('### 2');
 ![sync-callback](/images/sync-callback.png)
 
 Here we can see a **sequential** order of execution. <br>
+
+#### [asynchronous error handling](https://youtu.be/PAr063Qzeg8?t=2111)
+Error handling works different with asynchronous callbacks as we might be used to. <br>
+When we take our earlier example, but delete the *foobar.txt* file, we don't receive an exception back, only **undefined**. <br>
+Even though when we explicitly try to **catch** the exception … we don't get one – there is none thrown. <br>
+
+```js
+'use strict';
+
+const fs   = require('fs'),
+      path = require('path');
+
+const fileName = path.join(__dirname, 'foobar.txt');
+
+try {
+  fs.readFile(fileName, 'utf8', (err, content) => {
+    console.log('content:', content);
+    // > content: undefined
+  });
+} catch (ex) {
+  console.log('### ERROR:', ex.message);
+}
+```
+
+The only thing we see in the console is *content: undefined*. <br>
+This happens because the **try / catch** logic is executed **sequential**. <br>
+The try block initiates the `readFile()` method, hands it over to the file system – success! <br>
+The callback with that possible exception is still in queue when the catch block is in line. <br>
+For that reason, we have to work with the **err** parameter in asynchronous callbacks. <br>

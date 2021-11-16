@@ -5,8 +5,10 @@ const fs   = require('fs'),
 
 const fileName = path.join(__dirname, 'foobar.txt');
 
-console.log('### 1');
-fs.readFile(fileName, 'utf8', (err, content) => {
-  console.log(content);
-});
-console.log('### 2');
+try {
+  fs.readFile(fileName, 'utf8', (err, content) => {
+    console.log('content:', content);
+  });
+} catch (ex) {
+  console.log('### ERROR:', ex.message);
+}
