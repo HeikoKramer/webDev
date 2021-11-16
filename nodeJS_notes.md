@@ -2012,5 +2012,43 @@ console.log('wordLengths:', wordLengths);
 
 ## [Callbacks](https://youtu.be/PAr063Qzeg8?t=1544)
 A call back indicates that a certain process has been completed and gives back a specific result. <br>
-We can use **functions** for callbacks. <br>
+We can use **functions** to transform sequential programs and to set up callbacks. <br>
+<br>
+*sequential version:*
+
+```js
+'use strict';
+
+const add = function (left, right) {
+  return left + right;
+};
+
+const sum = add(23, 42);
+
+console.log(sum);
+// > 65
+```
+
+*callback version:*
+
+```js
+'use strict';
+
+const add = function (left, right, callback) {
+  const sum = left + right;
+
+  callback(sum);
+};
+
+add(23, 42, sum => {
+  console.log(sum);
+  // > 65
+});
+```
+
+This is rather non-practical example for a callback, but it shows one thing clearly: <br>
+Even though callbacks are often associated with **asynchronous code** – they are not necessary asynchronous! <br>
+When we are dealing with asynchronous code, we are facing callbacks. But that's not necessary true the other way around. <br>
+
+
 
