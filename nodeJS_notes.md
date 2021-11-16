@@ -2161,7 +2161,8 @@ Now we get an appropriate message back if the file can't be found: <br>
 *ENOENT: no such file or directory, open '/home/heiko/repos/github/webDev/node-js_sandbox/foobar.txt'*. <br>
 
 #### [null err parameter](https://youtu.be/PAr063Qzeg8?t=2573)
-When we write the asynchronous response ourselves (like here with `setTimeout()`) we give back `null` as the error parameter: <br>
+When we write the asynchronous response ourselves we give back `null` as the error parameter. <br>
+Here demonstrated with `setTimeout()` – there is no possibility for an error, so we hand over `null`: <br>
 
 ```js
 'use strict';
