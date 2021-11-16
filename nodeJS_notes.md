@@ -2010,3 +2010,7 @@ console.log('wordLengths:', wordLengths);
 `.map()` is therewith a good example for a build-in higher order function. <br>
 `forEach()` is an other example of an higher order function, so is `reduce()` <br>
 
+## [Callbacks](https://youtu.be/PAr063Qzeg8?t=1544)
+A call back indicates that a certain process has been completed and gives back a specific result. <br>
+We can use **functions** for callbacks. <br>
+
