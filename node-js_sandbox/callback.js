@@ -3,12 +3,17 @@
 const add = function (left, right, callback) {
   const sum = left + right;
 
-  callback(sum);
+  setTimeout(() => {
+    callback(null, sum); // <- give back null as error parameter
+  }, 1 * 1000);
 };
 
-console.log('### 1');
-add(23, 42, sum => {
+
+add(23, 42, (err, sum) => {
+  if (err) {
+    return console.log(err);
+  }
   console.log(sum);
   // > 65
 });
-console.log('### 2');
+

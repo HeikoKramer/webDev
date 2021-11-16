@@ -2160,5 +2160,27 @@ const fileName = path.join(__dirname, 'foobar.txt');
 Now we get an appropriate message back if the file can't be found: <br>
 *ENOENT: no such file or directory, open '/home/heiko/repos/github/webDev/node-js_sandbox/foobar.txt'*. <br>
 
+#### [null err parameter](https://youtu.be/PAr063Qzeg8?t=2573)
+When we write the asynchronous response ourselves (like here with `setTimeout()`) we give back `null` as the error parameter: <br>
 
+```js
+'use strict';
+
+const add = function (left, right, callback) {
+  const sum = left + right;
+
+  setTimeout(() => {
+    callback(null, sum); // <- give back null as error parameter
+  }, 1 * 1000);
+};
+
+
+add(23, 42, (err, sum) => {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(sum);
+  // > 65
+});
+```
 
