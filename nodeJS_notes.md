@@ -2100,7 +2100,7 @@ console.log('### 2');
 
 Here we can see a **sequential** order of execution. <br>
 
-#### [asynchronous error handling](https://youtu.be/PAr063Qzeg8?t=2111)
+### [asynchronous error handling](https://youtu.be/PAr063Qzeg8?t=2111)
 Error handling works different with asynchronous callbacks as we might be used to. <br>
 When we take our earlier example, but delete the *foobar.txt* file, we don't receive an exception back, only **undefined**. <br>
 Even though when we explicitly try to **catch** the exception … we don't get one – there is none thrown. <br>
@@ -2128,3 +2128,37 @@ This happens because the **try / catch** logic is executed **sequential**. <br>
 The try block initiates the `readFile()` method, hands it over to the file system – success! <br>
 The callback with that possible exception is still in queue when the catch block is in line. <br>
 For that reason, we have to work with the **err** parameter in asynchronous callbacks. <br>
+
+#### [err parameter](https://youtu.be/PAr063Qzeg8?t=2310)
+Asynchronous callbacks have always the same structure:
+* **err** is the first parameter
+* all **data** parameters follow **after** err 
+
+**RULE:** Never ignore err – we should **always** check for errors! <br>
+As we don't want our program to continue, when we catch an error, we use `return` to interrupt the execution. <br>
+This is called the **early return pattern** and usable in JavaScript due to the automatic memory allocation (garbage collector). <br>
+<br>
+Good practice is to handle a potential error **first** in the callback function: <br>
+
+```js
+'use strict';
+
+const fs   = require('fs'),
+      path = require('path');
+
+const fileName = path.join(__dirname, 'foobar.txt');
+
+
+  fs.readFile(fileName, 'utf8', (err, content) => {
+    if (err) {
+      return console.log(err.message);
+    }
+    console.log('content:', content);
+  });
+```
+
+Now we get an appropriate message back if the file can't be found: <br>
+*ENOENT: no such file or directory, open '/home/heiko/repos/github/webDev/node-js_sandbox/foobar.txt'*. <br>
+
+
+
