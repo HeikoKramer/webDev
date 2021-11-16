@@ -2185,3 +2185,14 @@ add(23, 42, (err, sum) => {
 });
 ```
 
+### [synchronous vs asynchronous](https://youtu.be/PAr063Qzeg8?t=2754)
+There are scenarios in Node.js, where we can have a synchronous and asynchronous callback simultaneously. <br>
+This might for example happen, when we work with a **cached file** – at the first load it's asynchronously loaded .. on the second run it is cached and immediately available (synchronously loaded) – what apparently isn't a good idea. <br>
+In that case we have to … kind of **fake delay** the operation to be executed asynchronously. <br>
+I have not really understood why at this point, but we can do that with `setTimout()` and that timeout is set to `0`. <br>
+<br> 
+An alternative way to set this up is with `setImmediate()`. [Example here](https://nodejs.dev/learn/understanding-setimmediate). <br>
+<br>
+`setTimeout(() => {}, 0)` and `setImmediate()` have come with a very short, but actual delay. <br>
+There is a third option to execute code asynchronously, but without any delay: `process.nextTick()`. <br>
+This is definitely a topic I have to catch up with when facing that issue in practice. <br>
