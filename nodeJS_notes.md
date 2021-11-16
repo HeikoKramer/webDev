@@ -2050,5 +2050,52 @@ This is rather non-practical example for a callback, but it shows one thing clea
 Even though callbacks are often associated with **asynchronous code** – they are not necessary asynchronous! <br>
 When we are dealing with asynchronous code, we are facing callbacks. But that's not necessary true the other way around. <br>
 
+### [Asynchronous code](https://youtu.be/PAr063Qzeg8?t=1934)
+**All I/O (input/output) operations in Node.js are asynchronous**. <br> 
+(Except the `require()` function and the `fs` **synchronous** functions.) <br>
+<br>
+Here an example for an asynchronous callback, we read the file *foobar.txt* and log its content in the console: <br>
 
+```js
+'use strict';
 
+const fs   = require('fs'),
+      path = require('path');
+
+const fileName = path.join(__dirname, 'foobar.txt');
+
+console.log('### 1');
+fs.readFile(fileName, 'utf8', (err, content) => {
+  console.log(content);
+});
+console.log('### 2');
+```
+
+The additional console logs help us to track the **order of execution**: <br>
+
+![async-callback](/images/async-callback.png)
+
+Our **asynchronous** callback has been executed last. <br>
+<br>
+Let's those markers to the **synchronous** example from before and compare them: <br>
+
+```js
+'use strict';
+
+const add = function (left, right, callback) {
+  const sum = left + right;
+
+  callback(sum);
+};
+
+console.log('### 1');
+add(23, 42, sum => {
+  console.log(sum);
+  // > 65
+});
+console.log('### 2');
+```
+
+![sync-callback](/images/sync-callback.png)
+
+Here we can see a **sequential** order of execution. <br>
