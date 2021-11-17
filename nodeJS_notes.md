@@ -2359,3 +2359,78 @@ Works as expected, now we're getting the **offline** event and our console messa
 
 ![node-event-handler](/images/node-event-handler.gif)
 
+### optimizing the example
+#### only acting on change
+Right now our event is firing its status every five seconds to the handler. <br>
+The handler is than displaying the message in the console, no matter if the status has changed or not. <br>
+If we only want to display a message **on change**, we can add and set a variable to track the previous state. <br>
+In our example we do that with the `wasOnline` variable. <br>
+Now we're only handing over the event to the handler if `this.isOnline !== this.wasOnline` – so when it changed: <br>
+
+```js
+'use strict';
+
+const events = require('events');
+
+const needle = require('needle');
+
+const EventEmitter = events.EventEmitter;
+
+class NetworkConnection extends EventEmitter {
+  constructor (options) {
+    if (!options) {
+      throw new Error('Options are missing.');
+    }
+    if (!options.host) {
+      throw new Error('Host is missing.');
+    }
+    if (!options.port) {
+      throw new Error('Port is missing.');
+    }
+
+    super();
+
+    this.host = options.host;
+    this.port = options.port;
+
+    this.wasOnline = undefined;
+    this.isOnline  = undefined;
+
+    this.test();
+  }
+
+  test () {
+    needle.get(`https://${this.host}:${this.port}/`, (err) => {
+      if (err) {
+        this.wentOffline();
+      } else {
+        this.wentOnline();
+      }
+
+      setTimeout(() => this.test(), 5 * 1000);
+    });
+  }
+
+  wentOnline () {
+    this.wasOnline = this.isOnline;
+    this.isOnline  = true;
+
+    if (this.isOnline !== this.wasOnline) {
+      this.emit('online');
+    }
+  }
+
+  wentOffline () {
+    this.wasOnline = this.isOnline;
+    this.isOnline  = false;
+
+    if (this.isOnline !== this.wasOnline) {
+      this.emit('offline');
+    }
+  }
+}
+
+module.exports = NetworkConnection;
+```
+
+

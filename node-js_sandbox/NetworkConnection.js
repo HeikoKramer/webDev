@@ -23,7 +23,8 @@ class NetworkConnection extends EventEmitter {
     this.host = options.host;
     this.port = options.port;
 
-    this.isOnline = undefined;
+    this.wasOnline = undefined;
+    this.isOnline  = undefined;
 
     this.test();
   }
@@ -41,13 +42,21 @@ class NetworkConnection extends EventEmitter {
   }
 
   wentOnline () {
-    this.isOnline = true;
-    this.emit('online');
+    this.wasOnline = this.isOnline;
+    this.isOnline  = true;
+
+    if (this.isOnline !== this.wasOnline) {
+      this.emit('online');
+    }
   }
 
   wentOffline () {
-    this.isOnline = false;
-    this.emit('offline');
+    this.wasOnline = this.isOnline;
+    this.isOnline  = false;
+
+    if (this.isOnline !== this.wasOnline) {
+      this.emit('offline');
+    }
   }
 }
 
