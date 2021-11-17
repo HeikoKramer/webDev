@@ -72,7 +72,7 @@ That way you'll use the updated version – if a security update for *fermium* h
 The running node version can as well be inspected using the standard node command `node --version` or the short form `node -v`. <br>
 
 ## [Running Node.js](https://youtu.be/g3Tt8ZozKWU?list=PL6QrD7_cU23kaZ05MvixcoJ5vctRD1qgC&t=1251)
-There are two ways of running Node.js – **interactive in the terminal** or by **loading a Javascript file into node**. <br>
+There are two ways of running Node.js – **interactive in the terminal** or by **loading a JavaScript file into node**. <br>
 ### Node.js interactive mode
 The Node.js interactive mode is an easy way to test JavaScript code. <br>
 You can start node's **interactive mode** by simply typing `node` into the console. <br>
@@ -2196,3 +2196,19 @@ An alternative way to set this up is with `setImmediate()`. [Example here](https
 `setTimeout(() => {}, 0)` and `setImmediate()` have come with a very short, but actual delay. <br>
 There is a third option to execute code asynchronously, but without any delay: `process.nextTick()`. <br>
 This is definitely a topic I have to catch up with when facing that issue in practice. <br>
+
+### [Asynchronous code overview](https://youtu.be/V9Jm4ce_cBg?t=88)
+**Callback** are only one vehicle for asynchronous code in JavaScript. <br>
+Here an overview above asynchronous methods available in JS: <br>
+
+* classic
+  * callbacks
+  * events
+  * streams
+* modern
+  * promises
+  * yield and function
+  * async & await
+  * observables
+
+
