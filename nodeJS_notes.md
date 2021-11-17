@@ -2211,4 +2211,17 @@ Here an overview above asynchronous methods available in JS: <br>
   * async & await
   * observables
 
+## [Events in Node.js](https://youtu.be/V9Jm4ce_cBg?t=191)
+Events are a way to get informed when a certain **event** is happening – without the necessity of repetitive checks. <br>
+### [Event principles](https://youtu.be/V9Jm4ce_cBg?t=309)
+* objects trigger events
+  * for example an interrupted network connection
+  * or an not-handled thrown exception
+* functions are reacting to events
+  * that function is called **event handler**
+
+So we have to look at two aspects of the event: <br>
+* what triggers the event
+* how are we handling the event
+
 
