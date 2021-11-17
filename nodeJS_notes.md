@@ -2243,3 +2243,82 @@ class NetworkConnection extends EventEmitter {
 module.exports = NetworkConnection;
 ```
 
+### [triggering an event](https://youtu.be/V9Jm4ce_cBg?t=547)
+To **trigger events** the `emit()` from the `EventEmitter` class is used. <br>
+`emit()` takes two parameters: <br>
+* name of the event 
+* data of the event (optional)
+
+Here an example for an event trigger, in which we're checking for host availability in an interval of five second: <br>
+
+*NetworkConnection.js*
+
+```js
+'use strict';
+
+const events = require('events');
+
+const needle = require('needle');
+
+const EventEmitter = events.EventEmitter;
+
+class NetworkConnection extends EventEmitter {
+  constructor (options) {
+    if (!options) {
+      throw new Error('Options are missing.');
+    }
+    if (!options.host) {
+      throw new Error('Host is missing.');
+    }
+    if (!options.port) {
+      throw new Error('Port is missing.');
+    }
+
+    super();
+
+    this.host = options.host;
+    this.port = options.port;
+
+    this.isOnline = undefined;
+
+    this.test();
+  }
+
+  test () {
+    needle.get(`https://${host}:${port}/`, (err) => {
+      if (err) {
+        this.wentOffline();
+      } else {
+        this.wentOnline();
+      }
+
+      setTimeout(() => this.test(), 5 * 1000);
+    });
+  }
+
+  wentOnline () {
+    this.isOnline = true;
+    this.emit('online');
+  }
+
+  wentOffLine () {
+    this.isOnline = false;
+    this.emit('offline');
+  }
+}
+
+module.exports = NetworkConnection;
+```
+
+And here's how we initiate that trigger, passing over our defined options: <br>
+
+*app.js*
+
+```js
+'use strict';
+
+const NetworkConnection = require('./NetworkConnection');
+
+const networkConnection = new NetworkConnection({ host: 'www.heikokraemer.de', port: 443 });
+```
+
