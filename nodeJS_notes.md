@@ -2224,4 +2224,22 @@ So we have to look at two aspects of the event: <br>
 * what triggers the event
 * how are we handling the event
 
+### [EventEmitter](https://youtu.be/V9Jm4ce_cBg?t=428)
+To listening for events of an object, we require the `EventEmitter` class. <br>
+That class is part of the `events` module, which is an **intergrated** Node.js module. <br>
+With the `EventEmitter` class available, we can write our own class, extending EventEmitter. <br>
+Here a base-setup template for some code which could be listening and reacting on the network connection: <br>
+
+```js
+'use strict';
+
+const events = require('events');
+const EventEmitter = events.EventEmitter;
+
+class NetworkConnection extends EventEmitter {
+// . . . 
+}
+
+module.exports = NetworkConnection;
+```
 
