@@ -2285,7 +2285,7 @@ class NetworkConnection extends EventEmitter {
   }
 
   test () {
-    needle.get(`https://${host}:${port}/`, (err) => {
+    needle.get(`https://${this.host}:${this.port}/`, (err) => {
       if (err) {
         this.wentOffline();
       } else {
@@ -2321,4 +2321,38 @@ const NetworkConnection = require('./NetworkConnection');
 
 const networkConnection = new NetworkConnection({ host: 'www.heikokraemer.de', port: 443 });
 ```
+
+### [handling an event](https://youtu.be/V9Jm4ce_cBg?t=1403)
+Now we have to attach our **event handler**. <br>
+The `EventEmitter` has also a method we can use therefor – the `on()` function. <br>
+The `emit()` function is always an **inner class** function. <br>
+From the **outside** we have the `on()` function, to **interact** with our `EventEmitter` class. <br>
+(Our `NetworkConnection` class in an **extended version** of `EventEmitter`.) <br>
+<br>
+The two parameters of the `on()` function are <br>
+* the **name** of the event we're interested in
+* a callback function – our **event handler**
+  * here we specify how to react on the event
+
+So continuing with our example, we add two handlers to our *app.js*, one for the **online** and one for the **offline** event: <br>
+
+```js
+'use strict';
+
+const NetworkConnection = require('./NetworkConnection');
+
+const networkConnection = new NetworkConnection({ host: 'www.heikokraemer.de', port: 443 });
+
+networkConnection.on('online', () => {
+  console.log('Online :)');
+});
+
+networkConnection.on('offline', () => {
+  console.log('Offline :(');
+});
+```
+
+Our specified site is online, when we're running *app.js* now we get this confirmed in a five seconds interval: <br>
+
+![node-event-handler](/images/node-event-handler.png)
 

@@ -29,7 +29,7 @@ class NetworkConnection extends EventEmitter {
   }
 
   test () {
-    needle.get(`https://${host}:${port}/`, (err) => {
+    needle.get(`https://${this.host}:${this.port}/`, (err) => {
       if (err) {
         this.wentOffline();
       } else {
