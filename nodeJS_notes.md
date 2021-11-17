@@ -2301,7 +2301,7 @@ class NetworkConnection extends EventEmitter {
     this.emit('online');
   }
 
-  wentOffLine () {
+  wentOffline () {
     this.isOnline = false;
     this.emit('offline');
   }
@@ -2352,7 +2352,10 @@ networkConnection.on('offline', () => {
 });
 ```
 
-Our specified site is online, when we're running *app.js* now we get this confirmed in a five seconds interval: <br>
+Our specified site is **online**, when we're running *app.js* now we get this confirmed with the appropriate event. <br>
+As we have set a five seconds interval, this gets continuously checked now. <br>
+We can fake a disconnect of the site now, by disabling the computer's WLAN. <br>
+Works as expected, now we're getting the **offline** event and our console message is reflecting that: <br>
 
-![node-event-handler](/images/node-event-handler.png)
+![node-event-handler](/images/node-event-handler.gif)
 

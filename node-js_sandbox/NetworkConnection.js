@@ -45,7 +45,7 @@ class NetworkConnection extends EventEmitter {
     this.emit('online');
   }
 
-  wentOffLine () {
+  wentOffline () {
     this.isOnline = false;
     this.emit('offline');
   }
