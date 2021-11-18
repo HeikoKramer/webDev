@@ -2527,5 +2527,7 @@ setTimeout(() => {
 
 Now we can de-register those listeners individually. <br>
 The application does exactly the same now as when we have used `removeAllListeners()` – but this time we are not endangered to shut down any listeners unintentional. <br>
+<br>
+**NOTE:** A legit usage of `removeAllListeners()` is when you are writing tests. <br>
 
 
