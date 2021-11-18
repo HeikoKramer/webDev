@@ -2432,5 +2432,24 @@ class NetworkConnection extends EventEmitter {
 
 module.exports = NetworkConnection;
 ```
+```
+### [once()](https://youtu.be/V9Jm4ce_cBg?t=1693)
+If we want to react only on the first occurrence of an event – for example the first time our network goes offline  – we can use `once()` instead of `on()`. <br>
+<br>
+Let's adjust that for the *offline* event in our *app.js*: <br>
 
+```js
+networkConnection.on('online', () => {
+  console.log('Online :)');
+});
 
+networkConnection.once('offline', () => {     // <-- changed on to once
+  console.log('Offline :(');
+});
+```
+
+Now we will get the offline message displayed only **once** in the terminal. <br>
+If we take that network connection down the second time we won't see that change reflected in the console. <br>
+If we switch it back on, we will receive the online message though – as we have not set `once()` for that event. <br>
+
+![once](/images/once.png)

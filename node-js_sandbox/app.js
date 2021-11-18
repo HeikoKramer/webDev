@@ -8,6 +8,6 @@ networkConnection.on('online', () => {
   console.log('Online :)');
 });
 
-networkConnection.on('offline', () => {
+networkConnection.once('offline', () => {
   console.log('Offline :(');
 });
