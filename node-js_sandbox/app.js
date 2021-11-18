@@ -4,14 +4,18 @@ const NetworkConnection = require('./NetworkConnection');
 
 const networkConnection = new NetworkConnection({ host: 'www.heikokraemer.de', port: 443 });
 
-networkConnection.on('online', () => {
+const onOnline = function () {
   console.log('Online :)');
-});
+};
 
-networkConnection.on('offline', () => {
+const onOffline = function () {
   console.log('Offline :(');
-});
+};
+
+networkConnection.on('online', onOnline);
+networkConnection.on('offline', onOffline);
 
 setTimeout(() => {
-  networkConnection.removeAllListeners();
+  networkConnection.removeListener('online', onOnline);
+  networkConnection.removeListener('offline', onOffline);
 }, 30 * 1000);

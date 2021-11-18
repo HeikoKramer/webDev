@@ -2482,5 +2482,50 @@ Now we are receiving our online / offline messages … but only for 30 seconds. 
 After those 30 seconds **no event is handled any longer**. <br> 
 **NOTE:** `removeAllListeners()` is extremely dangerous – as it removes really all listeners. <br>
 If we have a modular program, with multiple files, **all handlers of that application instance will stop listening** when `removeAllListeners()` is called, not only our two here from that particular file. <br>
+<br>
+The better pattern is here clearly to **remove only specific listeners**. <br>
+Therefor we can use the `removeListener()` function. <br>
+`removeListener()` comes with a bit of a challenge: <br>
+* it takes in two parameters
+  * the event name
+  * the name of the function we want to disable for that event
+
+But as we have defined our *online* handler, with only one function – an anonymous arrow function … <br>
+
+```js
+networkConnection.on('online', () => {
+  console.log('Online :)');
+});
+```
+
+… we can't provide a function name at this point. <br>
+So we actually have to refactor our code here and to define those functions outside of the handler: <br>
+
+```js
+'use strict';
+
+const NetworkConnection = require('./NetworkConnection');
+
+const networkConnection = new NetworkConnection({ host: 'www.heikokraemer.de', port: 443 });
+
+const onOnline = function () {
+  console.log('Online :)');
+};
+
+const onOffline = function () {
+  console.log('Offline :(');
+};
+
+networkConnection.on('online', onOnline);
+networkConnection.on('offline', onOffline);
+
+setTimeout(() => {
+  networkConnection.removeListener('online', onOnline);
+  networkConnection.removeListener('offline', onOffline);
+}, 30 * 1000);
+```
+
+Now we can de-register those listeners individually. <br>
+The application does exactly the same now as when we have used `removeAllListeners()` – but this time we are not endangered to shut down any listeners unintentional. <br>
 
 
