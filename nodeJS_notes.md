@@ -2577,3 +2577,8 @@ Means the `eventemitter2` can do everything the `EventEmitter` can do + more thi
 
 More information in the [documentation](https://www.npmjs.com/package/eventemitter2). <br>
 
+### [eventemitter3](https://youtu.be/V9Jm4ce_cBg?t=2894)
+Belive it or not, there is an other npm module called `eventemitter3`. <br>
+`eventemitter3` is also a **drop-in replacement** for the `EventEmitter` class. <br>
+There is maybe some more focus on performance and enterprise stability, check the [documentation](https://www.npmjs.com/package/eventemitter3). <br>
+
