@@ -2567,3 +2567,13 @@ setInterval(() => {
 Ain't that nice? <br>
 
 ![sigint-event](/images/sigint-event.gif)
+
+### [eventemitter2](https://youtu.be/V9Jm4ce_cBg?t=2727)
+The npm module `eventemitter2` is an alternative to the internal `EventEmitter` class.  <br>
+Like the `fs-extern` module, `eventemitter2` is a **drop-in replacement**. <br>
+Means the `eventemitter2` can do everything the `EventEmitter` can do + more things like <br>
+* namespaces
+* wildcards
+
+More information in the [documentation](https://www.npmjs.com/package/eventemitter2). <br>
+
