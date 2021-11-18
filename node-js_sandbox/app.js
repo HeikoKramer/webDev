@@ -8,6 +8,10 @@ networkConnection.on('online', () => {
   console.log('Online :)');
 });
 
-networkConnection.once('offline', () => {
+networkConnection.on('offline', () => {
   console.log('Offline :(');
 });
+
+setTimeout(() => {
+  networkConnection.removeAllListeners();
+}, 30 * 1000);

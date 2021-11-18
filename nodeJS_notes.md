@@ -2453,3 +2453,34 @@ If we take that network connection down the second time we won't see that change
 If we switch it back on, we will receive the online message though – as we have not set `once()` for that event. <br>
 
 ![once](/images/once.png)
+
+### [remove listeners](https://youtu.be/V9Jm4ce_cBg?t=1827)
+We have the possibilities to **remove listeners** under certain conditions and than not handle those events any longer. <br>
+Here we set a **timeout** – 30 seconds after the program started, we **remove all listeners:** <br>
+
+```js
+'use strict';
+
+const NetworkConnection = require('./NetworkConnection');
+
+const networkConnection = new NetworkConnection({ host: 'www.heikokraemer.de', port: 443 });
+
+networkConnection.on('online', () => {
+  console.log('Online :)');
+});
+
+networkConnection.on('offline', () => {
+  console.log('Offline :(');
+});
+
+setTimeout(() => {
+  networkConnection.removeAllListeners();
+}, 30 * 1000);
+```
+
+Now we are receiving our online / offline messages … but only for 30 seconds. <br>
+After those 30 seconds **no event is handled any longer**. <br> 
+**NOTE:** `removeAllListeners()` is extremely dangerous – as it removes really all listeners. <br>
+If we have a modular program, with multiple files, **all handlers of that application instance will stop listening** when `removeAllListeners()` is called, not only our two here from that particular file. <br>
+
+
