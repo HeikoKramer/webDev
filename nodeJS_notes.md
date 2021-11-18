@@ -2530,4 +2530,40 @@ The application does exactly the same now as when we have used `removeAllListene
 <br>
 **NOTE:** A legit usage of `removeAllListeners()` is when you are writing tests. <br>
 
+### [integrated events](https://youtu.be/V9Jm4ce_cBg?t=2400)
+There are multiple integrated events we can be listening to. <br>
+A good example is the `uncaughtException` event on the [process object](https://nodejs.org/api/process.html#process): <br>
+If we throw an error somewhere in our code, without handling it, Node.js will crash on that error. <br>
 
+```js
+'use strict';
+
+process.on('uncaughtException', err => {
+  console.log(`EXCEPTION: ${err.message}`);
+});
+
+throw new Error('Something went wrong.');
+```
+
+Now we're handling any **uncaught exception** and our program more organized, with an appropriate message in the console. <br> 
+<br>
+We can also listen to [**signal events**](https://nodejs.org/api/process.html#signal-events) which are also **on the project object**. <br>
+The **SIGINT** event for example is initiated when someone ends the program with <kbd>CTRL</kbd> <kbd>c</kbd>. <br>
+We could use that event to start some clean-up works, or simply to display a nice good bye in the console: <br>
+
+```js
+'use strict';
+
+process.on('SIGINT', () => {
+  console.log(' Good bye ٩(^‿^)۶');
+  process.exit(1);
+});
+
+setInterval(() => {
+  console.log('Hello World!');
+}, 2 * 1000);
+```
+
+Ain't that nice? <br>
+
+![sigint-event](/images/sigint-event.gif)
