@@ -2703,3 +2703,26 @@ The object id is a **system-wide unique identifier**. <br>
 Apparently we have created the user *Beth Dutton* twice – but the ids of those record differ: <br> 
 
 ![mongodb-find](/images/mongodb-find.png)
+
+### [query criteria](https://youtu.be/m88vVa5zyi0?t=2011)
+Of course we can also determine search criteria to restrict the result of the output. <br>
+Therefor we have to provide our filters as parameters to the `find()` function. <br>
+
+```js
+users.find({
+  firstName: 'Beth'
+}).toArray((err, documents) => {
+  if (err) {
+    console.log('Faild to find users.', err.message);
+    process.exit(1);
+  }
+
+  console.log(documents);
+  database.close();
+});
+```
+
+Now we have restricted the query to users with the firstName *Beth*. <br>
+We have received two users, as we still have that unintended created duplicate record stored in the database. <br> 
+
+![mongodb-query-criteria](/images/mongodb-query-criteria.png)
