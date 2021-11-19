@@ -2578,7 +2578,18 @@ Means the `eventemitter2` can do everything the `EventEmitter` can do + more thi
 More information in the [documentation](https://www.npmjs.com/package/eventemitter2). <br>
 
 ### [eventemitter3](https://youtu.be/V9Jm4ce_cBg?t=2894)
-Belive it or not, there is an other npm module called `eventemitter3`. <br>
+Believe it or not, there is an other npm module called `eventemitter3`. <br>
 `eventemitter3` is also a **drop-in replacement** for the `EventEmitter` class. <br>
 There is maybe some more focus on performance and enterprise stability, check the [documentation](https://www.npmjs.com/package/eventemitter3). <br>
+
+
+## [MongoDB](https://youtu.be/m88vVa5zyi0?t=452)
+**MongoDB** is a **NoSQL** database – NoSQL stands for "**not only SQL**" (not "no SQL"). <br>
+Within the NoSQL databases, MongoDB falls in the category of the **document oriented databases**. <br>
+* a **JSON object** equals a document
+  * we can store and access JSON objects with MongoDB 
+* MongoDB is [**schemaless**](https://www.mongodb.com/unstructured-data/schemaless)
+  * we don't have to define table columns, data types, etc. upfront
+
+To access MongoDB from Node.js, we require the official driver – [**mongodb**](https://www.npmjs.com/package/mongodb). <br>
 
