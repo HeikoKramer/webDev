@@ -2666,8 +2666,8 @@ Now that we have the collection, we can add single records to it with `insertOne
 
 ```js
 const user = {
-  firstName: 'Jane',
-  lastName:  'Doe'
+  firstName: 'Beth',
+  lastName:  'Dutton'
 };
 
 users.insertOne(user, err => {
@@ -2675,7 +2675,8 @@ users.insertOne(user, err => {
     console.log(err.message);
     process.exit(1);
   }
-  console.log('Successfully inserted user.');
+  console.log(`User ${user.firstName} ${user.lastName} successfully inserted.`);
+  // > User Beth Dutton successfully inserted.
   database.close();
 });
 ```

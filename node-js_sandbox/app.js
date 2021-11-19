@@ -18,8 +18,8 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   console.log(users);
 
   const user = {
-    firstName: 'Jane',
-    lastName:  'Doe'
+    firstName: 'Beth',
+    lastName:  'Dutton'
   };
 
   users.insertOne(user, err => {
@@ -27,7 +27,8 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
       console.log(err.message);
       process.exit(1);
     }
-    console.log('Successfully inserted user.');
+    console.log(`User ${user.firstName} ${user.lastName} successfully inserted.`);
+    // > User Beth Dutton successfully inserted.
     database.close();
   });
 });
