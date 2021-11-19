@@ -2592,9 +2592,23 @@ Within the NoSQL databases, MongoDB falls in the category of the **document orie
   * we don't have to define table columns, data types, etc. upfront
 
 To access MongoDB from Node.js, we require the official driver – [**mongodb**](https://www.npmjs.com/package/mongodb). <br>
+
 ### installing MongoDB
 * change directory into the project folder and type `npm i mongodb -E` in the console
 * add `const mongodb = require('mongodb')` to your main JS file
 
 That's already it, we're ready to go. <br>
 
+### [define the connection to MongoDB](https://youtu.be/m88vVa5zyi0?t=714)
+The first thing we have to do is to tell the MongoDB driver <br>
+* where our database is
+* how to connect to it
+* how to authenticate ourselves 
+
+To do that we use a **connection string**. That string has the following format: <br>
+
+```js
+mongodb://username:password@host:port/database
+```
+
+--> tutorial paused at 12:18 (MongoDB setup required but not covered in tutorial)
