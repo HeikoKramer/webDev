@@ -2662,3 +2662,21 @@ const users = admin.collection('users');
 console.log(users);
 ```
 
+Now that we have the collection, we can add single records to it with `insertOne()`: <br>
+
+```js
+const user = {
+  firstName: 'Jane',
+  lastName:  'Doe'
+};
+
+users.insertOne(user, err => {
+  if (err) {
+    console.log(err.message);
+    process.exit(1);
+  }
+  console.log('Successfully inserted user.');
+  database.close();
+});
+```
+
