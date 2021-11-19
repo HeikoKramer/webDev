@@ -2611,4 +2611,35 @@ To do that we use a **connection string**. That string has the following format:
 mongodb://username:password@host:port/database
 ```
 
---> tutorial paused at 12:18 (MongoDB setup required but not covered in tutorial)
+Three important parameters to know: <br>
+* autoReconnect
+  * re-connection after disruption
+* w
+  * write concern
+* j
+  * journaling
+
+Following the tutorial I was actually not able to set the `autoReconnect: true` successfully. <br>
+Always when I've tried it, I've received an error `option autoreconnect is not supported`. <br>
+Commented it out to continue with the tutorial – without the option I'm able to connect to the database. <br>
+
+```js
+'use strict';
+
+const mongodb = require('mongodb');
+
+const MongoClient = mongodb.MongoClient;
+
+const connectionString = 'mongodb://mongodemo:secret@localhost:27017/admin';
+
+MongoClient.connect(connectionString, {autoReconnect: true}, (err, database) => {
+  if (err) {
+    console.log('Failed to connect.', err.message);
+    process.exit(1);
+  }
+
+  console.log('Connected');
+  database.close();
+});
+```
+
