@@ -2726,3 +2726,30 @@ Now we have restricted the query to users with the firstName *Beth*. <br>
 We have received two users, as we still have that unintended created duplicate record stored in the database. <br> 
 
 ![mongodb-query-criteria](/images/mongodb-query-criteria.png)
+
+### [MongoDB query operators](https://youtu.be/m88vVa5zyi0?t=2046)
+We can further define our query for more **specific search results**. <br>
+MongoDB has its own query syntax, with build-in [query operators](https://docs.mongodb.com/manual/reference/operator/query/) that we can use. <br>
+Let's try that weird syntax, search for users with the lastName *Dutton*, but filter out the firstName *Beth*: <br>
+
+```js
+users.find({
+  $and: [ 
+    { lastName: 'Dutton' }, 
+    { firstName: { $ne: 'Beth' } }
+  ]
+}).toArray((err, documents) => {
+  if (err) {
+    console.log('Faild to find users.', err.message);
+    process.exit(1);
+  }
+
+  console.log(documents);
+  database.close();
+});
+```
+
+That syntax is requiring getting used to … but we have successfully filtered out those two Beths: <br>
+
+![mongodb-query-operators](/images/mongodb-query-operators.png)
+

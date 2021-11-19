@@ -36,7 +36,10 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   // QUERY USER
 
   users.find({
-    firstName: 'Beth'
+    $and: [ 
+      { lastName: 'Dutton' }, 
+      { firstName: { $ne: 'Beth' } }
+    ]
   }).toArray((err, documents) => {
     if (err) {
       console.log('Faild to find users.', err.message);
