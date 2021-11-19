@@ -17,18 +17,31 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   const users = admin.collection('users');
   console.log(users);
 
-  const user = {
-    firstName: 'Beth',
-    lastName:  'Dutton'
-  };
+  // SAVE USER
+  // const user = {
+  //   firstName: 'Beth',
+  //   lastName:  'Dutton'
+  // };
 
-  users.insertOne(user, err => {
+  // users.insertOne(user, err => {
+  //   if (err) {
+  //     console.log('Failed to insert user.', err.message);
+  //     process.exit(1);
+  //   }
+  //   console.log(`User ${user.firstName} ${user.lastName} successfully inserted.`);
+  //   // > User Beth Dutton successfully inserted.
+  //   database.close();
+  // });
+
+  // QUERY USER
+
+  users.find().toArray((err, documents) => {
     if (err) {
-      console.log(err.message);
+      console.log('Faild to find users.', err.message);
       process.exit(1);
     }
-    console.log(`User ${user.firstName} ${user.lastName} successfully inserted.`);
-    // > User Beth Dutton successfully inserted.
+
+    console.log(documents);
     database.close();
   });
 });

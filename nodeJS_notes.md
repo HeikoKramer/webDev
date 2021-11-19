@@ -2681,3 +2681,25 @@ users.insertOne(user, err => {
 });
 ```
 
+### [data queries](https://youtu.be/m88vVa5zyi0?t=1857)
+Now we can **query** our just created users with the `find()` function. <br>
+On the **result** of the `find()` function, we have to call `toArray()` to process errors or our requested documents. <br>
+
+```js
+users.find().toArray((err, documents) => {
+  if (err) {
+    console.log('Faild to find users.', err.message);
+    process.exit(1);
+  }
+
+  console.log(documents);
+  database.close();
+});
+```
+
+Now we see our users listed in the console. <br>
+As we can see, MongoDB has added an **_id** value to each record – that is the **object id**. <br>
+The object id is a **system-wide unique identifier**. <br> 
+Apparently we have created the user *Beth Dutton* twice – but the ids of those record differ: <br> 
+
+![mongodb-find](/images/mongodb-find.png)
