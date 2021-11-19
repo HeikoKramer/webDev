@@ -2753,3 +2753,22 @@ That syntax is requiring getting used to … but we have successfully filtered o
 
 ![mongodb-query-operators](/images/mongodb-query-operators.png)
 
+### findOne()
+Another way only to get Joe's user record is with the `findOne()` function. <br>
+This is not specifically filtering for *Joe*, but our he is the first *Dutton* in our results. <br>
+`findOne()` gives only the first record back – so we don't have to use `toArray()` on the result. <br> 
+
+```js
+users.findOne({
+  lastName: 'Dutton'
+}, (err, document) => {
+  if (err) {
+    console.log('Faild to find user.', err.message);
+    process.exit(1);
+  }
+
+  console.log(document);
+  database.close();
+});
+```
+

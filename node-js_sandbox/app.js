@@ -35,18 +35,31 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
 
   // QUERY USER
 
-  users.find({
-    $and: [ 
-      { lastName: 'Dutton' }, 
-      { firstName: { $ne: 'Beth' } }
-    ]
-  }).toArray((err, documents) => {
+  // users.find({
+  //   $and: [ 
+  //     { lastName: 'Dutton' }, 
+  //     { firstName: { $ne: 'Beth' } }
+  //   ]
+  // }).toArray((err, documents) => {
+  //   if (err) {
+  //     console.log('Faild to find users.', err.message);
+  //     process.exit(1);
+  //   }
+
+  //   console.log(documents);
+  //   database.close();
+  // });
+
+  users.findOne({
+    lastName: 'Dutton'
+  }, (err, document) => {
     if (err) {
-      console.log('Faild to find users.', err.message);
+      console.log('Faild to find user.', err.message);
       process.exit(1);
     }
 
-    console.log(documents);
+    console.log(document);
     database.close();
   });
+
 });
