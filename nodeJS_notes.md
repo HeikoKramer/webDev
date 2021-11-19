@@ -2632,7 +2632,7 @@ const MongoClient = mongodb.MongoClient;
 
 const connectionString = 'mongodb://mongodemo:secret@localhost:27017/admin';
 
-MongoClient.connect(connectionString, {autoReconnect: true}, (err, database) => {
+MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database) => {
   if (err) {
     console.log('Failed to connect.', err.message);
     process.exit(1);
@@ -2641,5 +2641,24 @@ MongoClient.connect(connectionString, {autoReconnect: true}, (err, database) => 
   console.log('Connected');
   database.close();
 });
+```
+
+With this code we're connecting to the database and receive the appropriate confirmation. <br>
+`database.close()` disconnects us from the db and gives us back our prompt. <br>
+
+### [using tables](https://youtu.be/m88vVa5zyi0?t=1521)
+**Tables** are called **collections** in MongoDB. <br>
+Those collections are **schemaless**. <br>
+To get access to data we use the `database.collection()` function. <br>
+`databases.collection()` hast **two syntactic versions** an **asynchronous** and a **synchronous** version. <br>
+We are using the synchronous syntax in the example. <br>
+If we're requesting a **non-existing collection**, MongoDB will create that collection for us. <br>
+If it exists already, we get back the appropriate reference. <br>
+
+```js
+const admin = database.db('admin')
+
+const users = admin.collection('users');
+console.log(users);
 ```
 
