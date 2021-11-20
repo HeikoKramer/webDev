@@ -2832,3 +2832,21 @@ users.deleteOne({ firstName: 'Beth' }, err => {
 
 ![mongodb-delete-one](/images/mongodb-delete-one.png)
 
+And now let's try what happens if we use `deleteMany()` on all of the *Duttons*: <br>
+
+```js
+users.deleteMany({ lastName: 'Dutton' }, err => {
+  if (err) {
+    console.log('Failed to delete.', err.message);
+    process.exit(1);
+  }
+
+  console.log('Deletion Successfull!')
+  database.close();
+});
+```
+
+All what's left of them is an empty array: <br>
+
+![mongodb-delete-many](/images/mongodb-delete-many.png)
+

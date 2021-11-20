@@ -86,14 +86,14 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
 
   showAllUsers();
 
-  users.deleteOne({ firstName: 'Beth' }, err => {
-    if (err) {
-      console.log('Failed to delete.', err.message);
-      process.exit(1);
-    }
+  // users.deleteMany({ lastName: 'Dutton' }, err => {
+  //   if (err) {
+  //     console.log('Failed to delete.', err.message);
+  //     process.exit(1);
+  //   }
 
-    console.log('Deletion Successfull!')
-    database.close();
-  });
+  //   console.log('Deletion Successfull!')
+  //   database.close();
+  // });
 
 });
