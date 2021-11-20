@@ -2813,4 +2813,22 @@ Now we've successfully married our *Jane* to a *Dutton*: <br>
 
 ![mongodb-update](/images/mongodb-update.png)
 
+### [delete records](https://youtu.be/m88vVa5zyi0?t=2645)
+The functions to delete records are `deleteOne()` and `deleteMany()`. <br>
+Those delete functions take in only two parameters – the **filter** and the **callback** for error handling. <br>
+Let's get of one of those duplicate *Beths* with the help of `deleteOne()`: <br>
+
+```js
+users.deleteOne({ firstName: 'Beth' }, err => {
+  if (err) {
+    console.log('Failed to delete.', err.message);
+    process.exit(1);
+  }
+
+  console.log('Deletion Successfull!')
+  database.close();
+});
+```
+
+![mongodb-delete-one](/images/mongodb-delete-one.png)
 

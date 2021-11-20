@@ -34,15 +34,16 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   // });
 
   // QUERY ALL USER
-  users.find().toArray((err, documents) => {
-    if (err) {
-      console.log('Faild to find users.', err.message);
-      process.exit(1);
-    }
-  
-    console.log(documents);
-    database.close();
-  });
+  const showAllUsers = function () {
+    users.find().toArray((err, documents) => {
+      if (err) {
+        console.log('Faild to find users.', err.message);
+        process.exit(1);
+      }
+    
+      console.log(documents);
+    });
+  };
 
   // QUERY ALL USERs WHIT lastName Dutton EXCLUDE firstName Beth
   // users.find({
@@ -82,5 +83,17 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   //   console.log('Update Successfull!');
   //   database.close();
   // });
+
+  showAllUsers();
+
+  users.deleteOne({ firstName: 'Beth' }, err => {
+    if (err) {
+      console.log('Failed to delete.', err.message);
+      process.exit(1);
+    }
+
+    console.log('Deletion Successfull!')
+    database.close();
+  });
 
 });
