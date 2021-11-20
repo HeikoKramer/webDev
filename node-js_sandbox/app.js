@@ -33,8 +33,18 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   //   database.close();
   // });
 
-  // QUERY USER
+  // QUERY ALL USER
+  users.find().toArray((err, documents) => {
+    if (err) {
+      console.log('Faild to find users.', err.message);
+      process.exit(1);
+    }
+  
+    console.log(documents);
+    database.close();
+  });
 
+  // QUERY ALL USERs WHIT lastName Dutton EXCLUDE firstName Beth
   // users.find({
   //   $and: [ 
   //     { lastName: 'Dutton' }, 
@@ -50,16 +60,27 @@ MongoClient.connect(connectionString, {/*autoReconnect: true*/}, (err, database)
   //   database.close();
   // });
 
-  users.findOne({
-    lastName: 'Dutton'
-  }, (err, document) => {
-    if (err) {
-      console.log('Faild to find user.', err.message);
-      process.exit(1);
-    }
+  // users.findOne({
+  //   lastName: 'Dutton'
+  // }, (err, document) => {
+  //   if (err) {
+  //     console.log('Faild to find user.', err.message);
+  //     process.exit(1);
+  //   }
 
-    console.log(document);
-    database.close();
-  });
+  //   console.log(document);
+  //   database.close();
+  // });
+
+  // UPDATE ALL (Janes)
+  // users.updateMany({ firstName: 'Jane' }, { $set: { lastName: 'Dutton' }}, err => {
+  //   if (err) {
+  //     console.log('Failed to update.', err.message);
+  //     process.exit(1);
+  //   }
+
+  //   console.log('Update Successfull!');
+  //   database.close();
+  // });
 
 });

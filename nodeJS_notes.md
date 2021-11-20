@@ -2772,3 +2772,45 @@ users.findOne({
 });
 ```
 
+### [update records](https://youtu.be/m88vVa5zyi0?t=2262)
+Like with `find()` there are two functions to **update record(s)**, `updateMany()` and `updateOne`. <br>
+The first parameter of `updateMany()` is the **filter** – which records should be updated. <br>
+The second parameter is the **update object** – what is updated and how. <br>
+The last parameter is again a **calback function**, to catch possible errors. <br>
+<br>
+To perform updates, we need to work with the [Node.js **update** operators](https://docs.mongodb.com/manual/reference/operator/update/#update-operators). <br>
+If we want to update the Last name of our user *Jane Doe* to *Dutton*, we can't just do it like this: <br>
+
+```js
+users.updateMany({ firstName: 'Jane' }, { lastName: 'Dutton' }, err => {})
+```
+
+or
+
+```js
+users.updateOne({ firstName: 'Jane' }, { lastName: 'Dutton' }, err => {})
+```
+
+Update transactions always require the usage of **update operators**! <br>
+In older versions of MongoDB, the `updateOne()` transaction would have been gone through. <br>
+But it would have performed a full update of the record, to only contain `lastName: 'Dutton'` and nothing more. <br>
+Here comes the `$set` **operator** into play. With `$set` we specify which attributes to update. <br>
+The rest of the document then remains **unchanged**. <br>
+
+```js
+users.updateMany({ firstName: 'Jane' }, { $set: { lastName: 'Dutton' }}, err => {
+  if (err) {
+    console.log('Failed to update.', err.message);
+    process.exit(1);
+  }
+
+  console.log('Update Successfull!');
+  database.close();
+});
+```
+
+Now we've successfully married our *Jane* to a *Dutton*: <br>
+
+![mongodb-update](/images/mongodb-update.png)
+
+
