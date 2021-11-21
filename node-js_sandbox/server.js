@@ -6,15 +6,24 @@ const todos = [
   { id: 3, text: 'ToDo Three'}
 ];
 
-const myResponse = JSON.stringify({
+const successfullResponse = JSON.stringify({
   success: true,
   data: todos
 });
 
+const nullResponse = JSON.stringify({
+  success: false,
+  error: 'Not Found',
+  data: null
+});
+
 const server = http.createServer((req, res) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.setHeader('X-Powered-By', 'Node.js');
-  res.end(myResponse);
+  res.writeHead(404, {
+    'Content-Type': 'application/json',
+    'X-Powered-By': 'Node.js'
+  });
+
+  res.end(nullResponse);
 });
 
 const PORT = 5000;
