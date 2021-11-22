@@ -22,3 +22,5 @@ Add then the following to the *package.json* (replace *server.js* with your serv
 Now you can start your server with `npm start`. <br>
 When you edit any **.js**, **.mjs** or **.json** file in the repo and **save**, the server will **automatically restart**. <br>
 
+## .ENV
+[dotenv](https://github.com/motdotla/dotenv) is a zero-dependency module that loads environment variables from a *.env* file into `process.env`. <br>
