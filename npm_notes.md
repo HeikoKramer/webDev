@@ -24,3 +24,8 @@ When you edit any **.js**, **.mjs** or **.json** file in the repo and **save**, 
 
 ## .ENV
 [dotenv](https://github.com/motdotla/dotenv) is a zero-dependency module that loads environment variables from a *.env* file into `process.env`. <br>
+
+
+## morgan
+[morgan](https://www.npmjs.com/package/morgan) is a HTTP request logger middleware for Node.js. <br>
+
