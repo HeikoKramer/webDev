@@ -40,3 +40,8 @@ console.log(`MongoDB Connected: ${conn.connection.host}`.black.bold.bgYellow);
 ```
 
 ![node-colors](/images/node-colors.png)
+
+
+## slugify
+[slugify](https://www.npmjs.com/package/slugify) is used to convert any string into a **URL ready** string. <br>
+
