@@ -45,3 +45,6 @@ console.log(`MongoDB Connected: ${conn.connection.host}`.black.bold.bgYellow);
 ## slugify
 [slugify](https://www.npmjs.com/package/slugify) is used to convert any string into a **URL ready** string. <br>
 
+## node-geocoder
+[node-geocoder](https://www.npmjs.com/package/node-geocoder) is a library for geocoding and reverse geocoding. <br>
+You can specify a provider, parse in an address string and get back full address information + coordinates, etc. <br>
