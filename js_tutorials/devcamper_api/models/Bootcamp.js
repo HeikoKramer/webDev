@@ -122,7 +122,8 @@ BootcampSchema.pre('save', async function(next) {
     country: loc[0].countryCode
   }
 
-  console.log(`https://www.google.com/maps/search/?api=1&query=${loc[0].latitude}%2C${loc[0].longitude}`);
+  // console.log(`https://www.google.com/maps/search/?api=1&query=${loc[0].latitude}%2C${loc[0].longitude}`);
+
   // Do not save address in database
   this.address = undefined;
   next();
