@@ -48,3 +48,7 @@ console.log(`MongoDB Connected: ${conn.connection.host}`.black.bold.bgYellow);
 ## node-geocoder
 [node-geocoder](https://www.npmjs.com/package/node-geocoder) is a library for geocoding and reverse geocoding. <br>
 You can specify a provider, parse in an address string and get back full address information + coordinates, etc. <br>
+
+## express-fileupload
+[express-fileupload](https://www.npmjs.com/package/express-fileupload) is a simple express middleware for uploading files. <br>
+
