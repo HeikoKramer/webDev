@@ -20,3 +20,15 @@ exports.getUser = asyncHandler(async (req, res, next) => {
     data: user
   });
 });
+
+//  @desc    Create user
+//  @route   POST /api/v1/auth/users
+//  @access  Private/Admin
+exports.createUser = asyncHandler(async (req, res, next) => {
+  const user = await User.create(req.body);
+
+  res.status(201).json({
+    success: true,
+    data: user
+  });
+});
